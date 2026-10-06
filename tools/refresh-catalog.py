@@ -2,7 +2,7 @@
 """Prepare a reviewed catalog candidate from approved public releases; never publish it."""
 import argparse,copy,datetime,hashlib,json,os,re,urllib.request,zipfile,stat
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);p.add_argument('--revision',required=True);p.add_argument('--reuse-from',type=Path);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);p.add_argument('--revision',required=True);p.add_argument('--reuse-from',type=Path);p.add_argument('--include-preparing',action='store_true',help='Review the explicitly authorized Connect 1.0.0 preview after its stable release exists');a=p.parse_args()
 if a.output.exists():p.error('Output must be a new directory')
 if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,63}',a.revision):p.error('Invalid revision')
 kit=Path(__file__).resolve().parents[1];base=json.loads((kit/'lib/catalog.json').read_text());a.output.mkdir(parents=True);records=[];changes=[]
@@ -34,11 +34,14 @@ def get(url,limit,api=False):
  return data
 try:
  for old in base['plugins']:
-  if not old.get('approved'):continue
+  preparing=old.get('approved')is False and old.get('slug')=='connect-for-shopware' and old.get('release_status')=='preparing'
+  if not old.get('approved')and not(a.include_preparing and preparing):continue
   repo=old['repository'];assert re.fullmatch(r'deckerweb/[A-Za-z0-9_.-]+',repo)
   repo_info=json.loads(get('https://api.github.com/repos/'+repo,1048576,True));assert repo_info.get('private')is False,'Private repositories cannot enter the public feed'
   release=json.loads(get('https://api.github.com/repos/'+repo+'/releases/latest',1048576,True));assert not release['draft']and not release['prerelease']
-  version=release['tag_name'].removeprefix('v');assert re.fullmatch(r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?',version)
+  version=release['tag_name'].removeprefix('v')
+  if preparing:assert version=='1.0.0','Only the explicitly authorized first release may activate the preview'
+  assert re.fullmatch(r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?',version)
   names=[old['slug']+'-'+version+'.zip',old['slug']+'.zip'];asset=next((x for name in names for x in release['assets']if x['name']==name),None);assert asset,'No unambiguous plugin release ZIP'
   url=asset['browser_download_url'];assert re.fullmatch(r'https://github.com/'+re.escape(repo)+r'/releases/download/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.zip',url)
   cached=a.reuse_from/(old['slug']+'.zip')if a.reuse_from else None
@@ -62,7 +65,9 @@ try:
   assert header('Version')==version and header('Plugin Name')==old['name']
   identity=header('Update URI')or header('Plugin URI');assert identity.rstrip('/')=='https://github.com/'+repo
   for key in ['Requires at least','Requires PHP']:assert re.fullmatch(r'\d+\.\d+(?:\.\d+)?',header(key))
-  entry=copy.deepcopy(old);entry.update(github_stars=repo_info['stargazers_count'],stars_checked_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d'),version=version,download_url=url,sha256=digest,requires_wp=header('Requires at least'),requires_php=header('Requires PHP'),published_at=release['published_at']);base['plugins'][base['plugins'].index(old)]=entry
+  entry=copy.deepcopy(old)
+  if preparing:entry['approved']=True;entry.pop('release_status',None)
+  entry.update(github_stars=repo_info['stargazers_count'],stars_checked_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d'),version=version,download_url=url,sha256=digest,requires_wp=header('Requires at least'),requires_php=header('Requires PHP'),published_at=release['published_at']);base['plugins'][base['plugins'].index(old)]=entry
   records.append({'slug':old['slug'],'release_id':release['id'],'tag':release['tag_name'],'published_at':release['published_at'],'asset':asset['name'],'download_url':url,'sha256':digest,'description_header':header('Description')})
   if old['version']!=version:changes.append({'slug':old['slug'],'before':old['version'],'after':version,'review':['Review localized descriptions, dependencies, network policy and artwork before approval.']})
  base.update(catalog_revision=a.revision,generated_at=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),requires_library='0.1.0')

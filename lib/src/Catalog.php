@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** Strict metadata-only catalog. No remote PHP, JavaScript, CSS, icons or telemetry. */
 final class Catalog {
- public const SERIES = [ 'quicknav' => 'QuickNav', 'builder' => 'Builder', 'purify' => 'Purify', 'manage-content' => 'Manage Content' ];
+ public const SERIES = [ 'quicknav' => 'QuickNav', 'builder' => 'Builder', 'purify' => 'Purify', 'manage-content' => 'Manage Content', 'connect' => 'Connect' ];
  public const DEFAULT_URL = 'https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json';
 	private string $dir;
 	public string $status = 'bundled';
@@ -122,6 +122,23 @@ final class Catalog {
 			$result[$slug] = $entry;
 		}
 		return $result;
+	}
+
+	/**
+	 * Read the explicitly approved local Connect preview without granting package approval.
+	 *
+	 * @return array Display-only metadata keyed by slug; no remote requests or package actions.
+	 */
+	public function previews(): array {
+		$data = json_decode( (string) file_get_contents( $this->dir . '/catalog.json' ), true );
+		foreach ( $data['plugins'] ?? [] as $entry ) {
+			if ( ( $entry['slug'] ?? '' ) !== 'connect-for-shopware' || ( $entry['approved'] ?? null ) !== false || ( $entry['release_status'] ?? '' ) !== 'preparing' ) { continue; }
+			if ( ( $entry['repository'] ?? '' ) !== 'deckerweb/connect-for-shopware' || ( $entry['plugin_file'] ?? '' ) !== 'connect-for-shopware/connect-for-shopware.php' || ( $entry['version'] ?? '' ) !== '1.0.0' || ( $entry['series_memberships'] ?? [] ) !== [ 'connect' ] ) { return []; }
+			foreach ( [ 'name', 'description', 'description_de', 'requires_wp', 'requires_php' ] as $field ) { if ( ! is_string( $entry[$field] ?? null ) || strlen( $entry[$field] ) > 2000 ) { return []; } }
+			$entry['dependencies'] = []; $entry['_preview'] = true;
+			return [ $entry['slug'] => $entry ];
+		}
+		return [];
 	}
 
 	/**

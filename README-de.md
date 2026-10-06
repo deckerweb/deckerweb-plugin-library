@@ -43,7 +43,7 @@ Siehe [integration](docs/INTEGRATION-de.md), [data](docs/DATA-de.md), [tests](do
 
 ### Passende Plugins finden
 
-Den deckerweb-Tab unter Plugins → Installieren öffnen. Suche, QuickNav/Builder/Purify/Manage Content und „Passt zu meiner Installation“ kombinieren. Jede Karte erklärt fehlende Voraussetzungen; Installation und Aktivierung bleiben getrennt.
+Den deckerweb-Tab unter Plugins → Installieren öffnen. Suche, QuickNav/Builder/Purify/Manage Content/Connect und „Passt zu meiner Installation“ kombinieren. Jede Karte erklärt fehlende Voraussetzungen; Installation und Aktivierung bleiben getrennt.
 
 ### Freigegebene Katalogupdates
 
@@ -93,6 +93,7 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 - **Neu:** Freigegebene Plugin-Releases können im Online-Katalog erscheinen, ohne die eingebettete Library auszutauschen.
 - **Neu:** Purify WPCode Lite und Purify WPForms Lite im Katalog entdecken.
 - **Neu:** Plugins können mehreren Serien angehören, darunter Inhalte verwalten.
+- **Neu:** Die Connect-Serie und das kommende Connect for Shopware 1.0.0 mit klarem Vorbereitungshinweis entdecken.
 - **Verbessert:** Der Katalog wird nach 24 Stunden aktualisiert; Updateprüfungen installierter Plugins nutzen einen unabhängigen Cache.
 - **Verbessert:** Die optionale Anbindung des Host-Updaters erhält aktuelle Paketfreigaben und Prüfsummenprüfungen.
 - **Verbessert:** Die öffentliche GitHub-Katalogadresse ist in den Library-Einstellungen vorausgefüllt.

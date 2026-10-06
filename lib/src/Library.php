@@ -211,6 +211,7 @@ final class Library {
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		$entries = $this->catalog->entries();
 		if ( is_wp_error( $entries ) ) { echo '<div class="notice notice-error"><p>' . esc_html( $entries->get_error_message() ) . '</p></div>'; return; }
+		$entries += $this->catalog->previews();
 		$plugins = get_plugins();
 		$search = isset( $_GET['dwl_search'] ) && is_string( $_GET['dwl_search'] ) ? sanitize_text_field( wp_unslash( $_GET['dwl_search'] ) ) : '';
 		$compatible = isset( $_GET['dwl_compatible'] ) && $_GET['dwl_compatible'] === '1';
@@ -235,7 +236,7 @@ final class Library {
 		foreach ( $entries as $entry ) {
 			$name = self::text( $entry, 'name' ); $description = self::text( $entry, 'description' );
 			if ( $series !== '' && ! in_array( $series, Catalog::series( $entry ), true ) ) { continue; }
-			$issues = Requirements::check( $entry, $plugins );
+			$issues = ! empty( $entry['_preview'] ) ? [ self::t( 'Release 1.0.0 is being prepared. Installation will be available after package verification.' ) ] : Requirements::check( $entry, $plugins );
 			if ( $search !== '' && stripos( remove_accents( $name . ' ' . $description ), remove_accents( $search ) ) === false ) { continue; }
 			if ( $compatible && $issues ) { continue; }
 			$count++;
@@ -248,7 +249,8 @@ final class Library {
 			if ( isset( $entry['github_stars'], $entry['stars_checked_at'] ) ) {
 				echo '<p class="dwl-stars"><a href="' . esc_url( 'https://github.com/' . $entry['repository'] . '/stargazers' ) . '" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">★</span> ' . esc_html( number_format_i18n( $entry['github_stars'] ) . ' ' . self::t( 'GitHub Stars' ) ) . '</a> <span class="dwl-meta">' . esc_html( self::t( 'As of ' ) . I18n::date( $entry['stars_checked_at'] ) ) . '</span></p>';
 			}
-			if ( $active ) { echo '<span class="dwl-active">' . esc_html( self::t( 'Already active' ) ) . '</span>'; }
+			if ( ! empty( $entry['_preview'] ) ) { echo '<button class="button" disabled>' . esc_html( self::t( 'Release in preparation' ) ) . '</button>'; }
+			elseif ( $active ) { echo '<span class="dwl-active">' . esc_html( self::t( 'Already active' ) ) . '</span>'; }
 			elseif ( $issues ) { echo '<button class="button" disabled>' . esc_html( $installed ? self::t( 'Activate' ) : self::t( 'Install now' ) ) . '</button>'; }
 			elseif ( $installed && current_user_can( 'activate_plugin', $entry['plugin_file'] ) ) { $this->form( 'activate', $entry['slug'], is_network_admin() ? self::t( 'Network activate' ) : self::t( 'Activate' ), 'button button-primary' ); }
 			elseif ( ! $installed ) { $this->form( 'install', $entry['slug'], self::t( 'Install now' ), 'button' ); }
@@ -256,7 +258,7 @@ final class Library {
 			if ( $issues ) { echo '<div class="dwl-requirements"><ul>'; foreach ( $issues as $issue ) { echo '<li>' . esc_html( $issue ) . '</li>'; } echo '</ul><a href="' . esc_url( self_admin_url( 'plugins.php' ) ) . '">' . esc_html( self::t( 'Manage installed plugins' ) ) . '</a></div>'; }
 			echo '<details class="dwl-details"><summary>' . esc_html( self::t( 'Details & requirements' ) ) . '</summary><p>WordPress ≥ ' . esc_html( $entry['requires_wp'] ) . ' · PHP ≥ ' . esc_html( $entry['requires_php'] ) . '</p>';
 			foreach ( $entry['dependencies'] as $dep ) { echo '<p>' . esc_html( $dep['name'] . ( $dep['min_version'] !== '' ? ' ≥ ' . $dep['min_version'] : '' ) ) . ( isset( $dep['url'] ) ? ' · <a href="' . esc_url( $dep['url'] ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::t( 'Product website' ) ) . '</a>' : '' ) . '</p>'; }
-			echo '<p><a href="' . esc_url( 'https://github.com/' . $entry['repository'] ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::t( 'Repository & documentation' ) ) . '</a></p><p class="dwl-meta">' . esc_html( self::t( 'Release checksum is verified before installation. Activation is a separate step.' ) ) . '</p></details></div><footer><span>' . esc_html( self::t( 'Source: GitHub' ) ) . '</span><span>' . esc_html( $installed ? self::t( 'Installed: ' ) . $plugins[$entry['plugin_file']]['Version'] : 'v' . $entry['version'] ) . '</span></footer></article>';
+			echo '<p><a href="' . esc_url( 'https://github.com/' . $entry['repository'] ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( self::t( 'Repository & documentation' ) ) . '</a></p><p class="dwl-meta">' . esc_html( self::t( ! empty( $entry['_preview'] ) ? 'Requirements shown are preliminary until the stable release is verified.' : 'Release checksum is verified before installation. Activation is a separate step.' ) ) . '</p></details></div><footer><span>' . esc_html( self::t( 'Source: GitHub' ) ) . '</span><span>' . esc_html( ! empty( $entry['_preview'] ) ? self::t( 'Planned: ' ) . $entry['version'] : ( $installed ? self::t( 'Installed: ' ) . $plugins[$entry['plugin_file']]['Version'] : 'v' . $entry['version'] ) ) . '</span></footer></article>';
 		}
 		echo '</div>';
 		if ( ! $count ) { echo '<p>' . esc_html( self::t( 'No approved plugins match this selection.' ) ) . ' <a href="' . esc_url( $reset_url ) . '">' . esc_html( self::t( 'Reset filters' ) ) . '</a></p>'; }

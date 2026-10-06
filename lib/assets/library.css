@@ -56,3 +56,5 @@
 @media(max-width:480px){#deckerweb-library .dwl-filter-controls input[type=search]{width:100%;max-width:100%}#deckerweb-library .dwl-filter-controls>label:first-child{width:100%}}
 
 #deckerweb-library .dwl-series-manage-content{background:#e8f1ef;color:#31534b}
+
+#deckerweb-library .dwl-series-connect{background:#edf0f7;color:#39476a}

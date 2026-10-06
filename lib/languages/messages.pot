@@ -76,6 +76,9 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
+msgid "Commerce"
+msgstr ""
+
 msgid "Compatible additions only"
 msgstr ""
 
@@ -334,6 +337,9 @@ msgstr ""
 msgid "Permission denied."
 msgstr ""
 
+msgid "Planned: "
+msgstr ""
+
 msgid "Plugin identity or version does not match the catalog."
 msgstr ""
 
@@ -349,13 +355,22 @@ msgstr ""
 msgid "Refresh catalog"
 msgstr ""
 
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr ""
+
 msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr ""
+
+msgid "Release in preparation"
 msgstr ""
 
 msgid "Release must contain exactly the approved plugin directory."
 msgstr ""
 
 msgid "Repository & documentation"
+msgstr ""
+
+msgid "Requirements shown are preliminary until the stable release is verified."
 msgstr ""
 
 msgid "Requires PHP %s or newer."

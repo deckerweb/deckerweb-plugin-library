@@ -79,6 +79,9 @@ msgstr "Änderungsverlauf"
 msgid "Close"
 msgstr "Schließen"
 
+msgid "Commerce"
+msgstr "Commerce"
+
 msgid "Compatible additions only"
 msgstr "Nur passende Ergänzungen"
 
@@ -337,6 +340,9 @@ msgstr "Eine POST-Anfrage ist erforderlich."
 msgid "Permission denied."
 msgstr "Keine Berechtigung."
 
+msgid "Planned: "
+msgstr "Geplant: "
+
 msgid "Plugin identity or version does not match the catalog."
 msgstr "Plugin oder Version stimmt nicht mit dem Katalog überein."
 
@@ -352,14 +358,23 @@ msgstr "Produktwebsite"
 msgid "Refresh catalog"
 msgstr "Katalog aktualisieren"
 
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+
 msgid "Release checksum is verified before installation. Activation is a separate step."
 msgstr "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+
+msgid "Release in preparation"
+msgstr "Release in Vorbereitung"
 
 msgid "Release must contain exactly the approved plugin directory."
 msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
 
 msgid "Repository & documentation"
 msgstr "Repository & Dokumentation"
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
 
 msgid "Requires PHP %s or newer."
 msgstr "Benötigt PHP %s oder neuer."

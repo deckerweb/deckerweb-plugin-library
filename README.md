@@ -43,7 +43,7 @@ See [integration](docs/INTEGRATION.md), [data](docs/DATA.md), [tests](docs/TESTI
 
 ### Discover suitable plugins
 
-Use the deckerweb tab under Plugins → Add New. Combine search, QuickNav/Builder/Purify/Manage Content and Fits my installation. Each card explains missing requirements; installation and activation remain separate.
+Use the deckerweb tab under Plugins → Add New. Combine search, QuickNav/Builder/Purify/Manage Content/Connect and Fits my installation. Each card explains missing requirements; installation and activation remain separate.
 
 ### Approved catalog updates
 
@@ -93,6 +93,7 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 - **New:** Approved plugin releases can appear in the online catalog without replacing the embedded Library.
 - **New:** Discover Purify WPCode Lite and Purify WPForms Lite in the catalog.
 - **New:** Plugins can belong to several series, including Manage Content.
+- **New:** Discover the Connect series and the upcoming Connect for Shopware 1.0.0 with a clear preparation notice.
 - **Improved:** The catalog refreshes after 24 hours; installed-plugin update checks use an independent cache.
 - **Improved:** Optional integration with the host updater keeps package approval and checksum checks current.
 - **Improved:** The public GitHub catalog address is prefilled in Library settings.

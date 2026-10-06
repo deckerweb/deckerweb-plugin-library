@@ -662,5 +662,25 @@
   "Manage Content": {
     "de_DE": "Inhalte verwalten",
     "de_DE_formal": "Inhalte verwalten"
+  },
+  "Commerce": {
+    "de_DE": "Commerce",
+    "de_DE_formal": "Commerce"
+  },
+  "Release in preparation": {
+    "de_DE": "Release in Vorbereitung",
+    "de_DE_formal": "Release in Vorbereitung"
+  },
+  "Planned: ": {
+    "de_DE": "Geplant: ",
+    "de_DE_formal": "Geplant: "
+  },
+  "Release 1.0.0 is being prepared. Installation will be available after package verification.": {
+    "de_DE": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar.",
+    "de_DE_formal": "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+  },
+  "Requirements shown are preliminary until the stable release is verified.": {
+    "de_DE": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig.",
+    "de_DE_formal": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
   }
 }
