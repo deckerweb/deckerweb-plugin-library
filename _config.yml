@@ -1,0 +1,11 @@
+theme: jekyll-theme-cayman
+title: deckerweb Plugin Library
+description: Small plugins. Practical improvements. / Kleine Plugins. Konkrete Verbesserungen.
+exclude:
+  - lib
+  - tools
+  - integration
+  - wiki
+  - catalog
+  - README.md
+  - README-de.md

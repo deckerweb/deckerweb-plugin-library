@@ -1,0 +1,331 @@
+{
+  "version": "0.6.0",
+  "faq": [
+    {
+      "question": {
+        "en": "Where is the catalog?",
+        "de": "Wo ist der Katalog?"
+      },
+      "answer": {
+        "en": "Open Plugins → Add New → deckerweb. WordPress.org remains the default view.",
+        "de": "Plugins → Plugin hinzufügen → deckerweb öffnen. WordPress.org bleibt die Standardansicht."
+      }
+    },
+    {
+      "question": {
+        "en": "Does it contact external services?",
+        "de": "Werden externe Dienste kontaktiert?"
+      },
+      "answer": {
+        "en": "Local browsing does not. Installation downloads the selected GitHub release. Optional online approval updates contact the configured first-party HTTPS endpoint; its server sees the requesting IP. No site URL, user ID, inventory or telemetry is sent.",
+        "de": "Die lokale Ansicht nicht. Installation lädt das ausgewählte GitHub-Release. Optionale Online-Freigaben kontaktieren die konfigurierte eigene HTTPS-Quelle; deren Server sieht die anfragende IP-Adresse. Website-URL, Nutzer-ID, Plugin-Inventar und Telemetrie werden nicht übertragen."
+      }
+    },
+    {
+      "question": {
+        "en": "Why is an installation unavailable?",
+        "de": "Warum ist eine Installation nicht verfügbar?"
+      },
+      "answer": {
+        "en": "Check the card for missing or inactive dependencies and WordPress/PHP requirements. Prerequisites are not installed automatically; activation is separate.",
+        "de": "Die Karte zeigt fehlende oder inaktive Abhängigkeiten sowie WordPress-/PHP-Anforderungen. Voraussetzungen werden nicht automatisch installiert; Aktivierung ist ein eigener Schritt."
+      }
+    },
+    {
+      "question": {
+        "en": "Can I hide it?",
+        "de": "Kann der Katalog ausgeblendet werden?"
+      },
+      "answer": {
+        "en": "Use Settings → deckerweb Library (Network Settings on Multisite). Hiding discovery preserves dependency checks and existing managed updates. Disable online catalog retrieval separately to stop its requests.",
+        "de": "Unter Einstellungen → deckerweb Library (bei Multisite in den Netzwerkeinstellungen). Ausblenden erhält Abhängigkeitsprüfungen und bereits eingerichtete Updates. Online-Abrufe separat abschalten."
+      }
+    },
+    {
+      "question": {
+        "en": "What happens when I remove a host?",
+        "de": "Was passiert beim Entfernen eines Hosts?"
+      },
+      "answer": {
+        "en": "Another installed host, even inactive, preserves shared data. The final host removes temporary Library data and caches. Settings remain unless optional deletion was enabled. Installed plugins and their content remain. Hosts must call the supplied uninstall contract.",
+        "de": "Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktiviert. Der letzte Host bereinigt temporäre Library-Daten und Caches. Einstellungen bleiben ohne ausdrücklich aktivierte Löschoption erhalten. Installierte Plugins und Inhalte bleiben bestehen. Hosts müssen den mitgelieferten Uninstall-Vertrag aufrufen."
+      }
+    },
+    {
+      "question": {
+        "en": "Does it support Multisite?",
+        "de": "Wird Multisite unterstützt?"
+      },
+      "answer": {
+        "en": "Library settings are shared per network and the introduction is per user. Network actions require appropriate capabilities and dependencies. Bricks QuickNav retains its per-site restriction pending separate host work; Daily follows its published release policy.",
+        "de": "Library-Einstellungen gelten je Netzwerk, der Einführungshinweis je Nutzer. Netzwerkaktionen erfordern passende Berechtigungen und Abhängigkeiten. Bricks QuickNav behält bis zur separaten Host-Anpassung seine Website-Beschränkung; Daily folgt den veröffentlichten Release-Regeln."
+      }
+    },
+    {
+      "question": {
+        "en": "How do I report a vulnerability?",
+        "de": "Wie wird eine Sicherheitslücke gemeldet?"
+      },
+      "answer": {
+        "en": "Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.",
+        "de": "Im Host-Plugin-Repository Security → Advisories → Report a vulnerability verwenden. Host- und Library-Version nennen; Sicherheitsdetails nicht in öffentlichen Issues posten. Hosts müssen den privaten Meldeweg vor Veröffentlichung aktivieren."
+      }
+    }
+  ],
+  "pages": {
+    "INTEGRATION": {
+      "en": {
+        "title": "Integration",
+        "body": "Only direct-distribution hosts are supported. Copy `lib/` to `includes/deckerweb-plugin-library/` in the explicitly selected current host source. Preserve the host's updater and current development work.\n\nBefore `plugins_loaded`:\n\n```php\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/bootstrap.php';\ndeckerweb_library_register_v2( __FILE__, [], __DIR__ . '/includes/deckerweb-plugin-library' );\n```\n\nIn the host's existing `uninstall.php`, after its direct-access guard, add a bounded cleanup block (do not replace its own cleanup):\n\n```php\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';\ndeckerweb_library_uninstall_v2( __DIR__ . '/YOUR-HOST-SLUG.php' );\n```\n\nThe exact host basename must match `WP_UNINSTALL_PLUGIN`. This contract is required for final-host cleanup. Inactive installed hosts are detected from their physical embedded bootstrap files; no active-only registration list is trusted. Keep the conventional library directory for discovery, including future copies. Hosts in custom locations require an explicitly reviewed detection contract.\n\nTranslations use the elected host's header Text Domain (its slug if missing), never an extra component domain. Component MO files are merged into that existing domain; host messages retain precedence. The bundle includes EN POT and informal/formal German PO/MO resources. `lib/messages.json` is the maintained dictionary. Run `tools/build-languages.py` after changes and merge the POT entries into host translation workflows. Locale changes reload the elected host-domain component resource.\n\n`prepare-plugin.py` only accepts BAS and Daily Scripture source ZIPs with known version markers and compatible minimum headers. It preserves code after the exact legacy integration block, adds bounded replacement markers and refuses ambiguous custom integrations or conditional uninstall code. It creates a new destination, never overwrites the supplied source and never raises minimums. Other hosts need reviewed manual integration. Review host translations, security policy and its actual final ZIP before release.\n\nThe Library kit itself is not installable. `deckerweb-plugin-library-runtime-0.6.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.\n\nRead [security](../SECURITY.md), [data](DATA.md), [tests](TESTING.md) and [release conventions](CONVENTIONS.md).\n\nLegacy 0.1–0.3 hosts can coexist, but their old uninstall code does not implement this new contract. Upgrade every host integration before relying on final-host cleanup after the last 0.4 host has been removed. No legacy host files are modified automatically.\n\nFor the central feed and optional existing updater bridge, read [Catalog](CATALOG.md) and [Updater](UPDATER.md). Always keep the current host development source and translate component messages through its domain.\n\nWhen replacing an earlier 0.6.0 build, replace every installed 0.6.0 copy together. Equal versions use the host basename as a deterministic election tie-breaker; an older same-version copy can otherwise win. Archive earlier packages and verify compatibility.json hashes after replacement."
+      },
+      "de": {
+        "title": "Einbindung",
+        "body": "Nur Direktvertriebs-Hosts werden unterstützt. `lib/` in `includes/deckerweb-plugin-library/` des ausdrücklich ausgewählten aktuellen Host-Quellstands kopieren. Eigenen Updater und aktuelle Entwicklungsarbeit erhalten.\n\nVor `plugins_loaded`:\n\n```php\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/bootstrap.php';\ndeckerweb_library_register_v2( __FILE__, [], __DIR__ . '/includes/deckerweb-plugin-library' );\n```\n\nIn der vorhandenen Host-Datei `uninstall.php` nach dem Schutz gegen direkten Aufruf einen begrenzten Cleanup-Block ergänzen; eigene Bereinigung nicht ersetzen:\n\n```php\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';\ndeckerweb_library_uninstall_v2( __DIR__ . '/DEIN-HOST-SLUG.php' );\n```\n\nDer genaue Host-Basename muss `WP_UNINSTALL_PLUGIN` entsprechen. Dieser Vertrag ist für die Bereinigung beim letzten Host erforderlich. Auch deaktivierte installierte Hosts werden über ihre physische Bootstrap-Datei erkannt; ein Register ausschließlich aktiver Hosts reicht nicht. Den üblichen Library-Pfad auch bei künftigen Kopien erhalten. Eigene Pfade benötigen einen ausdrücklich geprüften Erkennungsvertrag.\n\nÜbersetzungen verwenden die Textdomain des gewählten Hosts aus dessen Header (ersatzweise seinen Slug), keine eigene Komponentendomain. Library-MO-Dateien werden in diese Domain eingebunden; vorhandene Host-Texte haben Vorrang. EN-POT und deutsche PO/MO-Dateien für Du und Sie liegen bei. `lib/messages.json` ist die gepflegte Wörterbuchquelle. Nach Änderungen `tools/build-languages.py` ausführen und die POT-Einträge in den Host-Übersetzungsprozess übernehmen. Bei Locale-Wechsel wird die passende Host-Domain-Ressource neu geladen.\n\n`prepare-plugin.py` akzeptiert nur BAS und Daily Scripture mit bekannten Versionsmarkern und kompatiblen Mindestversions-Headern. Es erhält Code hinter dem genauen alten Einbindungsblock, nutzt begrenzte Ersetzungsmarker und lehnt unklare individuelle Einbindungen bzw. bedingten Uninstall-Code ab. Neue Zieldatei, keine Überschreibung der Quelle und keine Erhöhung von Mindestversionen. Andere Hosts benötigen geprüfte manuelle Integration. Vor Release Host-Übersetzungen, Sicherheitsrichtlinie und tatsächliches finales ZIP prüfen.\n\nDas Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.6.0.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.\n\nSiehe [Sicherheit](../SECURITY-de.md), [Daten](DATA-de.md), [Tests](TESTING-de.md) und [Release-Konventionen](CONVENTIONS-de.md).\n\nAlte Hosts mit 0.1–0.3 können parallel bestehen; deren alter Uninstall-Code erfüllt diesen neuen Vertrag jedoch noch nicht. Alle Host-Einbindungen aktualisieren, bevor nach Entfernen des letzten 0.4-Hosts eine abschließende Bereinigung durch einen alten Host erwartet wird. Alte Host-Dateien werden nicht automatisch verändert.\n\nFür zentralen Feed und optionale Brücke zum bestehenden Updater [Katalog](CATALOG-de.md) und [Updater](UPDATER-de.md) lesen. Aktuelle Host-Entwicklungsquelle erhalten und Nachrichten über deren Textdomain übersetzen.\n\nBeim Ersetzen eines früheren 0.6.0-Builds sämtliche installierten 0.6.0-Kopien gemeinsam austauschen. Gleiche Versionen verwenden den Host-Basename als eindeutige Auswahlregel; sonst kann eine ältere Kopie derselben Version gewinnen. Frühere Pakete archivieren und nach Austausch die Hashes in compatibility.json prüfen."
+      }
+    },
+    "DATA": {
+      "en": {
+        "title": "Data and lifecycle",
+        "body": "Settings and managed-install records use `deckerweb_library_settings_v1` and `deckerweb_library_installed_v1` site options (per network on Multisite, regular options on single sites). The settings deletion switch defaults off. Introduction state is the global user-meta key `deckerweb_library_intro_seen_v1`. Settings, records and introduction status are retained by default.\n\nCatalog caches use `_site_transient_dwl_catalog_<URL-md5>` with `_last` and `_retry` companions: 24 hours, 48 hours, 15 minutes. `deckerweb_library_cache_keys_v2` records keys for cleanup of persistent caches and database storage. Package downloads/normalization use Library-prefixed temp files and tracked staging directories in `deckerweb_library_temp_v2`. Normal completion cleans them immediately; final-host uninstall cleans tracked crash leftovers in the current temporary directory. The Library schedules no background tasks.\n\nDeactivation changes none of these data. Removing one host preserves shared data while any other host is installed, even inactive. Final-host uninstall cleans caches/key registry and tracked temporary artifacts. Optional deletion also removes Library settings, install records and introduction status. User introduction status is global: on multiple networks it is only removed when every network's Library settings have been removed. No installed plugin or content is deleted. No host settings or foreign tables/options are touched.\n\nCleanup covers all networks on final physical host removal and never follows a per-site deactivation. Newly created sites use the network settings automatically; no per-site initialization is required. Existing v1 data are preserved in place; v2 bookkeeping is added lazily. Legacy cache keys stored in the database are cleaned by their exact documented namespace; keys not recorded in an external object cache expire with their TTL.\n\nNo large settings export/import is added: the component has only visibility, optional catalog URL/online mode and the deletion switch.\n\nDisplay cache: dwl_catalog_<URL hash>, 24 hours. Update cache: dwl_catalog_<URL hash>_updates, 12 hours, independently read by WordPress update checks. Both have _last (48 hours) and _retry (15 minutes) companions; the existing shared cache-key registry covers both. Fresh package approval bypasses their caches. No new cron event or permanently stored updater credential is added. Final-host cleanup removes both cache families."
+      },
+      "de": {
+        "title": "Daten und Lebenszyklus",
+        "body": "Einstellungen und Installationszuordnung liegen in den Site Options `deckerweb_library_settings_v1` und `deckerweb_library_installed_v1` (bei Multisite je Netzwerk, sonst normale Optionen). Die Löschoption ist standardmäßig aus. Der Einführungshinweis verwendet den globalen User-Meta-Schlüssel `deckerweb_library_intro_seen_v1`. Einstellungen, Zuordnung und Hinweisstatus bleiben standardmäßig erhalten.\n\nKatalog-Caches verwenden `_site_transient_dwl_catalog_<URL-md5>` mit `_last` und `_retry`: 24 Stunden, 48 Stunden, 15 Minuten. `deckerweb_library_cache_keys_v2` hält Schlüssel zur Bereinigung in Datenbank und persistentem Cache fest. Download und Aufbereitung verwenden Library-markierte temporäre Dateien und in `deckerweb_library_temp_v2` erfasste Arbeitsverzeichnisse. Normaler Abschluss bereinigt sie sofort; der letzte Host entfernt erfasste Absturzreste im aktuellen temporären Verzeichnis. Die Library plant keine Hintergrundaufgaben.\n\nDeaktivierung verändert diese Daten nicht. Beim Entfernen eines Hosts bleiben gemeinsame Daten erhalten, solange ein weiterer Host installiert ist, auch deaktiviert. Der letzte Host bereinigt Caches, Schlüsselregister und erfasste temporäre Dateien. Die optionale Löschung entfernt zusätzlich Library-Einstellungen, Installationszuordnung und Hinweisstatus. Der Hinweisstatus gilt global: bei mehreren Netzwerken erst entfernen, wenn deren Library-Einstellungen sämtlich gelöscht sind. Installierte Plugins und Inhalte bleiben immer erhalten; fremde Tabellen, Optionen und Host-Einstellungen werden nicht angefasst.\n\nDie Bereinigung umfasst beim Entfernen des letzten physischen Hosts alle Netzwerke, niemals nur wegen einer Website-Deaktivierung. Neue Websites nutzen automatisch die Netzwerkeinstellungen und benötigen keine Initialisierung. Vorhandene v1-Daten bleiben unverändert; v2-Verwaltungsdaten entstehen bei Bedarf. Alte Datenbank-Caches werden über ihren dokumentierten Namespace bereinigt. Nicht erfasste Schlüssel externer Objekt-Caches laufen mit ihrer TTL aus.\n\nKein zusätzlicher Export/Import für die wenigen Einstellungen: Sichtbarkeit, optionale Katalog-URL/Online-Modus und Löschoption.\n\nAnzeigecache: dwl_catalog_<URL-Hash>, 24 Stunden. Updatecache: dwl_catalog_<URL-Hash>_updates, zwölf Stunden, unabhängig bei WordPress-Updateprüfungen gelesen. Beide haben _last (48 Stunden) und _retry (15 Minuten); die bestehende gemeinsame Schlüsselregistrierung deckt beide ab. Frische Paketfreigabe umgeht diese Caches. Kein neuer Cronjob und kein dauerhaft gespeicherter Updater-Schlüssel. Letzt-Host-Bereinigung entfernt beide Cachefamilien."
+      }
+    },
+    "CONVENTIONS": {
+      "en": {
+        "title": "Release conventions",
+        "body": "The component uses semantic three-part versions: feature additions increase the minor version; compatible fixes increase patch; breaking bootstrap/data/API changes require a documented compatibility plan and major version decision. Before 1.0, minor versions may change integration behavior only with clear migration instructions. Minimum increases require an explicit decision; they are not part of automatic integration.\n\nBefore a host release compare current Library/updater/footer versions, data ownership, locales and supported platforms; preserve current host code and its updater. Refresh only the approved catalog and source records. Verify dependencies and installed versions, then hashes, original package identity, current icons and dated stars. Installation never overwrites an existing directory and activation remains separate. Third-party dependency code is never copied.\n\nKeep public documentation on the shared source in `docs/content.json` and runtime history in `lib/history.json`; generate matching FAQ/readmes/changelogs. English category order is New, Improved, Fixed, Misc; German Neu, Verbessert, Behoben, Sonstiges. The full available history is included; unknown old release dates are not invented. Before publication verify current GitHub rules and private reporting in each host repository, and run the actual shipped ZIP through the test checklist. No publication is performed by these tools.\n\nMaintain synchronized English/German documentation and user-facing language. Use the words plugin conventions, consistent standard or shared foundation for necessary public process references. Internal working records do not enter public exports.\n\nCurrent banner artwork adapts the already approved catalog layout and original product icons; it introduces no new logo. Screenshots are a low-priority supplement."
+      },
+      "de": {
+        "title": "Release-Konventionen",
+        "body": "Die Komponente verwendet dreiteilige Versionen: neue Funktionen erhöhen Minor, kompatible Fixes Patch. Inkompatible Bootstrap-/Daten-/API-Änderungen benötigen einen dokumentierten Kompatibilitätsplan und eine Major-Entscheidung. Vor 1.0 dürfen Minor-Versionen das Einbindungsverhalten nur mit klaren Migrationshinweisen ändern. Höhere Mindestversionen brauchen eine ausdrückliche Entscheidung; sie sind kein automatischer Integrationsschritt.\n\nVor Host-Releases aktuelle Library-/Updater-/Footer-Stände, Datenzuordnung, Sprachen und Plattformen abgleichen; aktuellen Host-Code und eigenen Updater erhalten. Nur freigegebenen Katalog und Quellenstände aktualisieren. Abhängigkeiten und installierte Versionen, dann Hashes, Originalpaket-Identität, aktuelle Icons und datierte Sterne prüfen. Installation überschreibt keine vorhandenen Verzeichnisse; Aktivierung bleibt separat. Code fremder Abhängigkeiten wird niemals übernommen.\n\nGemeinsame öffentliche Inhalte in `docs/content.json`, Laufzeitverlauf in `lib/history.json` pflegen; entsprechende FAQ/Readmes/Changelogs generieren. EN-Kategorien New, Improved, Fixed, Misc; DE Neu, Verbessert, Behoben, Sonstiges. Alle vier vorhandenen Versionen stehen im Verlauf; unbekannte frühere Release-Daten werden nicht erfunden. Vor Veröffentlichung aktuelle GitHub-Regeln und privaten Meldeweg je Host prüfen und das tatsächliche Auslieferungs-ZIP durch die Testliste führen. Die Werkzeuge veröffentlichen nichts.\n\nDokumentation EN/DE synchron halten. Öffentliche Prozessbezüge bei Bedarf als Plugin-Konventionen, einheitlicher Standard oder gemeinsame Grundlage formulieren. Interne Arbeitsunterlagen nicht öffentlich exportieren.\n\nDer aktuelle Banner leitet sich aus dem bereits freigegebenen Kataloglayout und Original-Produkt-Icons ab, ohne neues Logo. Screenshots bleiben eine Ergänzung niedriger Priorität."
+      }
+    },
+    "TESTING": {
+      "en": {
+        "title": "Testing",
+        "body": "Use disposable staging installations, never production. Test WordPress 6.4 baseline and the current stable target with supported PHP; native filesystem installation and representative FTP/SSH hosts. Test the actual final runtime ZIP embedded in the selected host.\n\n1. Activate a single host, then old/new hosts in both orders; one elected compatible runtime and one tab. Skip incompatible higher versions and incomplete copies without a fatal error.\n2. Test English, de_DE and de_DE_formal, including locale switches, notice, settings, validation/package failures and neutral catalog descriptions. Inspect the host domain and translation extraction.\n3. Without optional online retrieval, rendering must make no remote requests. Test trusted sources, valid empty catalogs, rejection, cache/backoff and fresh approval failure. Hiding preserves protection and updates.\n4. Install approved original archives, activate separately, retain existing plugin directories. Exercise missing/inactive dependencies, network scopes and own updater precedence. Test native update from an older installed version.\n5. Test oversized compressed main files, total expansion limits, invalid paths, symlinks, duplicates, identity and hashes; failures should not exhaust memory. Check normal and failed temporary cleanup.\n6. Deactivate without data loss. Uninstall with another installed inactive host, then the final host with deletion off/on. Preserve foreign options, plugins and content. Test network settings, all-network cleanup and new sites.\n7. Use keyboard and screenreader checks for labels/focus, open/close/Escape/focus return in changelog, narrow layouts and adequate contrast. Check browser/PHP logs.\n\nCommercial builder fixtures do not establish licensed builder compatibility. Complete real builder and host feature tests in their own staging projects before host publication. Screenshots do not block release."
+      },
+      "de": {
+        "title": "Tests",
+        "body": "Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basis und aktuellen stabilen Zielstand mit unterstütztem PHP prüfen; native Dateisystem-Installation und repräsentative FTP-/SSH-Hosts. Tatsächliches finales Laufzeit-ZIP im ausgewählten Host testen.\n\n1. Einzelhost und alte/neue Hosts in beiden Reihenfolgen aktivieren: eine kompatible Laufzeit, ein Tab. Inkompatible höhere Versionen und unvollständige Kopien ohne Fatal Error überspringen.\n2. Englisch, de_DE und de_DE_formal einschließlich Locale-Wechsel, Hinweis, Einstellungen, Katalog-/Paketfehler und neutraler Beschreibungen prüfen. Host-Domain und Textextraktion kontrollieren.\n3. Ohne optionale Online-Abfrage keine entfernten Aufrufe beim Rendern. Quellen, leeren Katalog, Ablehnung, Cache/Backoff und fehlgeschlagene frische Freigabe testen. Ausblenden erhält Schutz und Updates.\n4. Originalarchive installieren, separat aktivieren, vorhandene Plugin-Verzeichnisse erhalten. Fehlende/inaktive Abhängigkeiten, Netzwerkkontext und eigener Updater. Nativen Updateweg von älterer Version testen.\n5. Übergroße komprimierte Hauptdateien, Gesamtgröße, unsichere Pfade, Symlinks, Duplikate, Identität und Hash prüfen; Fehler ohne Speichererschöpfung. Temporäre Bereinigung bei Erfolg/Fehler kontrollieren.\n6. Deaktivierung ohne Datenverlust. Deinstallation mit anderem installierten inaktiven Host, dann letztem Host mit Löschoption aus/an. Fremde Optionen, Plugins und Inhalte erhalten. Netzwerkeinstellungen, alle Netzwerke und neue Websites testen.\n7. Tastatur-/Screenreaderprüfung für Labels/Fokus, Dialog öffnen/schließen/Escape/Fokusrückgabe, schmale Ansicht und Kontrast. Browser-/PHP-Logs prüfen.\n\nBuilder-Fixtures belegen keine Kompatibilität mit Lizenzinstallationen. Echte Builder und Host-Funktionen vor Host-Veröffentlichung in deren Projekten prüfen. Screenshots blockieren keinen Release."
+      }
+    },
+    "GLOSSARY": {
+      "en": {
+        "title": "Glossary",
+        "body": "| English | German informal/formal (neutral unless noted) |\n|---|---|\n| host plugin | Host-Plugin |\n| Library | Library |\n| catalog | Katalog |\n| approved release | freigegebenes Release |\n| network activation | Netzwerkaktivierung |\n| GitHub Stars | GitHub-Sterne |\n| Changelog | Änderungsverlauf |\n| You already use … | Du nutzt bereits … / Sie nutzen bereits … |\n\nPublic process references: plugin conventions / Plugin-Konventionen; consistent standard / einheitlicher Standard; shared foundation / gemeinsame Grundlage."
+      },
+      "de": {
+        "title": "Begriffsverzeichnis",
+        "body": "| Englisch | Deutsch Du/Sie (neutral, sofern nicht angegeben) |\n|---|---|\n| host plugin | Host-Plugin |\n| Library | Library |\n| catalog | Katalog |\n| approved release | freigegebenes Release |\n| network activation | Netzwerkaktivierung |\n| GitHub Stars | GitHub-Sterne |\n| Changelog | Änderungsverlauf |\n| You already use … | Du nutzt bereits … / Sie nutzen bereits … |\n\nÖffentliche Prozessbezüge: Plugin-Konventionen / plugin conventions; einheitlicher Standard / consistent standard; gemeinsame Grundlage / shared foundation."
+      }
+    },
+    "VALIDATION": {
+      "en": {
+        "title": "Release validation · 0.6.0",
+        "body": "Checked on 6 October 2026: the revised 0.6.0 catalog contains 17 unique approved plugins, 15 current local original icons and two subdued text fallbacks. QuickNav 5, Builder 7, Purify 3, Manage Content 4; multiple memberships do not duplicate cards.\n\n182 catalog/series/source/dependency/package assertions pass on WordPress 6.4 and 7.1.2 sites and a WordPress 6.7 network. These include old-reader compatibility, duplicate/unknown/inconsistent membership refusal, removal of website-host catalog sources and missing/inactive/active Lite dependencies. 33 cache/provider assertions pass; native single and bulk background updates retain fresh approval and checksum refusal. Browser checks cover both languages, JavaScript on/off, all 17 cards and 15 local icons, 19 badges, dual membership filtering, Enter/search/reset and mobile layout.\n\nPHP execution uses 8.4.5; Library minimums remain WordPress 6.4 / PHP 8.0. Real target-plugin behavior, FTP/SSH, PHP 8.0 execution and host repository reporting configuration remain host checks. Earlier 310 assertions describe the original 0.6.0 delivery, not additional checks of this revision. No host or canonical updater source is overwritten. The public central JSON is published in the Library repository; online retrieval remains optional and initially off."
+      },
+      "de": {
+        "title": "Release-Prüfung · 0.6.0",
+        "body": "Geprüft am 6. Oktober 2026: Der überarbeitete Katalog von 0.6.0 enthält 17 eindeutige freigegebene Plugins, 15 aktuelle lokale Originalicons und zwei dezente Text-Fallbacks. QuickNav 5, Builder 7, Purify 3, Inhalte verwalten 4; Mehrfachzuordnungen erzeugen keine doppelten Karten.\n\n182 Katalog-/Serien-/Quellen-/Abhängigkeits-/Paketprüfungen bestehen auf WordPress 6.4 und 7.1.2 sowie in einem WordPress-6.7-Netzwerk. Dazu gehören Kompatibilität älterer Leser, Ablehnung doppelter/unbekannter/widersprüchlicher Serien, Entfernung der Websitehosts als Katalogquellen und fehlende/inaktive/aktive Lite-Abhängigkeiten. 33 Cache-/Providerprüfungen bestehen; native Einzel- und Sammelupdates im Hintergrund erhalten frische Freigabe und Prüfsummenprüfung. Browserprüfungen umfassen beide Sprachen, JavaScript an/aus, alle 17 Karten und 15 lokalen Icons, 19 Badges, Mehrfachserienfilter, Enter/Suche/Zurücksetzen und mobile Darstellung.\n\nAusgeführt mit PHP 8.4.5; Mindeststände bleiben WordPress 6.4 / PHP 8.0. Tatsächliches Verhalten der Zielplugins, FTP/SSH, PHP-8.0-Ausführung und Meldekonfiguration der Host-Repositories bleiben Host-Prüfungen. Frühere 310 Assertions beziehen sich auf die ursprüngliche 0.6.0-Lieferung und sind keine zusätzlichen Prüfungen dieser Überarbeitung. Keine Host- oder kanonische Updaterquelle überschrieben. Das zentrale öffentliche JSON wird im Library-Repository veröffentlicht; Online-Abfragen bleiben optional und initial aus."
+      }
+    },
+    "ASSETS": {
+      "en": {
+        "title": "Assets and provenance",
+        "body": "The Library code and its generated assets use GPL-2.0-or-later; see [LICENSE](../LICENSE). Copyright 2026 David Decker — DECKERWEB.\n\nFifteen catalog PNG icons are original deckerweb plugin artwork fetched from their public repositories. Exact repository commit, source path and SHA-256 are recorded per plugin in [Catalog sources](CATALOG-SOURCES-0.6.0.json); published ZIP identity and hashes are recorded separately in the same file. Oxygen QuickNav and Shortcode Item Updated use local subdued-color text fallbacks because no suitable original icon was found.\n\nEnglish and German 1280 × 640 banners reuse this existing catalog layout and its approved artwork, with editable SVG sources and PNG derivatives under assets-github. Arial/Helvetica are system-font references, not bundled font files. No stock artwork or commercial builder code is included. The artwork depicts no new plugin identity or logo. Icons and banners are delivered locally; rendering does not contact GitHub."
+      },
+      "de": {
+        "title": "Grafiken und Herkunft",
+        "body": "Library-Code und generierte Grafiken stehen unter GPL-2.0-or-later; siehe [LICENSE](../LICENSE). Copyright 2026 David Decker — DECKERWEB.\n\nFünfzehn PNG-Katalogicons sind originale deckerweb-Plugin-Grafiken aus ihren öffentlichen Repositories. Repository-Commit, Quellpfad und SHA-256 sind je Plugin in den [Katalogquellen](CATALOG-SOURCES-0.6.0.json) festgehalten; veröffentlichte ZIP-Identität und Hashes stehen separat in derselben Datei. Oxygen QuickNav und Shortcode Item Updated verwenden lokale Texte auf dezenten Hintergrundfarben, weil kein geeignetes Originalicon gefunden wurde.\n\nDie englischen und deutschen Banner mit 1280 × 640 Pixeln verwenden die bestehende Kataloggestaltung und freigegebene Grafiken; editierbare SVG-Quellen und PNG-Ableitungen liegen unter assets-github. Arial/Helvetica sind Systemschrift-Verweise, keine mitgelieferten Schriftdateien. Keine Stockgrafiken oder kommerzieller Builder-Code werden mitgeliefert. Die Grafiken führen keine neue Plugin-Identität und kein neues Logo ein. Icons und Banner sind lokal eingebunden; ihre Darstellung kontaktiert GitHub nicht."
+      }
+    },
+    "SERIES": {
+      "en": {
+        "title": "Series and catalog filters",
+        "body": "Explicit product families use the optional series_memberships list: quicknav, builder, purify and manage-content. The legacy series field remains a primary membership for older hosts; new readers accept scalar-only metadata too. Unknown, duplicate or inconsistent memberships are rejected atomically. Names do not determine membership. The catalog contains 17 unique plugins: QuickNav 5, Builder 7, Purify 3, Manage Content 4. The four content plugins belong to both Builder and Manage Content; Plugin Submenu Mover belongs to Builder. Brand Admin Schemes and Daily Scripture remain independent. Each card appears once and carries all relevant badges.\n\nFilters remain combinable with search and Fits my installation. All clears only the series; Reset filters clears every filter. Controls work without JavaScript, use GET and support keyboard/network contexts. Categories and original icons remain unchanged; no persistent selection or additional sorting."
+      },
+      "de": {
+        "title": "Serien und Katalogfilter",
+        "body": "Produktfamilien werden ausdrücklich über die optionale Liste series_memberships zugeordnet: quicknav, builder, purify und manage-content. Das ältere Feld series bleibt als Hauptzuordnung für ältere Hosts erhalten; neue Leser akzeptieren auch Metadaten mit alleiniger Einzelzuordnung. Unbekannte, doppelte oder widersprüchliche Zuordnungen werden vollständig abgelehnt. Namen bestimmen die Zugehörigkeit nicht. Der Katalog enthält 17 eindeutige Plugins: QuickNav 5, Builder 7, Purify 3, Inhalte verwalten 4. Die vier Inhaltsplugins gehören zu Builder und Inhalte verwalten; Plugin Submenu Mover zu Builder. Brand Admin Schemes und Daily Scripture bleiben eigenständig. Jede Karte erscheint einmal und zeigt alle passenden Badges.\n\nSerienfilter bleiben mit Suche und „Passt zu meiner Installation“ kombinierbar. „Alle“ hebt nur die Serie auf; „Filter zurücksetzen“ löscht sämtliche Filter. GET-Bedienelemente funktionieren ohne JavaScript, per Tastatur und im Netzwerk-Kontext. Kategorien und Originalicons bleiben erhalten; keine dauerhaft gespeicherte Auswahl und keine zusätzliche Sortierung."
+      }
+    },
+    "VALIDATION-0.4.0": {
+      "en": {
+        "title": "Release validation · 0.4.0",
+        "body": "Checked on 5 October 2026 against disposable WordPress installations. Library requirements remain WordPress 6.4 and PHP 8.0; no host minimum was raised.\n\n- 70 integration assertions: capabilities, nonces, sources, approval, caches, dependencies and host updater preservation.\n- 54 catalog/package assertions: all 14 approved release archives and twelve current local original icons; two generated fallbacks.\n- 11 network assertions, 34 final-host lifecycle assertions across single-site and multisite, six additional multiple-network assertions and an actual newly created site.\n- 13 localization, lifecycle setting, history and bounded-memory assertions, including oversized compressed main files under a 64 MiB PHP memory limit.\n- Six mixed-version election scenarios, including legacy registration first and incompatible, incomplete or corrupted higher copies.\n- 11 end-to-end assertions around a real WordPress Plugin_Upgrader installation/update and separate activation in disposable fixtures.\n- 12 integration-tool assertions for preservation, idempotence, archive purity and conflicting host minima.\n- Actual WordPress 6.4, 6.7 and current stable 7.1.2 run on PHP 8.4.5. The current-version database was upgraded normally. Informal/formal German and locale switching work on both endpoint versions.\n- Browser review on WordPress 7.1.2: fourteen cards, twelve local icons, GitHub stars, keyboard dialog, focus containment/return, Escape, narrow layout and no JavaScript errors.\n\nThe final archives are checked for integrity, public naming and development/private files; the runtime archive is extracted into a disposable host and loaded on WordPress 6.4 and 7.1.2. Frontend requests keep the runtime unloaded.\n\nLimits: PHP 8.0 was not available for an execution test. WordPress 6.4 emits an existing core deprecation on PHP 8.4. Commercial builder fixtures do not prove actual licensed-builder compatibility. FTP/SSH transports, full host features, assistive-technology review and private GitHub reporting configuration remain host publication checks. A Library build does not change repository settings or publish host releases. See [Testing](TESTING.md) and [Security](../SECURITY.md)."
+      },
+      "de": {
+        "title": "Release-Prüfung · 0.4.0",
+        "body": "Am 5. Oktober 2026 in isolierten WordPress-Installationen geprüft. Mindestanforderungen bleiben WordPress 6.4 und PHP 8.0; keine Host-Mindestanforderung wurde erhöht.\n\n- 70 Integrationsprüfungen: Rechte, Nonces, Quellen, Freigabe, Caches, Voraussetzungen und Erhalt eigener Host-Updater.\n- 54 Katalog-/Paketprüfungen: alle 14 freigegebenen Release-Archive und zwölf aktuelle lokale Originalicons; zwei generierte Ersatzicons.\n- Elf Netzwerkprüfungen, 34 Letzt-Host-Lebenszyklusprüfungen auf Einzelwebsite und Multisite, sechs zusätzliche Mehrnetzwerkprüfungen sowie eine tatsächlich neu angelegte Website.\n- 13 Prüfungen zu Übersetzungen, Löschoption, Verlauf und begrenztem Speicherbedarf, darunter übergroße komprimierte Hauptdateien bei 64 MiB PHP-Speicherlimit.\n- Sechs Szenarien zur gemeinsamen Versionswahl, einschließlich zuerst geladener alter Registrierung und inkompatibler, unvollständiger oder beschädigter höherer Kopien.\n- Elf Ablaufprüfungen rund um echte Installation/Update mit dem WordPress Plugin_Upgrader und separate Aktivierung in isolierten Testplugins.\n- Zwölf Werkzeugprüfungen zu Codeerhalt, wiederholter Integration, Paketinhalt und widersprüchlichen Host-Mindestanforderungen.\n- Tatsächliche WordPress-Versionen 6.4, 6.7 und die aktuelle stabile 7.1.2 auf PHP 8.4.5. Die Datenbank der aktuellen Version wurde regulär aktualisiert. Du/Sie und Sprachwechsel funktionieren auf beiden Eckversionen.\n- Browserprüfung auf WordPress 7.1.2: 14 Karten, zwölf lokale Icons, GitHub-Sterne, Tastaturdialog, Fokusbegrenzung und -rückgabe, Escape, schmale Darstellung und keine JavaScript-Fehler.\n\nDie fertigen Archive werden auf Integrität, öffentliche Benennung und Entwicklungs-/interne Dateien geprüft; das Laufzeitarchiv wird in einen isolierten Host entpackt und auf WordPress 6.4 und 7.1.2 geladen. Im Frontend bleibt die Laufzeit ungeladen.\n\nGrenzen: PHP 8.0 stand für einen Ausführungstest nicht zur Verfügung. WordPress 6.4 meldet unter PHP 8.4 eine bestehende Core-Deprecation. Builder-Testplugins ersetzen keinen Test mit tatsächlichen lizenzierten Buildern. FTP/SSH, vollständige Host-Funktionen, Prüfung mit assistiven Technologien und die private GitHub-Meldekonfiguration bleiben Prüfungen vor der jeweiligen Host-Veröffentlichung. Ein Library-Build ändert keine Repository-Einstellungen und veröffentlicht keine Host-Releases. Siehe [Tests](TESTING-de.md) und [Sicherheit](../SECURITY-de.md)."
+      }
+    },
+    "CATALOG": {
+      "en": {
+        "title": "Online catalog and independent updates",
+        "body": "Enable the optional online catalog in Settings → deckerweb Library (network settings in Multisite). The public catalog is available at `https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json`. This address is prefilled; online retrieval remains optional and off by default. Only HTTPS JSON sources under raw.githubusercontent.com/deckerweb are accepted.\n\nThe display cache lasts 24 hours, shared by all embedded hosts in the current site/network. A request after expiry refreshes it; low-traffic sites have no guaranteed refresh time. Refresh catalog performs a manual check. Installed-plugin update checks use an independent 12-hour cache; native manual force checks bypass it. Neither interval overrides WordPress scheduling. Cached valid metadata remains available for up to 48 hours on failure, with a 15-minute retry delay. Installation/update approval always requires a successful fresh read. A valid empty catalog withdraws all offers; an invalid catalog cannot approve a package.\n\nThe public document keeps schema_version: 1 and plugins, adding catalog_revision, generated_at and requires_library. Revision tracks approved metadata independently of Library code. Runtime checks reject an unsupported Library minimum. Existing entry fields, approvals, repository/ZIP identity, platform and dependency metadata, series and checksums remain mandatory. No remote executable code or icons are loaded; artwork stays local to the embedded component.\n\nPrepare a candidate on the operator machine with tools/refresh-catalog.py --output NEW_DIRECTORY --revision REVISION. It reads only repositories already approved in the bundled catalog, checks stable release ZIP identity and hashes, and writes review.json. A server-only DECKERWEB_CATALOG_GITHUB_TOKEN is optional; never distribute it. Review localized text, dependency/network requirements and icon changes. Export the exact reviewed candidate with tools/approve-catalog.py CANDIDATE DESTINATION --sha256 REVIEWED_HASH. Both tools stop before publication. Publish the approved JSON separately to the chosen endpoint; retain older revisions for rollback. A plugin release alone never grants approval.\n\nRead the source record and [Updater integration](UPDATER.md). Existing installed hosts retain their own Update URI and authentication behavior.\n\nKeep the schema-1 endpoint compatible for existing hosts. Do not increase requires_library merely because a newer host includes a newer component. If a future metadata format requires incompatible values, provide a compatible older feed until those hosts can migrate; this prevents the catalog from blocking its own host update.\n\nSeries metadata is additive: series retains a legacy primary membership (quicknav, builder or purify), while series_memberships lists all explicit memberships, including manage-content. Older readers can keep using the primary field. A plugin appears once in the catalog and in every matching series filter."
+      },
+      "de": {
+        "title": "Online-Katalog und unabhängige Updates",
+        "body": "Den optionalen Online-Katalog unter Einstellungen → deckerweb Library aktivieren (in Multisite Netzwerkeinstellungen). Der öffentliche Katalog liegt unter `https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json`. Diese Adresse ist vorausgefüllt; Online-Abfragen bleiben optional und standardmäßig ausgeschaltet. Erlaubt sind ausschließlich HTTPS-JSON-Quellen unter raw.githubusercontent.com/deckerweb.\n\nDer Anzeigecache gilt 24 Stunden, gemeinsam für alle eingebundenen Hosts auf der Website beziehungsweise im Netzwerk. Eine Anfrage nach Ablauf aktualisiert ihn; wenig besuchte Websites haben keinen garantierten Zeitpunkt. „Katalog aktualisieren“ prüft manuell. Updateprüfungen installierter Plugins nutzen einen unabhängigen Zwölf-Stunden-Cache; native manuelle Zwangsprüfungen umgehen ihn. Beide Intervalle ersetzen keine WordPress-Zeitplanung. Bei Ausfall bleiben gültige Metadaten bis zu 48 Stunden verfügbar, mit 15 Minuten Wiederholungsabstand. Installation/Update erfordern immer einen erfolgreichen frischen Freigabeabruf. Ein gültiger leerer Katalog zieht alle Angebote zurück; ein ungültiger Katalog kann kein Paket freigeben.\n\nDas öffentliche Dokument behält schema_version: 1 und plugins; catalog_revision, generated_at und requires_library ergänzen es. Die Revision kennzeichnet freigegebene Metadaten unabhängig vom Library-Code. Nicht unterstützte Library-Mindeststände werden abgelehnt. Eintragsfelder, Freigaben, Repository-/ZIP-Identität, Plattform- und Abhängigkeitsdaten, Serien und Prüfsummen bleiben verbindlich. Kein entfernter ausführbarer Code und keine entfernten Icons; Grafiken bleiben lokal in der Komponente.\n\nEinen Kandidaten auf dem Betreiberrechner mit tools/refresh-catalog.py --output NEUER_ORDNER --revision REVISION vorbereiten. Das Werkzeug liest nur im mitgelieferten Katalog freigegebene Repositories, prüft stabile Release-ZIPs und Hashes und schreibt review.json. Optionaler Schlüssel DECKERWEB_CATALOG_GITHUB_TOKEN bleibt ausschließlich auf dem Betreiberrechner/Server; niemals ausliefern. Übersetzte Texte, Abhängigkeiten, Netzwerkanforderungen und Iconänderungen prüfen. Den exakt geprüften Kandidaten mit tools/approve-catalog.py KANDIDAT ZIEL --sha256 GEPRUEFTER_HASH exportieren. Beide Werkzeuge stoppen vor Veröffentlichung. Freigegebenes JSON separat am ausgewählten Endpunkt veröffentlichen; ältere Revisionen zum Zurücksetzen erhalten. Ein Plugin-Release allein erteilt keine Freigabe.\n\nQuellennachweis und [Updater-Einbindung](UPDATER-de.md) lesen. Installierte Hosts behalten eigene Update URI und Authentifizierung.\n\nDen Schema-1-Endpunkt für bestehende Hosts kompatibel halten. requires_library nicht allein erhöhen, weil ein neuerer Host eine neuere Komponente enthält. Wenn künftige Metadaten inkompatible Werte benötigen, bis zur Host-Migration einen kompatiblen älteren Feed bereitstellen; der Katalog darf sein eigenes Host-Update nicht blockieren.\n\nSerienmetadaten werden ergänzend geführt: series erhält eine ältere Hauptzuordnung (quicknav, builder oder purify), series_memberships enthält alle ausdrücklichen Mitgliedschaften einschließlich manage-content. Ältere Leser können weiter das Hauptfeld verwenden. Ein Plugin erscheint einmal im Katalog und unter jedem passenden Serienfilter."
+      }
+    },
+    "UPDATER": {
+      "en": {
+        "title": "Optional public updater bridge",
+        "body": "The installed host remains the owner of its updater. The Library never silently replaces its Update URI handler. Public catalog callbacks are optional; private repositories keep their authentication provider and are not part of this public feed.\n\nThe authoring kit includes integration/updater-v2.1-dev.3-catalog-provider.patch, based on the separately maintained V2.1-dev.3 engine. Apply it to that exact source in a reviewed integration; it is an integration patch, not a newly released canonical updater. It adds SUPPORTS_CATALOG_PROVIDER and optional release_provider/package_provider constructor options. Both callbacks are required together and rejected in private mode. Existing public/private behavior, local artwork, detail dialogs and source selection are retained when the options are absent.\n\nAfter requiring the Library bootstrap and the host updater, guard configuration with defined(Updater::class . '::SUPPORTS_CATALOG_PROVIDER'). For public hosts merge deckerweb_library_updater_options_v1(HOST_MAIN_FILE, EXACT_REPOSITORY_URL) into existing updater options without replacing the host translator or artwork. The lazy callbacks work even before Library election. No updater hooks are registered by the bridge; the host still registers its own updater once.\n\nRelease callback: (repository URL, plugin basename, fresh boolean) returns false to retain direct GitHub mode while the online catalog is disabled or a capable runtime is unavailable, null to refuse an unapproved/unverified release, or validated release data. Refusal never falls back to GitHub while online catalog mode is active. The normal provider uses the separate update cache. Package callback: (repository URL, plugin basename, offered package URL) returns a bounded, hash-verified temporary archive or WP_Error after fresh approval and dependency checks. An earlier handled download is preserved, and another host/plugin is never intercepted.\n\nThe patch does not change any existing host, private credential, repository or released updater artifact. Integrate against the current updater project source and test mixed copies and native single/bulk updates before a host release. Do not apply it blindly to another updater version.\n\nMerge integration/updater-catalog-translations.json into the host translator resources; the component also ships these source messages in its host-domain bundle. Private-mode configuration errors remain developer-facing. The exact tested base source hash and patch handoff are recorded separately for operator review."
+      },
+      "de": {
+        "title": "Optionale Anbindung öffentlicher Updater",
+        "body": "Der installierte Host bleibt für seinen Updater verantwortlich. Die Library ersetzt dessen Update-URI-Handler nie stillschweigend. Öffentliche Katalog-Callbacks sind optional; private Repositories behalten ihren Auth-Provider und gehören nicht in diesen öffentlichen Feed.\n\nDas Kit enthält integration/updater-v2.1-dev.3-catalog-provider.patch, basierend auf der separat gepflegten Engine V2.1-dev.3. Auf genau diesen Quellstand in einer geprüften Integration anwenden; dies ist ein Integrationspatch, kein neuer kanonischer Updater-Release. Er ergänzt SUPPORTS_CATALOG_PROVIDER und optionale Konstruktoroptionen release_provider/package_provider. Beide Callbacks werden zusammen benötigt und im privaten Modus abgelehnt. Ohne diese Optionen bleiben öffentliches/privates Verhalten, lokale Grafiken, Detaildialoge und Quellauswahl erhalten.\n\nNach Laden des Library-Bootstraps und des Host-Updaters die Konfiguration mit defined(Updater::class . '::SUPPORTS_CATALOG_PROVIDER') absichern. Bei öffentlichen Hosts deckerweb_library_updater_options_v1(HOST_HAUPTDATEI, EXAKTE_REPOSITORY_URL) in bestehende Updateroptionen übernehmen; Host-Übersetzer und Grafiken erhalten. Die verzögert ausgeführten Callbacks funktionieren schon vor der Library-Wahl. Die Brücke registriert keine Updater-Hooks; der Host registriert weiterhin genau einen eigenen Updater.\n\nRelease-Callback: (Repository-URL, Plugin-Basename, fresh-Boolean) liefert false für den bisherigen direkten GitHub-Modus bei deaktiviertem Online-Katalog beziehungsweise fehlender geeigneter Laufzeit, null zur Ablehnung nicht freigegebener/ungeprüfter Releases oder validierte Release-Daten. Im aktiven Online-Modus führt eine Ablehnung nie zum GitHub-Fallback. Normale Abrufe verwenden den unabhängigen Updatecache. Paket-Callback: (Repository-URL, Plugin-Basename, angebotene Paket-URL) liefert ein begrenztes hashgeprüftes temporäres Archiv oder WP_Error nach frischer Freigabe und Abhängigkeitsprüfung. Bereits behandelte Downloads bleiben erhalten; andere Hosts/Plugins werden nicht abgefangen.\n\nDer Patch ändert keine bestehenden Hosts, privaten Zugangsdaten, Repositories oder ausgelieferten Updater-Artefakte. Gegen den aktuellen Updater-Projektstand integrieren und Mischkopien sowie native Einzel-/Bulk-Updates vor einem Host-Release prüfen. Nicht blind auf andere Updater-Versionen anwenden.\n\nIntegration/updater-catalog-translations.json in die Host-Übersetzerressourcen übernehmen; die Komponente liefert diese Nachrichten ebenfalls im Host-Domain-Paket. Konfigurationsfehler im privaten Modus richten sich an Entwickler. Exakter geprüfter Basis-Hash und Patch-Übergabe werden separat zur Betreiberprüfung festgehalten."
+      }
+    },
+    "VALIDATION-0.5.0": {
+      "en": {
+        "title": "Release validation · 0.5.0",
+        "body": "5 October 2026. This feature update adds series metadata and filtering and the approved Purify Elementor entry; Library minimum versions and lifecycle rules remain unchanged.\n\n33 focused assertions pass on each of WordPress 6.4 and 7.1.2 site installations and 32 on a WordPress 6.7 network installation (98 in total). They cover eight badges, explicit family membership, independent plugins, legacy metadata, malformed series rejection, empty/unknown filters, search and compatibility combinations, reset, network requirements and EN/de_DE/de_DE_formal controls. Browser checks cover actual form submission, Enter preserving the chosen family, All preserving search, resets, empty states, mobile layout and the five-version accessible history. Both JavaScript-enabled and disabled modes are checked.\n\nFinal kit/runtime archives are integrity-checked and the runtime archive is loaded on WordPress 6.4 and 7.1.2. The previous security, lifecycle and package baseline remains documented in [0.4.0 validation](VALIDATION-0.4.0.md). Execution uses PHP 8.4.5; PHP 8.0, licensed builders, FTP/SSH and repository private-reporting settings remain host publication checks. No host development source was overwritten and no repository was published.\n\nFinal 0.5.0 catalog correction: fifteen entries, five QuickNav, two Builder, one Purify and seven unassigned. Purify Elementor 1.0.1 original ZIP digest matches GitHub; package identity, local icon and missing/inactive/active Elementor guards checked. Earlier 0.5.0 packages are archived separately. Final catalog filters are rechecked on both endpoint cores and multisite."
+      },
+      "de": {
+        "title": "Release-Prüfung · 0.5.0",
+        "body": "5. Oktober 2026. Diese Erweiterung ergänzt Serienmetadaten und Filter und den freigegebenen Purify-Elementor-Eintrag; Library-Mindestversionen und Lebenszyklusregeln bleiben erhalten.\n\nJe 33 gezielte Prüfungen bestehen auf WordPress 6.4 und 7.1.2 als Einzelwebsite sowie 32 auf WordPress 6.7 als Netzwerk (98 insgesamt). Geprüft: acht Badges, ausdrückliche Serienzuordnung, eigenständige Plugins, ältere Metadaten, Ablehnung fehlerhafter Serien, leere/unbekannte Filter, Kombinationen mit Suche und Voraussetzungen, Zurücksetzen, Netzwerkanforderungen und Bedienelemente in EN/de_DE/de_DE_formal. Browserprüfungen umfassen tatsächliches Absenden, Enter mit Erhalt der Serie, „Alle“ mit Erhalt der Suche, Zurücksetzen, leere Ergebnisse, mobile Darstellung und den zugänglichen Verlauf mit fünf Versionen. Geprüft mit aktiviertem und deaktiviertem JavaScript.\n\nFertige Kit-/Laufzeitarchive werden auf Integrität geprüft und das Laufzeitarchiv auf WordPress 6.4 und 7.1.2 geladen. Die vorherige Sicherheits-, Lebenszyklus- und Paketprüfung bleibt in der [Prüfung von 0.4.0](VALIDATION-0.4.0-de.md) dokumentiert. Ausführung mit PHP 8.4.5; PHP 8.0, lizenzierte Builder, FTP/SSH und private GitHub-Meldekonfiguration bleiben Host-Prüfungen vor Veröffentlichung. Keine Host-Entwicklungsquelle wurde überschrieben und kein Repository veröffentlicht.\n\nAbschließende 0.5.0-Katalogkorrektur: 15 Einträge, fünf QuickNav, zwei Builder, ein Purify und sieben ohne Serie. Original-ZIP-Prüfsumme von Purify Elementor 1.0.1 stimmt mit GitHub überein; Paketidentität, lokales Icon und Schutz bei fehlendem/inaktivem/aktivem Elementor geprüft. Vorherige 0.5.0-Pakete separat archiviert. Finale Katalogfilter auf beiden Core-Eckversionen und Multisite erneut geprüft."
+      }
+    }
+  },
+  "intro": {
+    "en": "A small embedded catalog for directly distributed WordPress plugins. Only explicitly approved GitHub releases appear under Plugins → Add New → deckerweb. This is an embedding kit, not a standalone installable plugin.\n\nRequirements: WordPress 6.4+, PHP 8.0+, ZipArchive for installation. GPL-2.0-or-later. Only direct-distribution builds; exclude Library and deckerweb Updater entirely from WordPress.org builds.",
+    "de": "Ein kleiner eingebetteter Katalog für direkt vertriebene WordPress-Plugins. Unter Plugins → Plugin hinzufügen → deckerweb erscheinen nur ausdrücklich freigegebene GitHub-Releases. Dies ist ein Einbindungspaket, kein separat installierbares Plugin.\n\nAnforderungen: WordPress 6.4+, PHP 8.0+, ZipArchive für Installation. GPL-2.0-or-later. Nur Direktvertrieb; Library und deckerweb Updater vollständig aus WordPress.org-Builds ausschließen."
+  },
+  "integration": {
+    "en": "See [integration](docs/INTEGRATION.md), [data](docs/DATA.md), [tests](docs/TESTING.md) and [security](SECURITY.md).\n\n[Series and filters](docs/SERIES.md).",
+    "de": "Siehe [integration](docs/INTEGRATION-de.md), [data](docs/DATA-de.md), [tests](docs/TESTING-de.md) und [security](SECURITY-de.md).\n\n[Serien und Filter](docs/SERIES-de.md)."
+  },
+  "full_faq": [
+    {
+      "en": "Getting started",
+      "de": "Einstieg",
+      "items": [
+        {
+          "question": {
+            "en": "Where is the catalog?",
+            "de": "Wo ist der Katalog?"
+          },
+          "answer": {
+            "en": "Open Plugins → Add New → deckerweb. WordPress.org remains the default view.",
+            "de": "Plugins → Plugin hinzufügen → deckerweb öffnen. WordPress.org bleibt die Standardansicht."
+          }
+        },
+        {
+          "question": {
+            "en": "Does it contact external services?",
+            "de": "Werden externe Dienste kontaktiert?"
+          },
+          "answer": {
+            "en": "Local browsing does not. Installation downloads the selected GitHub release. Optional online approval updates contact the configured first-party HTTPS endpoint; its server sees the requesting IP. No site URL, user ID, inventory or telemetry is sent.",
+            "de": "Die lokale Ansicht nicht. Installation lädt das ausgewählte GitHub-Release. Optionale Online-Freigaben kontaktieren die konfigurierte eigene HTTPS-Quelle; deren Server sieht die anfragende IP-Adresse. Website-URL, Nutzer-ID, Plugin-Inventar und Telemetrie werden nicht übertragen."
+          }
+        }
+      ]
+    },
+    {
+      "en": "Requirements and installation",
+      "de": "Voraussetzungen und Installation",
+      "items": [
+        {
+          "question": {
+            "en": "Why is an installation unavailable?",
+            "de": "Warum ist eine Installation nicht verfügbar?"
+          },
+          "answer": {
+            "en": "Check the card for missing or inactive dependencies and WordPress/PHP requirements. Prerequisites are not installed automatically; activation is separate.",
+            "de": "Die Karte zeigt fehlende oder inaktive Abhängigkeiten sowie WordPress-/PHP-Anforderungen. Voraussetzungen werden nicht automatisch installiert; Aktivierung ist ein eigener Schritt."
+          }
+        },
+        {
+          "question": {
+            "en": "Can I hide it?",
+            "de": "Kann der Katalog ausgeblendet werden?"
+          },
+          "answer": {
+            "en": "Use Settings → deckerweb Library (Network Settings on Multisite). Hiding discovery preserves dependency checks and existing managed updates. Disable online catalog retrieval separately to stop its requests.",
+            "de": "Unter Einstellungen → deckerweb Library (bei Multisite in den Netzwerkeinstellungen). Ausblenden erhält Abhängigkeitsprüfungen und bereits eingerichtete Updates. Online-Abrufe separat abschalten."
+          }
+        }
+      ]
+    },
+    {
+      "en": "Catalog and update checks",
+      "de": "Katalog und Updateprüfungen",
+      "items": [
+        {
+          "question": {
+            "en": "Does each plugin release require a new Library?",
+            "de": "Benötigt jeder Plugin-Release eine neue Library?"
+          },
+          "answer": {
+            "en": "No. An approved online catalog revision can carry a newer plugin version independently of the embedded component.",
+            "de": "Nein. Eine freigegebene Online-Katalogrevision kann eine neuere Plugin-Version unabhängig von der eingebetteten Komponente enthalten."
+          }
+        },
+        {
+          "question": {
+            "en": "Why can the catalog and updater show different freshness?",
+            "de": "Warum können Katalog und Updater unterschiedlich aktuell sein?"
+          },
+          "answer": {
+            "en": "Discovery is cached for 24 hours; installed-plugin updates use an independent cache in the WordPress cycle. Package actions recheck approval freshly.",
+            "de": "Die Kataloganzeige wird 24 Stunden gespeichert; installierte Plugins nutzen einen unabhängigen Cache im WordPress-Zyklus. Paketaktionen prüfen die Freigabe frisch."
+          }
+        },
+        {
+          "question": {
+            "en": "Do users need a GitHub token?",
+            "de": "Benötigen Nutzer einen GitHub-Token?"
+          },
+          "answer": {
+            "en": "Public catalog and release downloads do not require user tokens. Optional operator credentials remain outside distributed files.",
+            "de": "Öffentlicher Katalog und Release-Downloads benötigen keine Nutzer-Tokens. Optionale Betreiberzugangsdaten bleiben außerhalb ausgelieferter Dateien."
+          }
+        }
+      ]
+    },
+    {
+      "en": "Shared settings and data",
+      "de": "Gemeinsame Einstellungen und Daten",
+      "items": [
+        {
+          "question": {
+            "en": "What happens when I remove a host?",
+            "de": "Was passiert beim Entfernen eines Hosts?"
+          },
+          "answer": {
+            "en": "Another installed host, even inactive, preserves shared data. The final host removes temporary Library data and caches. Settings remain unless optional deletion was enabled. Installed plugins and their content remain. Hosts must call the supplied uninstall contract.",
+            "de": "Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktiviert. Der letzte Host bereinigt temporäre Library-Daten und Caches. Einstellungen bleiben ohne ausdrücklich aktivierte Löschoption erhalten. Installierte Plugins und Inhalte bleiben bestehen. Hosts müssen den mitgelieferten Uninstall-Vertrag aufrufen."
+          }
+        },
+        {
+          "question": {
+            "en": "Does it support Multisite?",
+            "de": "Wird Multisite unterstützt?"
+          },
+          "answer": {
+            "en": "Library settings are shared per network and the introduction is per user. Network actions require appropriate capabilities and dependencies. Bricks QuickNav retains its per-site restriction pending separate host work; Daily follows its published release policy.",
+            "de": "Library-Einstellungen gelten je Netzwerk, der Einführungshinweis je Nutzer. Netzwerkaktionen erfordern passende Berechtigungen und Abhängigkeiten. Bricks QuickNav behält bis zur separaten Host-Anpassung seine Website-Beschränkung; Daily folgt den veröffentlichten Release-Regeln."
+          }
+        },
+        {
+          "question": {
+            "en": "How do I report a vulnerability?",
+            "de": "Wie wird eine Sicherheitslücke gemeldet?"
+          },
+          "answer": {
+            "en": "Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.",
+            "de": "Im Host-Plugin-Repository Security → Advisories → Report a vulnerability verwenden. Host- und Library-Version nennen; Sicherheitsdetails nicht in öffentlichen Issues posten. Hosts müssen den privaten Meldeweg vor Veröffentlichung aktivieren."
+          }
+        }
+      ]
+    }
+  ]
+}

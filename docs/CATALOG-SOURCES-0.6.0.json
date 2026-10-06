@@ -1,0 +1,308 @@
+{
+  "plugins": [
+    {
+      "slug": "brand-admin-schemes",
+      "release_id": 403924409,
+      "tag": "v0.18.0",
+      "published_at": "2026-10-05T16:38:48Z",
+      "asset": "brand-admin-schemes-0.18.0.zip",
+      "download_url": "https://github.com/deckerweb/brand-admin-schemes/releases/download/v0.18.0/brand-admin-schemes-0.18.0.zip",
+      "sha256": "cfec8ce2c484063b89cae1783fe35ba6c5f8bb5df171b70e7f676f80cc27c12b",
+      "description_header": "Brand colors for your WordPress admin, login, toolbar and browser tabs. Use Core Framework, Bricks, ACSS or your own palette.",
+      "icon": {
+        "commit": "a9a1c0da350c3e8cfc0eec5db8ab1d923bd4ba17",
+        "path": "assets-github/icon-128x128.png",
+        "sha256": "7e6be96553a52a790ee2eadaacfebd150138e63181a160ec984881468f760f60"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "breakdance-quicknav",
+      "release_id": 204545447,
+      "tag": "v1.0.0",
+      "published_at": "2025-03-08T18:46:03Z",
+      "asset": "breakdance-quicknav.zip",
+      "download_url": "https://github.com/deckerweb/breakdance-quicknav/releases/download/v1.0.0/breakdance-quicknav.zip",
+      "sha256": "8c319c59a25da2ea500eb7691fa0e1c3b7b335f6cc0afffd211e3efae5f60b71",
+      "description_header": "Adds a quick-access navigator (aka QuickNav) to the WordPress Admin Bar (Toolbar). It allows easy access to Breakdance Templates, Headers, Footers, Global Blocks, Popups, and Pages edited with Breakdance, along with some other essential settings.",
+      "icon": {
+        "commit": "4c3a767d41a4fda40a4c3a969364d020a85f7598",
+        "path": "assets/icon-128x128.png",
+        "sha256": "4fc130ec858caef34a40ae6209f7351aaa9e337a5327d53f7b4c6a11cc9c409b"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 3,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "daily-scripture",
+      "release_id": 399866335,
+      "tag": "v0.16.4",
+      "published_at": "2026-09-30T08:55:04Z",
+      "asset": "daily-scripture-0.16.4.zip",
+      "download_url": "https://github.com/deckerweb/daily-scripture/releases/download/v0.16.4/daily-scripture-0.16.4.zip",
+      "sha256": "b702f85c0ce06bf3ac4352be82b1a6296c73d36aa83a61668f5050af5cd0dca4",
+      "description_header": "Daily verses from Die Losungen and Bible 2.0, plus selected passages from four local Bible editions. Includes live previews, ten layouts, flexible typography, Gutenberg, Elementor, Bricks, shortcodes, a compact dashboard widget and JSON settings transfer.",
+      "icon": {
+        "commit": "58a4655b62210eec278539e88c62f256905fca6a",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "d44520ea223b01bde328c05766c95601af7f1b418af64e94d2ef1828d3871ee2"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "bricks-quicknav",
+      "release_id": 218005641,
+      "tag": "v1.0.0",
+      "published_at": "2025-05-12T14:21:10Z",
+      "asset": "bricks-quicknav.zip",
+      "download_url": "https://github.com/deckerweb/bricks-quicknav/releases/download/v1.0.0/bricks-quicknav.zip",
+      "sha256": "23a6bc16a4023783790efebc2a07ed2e59d11f5eadf32f6a19919981e4c8b33d",
+      "description_header": "Adds a quick-access navigator (aka QuickNav) to the WordPress Admin Bar (Toolbar). It allows easy access to Bricks Templates and Pages edited with Bricks, along with some other essential settings.",
+      "icon": {
+        "commit": "94068962c05f4127e0dd8fb30150fbfd0c182139",
+        "path": "assets/icon-128x128.png",
+        "sha256": "63076fbd8a5084206587ba44010bf9a2e0c098e432741d5e55de7fd19fc10269"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 7,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "oxygen-quicknav",
+      "release_id": 204575705,
+      "tag": "v1.0.0",
+      "published_at": "2025-03-09T06:40:49Z",
+      "asset": "oxygen-quicknav.zip",
+      "download_url": "https://github.com/deckerweb/oxygen-quicknav/releases/download/v1.0.0/oxygen-quicknav.zip",
+      "sha256": "3cd3a70d578d75fb5786b54e9dc5df60771cd63d9785234fe12eba19d218be3c",
+      "description_header": "Adds a quick-access navigator to the WordPress Admin Bar (Toolbar). It allows easy access to Oxygen Templates, Headers, Footers, Components, and Pages edited with Oxygen, along with some other essential settings. For Oxygen 6+ only!",
+      "icon": {
+        "fallback": "OQ",
+        "background": "#eef1f8"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "advanced-scripts-quicknav",
+      "release_id": 401279599,
+      "tag": "v1.2.0",
+      "published_at": "2026-10-01T19:23:21Z",
+      "asset": "advanced-scripts-quicknav-1.2.0.zip",
+      "download_url": "https://github.com/deckerweb/advanced-scripts-quicknav/releases/download/v1.2.0/advanced-scripts-quicknav-1.2.0.zip",
+      "sha256": "d007d56f73ac5199bf49c1a39f6ba4f784c45107ec0e614920e7dcfa05c39556",
+      "description_header": "Reach your Advanced Scripts through personal favorites, status lists and folders in the WordPress toolbar.",
+      "icon": {
+        "commit": "33f9ac7feeea2df8ac6725ea4727530eac2aa79d",
+        "path": "assets/icon-128x128.png",
+        "sha256": "6b9f0d0f1174b798e056c0f19ef09d8278aa59f93ffcd388e1fc5fe5d81a6009"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "quick-edit-featured-image",
+      "release_id": 212026989,
+      "tag": "v1.3.0",
+      "published_at": "2025-04-12T18:48:29Z",
+      "asset": "quick-edit-featured-image.zip",
+      "download_url": "https://github.com/deckerweb/quick-edit-featured-image/releases/download/v1.3.0/quick-edit-featured-image.zip",
+      "sha256": "ffb0ecd37a16b73c93316ec4154c1d36bdf4d0a9f3b1b6c81762ff1a8e42d9b5",
+      "description_header": "This lightweight plugin allows to set and remove a Featured Image via the Quick Edit action screen in Post Type List Tables within the WordPress Admin. Out of the box this works for Posts, Pages and any public Post Type which supports Featured Images.",
+      "icon": {
+        "commit": "c8658c193372b933a80ebc8cb444b7266764de26",
+        "path": "assets/icon-128x128.png",
+        "sha256": "fb38c5cba2b101f8cacdc10b4c45a3ec36b9762ad5c843e8096ee8207b20c9be"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 4,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "shortcode-item-updated",
+      "release_id": 208943841,
+      "tag": "v2.2.0",
+      "published_at": "2025-03-28T12:48:06Z",
+      "asset": "shortcode-item-updated.zip",
+      "download_url": "https://github.com/deckerweb/shortcode-item-updated/releases/download/v2.2.0/shortcode-item-updated.zip",
+      "sha256": "a300cb4dc9c437b1aa126e7148266ea52f080072ed60565fee5117d608776d4a",
+      "description_header": "Shortcode for showing the last updated date (and/or time) of an item of a post type.",
+      "icon": {
+        "fallback": "SU",
+        "background": "#f4f0e9"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 4,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "builder-list-pages",
+      "release_id": 401153957,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-01T16:35:09Z",
+      "asset": "builder-list-pages-1.1.0.zip",
+      "download_url": "https://github.com/deckerweb/builder-list-pages/releases/download/v1.1.0/builder-list-pages-1.1.0.zip",
+      "sha256": "dc556a3d3d852995a13e8706dce0cf7e35930ad9c9426f9e5f85529b55f84b87",
+      "description_header": "Find pages by their page builder. Recognize builders at a glance, filter multiple builders and keep working in familiar WordPress lists.",
+      "icon": {
+        "commit": "102f2d43121f094c488e9ebb047f62f9f2d58b32",
+        "path": "assets/icon-128x128.png",
+        "sha256": "4469f80b055281e94206f97c1840ce8743315763279c58cd8e646683ec341ce8"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 3,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "multisite-toolbar-additions",
+      "release_id": 401081357,
+      "tag": "v4.0.0",
+      "published_at": "2026-10-01T15:02:50Z",
+      "asset": "multisite-toolbar-additions-4.0.0.zip",
+      "download_url": "https://github.com/deckerweb/multisite-toolbar-additions/releases/download/v4.0.0/multisite-toolbar-additions-4.0.0.zip",
+      "sha256": "10a90b082caa87cd2cdf9cb90c8902e5392ba1048711d215f7f0dba23be1d5f3",
+      "description_header": "Useful network and site shortcuts, plus a configurable WordPress menu in the Toolbar.",
+      "icon": {
+        "commit": "f032089c4a5fd6c04554e7818583bab5124ac9b2",
+        "path": "assets/icon-128x128.png",
+        "sha256": "34b76a02a055dbe14de7d9375e4353416403f46d38e588f76047aacb71a311f3"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 12,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "post-author-taxonomy",
+      "release_id": 401041585,
+      "tag": "v1.3.0",
+      "published_at": "2026-10-01T14:20:18Z",
+      "asset": "post-author-taxonomy.zip",
+      "download_url": "https://github.com/deckerweb/post-author-taxonomy/releases/download/v1.3.0/post-author-taxonomy.zip",
+      "sha256": "0f2906ecf8b53c9c76ba5e87affc14f44d78fb21918a6c6469130a96ae79f770",
+      "description_header": "Authors as a public taxonomy: multiple authors, local photos, profiles and flexible shortcodes for your builder or theme.",
+      "icon": {
+        "commit": "35efb9ba7edbb728fb363ddc3aa37e531401e1c8",
+        "path": "assets/icon-128x128.png",
+        "sha256": "281167a763f86d5531edeed56ae74f7e62e7ee6cf1a3dda57e1be81bf2ebd744"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 4,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "portfolio-content",
+      "release_id": 401030810,
+      "tag": "v1.2.0",
+      "published_at": "2026-10-01T14:10:09Z",
+      "asset": "portfolio-content-1.2.0.zip",
+      "download_url": "https://github.com/deckerweb/portfolio-content/releases/download/v1.2.0/portfolio-content-1.2.0.zip",
+      "sha256": "0345809e35b5a72dadb745a9818cfe293d2b6fdb8113c3c9dbad23e96cbbeb62",
+      "description_header": "Portfolio projects, categories and tags with a quick start, project template and native block patterns.",
+      "icon": {
+        "commit": "74b06041f7818aa7d592ad14c96108f0995909e7",
+        "path": "assets/icon-128x128.png",
+        "sha256": "e69660bfe1ba031d8247200d435564a42f2c4248cb5f460521603e11c18b613a"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 6,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "builder-shortcode-extras",
+      "release_id": 401161327,
+      "tag": "v1.2.0",
+      "published_at": "2026-10-01T16:43:28Z",
+      "asset": "builder-shortcode-extras.zip",
+      "download_url": "https://github.com/deckerweb/builder-shortcode-extras/releases/download/v1.2.0/builder-shortcode-extras.zip",
+      "sha256": "03e7d7888774e13fa223f8dea84e8356698bd03d4c626ec919ed3826196ab6d4",
+      "description_header": "Small dynamic helpers for your WordPress website. Find, configure and copy useful shortcodes.",
+      "icon": {
+        "commit": "41c6aeaa0ede882fe58667d48f9ad5772b432bfd",
+        "path": "assets/icon-128x128.png",
+        "sha256": "24a3f4301f46d202a74d37edab38efa82b829694877731ab8e1db06c054cd2e5"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 14,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "plugin-submenu-mover",
+      "release_id": 208918275,
+      "tag": "v1.4.0",
+      "published_at": "2025-03-28T10:43:24Z",
+      "asset": "plugin-submenu-mover.zip",
+      "download_url": "https://github.com/deckerweb/plugin-submenu-mover/releases/download/v1.4.0/plugin-submenu-mover.zip",
+      "sha256": "5a37182f212e72ffa0b061eaeb156e307e1a464245a2a0ecdeb9f02b07422a64",
+      "description_header": "Move some plugin's single settings pages from top-level position to submenu under Tools, Settings or were appropriate. Result: cleaner admin screen, less confusing.",
+      "icon": {
+        "commit": "8d2c762785f2a88a244559dcf90f2513ebdfe3a9",
+        "path": "assets/icon-128x128.png",
+        "sha256": "3514004d94a9ce57c84478917dc3f7c0c4278b937cc66932e2328e744bfb1051"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 2,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "purify-elementor",
+      "release_id": 402169656,
+      "tag": "v1.0.1",
+      "published_at": "2026-10-02T21:33:51Z",
+      "asset": "purify-elementor-1.0.1.zip",
+      "download_url": "https://github.com/deckerweb/purify-elementor/releases/download/v1.0.1/purify-elementor-1.0.1.zip",
+      "sha256": "93de1d6c158e9ca2519a7303d6d039f35054c7306962a9cbd21906ea986ab5bb",
+      "description_header": "Targeted Elementor advertising cleanup with optional AI, news and locked widget controls.",
+      "icon": {
+        "commit": "779c94f251e0ccbc3a28c98448487c0ebf6ed677",
+        "path": "assets/artwork/icon-en-128x128.png",
+        "sha256": "3f82b4724f4e2adefc40c30eeead3d20b234deedc9baf7bd9eef1eceffe9965a"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "purify-wpcode-lite",
+      "release_id": 210324893,
+      "tag": "v1.0.0",
+      "published_at": "2025-04-04T10:03:03Z",
+      "asset": "purify-wpcode-lite.zip",
+      "download_url": "https://github.com/deckerweb/purify-wpcode-lite/releases/download/v1.0.0/purify-wpcode-lite.zip",
+      "sha256": "0ed97af66c5d79ce2bb37167107cd095c1ea518d7ba8b7151483153f6a619009",
+      "description_header": "Cleanup the (free) Lite version of WPCode to make it usable. Purify the admin screens to speed up your daily coding, ahem, work :-)",
+      "icon": {
+        "commit": "fa4d5a86d99f1792e5382002b2931b80b2ade4d3",
+        "path": "assets/icon-128x128.png",
+        "sha256": "3018ee2bdde53cc7cfb335fee3ba54e4f9180d5b8a51fb569df193bdf1c28aaf"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 2,
+      "stars_checked_at": "2026-10-06"
+    },
+    {
+      "slug": "purify-wpforms-lite",
+      "release_id": 210547296,
+      "tag": "v1.0.0",
+      "published_at": "2025-04-05T09:27:45Z",
+      "asset": "purify-wpforms-lite.zip",
+      "download_url": "https://github.com/deckerweb/purify-wpforms-lite/releases/download/v1.0.0/purify-wpforms-lite.zip",
+      "sha256": "dad2802cd988e1abd5ac7684d14f85b0232cb80ac83b155379e68fb02fd2a2c0",
+      "description_header": "Cleanup the (free) Lite version of WPForms to make it usable. Purify the admin screens to speed up your daily form building :-)",
+      "icon": {
+        "commit": "0aa2e24c299cbbaac0bf8609d09cf9a578f29834",
+        "path": "assets/icon-128x128.png",
+        "sha256": "81dccb37abd39cb981b7a05313320751eb9de08a2b8aabafb3f24e5fa1f5ed59"
+      },
+      "api_release_verified_on": "2026-10-06",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06"
+    }
+  ]
+}

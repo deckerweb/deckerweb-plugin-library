@@ -1,0 +1,10 @@
+{
+  "The approved release could not be verified.": {
+    "de_DE": "Der freigegebene Release konnte nicht geprüft werden.",
+    "de_DE_formal": "Der freigegebene Release konnte nicht geprüft werden."
+  },
+  "The approved release changed. Refresh updates first.": {
+    "de_DE": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren.",
+    "de_DE_formal": "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+  }
+}

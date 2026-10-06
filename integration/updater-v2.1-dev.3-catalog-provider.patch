@@ -1,0 +1,97 @@
+--- a/deckerweb-github-release-updater-v2.php
++++ b/deckerweb-github-release-updater-v2.php
+@@ -46,6 +46,11 @@
+ 	public const IMPLEMENTATION_VERSION = '2.1.0-dev.3';
+ 	public const SUPPORTS_PRIVATE_REPOSITORIES = true;
+ 	public const SUPPORTS_HOST_TRANSLATIONS = true;
++ public const SUPPORTS_CATALOG_PROVIDER = true;
++ /** @var \Closure|null Explicit public release provider; false retains direct GitHub mode. */
++ private ?\Closure $release_provider = null;
++ /** @var \Closure|null Fresh approval and package verifier for public catalog releases. */
++ private ?\Closure $package_provider = null;
+ 	/** Host-owned translator, evaluated in the current locale at output time. */
+ 	private ?\Closure $translate;
+ 	private bool $private;
+@@ -122,6 +127,12 @@
+ 		if ( isset( $options['private'] ) && ! is_bool( $options['private'] ) ) { throw new \InvalidArgumentException( $this->text( 'Private mode must be boolean.' ) ); }
+ 		if ( isset( $options['auth'] ) && ! $options['auth'] instanceof AuthProvider ) { throw new \InvalidArgumentException( $this->text( 'Invalid authentication provider.' ) ); }
+ 		$this->private = $options['private'] ?? false;
++  if ( isset( $options['release_provider'] ) || isset( $options['package_provider'] ) ) {
++   if ( $this->private || ! is_callable( $options['release_provider'] ?? null ) || ! is_callable( $options['package_provider'] ?? null ) ) { throw new \InvalidArgumentException( 'Public catalog callbacks require both providers and cannot be used in private mode.' ); }
++   $this->release_provider = \Closure::fromCallable( $options['release_provider'] );
++   $this->package_provider = \Closure::fromCallable( $options['package_provider'] );
++  }
++
+ 		$this->auth = $options['auth'] ?? null;
+ 		$this->file = \plugin_basename( $main_file );
+ 		$this->slug = \dirname( $this->file );
+@@ -196,7 +207,7 @@
+ 		\add_filter( 'update_plugins_github.com', array( $this, 'update' ), 10, 4 );
+ 		\add_filter( 'site_transient_update_plugins', array( $this, 'cached_icons' ) );
+ 		\add_filter( 'plugins_api', array( $this, 'information' ), 20, 3 );
+-		if ( $this->private ) { \add_filter( 'upgrader_pre_download', array( $this, 'download' ), 10, 4 ); }
++		if ( $this->private || $this->release_provider ) { \add_filter( 'upgrader_pre_download', array( $this, 'download' ), 10, 4 ); }
+ 		\add_filter( 'upgrader_source_selection', array( $this, 'select_source' ), 20, 4 );
+ 	}
+ 
+@@ -204,9 +215,17 @@
+ 	 * Fetch the latest published release and choose its installable ZIP.
+ 	 * Caches successful responses for 30 minutes and failures for 10 minutes.
+ 	 *
++	 * @param bool $fresh Require fresh catalog approval before a package operation.
+ 	 * @return array{version:string,package:string,notes:string,published:string}|null
+ 	 */
+-	private function release(): ?array {
++	private function release( bool $fresh = false ): ?array {
++  if ( ! $this->private && $this->release_provider ) {
++   try { $release = ( $this->release_provider )( $this->repo, $this->file, $fresh ); } catch ( \Throwable $error ) { return null; }
++   if ( false !== $release ) {
++    if ( ! is_array( $release ) || ! is_string( $release['version'] ?? null ) || ! preg_match( '/^\d+\.\d+(?:\.\d+)?(?:-[a-zA-Z0-9.-]+)?$/D', $release['version'] ) || ! is_string( $release['package'] ?? null ) || ! preg_match( '~^https://github\.com/' . preg_quote( substr( $this->repo, 19 ), '~' ) . '/releases/download/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+\.zip$~D', $release['package'] ) || ! is_string( $release['sha256'] ?? null ) || ! preg_match( '/^[a-f0-9]{64}$/D', $release['sha256'] ) ) { return null; }
++    return $release;
++   }
++  }
+ 		$auth_headers = $this->auth_headers();
+ 		if ( $this->private && null === $auth_headers ) { return null; }
+ 		$cached = \get_site_transient( $this->cache );
+@@ -308,8 +327,29 @@
+ 		return $upgrader instanceof \Plugin_Upgrader && true === $upgrader->bulk;
+ 	}
+ 
+-	/** Stream only this plugin's private offered package. Credentials never follow redirects. */
++	/**
++ * Verify and download only this host's current offered package.
++ *
++ * @param mixed $reply Earlier handled download or false.
++ * @param string $package Exact offered package URL.
++ * @param mixed $upgrader Native WordPress upgrader instance.
++ * @param array $hook_extra Native plugin/update context.
++ * @return mixed Earlier result, verified temporary ZIP or controlled WP_Error.
++ * Private credentials never follow redirects; public catalog packages require fresh approval.
++ */
+ 	public function download( $reply, $package, $upgrader, $hook_extra ) {
++  if ( ! $this->private && $this->release_provider ) {
++   if ( false !== $reply ) { return $reply; }
++   if ( ! $this->is_update_context( $upgrader, $hook_extra ) ) { return $reply; }
++   $release = $this->release( true );
++   if ( ! $release ) { return new \WP_Error( 'ddw_ghru_catalog', $this->text( 'The approved release could not be verified.' ) ); }
++   if ( isset( $release['sha256'] ) ) {
++    if ( $package !== $release['package'] ) { return new \WP_Error( 'ddw_ghru_catalog', $this->text( 'The approved release changed. Refresh updates first.' ) ); }
++    try { return ( $this->package_provider )( $this->repo, $this->file, $package ); } catch ( \Throwable $error ) { return new \WP_Error( 'ddw_ghru_catalog', $this->text( 'The approved release could not be verified.' ) ); }
++   }
++   return $reply;
++  }
++
+ 		if ( ! $this->private || false !== $reply || ! $this->is_update_context( $upgrader, $hook_extra ) ) { return $reply; }
+ 		$release = $this->release();
+ 		$headers = $this->auth_headers();
+@@ -366,8 +406,8 @@
+ 			'version'      => $release['version'],
+ 			'url'          => $this->repo . '/releases',
+ 			'package'      => $release['package'],
+-			'requires'     => (string) ( $plugin_data['RequiresWP'] ?? '' ),
+-			'requires_php' => (string) ( $plugin_data['RequiresPHP'] ?? '' ),
++			'requires'     => (string) ( $release['requires_wp'] ?? $plugin_data['RequiresWP'] ?? '' ),
++			'requires_php' => (string) ( $release['requires_php'] ?? $plugin_data['RequiresPHP'] ?? '' ),
+ 			'icons'        => $this->icons,
+ 		);
+ 	}

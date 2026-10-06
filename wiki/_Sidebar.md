@@ -1,0 +1,13 @@
+## deckerweb Plugin Library
+
+[English](Home) · [Deutsch](Home-de)
+
+- [INTEGRATION EN](INTEGRATION) · [DE](INTEGRATION-de)
+- [SERIES EN](SERIES) · [DE](SERIES-de)
+- [CATALOG EN](CATALOG) · [DE](CATALOG-de)
+- [FAQ EN](FAQ) · [DE](FAQ-de)
+- [DATA EN](DATA) · [DE](DATA-de)
+- [UPDATER EN](UPDATER) · [DE](UPDATER-de)
+- [CHANGELOG EN](CHANGELOG) · [DE](CHANGELOG-de)
+- [TESTING EN](TESTING) · [DE](TESTING-de)
+- [SECURITY EN](SECURITY) · [DE](SECURITY-de)
