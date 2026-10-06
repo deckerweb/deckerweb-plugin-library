@@ -1,6 +1,6 @@
 # Data and lifecycle
 
-[Deutsch](DATA-de.md)
+[Deutsch](DATA-de)
 
 Settings and managed-install records use `deckerweb_library_settings_v1` and `deckerweb_library_installed_v1` site options (per network on Multisite, regular options on single sites). The settings deletion switch defaults off. Introduction state is the global user-meta key `deckerweb_library_intro_seen_v1`. Settings, records and introduction status are retained by default.
 

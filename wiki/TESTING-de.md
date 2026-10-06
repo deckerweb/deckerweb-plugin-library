@@ -1,6 +1,6 @@
 # Tests
 
-[English](TESTING.md)
+[English](TESTING)
 
 Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basis und aktuellen stabilen Zielstand mit unterstütztem PHP prüfen; native Dateisystem-Installation und repräsentative FTP-/SSH-Hosts. Tatsächliches finales Laufzeit-ZIP im ausgewählten Host testen.
 

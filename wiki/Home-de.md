@@ -2,7 +2,7 @@
 
 [English](Home)
 
-![Library](assets/banner-de.png)
+![Library](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-de.png)
 
 Ein kleiner eingebetteter Katalog für direkt vertriebene WordPress-Plugins. Unter Plugins → Plugin hinzufügen → deckerweb erscheinen nur ausdrücklich freigegebene GitHub-Releases. Dies ist ein Einbindungspaket, kein separat installierbares Plugin.
 

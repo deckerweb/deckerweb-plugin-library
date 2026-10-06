@@ -1,6 +1,6 @@
 # Online catalog and independent updates
 
-[Deutsch](CATALOG-de.md)
+[Deutsch](CATALOG-de)
 
 Enable the optional online catalog in Settings → deckerweb Library (network settings in Multisite). The public catalog is available at `https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json`. This address is prefilled; online retrieval remains optional and off by default. Only HTTPS JSON sources under raw.githubusercontent.com/deckerweb are accepted.
 
@@ -10,7 +10,7 @@ The public document keeps schema_version: 1 and plugins, adding catalog_revision
 
 Prepare a candidate on the operator machine with tools/refresh-catalog.py --output NEW_DIRECTORY --revision REVISION. It reads only repositories already approved in the bundled catalog, checks stable release ZIP identity and hashes, and writes review.json. A server-only DECKERWEB_CATALOG_GITHUB_TOKEN is optional; never distribute it. Review localized text, dependency/network requirements and icon changes. Export the exact reviewed candidate with tools/approve-catalog.py CANDIDATE DESTINATION --sha256 REVIEWED_HASH. Both tools stop before publication. Publish the approved JSON separately to the chosen endpoint; retain older revisions for rollback. A plugin release alone never grants approval.
 
-Read the source record and [Updater integration](UPDATER.md). Existing installed hosts retain their own Update URI and authentication behavior.
+Read the source record and [Updater integration](UPDATER). Existing installed hosts retain their own Update URI and authentication behavior.
 
 Keep the schema-1 endpoint compatible for existing hosts. Do not increase requires_library merely because a newer host includes a newer component. If a future metadata format requires incompatible values, provide a compatible older feed until those hosts can migrate; this prevents the catalog from blocking its own host update.
 

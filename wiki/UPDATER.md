@@ -1,6 +1,6 @@
 # Optional public updater bridge
 
-[Deutsch](UPDATER-de.md)
+[Deutsch](UPDATER-de)
 
 The installed host remains the owner of its updater. The Library never silently replaces its Update URI handler. Public catalog callbacks are optional; private repositories keep their authentication provider and are not part of this public feed.
 

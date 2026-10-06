@@ -1,6 +1,6 @@
 # Fragen nach Themen
 
-[English](FAQ.md)
+[English](FAQ)
 
 ## Einstieg
 

@@ -1,6 +1,6 @@
 # Einbindung
 
-[English](INTEGRATION.md)
+[English](INTEGRATION)
 
 Nur Direktvertriebs-Hosts werden unterstützt. `lib/` in `includes/deckerweb-plugin-library/` des ausdrücklich ausgewählten aktuellen Host-Quellstands kopieren. Eigenen Updater und aktuelle Entwicklungsarbeit erhalten.
 
@@ -26,10 +26,10 @@ Der genaue Host-Basename muss `WP_UNINSTALL_PLUGIN` entsprechen. Dieser Vertrag 
 
 Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.6.0.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.
 
-Siehe [Sicherheit](SECURITY-de.md), [Daten](DATA-de.md), [Tests](TESTING-de.md) und [Release-Konventionen](CONVENTIONS-de.md).
+Siehe [Sicherheit](SECURITY-de), [Daten](DATA-de), [Tests](TESTING-de) und [Release-Konventionen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS-de.md).
 
 Alte Hosts mit 0.1–0.3 können parallel bestehen; deren alter Uninstall-Code erfüllt diesen neuen Vertrag jedoch noch nicht. Alle Host-Einbindungen aktualisieren, bevor nach Entfernen des letzten 0.4-Hosts eine abschließende Bereinigung durch einen alten Host erwartet wird. Alte Host-Dateien werden nicht automatisch verändert.
 
-Für zentralen Feed und optionale Brücke zum bestehenden Updater [Katalog](CATALOG-de.md) und [Updater](UPDATER-de.md) lesen. Aktuelle Host-Entwicklungsquelle erhalten und Nachrichten über deren Textdomain übersetzen.
+Für zentralen Feed und optionale Brücke zum bestehenden Updater [Katalog](CATALOG-de) und [Updater](UPDATER-de) lesen. Aktuelle Host-Entwicklungsquelle erhalten und Nachrichten über deren Textdomain übersetzen.
 
 Beim Ersetzen eines früheren 0.6.0-Builds sämtliche installierten 0.6.0-Kopien gemeinsam austauschen. Gleiche Versionen verwenden den Host-Basename als eindeutige Auswahlregel; sonst kann eine ältere Kopie derselben Version gewinnen. Frühere Pakete archivieren und nach Austausch die Hashes in compatibility.json prüfen.

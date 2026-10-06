@@ -1,6 +1,6 @@
 # Änderungsverlauf
 
-[English](CHANGELOG.md)
+[English](CHANGELOG)
 
 ### 0.6.0 · 2026-10-06
 

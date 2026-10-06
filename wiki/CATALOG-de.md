@@ -1,6 +1,6 @@
 # Online-Katalog und unabhängige Updates
 
-[English](CATALOG.md)
+[English](CATALOG)
 
 Den optionalen Online-Katalog unter Einstellungen → deckerweb Library aktivieren (in Multisite Netzwerkeinstellungen). Der öffentliche Katalog liegt unter `https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json`. Diese Adresse ist vorausgefüllt; Online-Abfragen bleiben optional und standardmäßig ausgeschaltet. Erlaubt sind ausschließlich HTTPS-JSON-Quellen unter raw.githubusercontent.com/deckerweb.
 
@@ -10,7 +10,7 @@ Das öffentliche Dokument behält schema_version: 1 und plugins; catalog_revisio
 
 Einen Kandidaten auf dem Betreiberrechner mit tools/refresh-catalog.py --output NEUER_ORDNER --revision REVISION vorbereiten. Das Werkzeug liest nur im mitgelieferten Katalog freigegebene Repositories, prüft stabile Release-ZIPs und Hashes und schreibt review.json. Optionaler Schlüssel DECKERWEB_CATALOG_GITHUB_TOKEN bleibt ausschließlich auf dem Betreiberrechner/Server; niemals ausliefern. Übersetzte Texte, Abhängigkeiten, Netzwerkanforderungen und Iconänderungen prüfen. Den exakt geprüften Kandidaten mit tools/approve-catalog.py KANDIDAT ZIEL --sha256 GEPRUEFTER_HASH exportieren. Beide Werkzeuge stoppen vor Veröffentlichung. Freigegebenes JSON separat am ausgewählten Endpunkt veröffentlichen; ältere Revisionen zum Zurücksetzen erhalten. Ein Plugin-Release allein erteilt keine Freigabe.
 
-Quellennachweis und [Updater-Einbindung](UPDATER-de.md) lesen. Installierte Hosts behalten eigene Update URI und Authentifizierung.
+Quellennachweis und [Updater-Einbindung](UPDATER-de) lesen. Installierte Hosts behalten eigene Update URI und Authentifizierung.
 
 Den Schema-1-Endpunkt für bestehende Hosts kompatibel halten. requires_library nicht allein erhöhen, weil ein neuerer Host eine neuere Komponente enthält. Wenn künftige Metadaten inkompatible Werte benötigen, bis zur Host-Migration einen kompatiblen älteren Feed bereitstellen; der Katalog darf sein eigenes Host-Update nicht blockieren.
 

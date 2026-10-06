@@ -1,6 +1,6 @@
 # FAQ by topic
 
-[Deutsch](FAQ-de.md)
+[Deutsch](FAQ-de)
 
 ## Getting started
 

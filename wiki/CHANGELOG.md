@@ -1,6 +1,6 @@
 # Changelog
 
-[Deutsch](CHANGELOG-de.md)
+[Deutsch](CHANGELOG-de)
 
 ### 0.6.0 · 2026-10-06
 

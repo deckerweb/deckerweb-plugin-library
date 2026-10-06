@@ -1,6 +1,6 @@
 # Daten und Lebenszyklus
 
-[English](DATA.md)
+[English](DATA)
 
 Einstellungen und Installationszuordnung liegen in den Site Options `deckerweb_library_settings_v1` und `deckerweb_library_installed_v1` (bei Multisite je Netzwerk, sonst normale Optionen). Die Löschoption ist standardmäßig aus. Der Einführungshinweis verwendet den globalen User-Meta-Schlüssel `deckerweb_library_intro_seen_v1`. Einstellungen, Zuordnung und Hinweisstatus bleiben standardmäßig erhalten.
 

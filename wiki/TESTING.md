@@ -1,6 +1,6 @@
 # Testing
 
-[Deutsch](TESTING-de.md)
+[Deutsch](TESTING-de)
 
 Use disposable staging installations, never production. Test WordPress 6.4 baseline and the current stable target with supported PHP; native filesystem installation and representative FTP/SSH hosts. Test the actual final runtime ZIP embedded in the selected host.
 

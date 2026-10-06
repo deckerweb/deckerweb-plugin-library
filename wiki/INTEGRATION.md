@@ -1,6 +1,6 @@
 # Integration
 
-[Deutsch](INTEGRATION-de.md)
+[Deutsch](INTEGRATION-de)
 
 Only direct-distribution hosts are supported. Copy `lib/` to `includes/deckerweb-plugin-library/` in the explicitly selected current host source. Preserve the host's updater and current development work.
 
@@ -26,10 +26,10 @@ Translations use the elected host's header Text Domain (its slug if missing), ne
 
 The Library kit itself is not installable. `deckerweb-plugin-library-runtime-0.6.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
 
-Read [security](SECURITY.md), [data](DATA.md), [tests](TESTING.md) and [release conventions](CONVENTIONS.md).
+Read [security](SECURITY), [data](DATA), [tests](TESTING) and [release conventions](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS.md).
 
 Legacy 0.1–0.3 hosts can coexist, but their old uninstall code does not implement this new contract. Upgrade every host integration before relying on final-host cleanup after the last 0.4 host has been removed. No legacy host files are modified automatically.
 
-For the central feed and optional existing updater bridge, read [Catalog](CATALOG.md) and [Updater](UPDATER.md). Always keep the current host development source and translate component messages through its domain.
+For the central feed and optional existing updater bridge, read [Catalog](CATALOG) and [Updater](UPDATER). Always keep the current host development source and translate component messages through its domain.
 
 When replacing an earlier 0.6.0 build, replace every installed 0.6.0 copy together. Equal versions use the host basename as a deterministic election tie-breaker; an older same-version copy can otherwise win. Archive earlier packages and verify compatibility.json hashes after replacement.

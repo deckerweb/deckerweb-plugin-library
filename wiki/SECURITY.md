@@ -1,6 +1,6 @@
 # Security
 
-[Deutsch](SECURITY-de.md)
+[Deutsch](SECURITY-de)
 
 Report vulnerabilities privately through the repository of the host plugin that embeds this Library: Security → Advisories → Report a vulnerability. No public email address is required. Include host/Library versions, WordPress/PHP versions, reproduction steps and impact; omit credentials and personal data. Do not publish unpatched security details in issues or discussions.
 

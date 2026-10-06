@@ -1,6 +1,6 @@
 # Optionale Anbindung öffentlicher Updater
 
-[English](UPDATER.md)
+[English](UPDATER)
 
 Der installierte Host bleibt für seinen Updater verantwortlich. Die Library ersetzt dessen Update-URI-Handler nie stillschweigend. Öffentliche Katalog-Callbacks sind optional; private Repositories behalten ihren Auth-Provider und gehören nicht in diesen öffentlichen Feed.
 

@@ -1,6 +1,6 @@
 # Series and catalog filters
 
-[Deutsch](SERIES-de.md)
+[Deutsch](SERIES-de)
 
 Explicit product families use the optional series_memberships list: quicknav, builder, purify and manage-content. The legacy series field remains a primary membership for older hosts; new readers accept scalar-only metadata too. Unknown, duplicate or inconsistent memberships are rejected atomically. Names do not determine membership. The catalog contains 17 unique plugins: QuickNav 5, Builder 7, Purify 3, Manage Content 4. The four content plugins belong to both Builder and Manage Content; Plugin Submenu Mover belongs to Builder. Brand Admin Schemes and Daily Scripture remain independent. Each card appears once and carries all relevant badges.
 

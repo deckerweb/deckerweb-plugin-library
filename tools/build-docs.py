@@ -29,3 +29,20 @@ for lang in ['en','de']:
 (wiki/'_Sidebar.md').write_text('## deckerweb Plugin Library\n\n[English](Home) · [Deutsch](Home-de)\n\n'+ '\n'.join('- ['+name+' EN]('+name+') · [DE]('+name+'-de)'for name in ['INTEGRATION','SERIES','CATALOG','FAQ','DATA','UPDATER','CHANGELOG','TESTING','SECURITY'])+'\n')
 # An authoring reference only: external installer components remain excluded from WordPress.org.
 (kit/'readme.txt').write_text('=== deckerweb Plugin Library ===\nRequires at least: 6.4\nRequires PHP: 8.0\nStable tag: '+content['version']+'\nLicense: GPLv2 or later\nLicense URI: https://www.gnu.org/licenses/gpl-2.0.html\n\n== Description ==\n'+content['intro']['en']+'\n\nEmbedded component for direct distribution only; not a standalone WordPress.org submission.\n\n== Installation ==\nSee README.md and docs/INTEGRATION.md.\n\n== Frequently Asked Questions ==\n'+ '\n\n'.join('= '+q['question']['en']+' =\n'+q['answer']['en']for q in content['faq'])+'\n\n== Changelog ==\n'+changes+'\n')
+
+# Wiki routes omit Markdown suffixes; repository-only files keep explicit links.
+repository = 'https://github.com/deckerweb/deckerweb-plugin-library/blob/main/'
+for page in wiki.glob('*.md'):
+ text = page.read_text()
+ def wiki_link(match):
+  label, target = match.groups()
+  if target.startswith(('https://', '#')):
+   return match[0]
+  if target.startswith('assets/'):
+   target = 'https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/' + target
+  elif target.endswith('.md'):
+   name = Path(target).name[:-3]
+   target = name if (wiki / (name + '.md')).exists() else repository + ('docs/' if not target.startswith('../') else '') + Path(target).name
+  return '[' + label + '](' + target + ')'
+ text = re.sub(r'\[([^\]]*)\]\(([^)]+)\)', wiki_link, text)
+ page.write_text(text)

@@ -1,6 +1,6 @@
 # Sicherheit
 
-[English](SECURITY.md)
+[English](SECURITY)
 
 Sicherheitslücken privat über das Repository des einbettenden Host-Plugins melden: Security → Advisories → Report a vulnerability. Keine öffentliche E-Mail-Adresse erforderlich. Host-/Library-Version, WordPress-/PHP-Version, Reproduktion und Auswirkungen nennen; keine Zugangsdaten oder personenbezogenen Inhalte. Ungepatchte Sicherheitsdetails nicht in Issues oder Discussions veröffentlichen.
 
