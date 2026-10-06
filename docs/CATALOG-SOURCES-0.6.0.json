@@ -306,18 +306,22 @@
     },
     {
       "slug": "connect-for-shopware",
-      "status": "preparing",
-      "planned_version": "1.0.0",
-      "release_id": null,
-      "source_commit": "137381adc97521e55755237b7e2df7001cc7cd90",
-      "source_header_version": "0.5.1-dev",
+      "release_id": 404906734,
+      "tag": "v1.0.0",
+      "published_at": "2026-10-06T15:55:53Z",
+      "asset": "connect-for-shopware-1.0.0.zip",
+      "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.0.0/connect-for-shopware-1.0.0.zip",
+      "sha256": "763ca01bbb2f870ff22e16efa68afeb5df479046cb8248fb380c7eee520e4032",
+      "description_header": "Read-only Shopware products for Gutenberg and native Bricks elements.",
       "icon": {
-        "commit": "137381adc97521e55755237b7e2df7001cc7cd90",
+        "commit": "35a35e0a5d1f5d9a80f95eec96ce861302c051c5",
         "path": "assets/brand/icon-128x128.png",
         "sha256": "42e03a43be594ee8167733c267f337ed837b8a9523451cd80c0b2304a155a7a0"
       },
       "api_release_verified_on": "2026-10-06",
-      "note": "User-approved preview only. No release ZIP, hash or package approval exists yet."
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-06",
+      "catalog_revision": "2026-10-06.4"
     }
   ]
 }

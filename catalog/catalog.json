@@ -487,8 +487,7 @@
       "published_at": "2025-04-05T09:27:45Z"
     },
     {
-      "approved": false,
-      "release_status": "preparing",
+      "approved": true,
       "slug": "connect-for-shopware",
       "name": "Connect for Shopware",
       "repository": "deckerweb/connect-for-shopware",
@@ -505,10 +504,13 @@
       ],
       "icon": "assets/icons/connect-for-shopware.png",
       "github_stars": 1,
-      "stars_checked_at": "2026-10-06"
+      "stars_checked_at": "2026-10-06",
+      "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.0.0/connect-for-shopware-1.0.0.zip",
+      "sha256": "763ca01bbb2f870ff22e16efa68afeb5df479046cb8248fb380c7eee520e4032",
+      "published_at": "2026-10-06T15:55:53Z"
     }
   ],
-  "catalog_revision": "2026-10-06.3",
-  "generated_at": "2026-10-06T14:46:37Z",
+  "catalog_revision": "2026-10-06.4",
+  "generated_at": "2026-10-06T18:43:46Z",
   "requires_library": "0.1.0"
 }
