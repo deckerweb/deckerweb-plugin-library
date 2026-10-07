@@ -2,6 +2,29 @@
 
 [English](CHANGELOG)
 
+### 0.8.1 · 2026-10-08
+
+- **Neu:** Katalogserien Werkzeuge und Shop mit rückwärtskompatiblen Metadaten.
+- **Verbessert:** Der mitgelieferte Katalog enthält alle 20 freigegebenen Plugins und ihre aktuellen lokalen Icons.
+- **Verbessert:** Nach unterbrochenen Inline-Aktionen den Plugin-Status prüfen, ohne eine erfolgreiche Aktion zu wiederholen.
+- **Verbessert:** Builder-Laufzeitmarker der aktiven Installation zuordnen und den versionsabhängigen Aktivierungsvertrag von Oxygen QuickNav 2.0 berücksichtigen.
+- **Verbessert:** Pakete, Voraussetzungen und Originalicons von Oxygen QuickNav2.0.0 und Quick Edit Featured Image1.4.0 aktualisiert.
+- **Behoben:** Beim Entfernen des letzten Hosts werden aktuelle Katalog- und Update-Caches ebenso wie ältere Caches bereinigt.
+- **Behoben:** Der aktuelle Deinstallationseinstieg bleibt wirksam, wenn zuvor eine ältere Cleanup-Kopie geladen wurde.
+
+### 0.7.0 · 2026-10-07
+
+- **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.
+- **Verbessert:** Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist.
+
+### 0.6.1 · 2026-10-07
+
+- **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.
+- **Verbessert:** Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library.
+- **Behoben:** Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden.
+- **Behoben:** Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite.
+- **Behoben:** Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten.
+
 ### 0.6.0 · 2026-10-06
 
 - **Neu:** Freigegebene Plugin-Releases können im Online-Katalog erscheinen, ohne die eingebettete Library auszutauschen.

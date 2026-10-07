@@ -16,6 +16,10 @@ Keep the schema-1 endpoint compatible for existing hosts. Do not increase requir
 
 Series metadata is additive: series retains a legacy primary membership (quicknav, builder or purify), while series_memberships lists all explicit memberships, including manage-content. Older readers can keep using the primary field. A plugin appears once in the catalog and in every matching series filter.
 
-Connect for Shopware starts the Connect series as an explicitly approved preview of planned version 1.0.0. Until its stable release ZIP is published and verified, its card is visible with a preparation notice and cannot install, activate or offer an update. There are 18 visible entries and 17 verified package offers. The original icon is bundled locally. Preliminary requirements come from the pinned public development header, not an unverified stable release.
+Daily Scripture uses network_activation=false as the protective legacy policy and network_activation_min_version=1.0.0 as the versioned approval understood by Library 0.6.1. The minimum policy takes precedence in capable readers and checks the installed version; older readers retain their block. Daily 1.0.1 carries the new runtime needed for cold activation beside old copies.
 
-After publication, use tools/refresh-catalog.py --include-preparing --output NEW_DIRECTORY --revision REVISION to review exactly the authorized first stable release 1.0.0. Verify ZIP identity, checksum, final platform requirements and localized text, then publish the approved JSON. No new Library build is needed. The Connect entry uses series_memberships without a legacy series field so older readers do not reject an unknown primary series.
+
+## Catalog revision 2026-10-07.4
+
+20 approved plugins. Redirect Draft Content 0.9.0 joins Manage Content (RDC). Tools for FluentCart 0.9.0 is temporarily unassigned (TFC); Tools and Shop will follow in a later component update. Both entries are accepted by Library 0.6.0 and 0.7.0 and require WordPress 7.1.2/PHP 8.2 as published. Older hosts use RDC/TFC text fallbacks until their local icons are updated. All catalog labels are present and unique. Component release ZIPs remain unchanged.
+

@@ -119,13 +119,13 @@
       "approved": true,
       "slug": "oxygen-quicknav",
       "name": "Oxygen QuickNav",
-      "description": "Quick access to templates, components and settings for Oxygen 6 and newer.",
-      "description_de": "Schneller Zugriff auf Templates, Komponenten und Einstellungen für Oxygen 6 und neuer.",
-      "version": "1.0.0",
+      "description": "Toolbar shortcuts for Oxygen 6+ and Oxygen Classic 4.x content, templates, settings and official add-ons. Settings remain available without an active builder.",
+      "description_de": "Toolbar-Verknüpfungen für Inhalte, Templates, Einstellungen und Hersteller-Addons von Oxygen 6+ und Oxygen Classic 4.x. Einstellungen bleiben ohne aktiven Builder erreichbar.",
+      "version": "2.0.0",
       "repository": "deckerweb/oxygen-quicknav",
       "plugin_file": "oxygen-quicknav/oxygen-quicknav.php",
-      "download_url": "https://github.com/deckerweb/oxygen-quicknav/releases/download/v1.0.0/oxygen-quicknav.zip",
-      "sha256": "3cd3a70d578d75fb5786b54e9dc5df60771cd63d9785234fe12eba19d218be3c",
+      "download_url": "https://github.com/deckerweb/oxygen-quicknav/releases/download/v2.0.0/oxygen-quicknav-2.0.0.zip",
+      "sha256": "8c53e26eb36b6cafb7eb572f5e0b621e474f9e24e4cee86d6150334876d22eb2",
       "requires_wp": "6.7",
       "requires_php": "7.4",
       "category": "Oxygen",
@@ -143,10 +143,12 @@
       "icon_label": "OQN",
       "icon_background": "#eef1f8",
       "series": "quicknav",
-      "published_at": "2025-03-09T06:40:49Z",
+      "published_at": "2026-10-07T22:59:51Z",
       "series_memberships": [
         "quicknav"
-      ]
+      ],
+      "icon": "assets/icons/oxygen-quicknav.png",
+      "dependencies_optional_since_version": "2.0.0-rc.1"
     },
     {
       "approved": true,
@@ -186,15 +188,15 @@
       "approved": true,
       "slug": "quick-edit-featured-image",
       "name": "Quick Edit Featured Image",
-      "description": "Set or replace featured images directly in Quick Edit.",
-      "description_de": "Beitragsbilder direkt über Quick Edit setzen oder austauschen.",
-      "version": "1.3.0",
+      "description": "Set, replace and remove featured images directly in Quick Edit for posts, pages and supported public post types.",
+      "description_de": "Beitragsbilder direkt in Quick Edit für Beiträge, Seiten und unterstützte öffentliche Inhaltstypen setzen, ersetzen und entfernen.",
+      "version": "1.4.0",
       "repository": "deckerweb/quick-edit-featured-image",
       "plugin_file": "quick-edit-featured-image/quick-edit-featured-image.php",
-      "download_url": "https://github.com/deckerweb/quick-edit-featured-image/releases/download/v1.3.0/quick-edit-featured-image.zip",
-      "sha256": "ffb0ecd37a16b73c93316ec4154c1d36bdf4d0a9f3b1b6c81762ff1a8e42d9b5",
+      "download_url": "https://github.com/deckerweb/quick-edit-featured-image/releases/download/v1.4.0/quick-edit-featured-image-1.4.0.zip",
+      "sha256": "2754a60f68b4e7ec64cd202d0cb143454d1f99949a0e10bcb9cfdcfad3449219",
       "requires_wp": "6.7",
-      "requires_php": "7.4",
+      "requires_php": "8.1",
       "category": "Content",
       "dependencies": [],
       "github_stars": 4,
@@ -202,7 +204,7 @@
       "icon": "assets/icons/quick-edit-featured-image.png",
       "icon_label": "QFI",
       "icon_background": "#f0f3f6",
-      "published_at": "2025-04-12T18:48:29Z",
+      "published_at": "2026-10-07T23:02:33Z",
       "series": "builder",
       "series_memberships": [
         "builder",
@@ -565,10 +567,14 @@
       "icon_label": "TFC",
       "icon_background": "#edf2f5",
       "published_at": "2026-10-07T20:00:24Z",
-      "series_memberships": []
+      "series_memberships": [],
+      "series_memberships_v2": [
+        "tools",
+        "shop"
+      ]
     }
   ],
-  "catalog_revision": "2026-10-07.4",
-  "generated_at": "2026-10-07T20:17:04Z",
+  "catalog_revision": "2026-10-08.2",
+  "generated_at": "2026-10-07T23:11:32Z",
   "requires_library": "0.1.0"
 }

@@ -14,7 +14,7 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-**Version:** 0.7.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 0.8.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
@@ -161,6 +161,16 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 0.8.1 · 2026-10-08
+
+- **New:** Tools and Shop catalog series, with backward-compatible metadata.
+- **Improved:** The bundled catalog includes all 20 approved plugins and their current local icons.
+- **Improved:** Check the plugin status after interrupted inline actions without repeating a successful operation.
+- **Improved:** Match builder runtime markers to the active installation and apply the versioned Oxygen QuickNav 2.0 activation contract.
+- **Improved:** Updated Oxygen QuickNav2.0.0 and Quick Edit Featured Image1.4.0 packages, requirements and original icons.
+- **Fixed:** Final-host uninstall removes current catalog and update caches as well as legacy caches.
+- **Fixed:** The current uninstall entry point remains effective when an older cleanup copy was loaded first.
 
 ### 0.7.0 · 2026-10-07
 

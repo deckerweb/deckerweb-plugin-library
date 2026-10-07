@@ -10,6 +10,8 @@ If you found an `includes/deckerweb-plugin-library/` folder inside a plugin, thi
 
 This repository contains the reusable PHP component, catalog, integration examples and documentation. It is also open for developers who want to read the code, reuse it under its license or build their own approach.
 
+Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
+
 Small plugins. Practical improvements.
 
 - [README](README)

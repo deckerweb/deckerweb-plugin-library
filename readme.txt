@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.7.0
+Stable tag: 0.8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,16 @@ Library settings are shared per network. Daily Scripture 1.0.0 and newer support
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 0.8.1 · 2026-10-08
+
+- **Neu:** Katalogserien Werkzeuge und Shop mit rückwärtskompatiblen Metadaten.
+- **Verbessert:** Der mitgelieferte Katalog enthält alle 20 freigegebenen Plugins und ihre aktuellen lokalen Icons.
+- **Verbessert:** Nach unterbrochenen Inline-Aktionen den Plugin-Status prüfen, ohne eine erfolgreiche Aktion zu wiederholen.
+- **Verbessert:** Builder-Laufzeitmarker der aktiven Installation zuordnen und den versionsabhängigen Aktivierungsvertrag von Oxygen QuickNav 2.0 berücksichtigen.
+- **Verbessert:** Pakete, Voraussetzungen und Originalicons von Oxygen QuickNav2.0.0 und Quick Edit Featured Image1.4.0 aktualisiert.
+- **Behoben:** Beim Entfernen des letzten Hosts werden aktuelle Katalog- und Update-Caches ebenso wie ältere Caches bereinigt.
+- **Behoben:** Der aktuelle Deinstallationseinstieg bleibt wirksam, wenn zuvor eine ältere Cleanup-Kopie geladen wurde.
+
 ### 0.7.0 · 2026-10-07
 
 - **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.

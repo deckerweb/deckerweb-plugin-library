@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: deckerweb Library 0.7.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: deckerweb Library 0.8.1\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "%s is installed but inactive. Activate it first."
 msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
@@ -81,6 +81,12 @@ msgstr "Katalog-URL"
 
 msgid "Changelog"
 msgstr "Änderungsverlauf"
+
+msgid "Check status"
+msgstr "Status prüfen"
+
+msgid "Checking status…"
+msgstr "Status wird geprüft…"
 
 msgid "Close"
 msgstr "Schließen"
@@ -319,6 +325,9 @@ msgstr "Neu"
 msgid "No approved plugins match this selection."
 msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
 
+msgid "Not installed. You can try again."
+msgstr "Nicht installiert. Ein erneuter Versuch ist möglich."
+
 msgid "Nov"
 msgstr "Nov"
 
@@ -433,6 +442,9 @@ msgstr "Sep"
 msgid "September"
 msgstr "September"
 
+msgid "Shop"
+msgstr "Shop"
+
 msgid "Show deckerweb under Add Plugins"
 msgstr "deckerweb unter „Plugins hinzufügen“ anzeigen"
 
@@ -453,6 +465,9 @@ msgstr "Sonntag"
 
 msgid "The GitHub release could not be downloaded."
 msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
+
+msgid "The action is still running. Check its status again."
+msgstr "Die Aktion läuft noch. Bitte den Status erneut prüfen."
 
 msgid "The approved release changed. Refresh updates first."
 msgstr "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
@@ -484,6 +499,9 @@ msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt
 msgid "The request could not be completed. Check the plugin status before trying again."
 msgstr "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
 
+msgid "The requirements below describe the offered release."
+msgstr "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
+
 msgid "This catalog requires a newer Library."
 msgstr "Dieser Katalog benötigt eine neuere Library."
 
@@ -501,6 +519,9 @@ msgstr "Do"
 
 msgid "Thursday"
 msgstr "Donnerstag"
+
+msgid "Tools"
+msgstr "Werkzeuge"
 
 msgid "Tue"
 msgstr "Di"

@@ -22,3 +22,4 @@ Daily Scripture uses network_activation=false as the protective legacy policy an
 ## Catalog revision 2026-10-07.4
 
 20 approved plugins. Redirect Draft Content 0.9.0 joins Manage Content (RDC). Tools for FluentCart 0.9.0 is temporarily unassigned (TFC); Tools and Shop will follow in a later component update. Both entries are accepted by Library 0.6.0 and 0.7.0 and require WordPress 7.1.2/PHP 8.2 as published. Older hosts use RDC/TFC text fallbacks until their local icons are updated. All catalog labels are present and unique. Component release ZIPs remain unchanged.
+

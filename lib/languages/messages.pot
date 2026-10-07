@@ -79,6 +79,12 @@ msgstr ""
 msgid "Changelog"
 msgstr ""
 
+msgid "Check status"
+msgstr ""
+
+msgid "Checking status…"
+msgstr ""
+
 msgid "Close"
 msgstr ""
 
@@ -316,6 +322,9 @@ msgstr ""
 msgid "No approved plugins match this selection."
 msgstr ""
 
+msgid "Not installed. You can try again."
+msgstr ""
+
 msgid "Nov"
 msgstr ""
 
@@ -430,6 +439,9 @@ msgstr ""
 msgid "September"
 msgstr ""
 
+msgid "Shop"
+msgstr ""
+
 msgid "Show deckerweb under Add Plugins"
 msgstr ""
 
@@ -449,6 +461,9 @@ msgid "Sunday"
 msgstr ""
 
 msgid "The GitHub release could not be downloaded."
+msgstr ""
+
+msgid "The action is still running. Check its status again."
 msgstr ""
 
 msgid "The approved release changed. Refresh updates first."
@@ -481,6 +496,9 @@ msgstr ""
 msgid "The request could not be completed. Check the plugin status before trying again."
 msgstr ""
 
+msgid "The requirements below describe the offered release."
+msgstr ""
+
 msgid "This catalog requires a newer Library."
 msgstr ""
 
@@ -497,6 +515,9 @@ msgid "Thu"
 msgstr ""
 
 msgid "Thursday"
+msgstr ""
+
+msgid "Tools"
 msgstr ""
 
 msgid "Tue"

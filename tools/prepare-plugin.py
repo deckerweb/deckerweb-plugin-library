@@ -77,9 +77,9 @@ with tempfile.TemporaryDirectory() as temp:
  uninstall=plugin/'uninstall.php';u=uninstall.read_text() if uninstall.exists() else "<?php\nif ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) { exit; }\n"
  if re.search(r'\?>\s*$',u):p.error('Host uninstall closing tag needs manual review')
  us='// BEGIN deckerweb Library cleanup';ue='// END deckerweb Library cleanup'
- ub=us+"\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';\ndeckerweb_library_uninstall_v2( __DIR__ . '/"+a.slug+".php' );\n"+ue
+ ub=us+"\nrequire_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';\ndeckerweb_library_uninstall_v3( __DIR__ . '/"+a.slug+".php' );\n"+ue
  if us not in u:
-  legacy_cleanup=re.compile(r"require_once __DIR__ \. '/includes/deckerweb-plugin-library/lifecycle\.php';\ndeckerweb_library_uninstall_v2\( __DIR__ \. '/"+re.escape(a.slug)+r"\.php' \);")
+  legacy_cleanup=re.compile(r"require_once __DIR__ \. '/includes/deckerweb-plugin-library/lifecycle\.php';\ndeckerweb_library_uninstall_v[23]\( __DIR__ \. '/"+re.escape(a.slug)+r"\.php' \);")
   u=legacy_cleanup.sub('',u,count=1)
  reviewed_control=u.replace("if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) { exit; }",'').replace("defined( 'WP_UNINSTALL_PLUGIN' ) || exit;",'')
  reviewed_control=re.sub(r"if\s*\(\s*!\s*defined\s*\(\s*'WP_UNINSTALL_PLUGIN'\s*\)\s*\)\s*\{\s*exit;\s*\}",'',reviewed_control,count=1)

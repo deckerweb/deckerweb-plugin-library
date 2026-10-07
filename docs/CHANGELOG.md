@@ -2,6 +2,16 @@
 
 [Deutsch](CHANGELOG-de.md)
 
+### 0.8.1 · 2026-10-08
+
+- **New:** Tools and Shop catalog series, with backward-compatible metadata.
+- **Improved:** The bundled catalog includes all 20 approved plugins and their current local icons.
+- **Improved:** Check the plugin status after interrupted inline actions without repeating a successful operation.
+- **Improved:** Match builder runtime markers to the active installation and apply the versioned Oxygen QuickNav 2.0 activation contract.
+- **Improved:** Updated Oxygen QuickNav2.0.0 and Quick Edit Featured Image1.4.0 packages, requirements and original icons.
+- **Fixed:** Final-host uninstall removes current catalog and update caches as well as legacy caches.
+- **Fixed:** The current uninstall entry point remains effective when an older cleanup copy was loaded first.
+
 ### 0.7.0 · 2026-10-07
 
 - **Improved:** Install and activate catalog plugins directly in their cards, with inline status and errors.

@@ -710,5 +710,33 @@
   "Installation failed.": {
     "de_DE": "Installation fehlgeschlagen.",
     "de_DE_formal": "Installation fehlgeschlagen."
+  },
+  "Tools": {
+    "de_DE": "Werkzeuge",
+    "de_DE_formal": "Werkzeuge"
+  },
+  "Shop": {
+    "de_DE": "Shop",
+    "de_DE_formal": "Shop"
+  },
+  "Check status": {
+    "de_DE": "Status prüfen",
+    "de_DE_formal": "Status prüfen"
+  },
+  "The action is still running. Check its status again.": {
+    "de_DE": "Die Aktion läuft noch. Bitte den Status erneut prüfen.",
+    "de_DE_formal": "Die Aktion läuft noch. Bitte den Status erneut prüfen."
+  },
+  "Not installed. You can try again.": {
+    "de_DE": "Nicht installiert. Ein erneuter Versuch ist möglich.",
+    "de_DE_formal": "Nicht installiert. Ein erneuter Versuch ist möglich."
+  },
+  "Checking status…": {
+    "de_DE": "Status wird geprüft…",
+    "de_DE_formal": "Status wird geprüft…"
+  },
+  "The requirements below describe the offered release.": {
+    "de_DE": "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release.",
+    "de_DE_formal": "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
   }
 }
