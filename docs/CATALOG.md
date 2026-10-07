@@ -17,3 +17,8 @@ Keep the schema-1 endpoint compatible for existing hosts. Do not increase requir
 Series metadata is additive: series retains a legacy primary membership (quicknav, builder or purify), while series_memberships lists all explicit memberships, including manage-content. Older readers can keep using the primary field. A plugin appears once in the catalog and in every matching series filter.
 
 Daily Scripture uses network_activation=false as the protective legacy policy and network_activation_min_version=1.0.0 as the versioned approval understood by Library 0.6.1. The minimum policy takes precedence in capable readers and checks the installed version; older readers retain their block. Daily 1.0.1 carries the new runtime needed for cold activation beside old copies.
+
+
+## Catalog revision 2026-10-07.4
+
+20 approved plugins. Redirect Draft Content 0.9.0 joins Manage Content (RDC). Tools for FluentCart 0.9.0 is temporarily unassigned (TFC); Tools and Shop will follow in a later component update. Both entries are accepted by Library 0.6.0 and 0.7.0 and require WordPress 7.1.2/PHP 8.2 as published. Older hosts use RDC/TFC text fallbacks until their local icons are updated. All catalog labels are present and unique. Component release ZIPs remain unchanged.
