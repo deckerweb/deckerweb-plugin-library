@@ -12,7 +12,9 @@ Wenn du in einem Plugin den Ordner `includes/deckerweb-plugin-library/` entdeckt
 
 Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Einbindungsbeispiele und Dokumentation. Entwickler können den Code durchstöbern, unter seiner Lizenz weiterverwenden oder als Anregung für eine eigene Lösung nutzen.
 
-**Version:** 0.6.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
+Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
+
+**Version:** 0.7.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
 
@@ -159,6 +161,11 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 0.7.0 · 2026-10-07
+
+- **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.
+- **Verbessert:** Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist.
 
 ### 0.6.1 · 2026-10-07
 

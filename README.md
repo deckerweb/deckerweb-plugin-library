@@ -12,7 +12,9 @@ If you found an `includes/deckerweb-plugin-library/` folder inside a plugin, thi
 
 This repository contains the reusable PHP component, catalog, integration examples and documentation. It is also open for developers who want to read the code, reuse it under its license or build their own approach.
 
-**Version:** 0.6.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
+Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
+
+**Version:** 0.7.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
@@ -159,6 +161,11 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 0.7.0 · 2026-10-07
+
+- **Improved:** Install and activate catalog plugins directly in their cards, with inline status and errors.
+- **Improved:** Use the approved three-character fallback labels when no original icon is available.
 
 ### 0.6.1 · 2026-10-07
 

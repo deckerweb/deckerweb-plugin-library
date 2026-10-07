@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.6.1
+Stable tag: 0.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,6 +11,8 @@ The deckerweb Plugin Library adds a selected catalog of deckerweb plugins to Wor
 If you found an `includes/deckerweb-plugin-library/` folder inside a plugin, this is the shared component behind that catalog. The plugin author included it deliberately; you do not need to install or configure a separate Library plugin.
 
 This repository contains the reusable PHP component, catalog, integration examples and documentation. It is also open for developers who want to read the code, reuse it under its license or build their own approach.
+
+Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
 Embedded component for direct distribution only; not a standalone WordPress.org submission.
 
@@ -40,6 +42,11 @@ Library settings are shared per network. Daily Scripture 1.0.0 and newer support
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 0.7.0 · 2026-10-07
+
+- **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.
+- **Verbessert:** Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist.
+
 ### 0.6.1 · 2026-10-07
 
 - **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.

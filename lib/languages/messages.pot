@@ -16,6 +16,9 @@ msgstr ""
 msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
 msgstr ""
 
+msgid "Activating…"
+msgstr ""
+
 msgid "Admin"
 msgstr ""
 
@@ -23,6 +26,9 @@ msgid "All"
 msgstr ""
 
 msgid "Already active"
+msgstr ""
+
+msgid "Another action for this plugin is running. Please wait."
 msgstr ""
 
 msgid "Apr"
@@ -121,6 +127,9 @@ msgstr ""
 msgid "February"
 msgstr ""
 
+msgid "Filesystem credentials are required."
+msgstr ""
+
 msgid "Filter"
 msgstr ""
 
@@ -154,10 +163,19 @@ msgstr ""
 msgid "Install now"
 msgstr ""
 
+msgid "Installation cancelled."
+msgstr ""
+
+msgid "Installation failed."
+msgstr ""
+
 msgid "Installed"
 msgstr ""
 
 msgid "Installed: "
+msgstr ""
+
+msgid "Installing…"
 msgstr ""
 
 msgid "Invalid ZIP archive."
@@ -458,6 +476,9 @@ msgid "The online catalog source is not trusted."
 msgstr ""
 
 msgid "The release checksum does not match. Installation stopped."
+msgstr ""
+
+msgid "The request could not be completed. Check the plugin status before trying again."
 msgstr ""
 
 msgid "This catalog requires a newer Library."

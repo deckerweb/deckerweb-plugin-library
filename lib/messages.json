@@ -682,5 +682,33 @@
   "Requirements shown are preliminary until the stable release is verified.": {
     "de_DE": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig.",
     "de_DE_formal": "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+  },
+  "Installing…": {
+    "de_DE": "Wird installiert…",
+    "de_DE_formal": "Wird installiert…"
+  },
+  "Activating…": {
+    "de_DE": "Wird aktiviert…",
+    "de_DE_formal": "Wird aktiviert…"
+  },
+  "The request could not be completed. Check the plugin status before trying again.": {
+    "de_DE": "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen.",
+    "de_DE_formal": "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
+  },
+  "Installation cancelled.": {
+    "de_DE": "Installation abgebrochen.",
+    "de_DE_formal": "Installation abgebrochen."
+  },
+  "Another action for this plugin is running. Please wait.": {
+    "de_DE": "Für dieses Plugin läuft bereits eine Aktion. Bitte warten.",
+    "de_DE_formal": "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+  },
+  "Filesystem credentials are required.": {
+    "de_DE": "Zugangsdaten für das Dateisystem werden benötigt.",
+    "de_DE_formal": "Zugangsdaten für das Dateisystem werden benötigt."
+  },
+  "Installation failed.": {
+    "de_DE": "Installation fehlgeschlagen.",
+    "de_DE_formal": "Installation fehlgeschlagen."
   }
 }

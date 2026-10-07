@@ -15,3 +15,5 @@ No large settings export/import is added: the component has only visibility, opt
 Display cache: dwl_catalog_<URL hash>, 24 hours. Update cache: dwl_catalog_<URL hash>_updates, 12 hours, independently read by WordPress update checks. Both have _last (48 hours) and _retry (15 minutes) companions; the existing shared cache-key registry covers both. Fresh package approval bypasses their caches. No new cron event or permanently stored updater credential is added. Final-host cleanup removes both cache families.
 
 Library 0.6.1 uses a _061 suffix on registered catalog cache base keys to avoid reusing older network-policy caches; the existing last-host cleanup removes registered keys and cache families.
+
+Inline actions use a temporary, non-autoloaded lock option named dwl_inline_lock_<slug>, stored on the main site of the main network (or the current single site). Each request releases its own token on completion or shutdown; abandoned locks can be recovered after 15 minutes. Final-host uninstall removes remaining component lock options. No filesystem credentials are stored by the Library.

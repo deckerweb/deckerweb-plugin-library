@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: deckerweb Library 0.6.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: deckerweb Library 0.7.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "%s is installed but inactive. Activate it first."
 msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
@@ -19,6 +19,9 @@ msgstr "Aktivieren"
 msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
 msgstr "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
 
+msgid "Activating…"
+msgstr "Wird aktiviert…"
+
 msgid "Admin"
 msgstr "Administration"
 
@@ -27,6 +30,9 @@ msgstr "Alle"
 
 msgid "Already active"
 msgstr "Bereits aktiv"
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
 
 msgid "Apr"
 msgstr "Apr"
@@ -124,6 +130,9 @@ msgstr "Feb"
 msgid "February"
 msgstr "Februar"
 
+msgid "Filesystem credentials are required."
+msgstr "Zugangsdaten für das Dateisystem werden benötigt."
+
 msgid "Filter"
 msgstr "Filtern"
 
@@ -157,11 +166,20 @@ msgstr "deckerweb-Plugin installieren"
 msgid "Install now"
 msgstr "Jetzt installieren"
 
+msgid "Installation cancelled."
+msgstr "Installation abgebrochen."
+
+msgid "Installation failed."
+msgstr "Installation fehlgeschlagen."
+
 msgid "Installed"
 msgstr "Installiert"
 
 msgid "Installed: "
 msgstr "Installiert: "
+
+msgid "Installing…"
+msgstr "Wird installiert…"
 
 msgid "Invalid ZIP archive."
 msgstr "Ungültiges ZIP-Archiv."
@@ -462,6 +480,9 @@ msgstr "Die Online-Katalogquelle ist nicht vertrauenswürdig."
 
 msgid "The release checksum does not match. Installation stopped."
 msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
 
 msgid "This catalog requires a newer Library."
 msgstr "Dieser Katalog benötigt eine neuere Library."

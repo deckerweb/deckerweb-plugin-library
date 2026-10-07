@@ -2,6 +2,11 @@
 
 [English](CHANGELOG.md)
 
+### 0.7.0 · 2026-10-07
+
+- **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.
+- **Verbessert:** Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist.
+
 ### 0.6.1 · 2026-10-07
 
 - **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.

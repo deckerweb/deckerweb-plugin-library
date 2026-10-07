@@ -2,6 +2,11 @@
 
 [Deutsch](CHANGELOG-de.md)
 
+### 0.7.0 · 2026-10-07
+
+- **Improved:** Install and activate catalog plugins directly in their cards, with inline status and errors.
+- **Improved:** Use the approved three-character fallback labels when no original icon is available.
+
 ### 0.6.1 · 2026-10-07
 
 - **Improved:** Updated approved plugin releases and original catalog icons.

@@ -15,7 +15,7 @@ Ein gemeinsamer Katalog, der mit ausgewählten WordPress-Plugins mitgeliefert wi
 - [English introduction and developer entry point](https://github.com/deckerweb/deckerweb-plugin-library/wiki/README)
 - [Deutsche Einführung und Einstieg für Entwickler](https://github.com/deckerweb/deckerweb-plugin-library/wiki/README-de)
 - [Wiki](https://github.com/deckerweb/deckerweb-plugin-library/wiki)
-- [Library 0.6.1](https://github.com/deckerweb/deckerweb-plugin-library/releases/tag/v0.6.1)
+- [Library 0.7.0](https://github.com/deckerweb/deckerweb-plugin-library/releases/tag/v0.7.0)
 
 ## Catalog at a glance · Katalog auf einen Blick
 

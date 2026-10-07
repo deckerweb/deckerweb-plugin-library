@@ -67,3 +67,8 @@
 #deckerweb-library.dwl-settings-footer [data-dwl-history]{margin-inline-start:18px}
 .wrap .dwl-settings-catalog-link{margin:26px 0 32px;padding:8px 0}
 .wrap .dwl-settings-catalog-link .button{padding-inline:16px}
+#deckerweb-library .dwl-inline-status{margin:10px 0;color:#22713b;overflow-wrap:anywhere}
+#deckerweb-library .dwl-inline-error{color:#b32d2e}
+#deckerweb-library .dwl-action[aria-busy=true] .button{cursor:progress}
+
+#deckerweb-library .dwl-icon-fallback{font-size:20px;letter-spacing:-.3px}

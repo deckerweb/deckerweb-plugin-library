@@ -23,6 +23,13 @@ if ( ! function_exists( 'deckerweb_library_uninstall_v2' ) ) {
    if ( is_file( $dir . '/includes/deckerweb-plugin-library/bootstrap.php' ) || is_file( $dir . '/deckerweb-plugin-library/bootstrap.php' ) ) { return false; }
   }
   global $wpdb;
+  // Remove abandoned component action locks only after the final host is uninstalled.
+  $lock_blog = is_multisite() ? get_main_site_id( get_main_network_id() ) : get_current_blog_id();
+  $switched = $lock_blog !== get_current_blog_id();
+  if ( $switched ) { switch_to_blog( $lock_blog ); }
+  $lock_names = $wpdb->get_col( $wpdb->prepare( "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s", $wpdb->esc_like( 'dwl_inline_lock_' ) . '%' ) );
+  foreach ( $lock_names as $name ) { if ( preg_match( '/^dwl_inline_lock_[a-z0-9-]+$/D', $name ) ) { delete_option( $name ); } }
+  if ( $switched ) { restore_current_blog(); }
   $networks = is_multisite() ? get_networks( [ 'fields' => 'ids', 'number' => 0 ] ) : [ null ];
   $delete_intro = false;
   $all_networks_delete = true;
