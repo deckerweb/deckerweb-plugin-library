@@ -9,3 +9,5 @@ Sixteen catalog PNG icons are original deckerweb plugin artwork fetched from the
 English and German 1280 × 640 banners reuse this existing catalog layout and its approved artwork, with editable SVG sources and PNG derivatives under assets-github. Arial/Helvetica are system-font references, not bundled font files. No stock artwork or commercial builder code is included. The artwork depicts no new plugin identity or logo. Icons and banners are delivered locally; rendering does not contact GitHub.
 
 Connect for Shopware adds its original icon from assets/brand/icon-128x128.png; the source commit and hash are recorded in the source document.
+
+The approved 1B identity uses blue/purple plugin-card artwork. Its EN/DE PNG banners are 1280 × 640; 1A is retained as a light alternative. Raster artwork and local exports use GPL-2.0-or-later. The 1B files do not have native SVG masters. The original catalog-overview SVG/PNG graphics remain available separately. Real EN/DE screenshots show an isolated Library 0.6.0 test installation and are examples rather than live release lists.

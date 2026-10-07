@@ -2,14 +2,17 @@
 
 [English](Home)
 
-![Library](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-de.png)
+![Library](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-1b-de.png)
 
-Ein kleiner eingebetteter Katalog für direkt vertriebene WordPress-Plugins. Unter Plugins → Plugin hinzufügen → deckerweb erscheinen nur ausdrücklich freigegebene GitHub-Releases. Dies ist ein Einbindungspaket, kein separat installierbares Plugin.
+Die deckerweb Plugin Library ergänzt WordPress um einen ausgewählten Katalog von deckerweb Plugins. Sie wird mit bestimmten Plugins mitgeliefert und bietet dir unter **Plugins → Plugin hinzufügen → deckerweb** eine weitere Möglichkeit, hilfreiche Erweiterungen zu entdecken und zu installieren. Der gewohnte WordPress.org-Katalog bleibt die Standardansicht.
 
-Anforderungen: WordPress 6.4+, PHP 8.0+, ZipArchive für Installation. GPL-2.0-or-later. Nur Direktvertrieb; Library und deckerweb Updater vollständig aus WordPress.org-Builds ausschließen.
+Wenn du in einem Plugin den Ordner `includes/deckerweb-plugin-library/` entdeckt hast: Dort liegt die gemeinsame Komponente hinter diesem Katalog. Der Plugin-Autor hat sie bewusst eingebunden. Du musst dafür kein zusätzliches Library-Plugin installieren oder einrichten.
+
+Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Einbindungsbeispiele und Dokumentation. Entwickler können den Code durchstöbern, unter seiner Lizenz weiterverwenden oder als Anregung für eine eigene Lösung nutzen.
 
 Kleine Plugins. Konkrete Verbesserungen.
 
+- [README](README-de)
 - [INTEGRATION](INTEGRATION-de)
 - [SERIES](SERIES-de)
 - [CATALOG](CATALOG-de)

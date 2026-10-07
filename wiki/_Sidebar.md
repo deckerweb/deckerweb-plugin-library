@@ -2,6 +2,7 @@
 
 [English](Home) · [Deutsch](Home-de)
 
+- [README EN](README) · [DE](README-de)
 - [INTEGRATION EN](INTEGRATION) · [DE](INTEGRATION-de)
 - [SERIES EN](SERIES) · [DE](SERIES-de)
 - [CATALOG EN](CATALOG) · [DE](CATALOG-de)

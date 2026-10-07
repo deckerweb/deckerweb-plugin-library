@@ -4,10 +4,25 @@ layout: default
 
 # deckerweb Plugin Library
 
-[English documentation](https://github.com/deckerweb/deckerweb-plugin-library#readme) · [Deutsche Dokumentation](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/README-de.md)
+![deckerweb Plugin Library](assets-github/banner-1b-en.png)
 
-Shared plugin discovery for WordPress. / Gemeinsamer Plugin-Katalog für WordPress.
+A shared catalog that comes bundled with selected WordPress plugins. Discover useful additions while keeping control of installation and activation.
 
-[Library 0.6.0](https://github.com/deckerweb/deckerweb-plugin-library/releases/tag/v0.6.0) · [Public JSON catalog / Öffentlicher JSON-Katalog](https://raw.githubusercontent.com/deckerweb/deckerweb-plugin-library/main/catalog/catalog.json)
+Ein gemeinsamer Katalog, der mit ausgewählten WordPress-Plugins mitgeliefert wird. Entdecke hilfreiche Ergänzungen und entscheide selbst über Installation und Aktivierung.
 
-The Library is embedded in selected plugins. See the integration guide before use. / Die Library wird in ausgewählte Plugins eingebunden. Vor Verwendung die Einbindungsanleitung lesen.
+## Read more · Mehr erfahren
+
+- [English introduction and developer entry point](https://github.com/deckerweb/deckerweb-plugin-library/wiki/README)
+- [Deutsche Einführung und Einstieg für Entwickler](https://github.com/deckerweb/deckerweb-plugin-library/wiki/README-de)
+- [Wiki](https://github.com/deckerweb/deckerweb-plugin-library/wiki)
+- [Library 0.6.0](https://github.com/deckerweb/deckerweb-plugin-library/releases/tag/v0.6.0)
+
+## Catalog at a glance · Katalog auf einen Blick
+
+![Catalog overview](assets-github/banner-en.png)
+
+Illustrative overview; available releases can change. / Beispielübersicht; verfügbare Releases können sich ändern.
+
+## Support · Unterstützung
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)

@@ -1,8 +1,8 @@
 # deckerweb Plugin Library
 
-[Deutsch](README-de.md)
+[Deutsch](README-de)
 
-![deckerweb Library](assets-github/banner-1b-en.png)
+![deckerweb Library](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-1b-en.png)
 
 ## About
 
@@ -14,7 +14,7 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 **Version:** 0.6.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
-[Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
+[Documentation](INTEGRATION) · [FAQ by topic](FAQ) · [Security](SECURITY)
 
 ## Contents
 
@@ -38,9 +38,9 @@ This repository contains the reusable PHP component, catalog, integration exampl
 <a id="installation"></a>
 ## Installation and first steps
 
-See [integration](docs/INTEGRATION.md), [data](docs/DATA.md), [tests](docs/TESTING.md) and [security](SECURITY.md).
+See [integration](INTEGRATION), [data](DATA), [tests](TESTING) and [security](SECURITY).
 
-[Series and filters](docs/SERIES.md).
+[Series and filters](SERIES).
 
 <a id="features"></a>
 ## Main features
@@ -51,21 +51,21 @@ Use the deckerweb tab under Plugins → Add New. Combine search, QuickNav/Builde
 
 ### Approved catalog updates
 
-The public GitHub catalog address is prefilled. Enable online retrieval in Library settings. Discovery is cached for 24 hours. Approved plugin releases can change without replacing Library code. [Catalog guide](docs/CATALOG.md).
+The public GitHub catalog address is prefilled. Enable online retrieval in Library settings. Discovery is cached for 24 hours. Approved plugin releases can change without replacing Library code. [Catalog guide](CATALOG).
 
 ### Shared preferences and safe packages
 
-Installed hosts share settings; deactivation preserves data. Fresh release approval, checksums and archive checks guard package actions. [Data](docs/DATA.md) · [Updater integration](docs/UPDATER.md).
+Installed hosts share settings; deactivation preserves data. Fresh release approval, checksums and archive checks guard package actions. [Data](DATA) · [Updater integration](UPDATER).
 
 ### A look at the catalog
 
-![Illustrative deckerweb plugin catalog overview](assets-github/banner-en.png)
+![Illustrative deckerweb plugin catalog overview](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-en.png)
 
 This original overview illustrates the catalog with examples of plugins and their icons. It is a schematic illustration, not a screenshot or a complete list of today's catalog. Available releases and requirements appear on the actual plugin cards.
 
 ### The catalog in WordPress
 
-![Real catalog view in WordPress](assets-github/catalog-real-en.png)
+![Real catalog view in WordPress](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-real-en.png)
 
 A real screenshot from a Library 0.6.0 test installation. It shows plugin cards, filters, installation controls and dependency notices. The catalog and displayed versions can change; this image is an example, not a live release list.
 
@@ -88,12 +88,12 @@ These requests let the serving endpoint see the requesting IP address. The Libra
 
 The Library checks WordPress/PHP requirements, declared dependencies, the approved package identity, checksum and archive structure. These checks help reject unexpected packages; they are not a promise that every plugin is suitable for every site. Review the plugin's own documentation and use your normal backup and staging workflow.
 
-Deactivating an embedding plugin preserves shared Library settings. Properly integrated hosts clean up temporary Library data when the last host is uninstalled; deleting settings is optional. Plugins installed through the catalog and their content remain. See [data ownership and cleanup](docs/DATA.md).
+Deactivating an embedding plugin preserves shared Library settings. Properly integrated hosts clean up temporary Library data when the last host is uninstalled; deleting settings is optional. Plugins installed through the catalog and their content remain. See [data ownership and cleanup](DATA).
 
 <a id="for-developers"></a>
 ## For developers: explore, reuse, adapt
 
-The Library is **GPL-2.0-or-later**. You are welcome to study, reuse and adapt the code under that license. Keep copyright and required provenance notices, and check the separate [artwork notes](docs/ASSETS.md) before reusing graphics or branding.
+The Library is **GPL-2.0-or-later**. You are welcome to study, reuse and adapt the code under that license. Keep copyright and required provenance notices, and check the separate [artwork notes](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS.md) before reusing graphics or branding.
 
 ### Start with the integration contract
 
@@ -108,21 +108,21 @@ deckerweb_library_register_v2(
 );
 ```
 
-This is the starting point, not the entire integration. Follow the [integration guide](docs/INTEGRATION.md) for the required uninstall contract, host-domain translations and mixed-copy checks. Preserve the host's own updater; the [catalog bridge](docs/UPDATER.md) is an optional integration. Ship the runtime, not the authoring tools or this whole repository. The current Library and deckerweb Updater are excluded from WordPress.org builds; use this kit for direct distribution.
+This is the starting point, not the entire integration. Follow the [integration guide](INTEGRATION) for the required uninstall contract, host-domain translations and mixed-copy checks. Preserve the host's own updater; the [catalog bridge](UPDATER) is an optional integration. Ship the runtime, not the authoring tools or this whole repository. The current Library and deckerweb Updater are excluded from WordPress.org builds; use this kit for direct distribution.
 
 ### A useful reading path
 
-- [`lib/bootstrap.php`](lib/bootstrap.php): registration and selection of one compatible runtime across hosts.
-- [`lib/src/Catalog.php`](lib/src/Catalog.php): catalog validation, source restrictions and independent caches.
-- [`lib/src/Requirements.php`](lib/src/Requirements.php) and [`lib/src/Package.php`](lib/src/Package.php): prerequisites, package verification and bounded archive processing.
-- [`lib/lifecycle.php`](lib/lifecycle.php): shared data ownership and cleanup after the final host.
-- [`tools/refresh-catalog.py`](tools/refresh-catalog.py) and [`tools/approve-catalog.py`](tools/approve-catalog.py): prepare a candidate, review it and export the exact approved bytes. Publication remains a separate operator action.
+- [`lib/bootstrap.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/bootstrap.php): registration and selection of one compatible runtime across hosts.
+- [`lib/src/Catalog.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Catalog.php): catalog validation, source restrictions and independent caches.
+- [`lib/src/Requirements.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Requirements.php) and [`lib/src/Package.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Package.php): prerequisites, package verification and bounded archive processing.
+- [`lib/lifecycle.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/lifecycle.php): shared data ownership and cleanup after the final host.
+- [`tools/refresh-catalog.py`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/tools/refresh-catalog.py) and [`tools/approve-catalog.py`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/tools/approve-catalog.py): prepare a candidate, review it and export the exact approved bytes. Publication remains a separate operator action.
 
 ### Building your own catalog
 
 The shipped implementation is intentionally restricted to approved deckerweb repositories and catalog sources. It is not an unrestricted repository installer: pointing it at an arbitrary JSON URL is insufficient. For another publisher, deliberately adapt and test source restrictions, repository identities, package rules, series, translations and shared-runtime ownership. Avoid namespace/bootstrap collisions if your adaptation can run beside deckerweb plugins.
 
-Keep catalog metadata separate from component releases, cache discovery rather than querying GitHub on every page view, and check package approval freshly before sensitive actions. Preserve independent host update paths. See the [catalog guide](docs/CATALOG.md), [test guide](docs/TESTING.md) and [release conventions](docs/CONVENTIONS.md). Ideas and implementation questions are welcome in this repository's Issues and Discussions; private security reports about an embedded copy belong in its host plugin repository.
+Keep catalog metadata separate from component releases, cache discovery rather than querying GitHub on every page view, and check package approval freshly before sensitive actions. Preserve independent host update paths. See the [catalog guide](CATALOG), [test guide](TESTING) and [release conventions](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS.md). Ideas and implementation questions are welcome in this repository's Issues and Discussions; private security reports about an embedded copy belong in its host plugin repository.
 
 
 ## FAQ
@@ -155,7 +155,7 @@ Library settings are shared per network and the introduction is per user. Networ
 
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
-[Complete FAQ by topic](docs/FAQ.md).
+[Complete FAQ by topic](FAQ).
 
 <a id="changelog"></a>
 ## Changelog
@@ -209,10 +209,10 @@ Developed and published by David Decker — DECKERWEB. A shared embedded compone
 <a id="support"></a>
 ## Issues, security and support
 
-Use the embedding host repository for ordinary issues and questions, and its private reporting channel for security details. [Security policy](SECURITY.md).
+Use the embedding host repository for ordinary issues and questions, and its private reporting channel for security details. [Security policy](SECURITY).
 
 [Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
 
 ## Copyright & License
 
-Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [License](LICENSE) · [Artwork and provenance](docs/ASSETS.md).
+Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [License](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/LICENSE) · [Artwork and provenance](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS.md).

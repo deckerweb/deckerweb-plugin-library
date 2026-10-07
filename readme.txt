@@ -6,9 +6,11 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-A small embedded catalog for directly distributed WordPress plugins. Only explicitly approved GitHub releases appear under Plugins → Add New → deckerweb. This is an embedding kit, not a standalone installable plugin.
+The deckerweb Plugin Library adds a selected catalog of deckerweb plugins to WordPress. It comes bundled with certain plugins and gives you another way to discover and install useful additions under **Plugins → Add New → deckerweb**. The usual WordPress.org catalog remains the default.
 
-Requirements: WordPress 6.4+, PHP 8.0+, ZipArchive for installation. GPL-2.0-or-later. Only direct-distribution builds; exclude Library and deckerweb Updater entirely from WordPress.org builds.
+If you found an `includes/deckerweb-plugin-library/` folder inside a plugin, this is the shared component behind that catalog. The plugin author included it deliberately; you do not need to install or configure a separate Library plugin.
+
+This repository contains the reusable PHP component, catalog, integration examples and documentation. It is also open for developers who want to read the code, reuse it under its license or build their own approach.
 
 Embedded component for direct distribution only; not a standalone WordPress.org submission.
 

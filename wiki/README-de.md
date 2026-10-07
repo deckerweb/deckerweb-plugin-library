@@ -1,8 +1,8 @@
 # deckerweb Plugin Library
 
-[English](README.md)
+[English](README)
 
-![deckerweb Library](assets-github/banner-1b-de.png)
+![deckerweb Library](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-1b-de.png)
 
 ## Über die Library
 
@@ -14,7 +14,7 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 **Version:** 0.6.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
-[Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
+[Dokumentation](INTEGRATION-de) · [Fragen nach Themen](FAQ-de) · [Sicherheit](SECURITY-de)
 
 ## Inhalt
 
@@ -38,9 +38,9 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 <a id="installation"></a>
 ## Einbindung und erste Schritte
 
-Siehe [integration](docs/INTEGRATION-de.md), [data](docs/DATA-de.md), [tests](docs/TESTING-de.md) und [security](SECURITY-de.md).
+Siehe [integration](INTEGRATION-de), [data](DATA-de), [tests](TESTING-de) und [security](SECURITY-de).
 
-[Serien und Filter](docs/SERIES-de.md).
+[Serien und Filter](SERIES-de).
 
 <a id="features"></a>
 ## Hauptfunktionen
@@ -51,21 +51,21 @@ Den deckerweb-Tab unter Plugins → Installieren öffnen. Suche, QuickNav/Builde
 
 ### Freigegebene Katalogupdates
 
-Die öffentliche GitHub-Katalogadresse ist vorausgefüllt. Online-Abfragen in den Library-Einstellungen aktivieren. Die Anzeige wird 24 Stunden gespeichert. Freigegebene Plugin-Releases können sich ohne Austausch des Library-Codes ändern. [Kataloganleitung](docs/CATALOG-de.md).
+Die öffentliche GitHub-Katalogadresse ist vorausgefüllt. Online-Abfragen in den Library-Einstellungen aktivieren. Die Anzeige wird 24 Stunden gespeichert. Freigegebene Plugin-Releases können sich ohne Austausch des Library-Codes ändern. [Kataloganleitung](CATALOG-de).
 
 ### Gemeinsame Einstellungen und sichere Pakete
 
-Installierte Hosts teilen Einstellungen; Deaktivieren erhält Daten. Frische Freigabe, Prüfsummen und Archivprüfung schützen Paketaktionen. [Daten](docs/DATA-de.md) · [Updater-Einbindung](docs/UPDATER-de.md).
+Installierte Hosts teilen Einstellungen; Deaktivieren erhält Daten. Frische Freigabe, Prüfsummen und Archivprüfung schützen Paketaktionen. [Daten](DATA-de) · [Updater-Einbindung](UPDATER-de).
 
 ### Ein Blick in den Katalog
 
-![Schematischer Überblick über den deckerweb Plugin-Katalog](assets-github/banner-de.png)
+![Schematischer Überblick über den deckerweb Plugin-Katalog](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/banner-de.png)
 
 Dieser bisherige Überblick veranschaulicht den Katalog mit beispielhaften Plugins und ihren Icons. Er ist eine schematische Darstellung, kein Screenshot und keine vollständige Liste des heutigen Katalogs. Verfügbare Releases und Voraussetzungen stehen auf den tatsächlichen Plugin-Karten.
 
 ### Der Katalog in WordPress
 
-![Reale Katalogansicht in WordPress](assets-github/catalog-real-de.png)
+![Reale Katalogansicht in WordPress](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-real-de.png)
 
 Ein realer Screenshot aus einer Testinstallation mit Library 0.6.0. Er zeigt Plugin-Karten, Filter, Installationsaktionen und Hinweise auf Abhängigkeiten. Katalog und angezeigte Versionen können sich ändern; das Bild ist ein Beispiel, keine laufend aktuelle Release-Liste.
 
@@ -88,12 +88,12 @@ Der jeweilige Server sieht dabei die anfragende IP-Adresse. Die Library übertr�
 
 Die Library prüft WordPress-/PHP-Anforderungen, angegebene Abhängigkeiten, Paketidentität, Prüfsumme und Archivstruktur. Das hilft, unerwartete Pakete zurückzuweisen, garantiert aber nicht, dass jedes Plugin zu jeder Website passt. Lies die jeweilige Plugin-Dokumentation und nutze deinen gewohnten Backup- und Testablauf.
 
-Das Deaktivieren eines einbettenden Plugins erhält gemeinsame Library-Einstellungen. Richtig eingebundene Plugins bereinigen temporäre Library-Daten bei der Deinstallation des letzten Hosts; das Löschen der Einstellungen ist optional. Über den Katalog installierte Plugins und deren Inhalte bleiben erhalten. Siehe [Datenhaltung und Bereinigung](docs/DATA-de.md).
+Das Deaktivieren eines einbettenden Plugins erhält gemeinsame Library-Einstellungen. Richtig eingebundene Plugins bereinigen temporäre Library-Daten bei der Deinstallation des letzten Hosts; das Löschen der Einstellungen ist optional. Über den Katalog installierte Plugins und deren Inhalte bleiben erhalten. Siehe [Datenhaltung und Bereinigung](DATA-de).
 
 <a id="for-developers"></a>
 ## Für Entwickler: durchstöbern, nutzen, anpassen
 
-Die Library steht unter **GPL-2.0-or-later**. Du kannst den Code unter dieser Lizenz studieren, weiterverwenden und anpassen. Erhalte Copyright- und erforderliche Herkunftshinweise. Prüfe vor der Übernahme von Grafiken oder Branding die gesonderten [Grafikhinweise](docs/ASSETS-de.md).
+Die Library steht unter **GPL-2.0-or-later**. Du kannst den Code unter dieser Lizenz studieren, weiterverwenden und anpassen. Erhalte Copyright- und erforderliche Herkunftshinweise. Prüfe vor der Übernahme von Grafiken oder Branding die gesonderten [Grafikhinweise](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS-de.md).
 
 ### Mit dem Einbindungsvertrag starten
 
@@ -108,21 +108,21 @@ deckerweb_library_register_v2(
 );
 ```
 
-Das ist der Einstieg, nicht die gesamte Einbindung. Die [Integrationsanleitung](docs/INTEGRATION-de.md) beschreibt den erforderlichen Uninstall-Vertrag, Übersetzungen über die Host-Textdomain und Prüfungen mit mehreren Kopien. Erhalte den eigenen Updater des Hosts; die [Kataloganbindung](docs/UPDATER-de.md) ist optional. Liefere die Laufzeitdateien aus, nicht die Entwicklungswerkzeuge oder das gesamte Repository. Die aktuelle Library und der deckerweb Updater bleiben aus WordPress.org-Builds ausgeschlossen; dieses Kit ist für Direktvertrieb vorgesehen.
+Das ist der Einstieg, nicht die gesamte Einbindung. Die [Integrationsanleitung](INTEGRATION-de) beschreibt den erforderlichen Uninstall-Vertrag, Übersetzungen über die Host-Textdomain und Prüfungen mit mehreren Kopien. Erhalte den eigenen Updater des Hosts; die [Kataloganbindung](UPDATER-de) ist optional. Liefere die Laufzeitdateien aus, nicht die Entwicklungswerkzeuge oder das gesamte Repository. Die aktuelle Library und der deckerweb Updater bleiben aus WordPress.org-Builds ausgeschlossen; dieses Kit ist für Direktvertrieb vorgesehen.
 
 ### Ein sinnvoller Weg durch den Code
 
-- [`lib/bootstrap.php`](lib/bootstrap.php): Registrierung und Auswahl einer kompatiblen gemeinsamen Laufzeit.
-- [`lib/src/Catalog.php`](lib/src/Catalog.php): Katalogvalidierung, erlaubte Quellen und unabhängige Caches.
-- [`lib/src/Requirements.php`](lib/src/Requirements.php) und [`lib/src/Package.php`](lib/src/Package.php): Voraussetzungen, Paketprüfung und begrenzte Archivverarbeitung.
-- [`lib/lifecycle.php`](lib/lifecycle.php): gemeinsame Datenhaltung und Bereinigung nach dem letzten Host.
-- [`tools/refresh-catalog.py`](tools/refresh-catalog.py) und [`tools/approve-catalog.py`](tools/approve-catalog.py): Kandidat erstellen, prüfen und exakt freigegebene Daten exportieren. Die Veröffentlichung bleibt eine separate Betreiberaktion.
+- [`lib/bootstrap.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/bootstrap.php): Registrierung und Auswahl einer kompatiblen gemeinsamen Laufzeit.
+- [`lib/src/Catalog.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Catalog.php): Katalogvalidierung, erlaubte Quellen und unabhängige Caches.
+- [`lib/src/Requirements.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Requirements.php) und [`lib/src/Package.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/src/Package.php): Voraussetzungen, Paketprüfung und begrenzte Archivverarbeitung.
+- [`lib/lifecycle.php`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/lib/lifecycle.php): gemeinsame Datenhaltung und Bereinigung nach dem letzten Host.
+- [`tools/refresh-catalog.py`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/tools/refresh-catalog.py) und [`tools/approve-catalog.py`](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/tools/approve-catalog.py): Kandidat erstellen, prüfen und exakt freigegebene Daten exportieren. Die Veröffentlichung bleibt eine separate Betreiberaktion.
 
 ### Einen eigenen Katalog bauen
 
 Die ausgelieferte Implementierung ist bewusst auf freigegebene deckerweb Repositories und Katalogquellen beschränkt. Eine beliebige JSON-URL einzutragen reicht für einen anderen Herausgeber nicht aus. Passe erlaubte Quellen, Repository-Identitäten, Paketregeln, Serien, Übersetzungen und gemeinsame Laufzeitverwaltung gezielt an und teste sie. Vermeide Namespace- und Bootstrap-Kollisionen, wenn deine Variante neben deckerweb Plugins laufen kann.
 
-Trenne Katalogmetadaten von Komponenten-Releases, speichere die Anzeige zwischen und frage GitHub nicht bei jedem Seitenaufruf ab. Prüfe Paketfreigaben vor entsprechenden Aktionen frisch und erhalte unabhängige Host-Updatewege. Siehe [Kataloganleitung](docs/CATALOG-de.md), [Testanleitung](docs/TESTING-de.md) und [Release-Konventionen](docs/CONVENTIONS-de.md). Ideen und Implementierungsfragen sind in den Issues und Discussions dieses Repositories willkommen; private Sicherheitsmeldungen zu einer eingebetteten Kopie gehören in das Repository ihres Host-Plugins.
+Trenne Katalogmetadaten von Komponenten-Releases, speichere die Anzeige zwischen und frage GitHub nicht bei jedem Seitenaufruf ab. Prüfe Paketfreigaben vor entsprechenden Aktionen frisch und erhalte unabhängige Host-Updatewege. Siehe [Kataloganleitung](CATALOG-de), [Testanleitung](TESTING-de) und [Release-Konventionen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS-de.md). Ideen und Implementierungsfragen sind in den Issues und Discussions dieses Repositories willkommen; private Sicherheitsmeldungen zu einer eingebetteten Kopie gehören in das Repository ihres Host-Plugins.
 
 
 ## FAQ
@@ -155,7 +155,7 @@ Library-Einstellungen gelten je Netzwerk, der Einführungshinweis je Nutzer. Net
 
 Im Host-Plugin-Repository Security → Advisories → Report a vulnerability verwenden. Host- und Library-Version nennen; Sicherheitsdetails nicht in öffentlichen Issues posten. Hosts müssen den privaten Meldeweg vor Veröffentlichung aktivieren.
 
-[Vollständige Fragen nach Themen](docs/FAQ-de.md).
+[Vollständige Fragen nach Themen](FAQ-de).
 
 <a id="changelog"></a>
 ## Änderungsverlauf
@@ -209,10 +209,10 @@ Entwickelt und herausgegeben von David Decker — DECKERWEB. Gemeinsame eingebet
 <a id="support"></a>
 ## Fragen, Sicherheit und Unterstützung
 
-Normale Fehler und Fragen im Repository des einbettenden Hosts melden; Sicherheitsdetails über dessen privaten Meldeweg. [Sicherheitsrichtlinie](SECURITY-de.md).
+Normale Fehler und Fragen im Repository des einbettenden Hosts melden; Sicherheitsdetails über dessen privaten Meldeweg. [Sicherheitsrichtlinie](SECURITY-de).
 
 [Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
 
 ## Copyright und Lizenzen
 
-Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [Lizenz](LICENSE) · [Grafiken und Herkunft](docs/ASSETS-de.md).
+Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [Lizenz](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/LICENSE) · [Grafiken und Herkunft](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS-de.md).
