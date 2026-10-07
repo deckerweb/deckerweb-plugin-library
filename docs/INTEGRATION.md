@@ -24,7 +24,7 @@ Translations use the elected host's header Text Domain (its slug if missing), ne
 
 `prepare-plugin.py` only accepts BAS and Daily Scripture source ZIPs with known version markers and compatible minimum headers. It preserves code after the exact legacy integration block, adds bounded replacement markers and refuses ambiguous custom integrations or conditional uninstall code. It creates a new destination, never overwrites the supplied source and never raises minimums. Other hosts need reviewed manual integration. Review host translations, security policy and its actual final ZIP before release.
 
-The Library kit itself is not installable. `deckerweb-plugin-library-runtime-0.6.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
+The Library kit itself is not installable. `deckerweb-plugin-library-runtime-0.6.1.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
 
 Read [security](../SECURITY.md), [data](DATA.md), [tests](TESTING.md) and [release conventions](CONVENTIONS.md).
 
@@ -33,3 +33,7 @@ Legacy 0.1–0.3 hosts can coexist, but their old uninstall code does not implem
 For the central feed and optional existing updater bridge, read [Catalog](CATALOG.md) and [Updater](UPDATER.md). Always keep the current host development source and translate component messages through its domain.
 
 When replacing an earlier 0.6.0 build, replace every installed 0.6.0 copy together. Equal versions use the host basename as a deterministic election tie-breaker; an older same-version copy can otherwise win. Archive earlier packages and verify compatibility.json hashes after replacement.
+
+The 0.6.1 bootstrap registers a pre-activation handoff. During a cold activation it verifies the newly included target host manifest and replaces an older elected Library before its activation guard. Only callbacks owned by the former Library instance are removed; host/updater hooks remain. Keep the protocol-two manifest complete. Daily Scripture network approval starts at installed version 1.0.0. Publish the revised online catalog before distributing the host update.
+
+An old offline Library catalog cannot redraw its disabled activation card before the new component is active. For the first transition use Network Admin → Plugins → Daily Scripture → Network Activate (or update an already active host). The new target bootstrap handles that native activation; afterward the new Library owns the catalog actions.

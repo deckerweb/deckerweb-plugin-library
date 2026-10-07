@@ -44,7 +44,7 @@ Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktivie
 
 ### Wird Multisite unterstützt?
 
-Library-Einstellungen gelten je Netzwerk, der Einführungshinweis je Nutzer. Netzwerkaktionen erfordern passende Berechtigungen und Abhängigkeiten. Bricks QuickNav behält bis zur separaten Host-Anpassung seine Website-Beschränkung; Daily folgt den veröffentlichten Release-Regeln.
+Library-Einstellungen gelten je Netzwerk. Daily Scripture ab 1.0.0 unterstützt Netzwerkaktivierung; ältere installierte Versionen müssen zuvor aktualisiert werden. Bricks QuickNav bleibt auf Website-Aktivierung beschränkt. Berechtigungs- und Abhängigkeitsprüfungen gelten weiterhin.
 
 ### Wie wird eine Sicherheitslücke gemeldet?
 

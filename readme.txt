@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.6.0
+Stable tag: 0.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,12 +34,20 @@ Use Settings → deckerweb Library (Network Settings on Multisite). Hiding disco
 Another installed host, even inactive, preserves shared data. The final host removes temporary Library data and caches. Settings remain unless optional deletion was enabled. Installed plugins and their content remain. Hosts must call the supplied uninstall contract.
 
 = Does it support Multisite? =
-Library settings are shared per network and the introduction is per user. Network actions require appropriate capabilities and dependencies. Bricks QuickNav retains its per-site restriction pending separate host work; Daily follows its published release policy.
+Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Bricks QuickNav retains its per-site restriction. Permissions and dependency checks still apply.
 
 = How do I report a vulnerability? =
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 0.6.1 · 2026-10-07
+
+- **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.
+- **Verbessert:** Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library.
+- **Behoben:** Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden.
+- **Behoben:** Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite.
+- **Behoben:** Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten.
+
 ### 0.6.0 · 2026-10-06
 
 - **Neu:** Freigegebene Plugin-Releases können im Online-Katalog erscheinen, ohne die eingebettete Library auszutauschen.

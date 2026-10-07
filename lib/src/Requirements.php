@@ -1,6 +1,6 @@
 <?php
 /** Copyright 2026 David Decker – DECKERWEB. SPDX-License-Identifier: GPL-2.0-or-later */
-namespace Deckerweb\PluginLibrary\V0_6_0;
+namespace Deckerweb\PluginLibrary\V0_6_1;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** Used both when rendering cards and immediately before install/activation. */
@@ -11,16 +11,21 @@ final class Requirements {
 	 * @param array $entry Validated approved catalog entry and dependency metadata.
 	 * @param array|null $plugins Installed plugin metadata; null reads the current installation.
 	 * @param bool|null $network Network activation context; null derives it from the current admin scope.
-	 * @return array Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @param bool $activation Check the installed version for activation; false checks the offered release for package updates.
+	 * @return array Localized unmet requirements; an empty list means the declared prerequisites are met.
 	 */
-	public static function check( array $entry, ?array $plugins = null, ?bool $network = null ): array {
+	public static function check( array $entry, ?array $plugins = null, ?bool $network = null, bool $activation = true ): array {
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		$plugins = $plugins ?? get_plugins();
 		$network = $network ?? ( is_multisite() && is_network_admin() );
 		$issues = [];
 		if ( ! empty( $entry['requires_multisite'] ) && ! is_multisite() ) { $issues[] = Library::t( 'Requires a WordPress Multisite network.' ); }
 		if ( ! empty( $entry['network_only'] ) && is_multisite() && ! $network ) { $issues[] = Library::t( 'Install and activate this plugin in the network admin.' ); }
-		if ( $network && isset( $entry['network_activation'] ) && ! $entry['network_activation'] ) { $issues[] = sprintf( Library::t( '%s supports activation per site only.' ), $entry['name'] ); }
+		if ( $network && isset( $entry['network_activation'] ) && ! $entry['network_activation'] && ! isset( $entry['network_activation_min_version'] ) ) { $issues[] = sprintf( Library::t( '%s supports activation per site only.' ), $entry['name'] ); }
+		if ( $network && isset( $entry['network_activation_min_version'] ) ) {
+			$installed_version = $activation && isset( $plugins[$entry['plugin_file']] ) ? ( $plugins[$entry['plugin_file']]['Version'] ?? '' ) : $entry['version'];
+			if ( version_compare( $installed_version, $entry['network_activation_min_version'], '<' ) ) { $issues[] = sprintf( Library::t( 'Update %1$s to version %2$s or newer.' ), $entry['name'], $entry['network_activation_min_version'] ); }
+		}
 		global $wp_version;
 		if ( version_compare( $wp_version, $entry['requires_wp'], '<' ) ) { $issues[] = sprintf( Library::t( 'Requires WordPress %s or newer.' ), $entry['requires_wp'] ); }
 		if ( version_compare( PHP_VERSION, $entry['requires_php'], '<' ) ) { $issues[] = sprintf( Library::t( 'Requires PHP %s or newer.' ), $entry['requires_php'] ); }

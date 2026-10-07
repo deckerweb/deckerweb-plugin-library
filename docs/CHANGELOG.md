@@ -2,6 +2,14 @@
 
 [Deutsch](CHANGELOG-de.md)
 
+### 0.6.1 · 2026-10-07
+
+- **Improved:** Updated approved plugin releases and original catalog icons.
+- **Improved:** The settings footer shows the local Library SVG icon, name and version.
+- **Fixed:** Daily Scripture 1.0.0 and newer can be network activated, including beside an older embedded Library.
+- **Fixed:** Single filtered results retain normal card width on wide screens.
+- **Fixed:** Multisite Toolbar Additions is also available for single websites and site activation.
+
 ### 0.6.0 · 2026-10-06
 
 - **New:** Approved plugin releases can appear in the online catalog without replacing the embedded Library.

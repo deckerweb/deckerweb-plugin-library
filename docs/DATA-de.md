@@ -13,3 +13,5 @@ Die Bereinigung umfasst beim Entfernen des letzten physischen Hosts alle Netzwer
 Kein zusätzlicher Export/Import für die wenigen Einstellungen: Sichtbarkeit, optionale Katalog-URL/Online-Modus und Löschoption.
 
 Anzeigecache: dwl_catalog_<URL-Hash>, 24 Stunden. Updatecache: dwl_catalog_<URL-Hash>_updates, zwölf Stunden, unabhängig bei WordPress-Updateprüfungen gelesen. Beide haben _last (48 Stunden) und _retry (15 Minuten); die bestehende gemeinsame Schlüsselregistrierung deckt beide ab. Frische Paketfreigabe umgeht diese Caches. Kein neuer Cronjob und kein dauerhaft gespeicherter Updater-Schlüssel. Letzt-Host-Bereinigung entfernt beide Cachefamilien.
+
+Library 0.6.1 ergänzt registrierte Katalogcache-Basisschlüssel um _061, damit frühere Netzwerkfreigaben nicht aus alten Caches übernommen werden. Bestehende Letzt-Host-Bereinigung entfernt registrierte Schlüssel und Cachefamilien.

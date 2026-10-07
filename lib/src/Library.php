@@ -1,11 +1,11 @@
 <?php
 /** Copyright 2026 David Decker – DECKERWEB. SPDX-License-Identifier: GPL-2.0-or-later */
-namespace Deckerweb\PluginLibrary\V0_6_0;
+namespace Deckerweb\PluginLibrary\V0_6_1;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** WordPress-native, embedded catalog. Settings are shared across host plugins. */
 final class Library {
-	const VERSION = '0.6.0';
+	const VERSION = '0.6.1';
 	const OPTION = 'deckerweb_library_settings_v1';
 	const MANAGED = 'deckerweb_library_installed_v1';
 	private array $chosen;
@@ -30,7 +30,7 @@ final class Library {
 	 *
 	 * @param string $en English source message.
 	 * @param string $de Legacy optional argument; translation resources determine the result.
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Translated English source using the elected host domain.
 	 */
 	public static function t( string $en, string $de = '' ): string {
   return I18n::text( $en );
@@ -38,7 +38,7 @@ final class Library {
 	/**
 	 * Read shared preferences with safe defaults without creating per-host options.
 	 *
-	 * @return array Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return array Normalized shared discovery, online-source and deletion preferences.
 	 */
 	public static function settings(): array {
 		$saved = get_site_option( self::OPTION, [] );
@@ -76,7 +76,7 @@ final class Library {
 	 * Add the optional catalog link to the host plugin action links.
 	 *
 	 * @param array $links Existing host plugin action links.
-	 * @return array Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return array Host action links with the optional catalog entry appended.
 	 */
 	public function links( array $links ): array {
 		if ( self::settings()['enabled'] && current_user_can( 'install_plugins' ) ) { $links['deckerweb_library'] = '<a href="' . esc_url( self_admin_url( 'plugin-install.php?tab=deckerweb' ) ) . '">' . esc_html( self::t( 'More by deckerweb' ) ) . '</a>'; }
@@ -86,7 +86,7 @@ final class Library {
 	 * Expose the catalog tab only when enabled and permitted.
 	 *
 	 * @param array $tabs Existing installer tab labels.
-	 * @return array Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return array Native installation tabs including the permitted catalog tab.
 	 */
 	public function tabs( array $tabs ): array {
 		if ( self::settings()['enabled'] && current_user_can( 'install_plugins' ) ) { $tabs['deckerweb'] = 'deckerweb'; }
@@ -135,13 +135,13 @@ final class Library {
 	/**
 	 * Build the catalog URL for the current site or network administration scope.
 	 *
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Catalog administration URL in the current site or network scope.
 	 */
 	private function catalog_url(): string { return ( $this->network ? network_admin_url( 'plugin-install.php?tab=deckerweb' ) : self_admin_url( 'plugin-install.php?tab=deckerweb' ) ); }
 	/**
 	 * Build the shared settings URL for the current administration scope.
 	 *
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Shared settings URL for the current administration scope.
 	 */
 	private function settings_url(): string { return is_multisite() ? network_admin_url( 'settings.php?page=deckerweb-library' ) : admin_url( 'options-general.php?page=deckerweb-library' ); }
 	/**
@@ -149,7 +149,7 @@ final class Library {
 	 *
 	 * @param string $action Nonce and action identifier.
 	 * @param string $slug Approved catalog plugin slug.
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Administration action URL before nonce decoration.
 	 */
 	private function action_url( string $action, string $slug = '' ): string {
 		return add_query_arg( [ 'action' => 'dwl_' . $action, 'slug' => $slug, 'network' => ( is_network_admin() || $this->network ) ? '1' : '0' ], admin_url( 'admin-post.php' ) );
@@ -176,7 +176,7 @@ final class Library {
 	 *
 	 * @param array $entry Validated approved catalog entry and dependency metadata.
 	 * @param string $key Display field name selected from the validated localized entry.
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Requested catalog field in the current locale, falling back to English.
 	 */
 	private static function text( array $entry, string $key ): string {
 		return str_starts_with( determine_locale(), 'de' ) && isset( $entry[$key . '_de'] ) ? $entry[$key . '_de'] : $entry[$key];
@@ -186,11 +186,11 @@ final class Library {
 	 * Select a local original icon or a subdued text fallback for a catalog card.
 	 *
 	 * @param array $entry Validated approved catalog entry and dependency metadata.
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Escaped local icon HTML or the muted initials fallback.
 	 */
 	private function icon( array $entry ): string {
 		// Only bundled PNG files; catalog metadata never triggers remote image requests.
-		$file = $entry['icon'] ?? '';
+		$file = str_starts_with( determine_locale(), 'de' ) ? ( $entry['icon_de'] ?? $entry['icon'] ?? '' ) : ( $entry['icon'] ?? '' );
 		if ( $file && is_file( $this->chosen['dir'] . '/' . $file ) ) {
 			return '<img src="' . esc_url( add_query_arg( 'ver', self::VERSION, plugins_url( $file, $this->chosen['dir'] . '/bootstrap.php' ) ) ) . '" alt="" width="54" height="54">';
 		}
@@ -278,13 +278,13 @@ final class Library {
 		$cap = is_multisite() ? 'manage_network_options' : 'manage_options';
 		if ( ! current_user_can( $cap ) ) { wp_die( esc_html( self::t( 'Permission denied.' ) ), '', [ 'response' => 403 ] ); }
 		$s = self::settings();
-		echo '<div class="wrap"><h1>deckerweb Library</h1>';
+		echo '<div class="wrap"><h1>deckerweb Plugin Library</h1>';
 		if ( isset( $_GET['saved'] ) ) { echo '<div class="notice notice-success"><p>' . esc_html( self::t( 'Library settings saved.' ) ) . '</p></div>'; }
 		echo '<form method="post" action="' . esc_url( $this->action_url( 'preferences' ) ) . '">'; wp_nonce_field( 'dwl_preferences_' );
 		echo '<table class="form-table" role="presentation"><tr><th scope="row">' . esc_html( self::t( 'Visibility' ) ) . '</th><td><label><input type="checkbox" name="enabled" value="1" ' . checked( $s['enabled'], true, false ) . '> ' . esc_html( self::t( 'Show deckerweb under Add Plugins' ) ) . '</label></td></tr>';
 		echo '<tr><th scope="row">' . esc_html( self::t( 'Online catalog' ) ) . '</th><td><label><input type="checkbox" name="online" value="1" ' . checked( $s['online'], true, false ) . '> ' . esc_html( self::t( 'Retrieve approved catalog updates online' ) ) . '</label><p class="description">' . esc_html( self::t( 'Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent.' ) ) . '</p><p><label for="dwl-catalog-url">' . esc_html( self::t( 'Catalog URL' ) ) . '</label><br><input type="url" id="dwl-catalog-url" name="catalog_url" value="' . esc_attr( $s['catalog_url'] ) . '" class="regular-text" placeholder="https://…/catalog.json"></p><p class="description">' . esc_html( self::t( 'Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release.' ) ) . '</p></td></tr></table>';
 		echo '<p><label><input type="checkbox" name="delete_settings" value="1" ' . checked( $s['delete_settings'], true, false ) . '> ' . esc_html( self::t( 'Delete Library settings when removing the last host plugin' ) ) . '</label></p><p class="description">' . esc_html( self::t( 'Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites.' ) ) . '</p>';
-  submit_button( self::t( 'Save settings' ) ); echo '</form><p><a href="' . esc_url( self_admin_url( 'plugin-install.php?tab=deckerweb' ) ) . '">' . esc_html( self::t( 'Open catalog' ) ) . '</a></p>'; echo '<div id="deckerweb-library">'; History::render( $this->chosen['dir'] ); echo '</div></div>'; 
+  submit_button( self::t( 'Save settings' ) ); echo '</form><p class="dwl-settings-catalog-link"><a class="button button-secondary" href="' . esc_url( self_admin_url( 'plugin-install.php?tab=deckerweb' ) ) . '">' . esc_html( self::t( 'Open catalog' ) ) . '</a></p>'; echo '<div id="deckerweb-library" class="dwl-settings-footer"><div class="dwl-settings-brand"><img src="' . esc_url( plugins_url( 'assets/library-icon.svg', $this->chosen['dir'] . '/bootstrap.php' ) ) . '" width="52" height="52" alt="" aria-hidden="true"><div><strong>deckerweb Library</strong> <span>' . esc_html( self::VERSION ) . '</span><br>'; History::render( $this->chosen['dir'] ); echo '</div></div></div></div>'; 
 	}
 	/**
 	 * Reject non-POST requests, invalid nonces or insufficient capabilities before mutation.
@@ -304,7 +304,7 @@ final class Library {
 	/**
 	 * Read the requested plugin slug as a sanitized scalar.
 	 *
-	 * @return string Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return string Sanitized scalar request slug, or an empty string for missing/invalid input.
 	 */
 	private function slug(): string { return isset( $_REQUEST['slug'] ) && is_string( $_REQUEST['slug'] ) ? sanitize_key( wp_unslash( $_REQUEST['slug'] ) ) : ''; }
 	/**
@@ -312,7 +312,7 @@ final class Library {
 	 *
 	 * @param string $slug Approved catalog plugin slug.
 	 * @param bool $fresh Require a successful uncached source read.
-	 * @return array Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return array One freshly approved entry; terminates with a user-facing error if absent.
 	 */
 	private function entry( string $slug, bool $fresh = true ): array {
 		if ( ! self::settings()['enabled'] ) { wp_die( esc_html( self::t( 'The catalog is disabled.' ) ), '', [ 'response' => 403 ] ); }
@@ -392,6 +392,11 @@ final class Library {
 		set_current_screen( $this->network ? 'plugin-install-network' : 'plugin-install' );
 		wp_enqueue_style( 'common' ); wp_enqueue_style( 'forms' );
 		wp_enqueue_style( 'deckerweb-plugin-library', plugins_url( 'assets/library.css', $this->chosen['dir'] . '/bootstrap.php' ), [], self::VERSION );
+		/**
+		 * Add the installer scope to the native administration body classes.
+		 * @param string $classes Existing space-delimited body classes.
+		 * @return string Existing classes with the Library installer marker.
+		 */
 		$body_class = static fn( string $classes ): string => $classes . ' dwl-install';
 		add_filter( 'admin_body_class', $body_class );
 		iframe_header( esc_html( $title ) );
@@ -404,6 +409,7 @@ final class Library {
 		$package = Package::download( $entry );
 		if ( is_wp_error( $package ) ) { echo '<div class="notice notice-error"><p>' . esc_html( $package->get_error_message() ) . '</p></div>'; }
 		else {
+			/** Installer skin with wrappers suppressed because this page supplies them. */
 			$skin = new class( [ 'type' => 'web', 'url' => $url, 'nonce' => 'dwl_install_' . $slug, 'title' => $title, 'api' => (object) [ 'name' => $entry['name'], 'slug' => $entry['slug'], 'version' => $entry['version'] ] ] ) extends \Plugin_Installer_Skin {
 				// The standalone page already owns its heading and wrapper.
 				/**
@@ -420,6 +426,13 @@ final class Library {
 				public function footer() {}
 			};
 			$upgrader = new \Plugin_Upgrader( $skin );
+			/**
+			 * Replace installer activation links with dependency-aware Library actions.
+			 * @param array $links Existing installer links.
+			 * @param object $api Native plugin information supplied by the installer skin.
+			 * @param string $file Installed plugin basename.
+			 * @return array Updated action links; unrelated packages remain untouched.
+			 */
 			$actions = function( array $links, $api, string $file ) use ( $entry ): array {
 				unset( $links['activate_plugin'], $links['network_activate'] );
 				if ( $file === $entry['plugin_file'] && ! Requirements::check( $entry, null, $this->network ) && current_user_can( 'activate_plugin', $file ) ) {
@@ -457,8 +470,8 @@ final class Library {
 	/**
 	 * Apply dependency checks to known plugins activated through the ordinary Plugins screen.
 	 *
-	 * @param string $file Plugin basename or temporary archive path as required by this operation.
-	 * @param bool $network Network activation context; null derives it from the current admin scope.
+	 * @param string $file Plugin basename identifying the target plugin.
+	 * @param bool $network Whether WordPress is activating the target across the network.
 	 * @return void No return value.
 	 */
 	public function activation_guard( string $file, bool $network ): void {
@@ -475,7 +488,7 @@ final class Library {
 	 * Add update offers only for Library-managed plugins without their own Update URI.
 	 *
 	 * @param mixed $transient Native update transient with checked plugin versions and existing offers.
-	 * @return mixed Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return mixed The supplied native update transient with eligible managed offers added.
 	 */
 	public function updates( $transient ) {
 		if ( ! is_object( $transient ) || empty( $transient->checked ) ) { return $transient; }
@@ -498,7 +511,7 @@ final class Library {
 	 * @param string $package Exact offered release ZIP URL.
 	 * @param mixed $upgrader Native WordPress upgrader instance.
 	 * @param array $extra Additional action fields or native upgrader context.
-	 * @return mixed Result of the operation; errors are returned or rejected as documented by the caller.
+	 * @return mixed Existing handled download, verified local package path, WP_Error, or the original unhandled value.
 	 */
 	public function update_download( $reply, string $package, $upgrader, array $extra = [] ) {
 		$file = $extra['plugin'] ?? '';
@@ -513,7 +526,7 @@ final class Library {
 		foreach ( $entries as $entry ) {
 			if ( $entry['plugin_file'] !== $file || $entry['repository'] !== $managed[$file] ) { continue; }
 			if ( $package !== $entry['download_url'] ) { return new \WP_Error( 'dwl_release_changed', self::t( 'The approved release changed. Refresh updates first.' ) ); }
-			$issues = Requirements::check( $entry, null, is_plugin_active_for_network( $file ) );
+			$issues = Requirements::check( $entry, null, is_plugin_active_for_network( $file ), false );
 			if ( $issues ) { return new \WP_Error( 'dwl_requirements', implode( ' ', $issues ) ); }
 			return Package::download( $entry );
 		}
@@ -523,9 +536,9 @@ final class Library {
   * Supply opted-in public host updater metadata from the independent update cache.
   *
   * @param string $repository Exact public GitHub repository URL.
-  * @param string $file Plugin basename or temporary archive path as required by this operation.
+  * @param string $file Plugin basename identifying the target plugin.
   * @param bool $fresh Require a successful uncached source read.
-  * @return array|null|false Result of the operation; errors are returned or rejected as documented by the caller.
+  * @return array|null|false Release metadata, false for direct-updater fallback, or null when approval is refused.
   */
  public function updater_release( string $repository, string $file, bool $fresh = false ) {
   if ( ! self::settings()['online'] ) { return false; }
@@ -542,9 +555,9 @@ final class Library {
   * Download the opted-in host package only after fresh approval and requirement checks.
   *
   * @param string $repository Exact public GitHub repository URL.
-  * @param string $file Plugin basename or temporary archive path as required by this operation.
+  * @param string $file Plugin basename identifying the target plugin.
   * @param string $package Exact offered release ZIP URL.
-  * @return string|\WP_Error Result of the operation; errors are returned or rejected as documented by the caller.
+  * @return string|\WP_Error Verified temporary package path or WP_Error when approval or requirements fail.
   * Successful temporary archives must be removed by the caller after use.
   */
  public function updater_package( string $repository, string $file, string $package ) {
@@ -553,7 +566,7 @@ final class Library {
   foreach ( $entries as $entry ) {
    if ( $entry['plugin_file'] !== $file || 'https://github.com/' . $entry['repository'] !== $repository ) { continue; }
    if ( $package !== $entry['download_url'] ) { return new \WP_Error( 'dwl_release_changed', self::t( 'The approved release changed. Refresh updates first.' ) ); }
-   $issues = Requirements::check( $entry, null, is_plugin_active_for_network( $file ) );
+   $issues = Requirements::check( $entry, null, is_plugin_active_for_network( $file ), false );
    if ( $issues ) { return new \WP_Error( 'dwl_requirements', implode( ' ', $issues ) ); }
    return Package::download( $entry );
   }

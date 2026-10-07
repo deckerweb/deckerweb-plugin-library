@@ -12,7 +12,7 @@ If you found an `includes/deckerweb-plugin-library/` folder inside a plugin, thi
 
 This repository contains the reusable PHP component, catalog, integration examples and documentation. It is also open for developers who want to read the code, reuse it under its license or build their own approach.
 
-**Version:** 0.6.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 0.6.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
@@ -149,7 +149,7 @@ Another installed host, even inactive, preserves shared data. The final host rem
 
 ### Does it support Multisite?
 
-Library settings are shared per network and the introduction is per user. Network actions require appropriate capabilities and dependencies. Bricks QuickNav retains its per-site restriction pending separate host work; Daily follows its published release policy.
+Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Bricks QuickNav retains its per-site restriction. Permissions and dependency checks still apply.
 
 ### How do I report a vulnerability?
 
@@ -159,6 +159,14 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 0.6.1 · 2026-10-07
+
+- **Improved:** Updated approved plugin releases and original catalog icons.
+- **Improved:** The settings footer shows the local Library SVG icon, name and version.
+- **Fixed:** Daily Scripture 1.0.0 and newer can be network activated, including beside an older embedded Library.
+- **Fixed:** Single filtered results retain normal card width on wide screens.
+- **Fixed:** Multisite Toolbar Additions is also available for single websites and site activation.
 
 ### 0.6.0 · 2026-10-06
 

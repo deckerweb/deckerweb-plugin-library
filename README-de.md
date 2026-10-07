@@ -12,7 +12,7 @@ Wenn du in einem Plugin den Ordner `includes/deckerweb-plugin-library/` entdeckt
 
 Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Einbindungsbeispiele und Dokumentation. Entwickler können den Code durchstöbern, unter seiner Lizenz weiterverwenden oder als Anregung für eine eigene Lösung nutzen.
 
-**Version:** 0.6.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 0.6.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
 
@@ -149,7 +149,7 @@ Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktivie
 
 ### Wird Multisite unterstützt?
 
-Library-Einstellungen gelten je Netzwerk, der Einführungshinweis je Nutzer. Netzwerkaktionen erfordern passende Berechtigungen und Abhängigkeiten. Bricks QuickNav behält bis zur separaten Host-Anpassung seine Website-Beschränkung; Daily folgt den veröffentlichten Release-Regeln.
+Library-Einstellungen gelten je Netzwerk. Daily Scripture ab 1.0.0 unterstützt Netzwerkaktivierung; ältere installierte Versionen müssen zuvor aktualisiert werden. Bricks QuickNav bleibt auf Website-Aktivierung beschränkt. Berechtigungs- und Abhängigkeitsprüfungen gelten weiterhin.
 
 ### Wie wird eine Sicherheitslücke gemeldet?
 
@@ -159,6 +159,14 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 0.6.1 · 2026-10-07
+
+- **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.
+- **Verbessert:** Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library.
+- **Behoben:** Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden.
+- **Behoben:** Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite.
+- **Behoben:** Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten.
 
 ### 0.6.0 · 2026-10-06
 

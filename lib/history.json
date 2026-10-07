@@ -1,5 +1,35 @@
 [
   {
+    "version": "0.6.1",
+    "date": "2026-10-07",
+    "changes": {
+      "Improved": [
+        {
+          "en": "Updated approved plugin releases and original catalog icons.",
+          "de": "Freigegebene Plugin-Releases und originale Katalogicons aktualisiert."
+        },
+        {
+          "en": "The settings footer shows the local Library SVG icon, name and version.",
+          "de": "Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library."
+        }
+      ],
+      "Fixed": [
+        {
+          "en": "Daily Scripture 1.0.0 and newer can be network activated, including beside an older embedded Library.",
+          "de": "Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden."
+        },
+        {
+          "en": "Single filtered results retain normal card width on wide screens.",
+          "de": "Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite."
+        },
+        {
+          "en": "Multisite Toolbar Additions is also available for single websites and site activation.",
+          "de": "Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten."
+        }
+      ]
+    }
+  },
+  {
     "version": "0.6.0",
     "date": "2026-10-06",
     "changes": {

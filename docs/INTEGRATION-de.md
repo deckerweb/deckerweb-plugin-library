@@ -24,7 +24,7 @@ Der genaue Host-Basename muss `WP_UNINSTALL_PLUGIN` entsprechen. Dieser Vertrag 
 
 `prepare-plugin.py` akzeptiert nur BAS und Daily Scripture mit bekannten Versionsmarkern und kompatiblen Mindestversions-Headern. Es erhält Code hinter dem genauen alten Einbindungsblock, nutzt begrenzte Ersetzungsmarker und lehnt unklare individuelle Einbindungen bzw. bedingten Uninstall-Code ab. Neue Zieldatei, keine Überschreibung der Quelle und keine Erhöhung von Mindestversionen. Andere Hosts benötigen geprüfte manuelle Integration. Vor Release Host-Übersetzungen, Sicherheitsrichtlinie und tatsächliches finales ZIP prüfen.
 
-Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.6.0.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.
+Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.6.1.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.
 
 Siehe [Sicherheit](../SECURITY-de.md), [Daten](DATA-de.md), [Tests](TESTING-de.md) und [Release-Konventionen](CONVENTIONS-de.md).
 
@@ -33,3 +33,7 @@ Alte Hosts mit 0.1–0.3 können parallel bestehen; deren alter Uninstall-Code e
 Für zentralen Feed und optionale Brücke zum bestehenden Updater [Katalog](CATALOG-de.md) und [Updater](UPDATER-de.md) lesen. Aktuelle Host-Entwicklungsquelle erhalten und Nachrichten über deren Textdomain übersetzen.
 
 Beim Ersetzen eines früheren 0.6.0-Builds sämtliche installierten 0.6.0-Kopien gemeinsam austauschen. Gleiche Versionen verwenden den Host-Basename als eindeutige Auswahlregel; sonst kann eine ältere Kopie derselben Version gewinnen. Frühere Pakete archivieren und nach Austausch die Hashes in compatibility.json prüfen.
+
+Der 0.6.1-Bootstrap registriert eine Übergabe vor Aktivierung. Bei erstmaliger Aktivierung prüft er das Manifest des gerade eingebundenen Zielhosts und ersetzt eine ältere gewählte Library vor deren Aktivierungsprüfung. Nur Callbacks der bisherigen Library-Instanz werden entfernt; Host-/Updater-Hooks bleiben erhalten. Das Protokoll-2-Manifest muss vollständig sein. Daily-Scripture-Netzwerkfreigabe gilt ab installierter Version 1.0.0. Den aktualisierten Online-Katalog vor Auslieferung des Host-Updates veröffentlichen.
+
+Ein alter Offline-Library-Katalog kann seine gesperrte Aktivierungskarte vor dem Komponentenwechsel nicht neu darstellen. Für den Erstwechsel Netzwerkverwaltung → Plugins → Daily Scripture → Netzwerkweit aktivieren verwenden (oder einen bereits aktiven Host aktualisieren). Der neue Zielhost-Bootstrap übernimmt diese native Aktivierung; danach stellt die neue Library die Katalogaktionen bereit.

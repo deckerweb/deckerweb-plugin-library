@@ -8,7 +8,7 @@ if ( ! function_exists( 'deckerweb_library_uninstall_v2' ) ) {
   * Clean component-owned temporary data only after the final installed host is removed.
   *
   * @param string $host_file Absolute host main-file path matching WP_UNINSTALL_PLUGIN.
-  * @return bool Result of the operation; errors are returned or rejected as documented by the caller.
+  * @return bool True when last-host cleanup completes; false when ownership or remaining hosts prevent cleanup.
   * May read or change component-owned shared storage; foreign plugin data is preserved.
   */
  function deckerweb_library_uninstall_v2( string $host_file ): bool {

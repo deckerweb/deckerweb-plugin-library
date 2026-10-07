@@ -74,5 +74,5 @@ try:
  (a.output/'candidate.json').write_text(json.dumps(base,ensure_ascii=False,indent=2)+'\n');(a.output/'sources.json').write_text(json.dumps({'plugins':records},indent=2)+'\n');(a.output/'review.json').write_text(json.dumps({'status':'review_required','changes':changes,'candidate_sha256':hashlib.sha256((a.output/'candidate.json').read_bytes()).hexdigest()},indent=2)+'\n')
  print('Candidate prepared; review metadata and approve explicitly. Nothing published.')
 except Exception as error:
- print('Stopped while reviewing '+old['slug']+'.')
+ print('Stopped while reviewing '+old['slug']+'.');print(type(error).__name__+': '+str(error))
  print('Preparation stopped. Check approved repository access, release ZIP identity and limits; no catalog approved or published.');raise SystemExit(1)

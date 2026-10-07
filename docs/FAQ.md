@@ -44,7 +44,7 @@ Another installed host, even inactive, preserves shared data. The final host rem
 
 ### Does it support Multisite?
 
-Library settings are shared per network and the introduction is per user. Network actions require appropriate capabilities and dependencies. Bricks QuickNav retains its per-site restriction pending separate host work; Daily follows its published release policy.
+Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Bricks QuickNav retains its per-site restriction. Permissions and dependency checks still apply.
 
 ### How do I report a vulnerability?
 
