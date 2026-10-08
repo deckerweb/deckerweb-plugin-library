@@ -21,19 +21,23 @@
       "icon_label": "BAS",
       "icon_background": "#edf3f0",
       "icon": "assets/icons/brand-admin-schemes.png",
-      "published_at": "2026-10-06T15:59:00Z"
+      "published_at": "2026-10-06T15:59:00Z",
+      "series_memberships": [],
+      "series_memberships_v2": [
+        "tools"
+      ]
     },
     {
       "approved": true,
       "slug": "breakdance-quicknav",
       "name": "Breakdance QuickNav",
-      "description": "Quick access to Breakdance templates, headers, footers, global blocks and settings from the toolbar.",
-      "description_de": "Schneller Zugriff auf Breakdance-Templates, Header, Footer, globale Blöcke und Einstellungen über die Toolbar.",
-      "version": "1.0.0",
+      "description": "Quick access to Breakdance content, templates, settings, and official add-ons from the WordPress toolbar.",
+      "description_de": "Schneller Toolbar-Zugriff auf Breakdance-Inhalte, Templates, Einstellungen und Hersteller-Addons.",
+      "version": "2.0.0",
       "repository": "deckerweb/breakdance-quicknav",
       "plugin_file": "breakdance-quicknav/breakdance-quicknav.php",
-      "download_url": "https://github.com/deckerweb/breakdance-quicknav/releases/download/v1.0.0/breakdance-quicknav.zip",
-      "sha256": "8c319c59a25da2ea500eb7691fa0e1c3b7b335f6cc0afffd211e3efae5f60b71",
+      "download_url": "https://github.com/deckerweb/breakdance-quicknav/releases/download/v2.0.0/breakdance-quicknav-2.0.0.zip",
+      "sha256": "07dde55991e8b3d117f5ccfdb494facb0c3ffebb57c0e032f6b3e17eeeca08f2",
       "requires_wp": "6.7",
       "requires_php": "7.4",
       "category": "Breakdance",
@@ -48,11 +52,10 @@
       ],
       "github_stars": 3,
       "stars_checked_at": "2026-10-07",
-      "icon": "assets/icons/breakdance-quicknav.png",
       "icon_label": "BDQ",
       "icon_background": "#f0f3f6",
       "series": "quicknav",
-      "published_at": "2025-03-08T18:46:03Z",
+      "published_at": "2026-10-08T15:31:56Z",
       "series_memberships": [
         "quicknav"
       ]
@@ -178,10 +181,13 @@
       "icon": "assets/icons/advanced-scripts-quicknav.png",
       "icon_label": "ASQ",
       "icon_background": "#f0f3f6",
-      "series": "quicknav",
       "published_at": "2026-10-01T19:23:21Z",
       "series_memberships": [
         "quicknav"
+      ],
+      "series_memberships_v2": [
+        "quicknav",
+        "tools"
       ]
     },
     {
@@ -572,9 +578,32 @@
         "tools",
         "shop"
       ]
+    },
+    {
+      "approved": true,
+      "slug": "builder-content-guide",
+      "name": "Builder Content Guide",
+      "repository": "deckerweb/builder-content-guide",
+      "plugin_file": "builder-content-guide/builder-content-guide.php",
+      "dependencies": [],
+      "category": "Content",
+      "icon_label": "BCG",
+      "icon_background": "#eef1f8",
+      "series_memberships": [
+        "builder",
+        "manage-content"
+      ],
+      "version": "1.0.0",
+      "download_url": "https://github.com/deckerweb/builder-content-guide/releases/download/1.0.0/builder-content-guide-1.0.0.zip",
+      "sha256": "74142634e7e198401d0db923016ad2095bb91e4e034b9e2747858cc5ceb3dc0e",
+      "published_at": "2026-10-08T15:24:23Z",
+      "requires_wp": "7.0",
+      "requires_php": "8.0",
+      "description": "Find the right website building block, understand the effect of a change, and open its original editor.",
+      "description_de": "Passende Website-Bausteine finden, die Wirkung einer Änderung verstehen und den ursprünglichen Editor öffnen."
     }
   ],
-  "catalog_revision": "2026-10-08.2",
-  "generated_at": "2026-10-07T23:11:32Z",
+  "catalog_revision": "2026-10-08.3",
+  "generated_at": "2026-10-08T15:45:52Z",
   "requires_library": "0.1.0"
 }
