@@ -315,11 +315,11 @@
       "name": "Builder List Pages",
       "description": "Recognize page builders at a glance, filter several builders and find their content in familiar WordPress lists.",
       "description_de": "Page Builder auf einen Blick erkennen, mehrere Builder filtern und ihre Inhalte in vertrauten WordPress-Listen finden.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "repository": "deckerweb/builder-list-pages",
       "plugin_file": "builder-list-pages/builder-list-pages.php",
-      "download_url": "https://github.com/deckerweb/builder-list-pages/releases/download/v1.1.0/builder-list-pages-1.1.0.zip",
-      "sha256": "dc556a3d3d852995a13e8706dce0cf7e35930ad9c9426f9e5f85529b55f84b87",
+      "download_url": "https://github.com/deckerweb/builder-list-pages/releases/download/v1.2.0/builder-list-pages-1.2.0.zip",
+      "sha256": "a415ddb54f8e716f769930b6fdd8c1c69f6d987e9d23cf6510ce2b6fc0949979",
       "requires_wp": "6.7",
       "requires_php": "8.0",
       "category": "Builder",
@@ -330,7 +330,7 @@
       "icon_label": "BLP",
       "icon_background": "#f0f3f6",
       "series": "builder",
-      "published_at": "2026-10-01T16:35:09Z",
+      "published_at": "2026-10-10T08:30:38Z",
       "series_memberships": [
         "builder"
       ],
@@ -381,9 +381,9 @@
       "plugin_file": "post-author-taxonomy/post-author-taxonomy.php",
       "category": "Content",
       "dependencies": [],
-      "version": "1.3.0",
-      "download_url": "https://github.com/deckerweb/post-author-taxonomy/releases/download/v1.3.0/post-author-taxonomy.zip",
-      "sha256": "0f2906ecf8b53c9c76ba5e87affc14f44d78fb21918a6c6469130a96ae79f770",
+      "version": "1.4.0",
+      "download_url": "https://github.com/deckerweb/post-author-taxonomy/releases/download/v1.4.0/post-author-taxonomy.zip",
+      "sha256": "1bdd51855ab78a809e8b3da5b3e1af0501c3fd339aeb3d93e93aa542c3522e6f",
       "requires_wp": "6.7",
       "requires_php": "8.0",
       "github_stars": 4,
@@ -393,7 +393,7 @@
       "icon": "assets/icons/post-author-taxonomy.png",
       "icon_label": "PAT",
       "icon_background": "#edf2f5",
-      "published_at": "2026-10-01T14:20:18Z",
+      "published_at": "2026-10-10T08:37:36Z",
       "series": "builder",
       "series_memberships": [
         "builder",
@@ -447,9 +447,9 @@
       "plugin_file": "builder-shortcode-extras/builder-shortcode-extras.php",
       "category": "Content",
       "dependencies": [],
-      "version": "1.2.1",
-      "download_url": "https://github.com/deckerweb/builder-shortcode-extras/releases/download/v1.2.1/builder-shortcode-extras.zip",
-      "sha256": "b0916816f465b9bd42575369da16be2435c7e78ebcb18f7a7f6c445e7b519d32",
+      "version": "1.3.0",
+      "download_url": "https://github.com/deckerweb/builder-shortcode-extras/releases/download/v1.3.0/builder-shortcode-extras.zip",
+      "sha256": "98b3a0df8b44df914e3ae74082b3874442a5ed8ee8ec9df7b0d1d2d7cb9e1d54",
       "requires_wp": "6.7",
       "requires_php": "8.0",
       "github_stars": 14,
@@ -460,7 +460,7 @@
       "icon_label": "BSE",
       "icon_background": "#edf2f5",
       "series": "builder",
-      "published_at": "2026-10-08T22:56:50Z",
+      "published_at": "2026-10-10T08:34:26Z",
       "series_memberships": [
         "builder"
       ],
@@ -748,8 +748,8 @@
       "category_de": "Inhalte"
     }
   ],
-  "catalog_revision": "2026-10-10.1",
-  "generated_at": "2026-10-10T05:55:01Z",
+  "catalog_revision": "2026-10-10.2",
+  "generated_at": "2026-10-10T08:42:36Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
