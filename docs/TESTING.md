@@ -13,3 +13,5 @@ Use disposable staging installations, never production. Test WordPress 6.4 basel
 7. Use keyboard and screenreader checks for labels/focus, open/close/Escape/focus return in changelog, narrow layouts and adequate contrast. Check browser/PHP logs.
 
 Commercial builder fixtures do not establish licensed builder compatibility. Complete real builder and host feature tests in their own staging projects before host publication. Screenshots do not block release.
+
+[Actual validation for 0.9.0](VALIDATION-0.9.0.md).

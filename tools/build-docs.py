@@ -22,7 +22,7 @@ for lang in ['en','de']:
   link=f'[Deutsch]({name}-de.md)'if lang=='en'else f'[English]({name}.md)';(docs/(name+suffix+'.md')).write_text('# '+title+'\n\n'+link+'\n\n'+body+'\n')
  for name,pages in content['pages'].items():
   page=pages[lang];link=f'[Deutsch]({name}-de.md)'if lang=='en'else f'[English]({name}.md)';(docs/(name+suffix+'.md')).write_text('# '+page['title']+'\n\n'+link+'\n\n'+page['body']+'\n')
- for name in ['FAQ','CHANGELOG','INTEGRATION','DATA','CATALOG','UPDATER','SERIES','TESTING']:
+ for name in ['FAQ','CHANGELOG','INTEGRATION','DATA','CATALOG','UPDATER','SERIES','TESTING','VALIDATION-0.9.0']:
   text=(docs/(name+suffix+'.md')).read_text().replace('../SECURITY','SECURITY');(wiki/(name+suffix+'.md')).write_text(text)
  shutil.copyfile(kit/('SECURITY'+suffix+'.md'),wiki/('SECURITY'+suffix+'.md'))
  (wiki/'assets').mkdir(exist_ok=True);shutil.copyfile(kit/'assets-github'/(content.get('branding',{}).get('banner_prefix','banner-')+lang+'.png'),wiki/'assets'/(content.get('branding',{}).get('banner_prefix','banner-')+lang+'.png'))

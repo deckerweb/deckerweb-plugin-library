@@ -24,7 +24,7 @@ Der genaue Host-Basename muss `WP_UNINSTALL_PLUGIN` entsprechen. Dieser Vertrag 
 
 `prepare-plugin.py` akzeptiert nur BAS und Daily Scripture mit bekannten Versionsmarkern und kompatiblen Mindestversions-Headern. Es erhält Code hinter dem genauen alten Einbindungsblock, nutzt begrenzte Ersetzungsmarker und lehnt unklare individuelle Einbindungen bzw. bedingten Uninstall-Code ab. Neue Zieldatei, keine Überschreibung der Quelle und keine Erhöhung von Mindestversionen. Andere Hosts benötigen geprüfte manuelle Integration. Vor Release Host-Übersetzungen, Sicherheitsrichtlinie und tatsächliches finales ZIP prüfen.
 
-Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.6.1.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.
+Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runtime-0.9.0.zip` enthält nur Laufzeitdateien. Das vollständige Kit enthält zusätzlich Werkzeuge und Dokumentation, die nicht in produktive Plugin-ZIPs gehören. Externen Installer und deckerweb Updater nicht auf WordPress.org ausliefern.
 
 Siehe [Sicherheit](SECURITY-de), [Daten](DATA-de), [Tests](TESTING-de) und [Release-Konventionen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS-de.md).
 

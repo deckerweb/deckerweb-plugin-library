@@ -13,3 +13,5 @@ Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basi
 7. Tastatur-/Screenreaderprüfung für Labels/Fokus, Dialog öffnen/schließen/Escape/Fokusrückgabe, schmale Ansicht und Kontrast. Browser-/PHP-Logs prüfen.
 
 Builder-Fixtures belegen keine Kompatibilität mit Lizenzinstallationen. Echte Builder und Host-Funktionen vor Host-Veröffentlichung in deren Projekten prüfen. Screenshots blockieren keinen Release.
+
+[Tatsächlicher Prüfstand für 0.9.0](VALIDATION-0.9.0-de.md).

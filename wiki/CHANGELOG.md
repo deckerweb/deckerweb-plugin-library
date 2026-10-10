@@ -2,6 +2,14 @@
 
 [Deutsch](CHANGELOG-de)
 
+### 0.9.0 · 2026-10-10
+
+- **New:** Update verified installed catalog plugins directly in their cards, including older releases without an updater.
+- **New:** Catalog-defined series, localized categories, ordering and versioned safe-pause dependency rules.
+- **Improved:** Current approved catalog packages and local original icons, including Builder Content Guide and the Admin series.
+- **Improved:** Save shared preferences in place and keep Library operations inside WordPress administration.
+- **Fixed:** Early fallback messages use host translation resources; activation handoff documentation is directly attached to the function.
+
 ### 0.8.1 · 2026-10-08
 
 - **New:** Tools and Shop catalog series, with backward-compatible metadata.

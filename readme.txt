@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.8.1
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,14 @@ Library settings are shared per network. Daily Scripture 1.0.0 and newer support
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 0.9.0 · 2026-10-10
+
+- **Neu:** Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater.
+- **Neu:** Katalogdefinierte Serien, übersetzte Kategorien, Reihenfolge und versionsabhängige Regeln für sichere Funktionspausen.
+- **Verbessert:** Aktuelle freigegebene Katalogpakete und lokale Originalicons, einschließlich Builder Content Guide und Admin-Serie.
+- **Verbessert:** Gemeinsame Einstellungen direkt speichern und Library-Aktionen innerhalb der WordPress-Verwaltung halten.
+- **Behoben:** Frühe Ausfallmeldungen verwenden Host-Sprachressourcen; die Aktivierungsübergabe ist direkt an der Funktion dokumentiert.
+
 ### 0.8.1 · 2026-10-08
 
 - **Neu:** Katalogserien Werkzeuge und Shop mit rückwärtskompatiblen Metadaten.

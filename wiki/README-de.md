@@ -14,7 +14,7 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
-**Version:** 0.8.1 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 0.9.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](INTEGRATION-de) · [Fragen nach Themen](FAQ-de) · [Sicherheit](SECURITY-de)
 
@@ -161,6 +161,14 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 0.9.0 · 2026-10-10
+
+- **Neu:** Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater.
+- **Neu:** Katalogdefinierte Serien, übersetzte Kategorien, Reihenfolge und versionsabhängige Regeln für sichere Funktionspausen.
+- **Verbessert:** Aktuelle freigegebene Katalogpakete und lokale Originalicons, einschließlich Builder Content Guide und Admin-Serie.
+- **Verbessert:** Gemeinsame Einstellungen direkt speichern und Library-Aktionen innerhalb der WordPress-Verwaltung halten.
+- **Behoben:** Frühe Ausfallmeldungen verwenden Host-Sprachressourcen; die Aktivierungsübergabe ist direkt an der Funktion dokumentiert.
 
 ### 0.8.1 · 2026-10-08
 

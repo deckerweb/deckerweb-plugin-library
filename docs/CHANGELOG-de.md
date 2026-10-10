@@ -2,6 +2,14 @@
 
 [English](CHANGELOG.md)
 
+### 0.9.0 · 2026-10-10
+
+- **Neu:** Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater.
+- **Neu:** Katalogdefinierte Serien, übersetzte Kategorien, Reihenfolge und versionsabhängige Regeln für sichere Funktionspausen.
+- **Verbessert:** Aktuelle freigegebene Katalogpakete und lokale Originalicons, einschließlich Builder Content Guide und Admin-Serie.
+- **Verbessert:** Gemeinsame Einstellungen direkt speichern und Library-Aktionen innerhalb der WordPress-Verwaltung halten.
+- **Behoben:** Frühe Ausfallmeldungen verwenden Host-Sprachressourcen; die Aktivierungsübergabe ist direkt an der Funktion dokumentiert.
+
 ### 0.8.1 · 2026-10-08
 
 - **Neu:** Katalogserien Werkzeuge und Shop mit rückwärtskompatiblen Metadaten.
