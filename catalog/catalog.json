@@ -112,11 +112,11 @@
       "name": "Bricks QuickNav",
       "description": "Quick access to Bricks templates, pages and settings from the toolbar.",
       "description_de": "Schneller Zugriff auf Bricks-Templates, Seiten und Einstellungen über die Toolbar.",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "repository": "deckerweb/bricks-quicknav",
       "plugin_file": "bricks-quicknav/bricks-quicknav.php",
-      "download_url": "https://github.com/deckerweb/bricks-quicknav/releases/download/v1.0.0/bricks-quicknav.zip",
-      "sha256": "23a6bc16a4023783790efebc2a07ed2e59d11f5eadf32f6a19919981e4c8b33d",
+      "download_url": "https://github.com/deckerweb/bricks-quicknav/releases/download/v2.0.0/bricks-quicknav-2.0.0.zip",
+      "sha256": "cf0996a00f1cd09c25b8bd17e13fec85bf49e6fd0e0da22417da941135d15372",
       "requires_wp": "6.7",
       "requires_php": "7.4",
       "category": "Bricks",
@@ -135,7 +135,7 @@
       "icon_label": "BXQ",
       "icon_background": "#f0f3f6",
       "series": "quicknav",
-      "published_at": "2025-05-12T14:21:10Z",
+      "published_at": "2026-10-10T17:15:09Z",
       "series_memberships": [
         "quicknav"
       ],
@@ -746,10 +746,39 @@
       "github_stars": 1,
       "stars_checked_at": "2026-10-10",
       "category_de": "Inhalte"
+    },
+    {
+      "approved": true,
+      "slug": "builder-template-categories",
+      "name": "Builder Template Categories",
+      "description": "Organize WordPress patterns and supported builder template libraries with shared categories.",
+      "description_de": "WordPress-Patterns und Vorlagenbibliotheken unterstützter Builder mit gemeinsamen Kategorien organisieren.",
+      "version": "1.9.0",
+      "repository": "deckerweb/builder-template-categories",
+      "plugin_file": "builder-template-categories/builder-template-categories.php",
+      "download_url": "https://github.com/deckerweb/builder-template-categories/releases/download/1.9.0/builder-template-categories-1.9.0.zip",
+      "sha256": "6b1d6478748a5940878b0f225f5144cc2624ab2c8adb7ad73d8113ad19abb65f",
+      "requires_wp": "7.0",
+      "requires_php": "8.0",
+      "category": "Builder",
+      "dependencies": [],
+      "icon": "assets/icons/builder-template-categories-1-9-0.png",
+      "icon_label": "BTC",
+      "icon_background": "#f0f3f6",
+      "series": "builder",
+      "published_at": "2026-10-10T11:26:53Z",
+      "series_memberships": [
+        "builder"
+      ],
+      "sort_order": 220,
+      "series_memberships_v3": [
+        "builder"
+      ],
+      "category_de": "Builder"
     }
   ],
-  "catalog_revision": "2026-10-10.2",
-  "generated_at": "2026-10-10T08:42:36Z",
+  "catalog_revision": "2026-10-10.3",
+  "generated_at": "2026-10-10T18:56:48Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
