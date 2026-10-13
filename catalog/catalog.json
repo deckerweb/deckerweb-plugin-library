@@ -775,10 +775,44 @@
         "builder"
       ],
       "category_de": "Builder"
+    },
+    {
+      "approved": true,
+      "slug": "site-essentials",
+      "name": "Site Essentials",
+      "description": "Configure WordPress core behavior with optional controls, reusable presets and independent site settings.",
+      "description_de": "WordPress-Core-Verhalten mit optionalen Einstellungen, wiederverwendbaren Presets und unabhängigen Website-Konfigurationen steuern.",
+      "version": "0.9.0",
+      "repository": "deckerweb/site-essentials",
+      "plugin_file": "site-essentials/site-essentials.php",
+      "download_url": "https://github.com/deckerweb/site-essentials/releases/download/v0.9.0/site-essentials-0.9.0.zip",
+      "sha256": "1f90320c982d1dc13c4ca728ac817de74934c5b177d2308c0491f9d0cb7be9ab",
+      "requires_wp": "7.1.2",
+      "requires_php": "8.2",
+      "category": "Admin",
+      "category_de": "Admin",
+      "dependencies": [],
+      "requires_multisite": false,
+      "network_only": false,
+      "github_stars": 0,
+      "stars_checked_at": "2026-10-13",
+      "icon_label": "SE",
+      "icon_background": "#eaf0f2",
+      "icon": "assets/icons/site-essentials.png",
+      "published_at": "2026-10-13T10:41:08Z",
+      "series_memberships": [],
+      "series_memberships_v2": [
+        "tools"
+      ],
+      "series_memberships_v3": [
+        "tools",
+        "admin"
+      ],
+      "sort_order": 230
     }
   ],
-  "catalog_revision": "2026-10-10.3",
-  "generated_at": "2026-10-10T18:56:48Z",
+  "catalog_revision": "2026-10-13.1",
+  "generated_at": "2026-10-13T10:49:18Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
