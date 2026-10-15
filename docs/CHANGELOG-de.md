@@ -2,6 +2,12 @@
 
 [English](CHANGELOG.md)
 
+### 1.0.0 · 2026-10-15
+
+- **Neu:** Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen.
+- **Verbessert:** Gespeicherte Filter, klarer Katalogstatus und Plugin-Aktivierungszustand, aktualisierte freigegebene Releases und lokale Originalicons.
+- **Behoben:** Inline-Installationen übergeben die native Pluginidentität für die Zusammenarbeit mit Git Updater. Verlaufsdialoge behalten native Schließ- und Dokumentationslink-Fallbacks.
+
 ### 0.9.0 · 2026-10-10
 
 - **Neu:** Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater.

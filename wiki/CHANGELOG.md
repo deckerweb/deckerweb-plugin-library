@@ -2,6 +2,12 @@
 
 [Deutsch](CHANGELOG-de)
 
+### 1.0.0 · 2026-10-15
+
+- **New:** Personal catalog sorting, stable random discovery and copyable technical information in Library settings.
+- **Improved:** Remembered filters, clearer catalog provenance and plugin activation states, refreshed approved releases and local original icons.
+- **Fixed:** Inline installation supplies native plugin identity for Git Updater compatibility. Changelog dialogs retain native close and documentation-link fallbacks.
+
 ### 0.9.0 · 2026-10-10
 
 - **New:** Update verified installed catalog plugins directly in their cards, including older releases without an updater.

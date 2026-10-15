@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.9.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,12 @@ Library settings are shared per network. Daily Scripture 1.0.0 and newer support
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 1.0.0 · 2026-10-15
+
+- **Neu:** Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen.
+- **Verbessert:** Gespeicherte Filter, klarer Katalogstatus und Plugin-Aktivierungszustand, aktualisierte freigegebene Releases und lokale Originalicons.
+- **Behoben:** Inline-Installationen übergeben die native Pluginidentität für die Zusammenarbeit mit Git Updater. Verlaufsdialoge behalten native Schließ- und Dokumentationslink-Fallbacks.
+
 ### 0.9.0 · 2026-10-10
 
 - **Neu:** Geprüfte installierte Katalogplugins direkt in ihren Karten aktualisieren, einschließlich älterer Releases ohne Updater.

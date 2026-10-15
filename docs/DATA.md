@@ -17,3 +17,5 @@ Display cache: dwl_catalog_<URL hash>, 24 hours. Update cache: dwl_catalog_<URL 
 Library 0.6.1 uses a _061 suffix on registered catalog cache base keys to avoid reusing older network-policy caches; the existing last-host cleanup removes registered keys and cache families.
 
 Inline actions use a temporary, non-autoloaded lock option named dwl_inline_lock_<slug>, stored on the main site of the main network (or the current single site). Each request releases its own token on completion or shutdown; abandoned locks can be recovered after 15 minutes. Final-host uninstall removes remaining component lock options. No filesystem credentials are stored by the Library.
+
+Personal catalog sorting, search, series and compatibility filters are stored in user metadata (deckerweb_library_view_v1). A conflict-notice dismissal stores only a local fingerprint (deckerweb_git_updater_notice_v1). Reset view clears the saved view. These settings are removed with the optional final-host settings deletion only when all network scopes permit deletion. Diagnostic copies exclude these personal search values and contain no credentials or site content.

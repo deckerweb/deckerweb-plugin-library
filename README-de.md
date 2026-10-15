@@ -14,7 +14,7 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
-**Version:** 0.9.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
 
@@ -70,6 +70,8 @@ Dieser bisherige Überblick veranschaulicht den Katalog mit beispielhaften Plugi
 ![Reale Katalogansicht in WordPress](assets-github/catalog-real-de.png)
 
 Ein realer Screenshot aus einer Testinstallation mit Library 0.6.0. Er zeigt Plugin-Karten, Filter, Installationsaktionen und Hinweise auf Abhängigkeiten. Katalog und angezeigte Versionen können sich ändern; das Bild ist ein Beispiel, keine laufend aktuelle Release-Liste.
+
+Im Katalog stehen Standard, Name A–Z, Name Z–A, zuletzt aktualisiert und zufällig entdecken zur Wahl. Die Ansicht wird pro WordPress-Benutzer gespeichert; Neu mischen ändert die Zufallsreihenfolge. Filter bleiben bei der Rückkehr erhalten. Die Library-Einstellungen enthalten aufklappbare technische Informationen mit Kopierfunktion, ohne Zugangsdaten oder Website-Inhalte. Git-Updater-Konflikte werden lokal erkannt; ein gezielter Hinweis erklärt bei Bedarf die vorübergehende Deaktivierung.
 
 <a id="for-users"></a>
 ## Die Library in deinem Plugin entdeckt?
@@ -161,6 +163,12 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 1.0.0 · 2026-10-15
+
+- **Neu:** Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen.
+- **Verbessert:** Gespeicherte Filter, klarer Katalogstatus und Plugin-Aktivierungszustand, aktualisierte freigegebene Releases und lokale Originalicons.
+- **Behoben:** Inline-Installationen übergeben die native Pluginidentität für die Zusammenarbeit mit Git Updater. Verlaufsdialoge behalten native Schließ- und Dokumentationslink-Fallbacks.
 
 ### 0.9.0 · 2026-10-10
 

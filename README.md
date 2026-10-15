@@ -14,7 +14,7 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-**Version:** 0.9.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
@@ -70,6 +70,8 @@ This original overview illustrates the catalog with examples of plugins and thei
 ![Real catalog view in WordPress](assets-github/catalog-real-en.png)
 
 A real screenshot from a Library 0.6.0 test installation. It shows plugin cards, filters, installation controls and dependency notices. The catalog and displayed versions can change; this image is an example, not a live release list.
+
+Choose Standard, Name A–Z, Name Z–A, Recently updated or Discover randomly in the catalog. Your view is saved per WordPress user; Shuffle again changes the random order. Filters remain available when returning. Library settings contain expandable Technical information with a copy button. No credentials or site content are included. Git Updater conflicts are detected locally; a targeted notice explains temporary deactivation when needed.
 
 <a id="for-users"></a>
 ## Found this Library in your plugin?
@@ -161,6 +163,12 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 1.0.0 · 2026-10-15
+
+- **New:** Personal catalog sorting, stable random discovery and copyable technical information in Library settings.
+- **Improved:** Remembered filters, clearer catalog provenance and plugin activation states, refreshed approved releases and local original icons.
+- **Fixed:** Inline installation supplies native plugin identity for Git Updater compatibility. Changelog dialogs retain native close and documentation-link fallbacks.
 
 ### 0.9.0 · 2026-10-10
 

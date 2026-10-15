@@ -14,4 +14,4 @@ Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basi
 
 Builder-Fixtures belegen keine Kompatibilität mit Lizenzinstallationen. Echte Builder und Host-Funktionen vor Host-Veröffentlichung in deren Projekten prüfen. Screenshots blockieren keinen Release.
 
-[Tatsächlicher Prüfstand für 0.9.0](VALIDATION-0.9.0-de.md).
+[Tatsächlicher Prüfstand für 1.0.0](VALIDATION-1.0.0-de.md).
