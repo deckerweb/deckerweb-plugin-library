@@ -865,10 +865,47 @@
       "github_stars": 4,
       "stars_checked_at": "2026-10-15",
       "icon": "assets/icons/genesis-widgetized-notfound-b19c22c920b2.png"
+    },
+    {
+      "approved": true,
+      "slug": "types-fields-quicknav",
+      "name": "Types & Fields QuickNav",
+      "description": "Quick toolbar access to content type and custom field administration, with configurable provider navigation and role or user exclusions.",
+      "description_de": "Kurze Toolbar-Wege zur Verwaltung von Inhaltstypen und Feldern – mit wählbaren Provider-Menüs und Rollen- oder Benutzersperren.",
+      "version": "1.0.0",
+      "repository": "deckerweb/types-fields-quicknav",
+      "plugin_file": "types-fields-quicknav/types-fields-quicknav.php",
+      "download_url": "https://github.com/deckerweb/types-fields-quicknav/releases/download/1.0.0/types-fields-quicknav-1.0.0.zip",
+      "sha256": "66d53f5edcdfc1febac988e176687462dd3478a580f6d9a1678949d229d46a79",
+      "requires_wp": "7.1.2",
+      "requires_php": "8.2",
+      "category": "Content types & fields",
+      "category_de": "Inhaltstypen & Felder",
+      "dependencies": [],
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-18",
+      "icon_label": "TFQ",
+      "icon_background": "#ddd2bb",
+      "icon": "assets/icons/types-fields-quicknav-ffa511c3a6a2.png",
+      "published_at": "2026-10-18T18:24:50Z",
+      "series": "quicknav",
+      "series_memberships": [
+        "quicknav"
+      ],
+      "series_memberships_v2": [
+        "quicknav"
+      ],
+      "series_memberships_v3": [
+        "quicknav"
+      ],
+      "sort_order": 250,
+      "requires_multisite": false,
+      "network_only": false,
+      "network_activation": true
     }
   ],
-  "catalog_revision": "2026-10-15.3",
-  "generated_at": "2026-10-15T05:46:01Z",
+  "catalog_revision": "2026-10-18.1",
+  "generated_at": "2026-10-18T18:34:43Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
