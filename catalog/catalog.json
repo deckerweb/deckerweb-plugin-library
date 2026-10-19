@@ -902,9 +902,74 @@
       "requires_multisite": false,
       "network_only": false,
       "network_activation": true
+    },
+    {
+      "approved": true,
+      "slug": "tabulamea",
+      "name": "TabulaMea",
+      "repository": "deckerweb/tabulamea",
+      "plugin_file": "tabulamea/tabulamea.php",
+      "version": "0.9.0",
+      "download_url": "https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip",
+      "sha256": "28fe76a11b7b84b41eaa9fee5d14c20d7b4b1ae2c6f30ac3e6caed315b164d9d",
+      "requires_wp": "7.1.2",
+      "requires_php": "8.2",
+      "description": "Privacy-friendly pageview statistics, popular content and referrers, with access controls and optional country and technology reports.",
+      "description_de": "WordPress-Inhalte tabellarisch verwalten.",
+      "dependencies": [],
+      "category": "Admin",
+      "category_de": "Admin",
+      "series_memberships": [],
+      "series_memberships_v2": [
+        "tools"
+      ],
+      "series_memberships_v3": [
+        "tools",
+        "admin"
+      ],
+      "icon_label": "TBM",
+      "icon": "assets/icons/tabulamea-973feb3bc9e3.png",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-19",
+      "published_at": "2026-10-19T06:47:30Z",
+      "sort_order": 260
+    },
+    {
+      "approved": true,
+      "slug": "genesis-widgetized-footer",
+      "name": "Genesis Widgetized Footer",
+      "repository": "deckerweb/genesis-widgetized-footer",
+      "plugin_file": "genesis-widgetized-footer/genesis-widgetized-footer.php",
+      "version": "2.0.0",
+      "download_url": "https://github.com/deckerweb/genesis-widgetized-footer/releases/download/v2.0.0/genesis-widgetized-footer-2.0.0.zip",
+      "sha256": "67b2e3131bfb4ecbaa5d46033ba59d4a46ff5864c5d882985a2a420dc551f7d8",
+      "requires_wp": "6.4",
+      "requires_php": "8.0",
+      "description": "Customize the Genesis footer and optional disclaimer with widgets, responsive layouts and shortcodes. Footer features require an active Genesis theme and otherwise pause safely.",
+      "description_de": "Widgetbereiche im Footer von Genesis-Themes verwalten. Footer-Funktionen benötigen ein aktives Genesis-Theme und pausieren andernfalls sicher.",
+      "dependencies": [],
+      "category": "Genesis",
+      "category_de": "Genesis",
+      "series_memberships": [
+        "builder"
+      ],
+      "series_memberships_v2": [
+        "builder",
+        "tools"
+      ],
+      "series_memberships_v3": [
+        "builder",
+        "tools"
+      ],
+      "icon_label": "GWF",
+      "icon": "assets/icons/genesis-widgetized-footer-c82e29394a19.png",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-19",
+      "published_at": "2026-10-19T07:28:41Z",
+      "sort_order": 270
     }
   ],
-  "catalog_revision": "2026-10-18.1",
+  "catalog_revision": "2026-10-19.1",
   "generated_at": "2026-10-18T18:34:43Z",
   "requires_library": "0.1.0",
   "series_definitions": {
