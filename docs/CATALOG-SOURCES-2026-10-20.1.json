@@ -1,0 +1,441 @@
+{
+  "plugins": [
+    {
+      "slug": "brand-admin-schemes",
+      "release_id": 404909489,
+      "tag": "v1.0.0",
+      "published_at": "2026-10-06T15:59:00Z",
+      "asset": "brand-admin-schemes-1.0.0.zip",
+      "download_url": "https://github.com/deckerweb/brand-admin-schemes/releases/download/v1.0.0/brand-admin-schemes-1.0.0.zip",
+      "sha256": "73039d32cbabdb3af586df9ef506553e47a463b102cb432d7c452632b895eda3",
+      "description_header": "Brand colors for your WordPress admin, login, toolbar and browser tabs. Use Core Framework, Bricks, ACSS or your own palette.",
+      "icon": {
+        "commit": "ac42dd1f0f3a36276621268f5ac4015fff21e0b4",
+        "path": "assets-github/icon-128x128.png",
+        "sha256": "7e6be96553a52a790ee2eadaacfebd150138e63181a160ec984881468f760f60",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "breakdance-quicknav",
+      "release_id": 406986821,
+      "tag": "v2.0.0",
+      "published_at": "2026-10-08T15:31:56Z",
+      "asset": "breakdance-quicknav-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/breakdance-quicknav/releases/download/v2.0.0/breakdance-quicknav-2.0.0.zip",
+      "sha256": "1329e103befa191c8a2890a3c327adb05f359d2dc1958e5adb73d0fa845b4681",
+      "description_header": "Quick access to Breakdance content, templates, settings, and official add-ons from the WordPress toolbar.",
+      "icon": {
+        "commit": "67aefe3a3a37de3daa352ec5c73c53b57d75fdc5",
+        "path": "assets/brand/icon-128.png",
+        "sha256": "5fb876663a7c80a170f0920eb5043e5c843f4e1a8eb05389f5b2d8a53657a1bb",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "daily-scripture",
+      "release_id": 418049048,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-20T05:45:55Z",
+      "asset": "daily-scripture-1.1.0.zip",
+      "download_url": "https://github.com/deckerweb/daily-scripture/releases/download/v1.1.0/daily-scripture-1.1.0.zip",
+      "sha256": "1d3911067307ec4c8771495af7710b5071b3b3dcc629a90d8607b3e3d097ace5",
+      "description_header": "Daily readings and selected local Bible passages for WordPress websites, including Multisite. Flexible design, live previews, Gutenberg, Elementor, Bricks, shortcodes, personal dashboard widgets and JSON settings transfer.",
+      "icon": {
+        "commit": "f8847228e83416e83866574c64cf3fa3203e5a68",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "d44520ea223b01bde328c05766c95601af7f1b418af64e94d2ef1828d3871ee2",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "bricks-quicknav",
+      "release_id": 409089087,
+      "tag": "v2.0.0",
+      "published_at": "2026-10-10T17:15:09Z",
+      "asset": "bricks-quicknav-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/bricks-quicknav/releases/download/v2.0.0/bricks-quicknav-2.0.0.zip",
+      "sha256": "cf0996a00f1cd09c25b8bd17e13fec85bf49e6fd0e0da22417da941135d15372",
+      "description_header": "Quick access to Bricks content, templates, settings, add-ons, and resources from the WordPress toolbar.",
+      "icon": {
+        "commit": "71a0f330bd627cfc7d65d2c41bdf81eac1e091c5",
+        "path": "assets/icon-128x128.png",
+        "sha256": "307de6c15a3f1821f46ad0239ba1a9b3ad7f92282aed08054e887cee792d5456",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "oxygen-quicknav",
+      "release_id": 406233855,
+      "tag": "v2.0.0",
+      "published_at": "2026-10-07T22:59:51Z",
+      "asset": "oxygen-quicknav-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/oxygen-quicknav/releases/download/v2.0.0/oxygen-quicknav-2.0.0.zip",
+      "sha256": "8c53e26eb36b6cafb7eb572f5e0b621e474f9e24e4cee86d6150334876d22eb2",
+      "description_header": "Quick access to Oxygen and Oxygen Classic content, templates, settings, and official add-ons from the WordPress toolbar.",
+      "icon": {
+        "commit": "2969cd0624141c759394e880d2904b2633a1f419",
+        "path": "assets/brand/icon-128.png",
+        "sha256": "560d21e7da8d3e43e3d4d89d295b6e1f96e1778ca7e314f77d96d0fa7448c1b0",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "advanced-scripts-quicknav",
+      "release_id": 417157622,
+      "tag": "v1.3.0",
+      "published_at": "2026-10-19T10:21:06Z",
+      "asset": "advanced-scripts-quicknav.zip",
+      "download_url": "https://github.com/deckerweb/advanced-scripts-quicknav/releases/download/v1.3.0/advanced-scripts-quicknav.zip",
+      "sha256": "59785bfb0e081f08f2598cdc21614aad97afe1847b38068766e7f49d7a5f4664",
+      "description_header": "Reach your Advanced Scripts through personal favorites, status lists and folders in the WordPress toolbar.",
+      "icon": {
+        "commit": "ab4777a0345a14151821eec34153996ffc1af6de",
+        "path": "assets/icon-128x128.png",
+        "sha256": "6b9f0d0f1174b798e056c0f19ef09d8278aa59f93ffcd388e1fc5fe5d81a6009",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "quick-edit-featured-image",
+      "release_id": 406235206,
+      "tag": "v1.4.0",
+      "published_at": "2026-10-07T23:02:33Z",
+      "asset": "quick-edit-featured-image-1.4.0.zip",
+      "download_url": "https://github.com/deckerweb/quick-edit-featured-image/releases/download/v1.4.0/quick-edit-featured-image-1.4.0.zip",
+      "sha256": "2754a60f68b4e7ec64cd202d0cb143454d1f99949a0e10bcb9cfdcfad3449219",
+      "description_header": "Set, replace and remove featured images directly in Quick Edit for posts, pages and supported public post types.",
+      "icon": {
+        "commit": "8111e8d3a72c5d7e33b716238ff81e7a18515e41",
+        "path": "assets/icon-128x128.png",
+        "sha256": "1a8941ac79e51e725fa83cc777773a6fc7b9e38e021b007fc2c0a7a0d91548a2",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "shortcode-item-updated",
+      "release_id": 407293142,
+      "tag": "v2.3.0",
+      "published_at": "2026-10-08T22:49:24Z",
+      "asset": "shortcode-item-updated-2.3.0.zip",
+      "download_url": "https://github.com/deckerweb/shortcode-item-updated/releases/download/v2.3.0/shortcode-item-updated-2.3.0.zip",
+      "sha256": "5fe6275dc2764fae7bf002ade0406f46dcef1d5ad8d222b0b4b7599068821fb5",
+      "description_header": "Display the latest update of selected posts, pages or custom post type items with a flexible shortcode.",
+      "icon": {
+        "commit": "2d8c2a9b91e5094533d4bbaf508fed2d80237625",
+        "path": "assets/icon-128x128.png",
+        "sha256": "7a3bcb32fa92a1fee33bc7a923e511f1bb704828e72d656bdeaad3be9da3a317",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "builder-list-pages",
+      "release_id": 408808157,
+      "tag": "v1.2.0",
+      "published_at": "2026-10-10T08:30:38Z",
+      "asset": "builder-list-pages-1.2.0.zip",
+      "download_url": "https://github.com/deckerweb/builder-list-pages/releases/download/v1.2.0/builder-list-pages-1.2.0.zip",
+      "sha256": "a415ddb54f8e716f769930b6fdd8c1c69f6d987e9d23cf6510ce2b6fc0949979",
+      "description_header": "Find pages by their page builder. Recognize builders at a glance, filter multiple builders and keep working in familiar WordPress lists.",
+      "icon": {
+        "commit": "bfedb8c91a826004b75ca6fa9f1ecc7a83baf236",
+        "path": "assets/icon-128x128.png",
+        "sha256": "81160c9b906b9e1129aadb352da4b25f82fd92fc1d58f05ab25c7ff366f6f156",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "multisite-toolbar-additions",
+      "release_id": 405606972,
+      "tag": "v4.1.0",
+      "published_at": "2026-10-07T09:41:59Z",
+      "asset": "multisite-toolbar-additions-4.1.0.zip",
+      "download_url": "https://github.com/deckerweb/multisite-toolbar-additions/releases/download/v4.1.0/multisite-toolbar-additions-4.1.0.zip",
+      "sha256": "b11be30a93e429ade7d0126909d5b586bb9cf16a8ff5f3f8040df1de5f9be04e",
+      "description_header": "Configurable WordPress toolbar menus and practical shortcuts for single sites and Multisite networks.",
+      "icon": {
+        "commit": "70737a98a0e8ad91a6cfd218dcf06dfedd50e301",
+        "path": "assets/icon-128x128.png",
+        "sha256": "34b76a02a055dbe14de7d9375e4353416403f46d38e588f76047aacb71a311f3",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "post-author-taxonomy",
+      "release_id": 408812008,
+      "tag": "v1.4.0",
+      "published_at": "2026-10-10T08:37:36Z",
+      "asset": "post-author-taxonomy.zip",
+      "download_url": "https://github.com/deckerweb/post-author-taxonomy/releases/download/v1.4.0/post-author-taxonomy.zip",
+      "sha256": "1bdd51855ab78a809e8b3da5b3e1af0501c3fd339aeb3d93e93aa542c3522e6f",
+      "description_header": "Authors as a public taxonomy: multiple authors, local photos, profiles and flexible shortcodes for your builder or theme.",
+      "icon": {
+        "commit": "3558856ea990259d80742e22c9420b84189d8059",
+        "path": "assets/icon-128x128.png",
+        "sha256": "e41e3b9d292dd3890c937d336d6a57b986f03adf3077fc0d473baf9f92bf6bb0",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "portfolio-content",
+      "release_id": 407294206,
+      "tag": "v1.3.0",
+      "published_at": "2026-10-08T22:41:32Z",
+      "asset": "portfolio-content-1.3.0.zip",
+      "download_url": "https://github.com/deckerweb/portfolio-content/releases/download/v1.3.0/portfolio-content-1.3.0.zip",
+      "sha256": "274eeab14a284156e5cffe4f5f418a0e23549df5a2d55bd497184ea93fff3cd4",
+      "description_header": "Portfolio projects, categories and tags with a quick start, project template and native block patterns.",
+      "icon": {
+        "commit": "e48e45c8ceffe01881bad02aac6838bdcca1508d",
+        "path": "assets/icon-128x128.png",
+        "sha256": "e69660bfe1ba031d8247200d435564a42f2c4248cb5f460521603e11c18b613a",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "builder-shortcode-extras",
+      "release_id": 408810135,
+      "tag": "v1.3.0",
+      "published_at": "2026-10-10T08:34:26Z",
+      "asset": "builder-shortcode-extras.zip",
+      "download_url": "https://github.com/deckerweb/builder-shortcode-extras/releases/download/v1.3.0/builder-shortcode-extras.zip",
+      "sha256": "98b3a0df8b44df914e3ae74082b3874442a5ed8ee8ec9df7b0d1d2d7cb9e1d54",
+      "description_header": "Small dynamic helpers for your WordPress website. Find, configure and copy useful shortcodes.",
+      "icon": {
+        "commit": "0bc603d81a11b1e75c8c17de027c0d79cfb20aa5",
+        "path": "assets/icon-128x128.png",
+        "sha256": "8d63d29526767839c31f3196e3e94f53465d5ee198edbd11be8e3561bb3f85b0",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "plugin-submenu-mover",
+      "release_id": 417481399,
+      "tag": "v2.0.0",
+      "published_at": "2026-10-19T15:58:34Z",
+      "asset": "plugin-submenu-mover-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/plugin-submenu-mover/releases/download/v2.0.0/plugin-submenu-mover-2.0.0.zip",
+      "sha256": "35ad04a457d053d6f71809d98ccd141453a995b9a9e4a7c49157169fdf408a5f",
+      "description_header": "Organize plugin settings with safe submenu moves, an optional Plugin Hub, personal favorites and reviewable rules.",
+      "icon": {
+        "commit": "8d2c762785f2a88a244559dcf90f2513ebdfe3a9",
+        "path": "assets/icon-128x128.png",
+        "sha256": "3514004d94a9ce57c84478917dc3f7c0c4278b937cc66932e2328e744bfb1051",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "purify-elementor",
+      "release_id": 413100180,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-14T19:27:29Z",
+      "asset": "purify-elementor-1.1.0.zip",
+      "download_url": "https://github.com/deckerweb/purify-elementor/releases/download/v1.1.0/purify-elementor-1.1.0.zip",
+      "sha256": "698577a95875586fbff158a531a4667ee2b7cca01785b1c5d34e8d3171172a9e",
+      "description_header": "Targeted Elementor advertising cleanup with optional AI, news and locked widget controls.",
+      "icon": {
+        "commit": "310863e3c7db801d64ae1680f0228a03a9787fda",
+        "path": "assets/artwork/icon-en-128x128.png",
+        "sha256": "786d0fd981d9bb74c2aa0421ec85bc35f660567779aa24b9b3a4b104c9aad772",
+        "source": "pinned-public-repository"
+      },
+      "icon_de": {
+        "commit": "310863e3c7db801d64ae1680f0228a03a9787fda",
+        "path": "assets/artwork/icon-de-128x128.png",
+        "sha256": "083648fac0c6bf34928881cf8f2b6b9de0de7a2d545456f8b01a7490ae923bd2"
+      }
+    },
+    {
+      "slug": "purify-wpcode-lite",
+      "release_id": 407610579,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-09T06:53:03Z",
+      "asset": "purify-wpcode-lite-1.1.0.zip",
+      "download_url": "https://github.com/deckerweb/purify-wpcode-lite/releases/download/v1.1.0/purify-wpcode-lite-1.1.0.zip",
+      "sha256": "382474a3da9c507cf39b46cc5a91263937fca90174eeba924674515ab8ad794d",
+      "description_header": "Remove promotional elements from WPCode Lite while preserving useful free features.",
+      "icon": {
+        "commit": "7bf2a6d8463b556a33f18163755c2c22018688e1",
+        "path": "assets/icon-128x128.png",
+        "sha256": "a560b837cb98150cdf35f8ad6ddde6114f28762e0bd77511d9c7cd0853965613",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "purify-wpforms-lite",
+      "release_id": 408412625,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-09T23:04:09Z",
+      "asset": "purify-wpforms-lite.zip",
+      "download_url": "https://github.com/deckerweb/purify-wpforms-lite/releases/download/v1.1.0/purify-wpforms-lite.zip",
+      "sha256": "53228fd62e2db26f369d105400aee7d506509ac7c3e84731d8fc22fe7f1d0206",
+      "description_header": "Remove promotional elements from WPForms Lite while preserving useful free features.",
+      "icon": {
+        "commit": "6bbf42a8906592d15b464e2fc3910033b01a275a",
+        "path": "assets/icon-128x128.png",
+        "sha256": "730dc2781ea534c133f74670c0765544e0d4f583146d3774d41f4ebb7f6616c9",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "connect-for-shopware",
+      "release_id": 418187573,
+      "tag": "v1.1.0",
+      "published_at": "2026-10-20T08:54:04Z",
+      "asset": "connect-for-shopware-1.1.0.zip",
+      "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.1.0/connect-for-shopware-1.1.0.zip",
+      "sha256": "e2c7d6d7a9161d04a9fed32a9e16637a4b9f672e6d432892439103933141a545",
+      "description_header": "Read-only Shopware products for Gutenberg and native Bricks elements.",
+      "icon": {
+        "commit": "287adb94b0cd6bde644e64a85c270b10d0b7ab8c",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "42e03a43be594ee8167733c267f337ed837b8a9523451cd80c0b2304a155a7a0",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "redirect-draft-content",
+      "release_id": 405818251,
+      "tag": "v0.9.0",
+      "published_at": "2026-10-07T13:53:14Z",
+      "asset": "redirect-draft-content-0.9.0.zip",
+      "download_url": "https://github.com/deckerweb/redirect-draft-content/releases/download/v0.9.0/redirect-draft-content-0.9.0.zip",
+      "sha256": "749422af57ccf1698d345e4460aa4a146714e57b61e5bafb7f65ecc3484d69f0",
+      "description_header": "Temporarily redirect draft content to a published item or a custom URL, with individual targets for posts, pages and public custom post types.",
+      "icon": {
+        "commit": "a76cdce05209a335a5edfbe540de935904d8226c",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "f5f5ca6f88fca3894b16b9686877b2a6689bf5dba5a9b5edf9830d9db6e2730b",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "tools-for-fluentcart",
+      "release_id": 406116370,
+      "tag": "v0.9.0",
+      "published_at": "2026-10-07T20:00:24Z",
+      "asset": "tools-for-fluentcart-0.9.0.zip",
+      "download_url": "https://github.com/deckerweb/tools-for-fluentcart/releases/download/v0.9.0/tools-for-fluentcart-0.9.0.zip",
+      "sha256": "c7a93a3be1781303ef8f52769f0c01606398f62a9a7face793f545775a1c4a2a",
+      "description_header": "Practical tools for FluentCart. Cart Rules adds quantity limits, minimum order values and single-item carts.",
+      "icon": {
+        "commit": "75fd27277d8cf507af562ae4c4fb347989827f1c",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "f628f6cdf6b31af830e0c4a36ea76997aebb1033e52ecd49ac2eb8b8aa192ec6",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "builder-content-guide",
+      "release_id": 406979666,
+      "tag": "1.0.0",
+      "published_at": "2026-10-08T15:24:23Z",
+      "asset": "builder-content-guide-1.0.0.zip",
+      "download_url": "https://github.com/deckerweb/builder-content-guide/releases/download/1.0.0/builder-content-guide-1.0.0.zip",
+      "sha256": "74142634e7e198401d0db923016ad2095bb91e4e034b9e2747858cc5ceb3dc0e",
+      "description_header": "Find the right website building block, understand the effect of a change, and open its original editor.",
+      "icon": {
+        "commit": "f91ba9f1ddf17111e35a6fc87f9e3bb7bb1b45f6",
+        "path": "graphics/icon-128.png",
+        "sha256": "46fc9f1a1a32af841999de0c258286c2fcdae4b865f096583947ba096a4225cd",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "builder-template-categories",
+      "release_id": 408900159,
+      "tag": "1.9.0",
+      "published_at": "2026-10-10T11:26:53Z",
+      "asset": "builder-template-categories-1.9.0.zip",
+      "download_url": "https://github.com/deckerweb/builder-template-categories/releases/download/1.9.0/builder-template-categories-1.9.0.zip",
+      "sha256": "6b1d6478748a5940878b0f225f5144cc2624ab2c8adb7ad73d8113ad19abb65f",
+      "description_header": "Organize WordPress patterns and the template libraries of supported builders and themes with shared categories.",
+      "icon": {
+        "commit": "43b37c9b9b9487b0af5c54f45e1599893c077f22",
+        "path": "assets/icon-128x128.png",
+        "sha256": "7e8d993c46798964a4dd67066a79733e962c96dd7d75609212f6a05dd26efd37",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "site-essentials",
+      "release_id": 411485014,
+      "tag": "v0.9.0",
+      "published_at": "2026-10-13T10:41:08Z",
+      "asset": "site-essentials-0.9.0.zip",
+      "download_url": "https://github.com/deckerweb/site-essentials/releases/download/v0.9.0/site-essentials-0.9.0.zip",
+      "sha256": "1f90320c982d1dc13c4ca728ac817de74934c5b177d2308c0491f9d0cb7be9ab",
+      "description_header": "Configure WordPress core behavior with focused controls, reusable presets and site-specific settings.",
+      "icon": {
+        "commit": "48fba293a942bbe46a668c9a9cca2097066ddc7f",
+        "path": "assets-github/icon-128.png",
+        "sha256": "c6e2b94cd6fd739c953f35c8d42e3adce92a446934a296e6c18ad5e455181b43",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "genesis-widgetized-notfound",
+      "release_id": 413458878,
+      "tag": "2.0.0",
+      "published_at": "2026-10-15T05:47:32Z",
+      "asset": "genesis-widgetized-notfound-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/genesis-widgetized-notfound/releases/download/2.0.0/genesis-widgetized-notfound-2.0.0.zip",
+      "sha256": "dac1238897d918e441a3024db5b42d5346f0ace68121fad4e111516849db494a",
+      "description_header": "Customize Genesis 404 pages and empty search results with widgets, an accessible search form and shortcodes.",
+      "icon": {
+        "commit": "eb175dc197a6fbfb25ce03ff7bc497a2dad54381",
+        "path": "assets/icon-128x128.png",
+        "sha256": "b19c22c920b2edae31b0eb65b2af37d414d6f9f691cc92cd3d5cdd4062750263",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "types-fields-quicknav",
+      "release_id": 416605036,
+      "tag": "1.0.0",
+      "published_at": "2026-10-18T18:24:50Z",
+      "asset": "types-fields-quicknav-1.0.0.zip",
+      "download_url": "https://github.com/deckerweb/types-fields-quicknav/releases/download/1.0.0/types-fields-quicknav-1.0.0.zip",
+      "sha256": "66d53f5edcdfc1febac988e176687462dd3478a580f6d9a1678949d229d46a79",
+      "description_header": "Quick toolbar access to available content type and custom field administration.",
+      "icon": {
+        "commit": "7a6903ece10c74c459c318f895f2720f968c8d90",
+        "path": "assets/brand/icon-128x128.png",
+        "sha256": "ffa511c3a6a289a1e8d409c417401084a49e9b06b97d2d949363aeeefe7188fb",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "tabulamea",
+      "release_id": 416986946,
+      "tag": "v0.9.0",
+      "published_at": "2026-10-19T06:47:30Z",
+      "asset": "tabulamea-0.9.0.zip",
+      "download_url": "https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip",
+      "sha256": "28fe76a11b7b84b41eaa9fee5d14c20d7b4b1ae2c6f30ac3e6caed315b164d9d",
+      "description_header": "Privacy-friendly pageview statistics, popular content and referrers, with access controls and optional country and technology reports.",
+      "icon": {
+        "commit": "ab63a7438b6a89cf65e41bd7ebbbb34e15ca98bb",
+        "path": "artwork/icon-128x128.png",
+        "sha256": "973feb3bc9e3b787a462b6bf9ca50dc81930f2c248ac8820ad5cf31060099566",
+        "source": "pinned-public-repository"
+      }
+    },
+    {
+      "slug": "genesis-widgetized-footer",
+      "release_id": 417005277,
+      "tag": "v2.0.0",
+      "published_at": "2026-10-19T07:28:41Z",
+      "asset": "genesis-widgetized-footer-2.0.0.zip",
+      "download_url": "https://github.com/deckerweb/genesis-widgetized-footer/releases/download/v2.0.0/genesis-widgetized-footer-2.0.0.zip",
+      "sha256": "67b2e3131bfb4ecbaa5d46033ba59d4a46ff5864c5d882985a2a420dc551f7d8",
+      "description_header": "Customize the Genesis footer and optional disclaimer with widgets, responsive layouts and shortcodes.",
+      "icon": {
+        "commit": "43d1e149a7539780772916a19cc235832b053e32",
+        "path": "assets/icon-128x128.png",
+        "sha256": "c82e29394a1910a418d07c63e9527c8782a22fa9b4e0e6603a89d29307b9edc2",
+        "source": "pinned-public-repository"
+      }
+    }
+  ]
+}

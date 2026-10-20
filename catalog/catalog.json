@@ -85,13 +85,13 @@
       "name": "Daily Scripture",
       "description": "Daily readings and selected local Bible passages for WordPress websites, including Multisite. Flexible design, live previews, Gutenberg, Elementor, Bricks, shortcodes, personal dashboard widgets and JSON settings transfer.",
       "description_de": "Tägliche Lesungen und ausgewählte lokale Bibeltexte für WordPress und Multisite, mit flexibler Gestaltung, Builder-Integrationen und persönlichen Dashboard-Widgets.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "repository": "deckerweb/daily-scripture",
       "plugin_file": "daily-scripture/daily-scripture.php",
-      "download_url": "https://github.com/deckerweb/daily-scripture/releases/download/v1.0.1/daily-scripture-1.0.1.zip",
-      "sha256": "27984a1448ab16b56dd661c5708d885e79026221c1be8729b29df2ff4bc97e98",
+      "download_url": "https://github.com/deckerweb/daily-scripture/releases/download/v1.1.0/daily-scripture-1.1.0.zip",
+      "sha256": "1d3911067307ec4c8771495af7710b5071b3b3dcc629a90d8607b3e3d097ace5",
       "requires_wp": "6.6",
-      "requires_php": "8.0",
+      "requires_php": "8.1",
       "category": "Content",
       "dependencies": [],
       "github_stars": 1,
@@ -100,11 +100,15 @@
       "icon_label": "DS",
       "icon_background": "#f0f3f6",
       "network_activation": false,
-      "published_at": "2026-10-07T23:31:49Z",
+      "published_at": "2026-10-20T05:45:55Z",
       "network_activation_min_version": "1.0.0",
       "sort_order": 20,
-      "series_memberships_v3": [],
-      "category_de": "Inhalte"
+      "series_memberships_v3": [
+        "inspiration"
+      ],
+      "category_de": "Inhalte",
+      "series_memberships": [],
+      "series_memberships_v2": []
     },
     {
       "approved": true,
@@ -205,11 +209,11 @@
       "name": "Advanced Scripts QuickNav",
       "description": "Reach your Advanced Scripts through personal favorites, status lists and folders in the WordPress toolbar.",
       "description_de": "Advanced Scripts über persönliche Favoriten, Statuslisten und Ordner in der WordPress-Toolbar erreichen.",
-      "version": "1.2.1",
+      "version": "1.3.0",
       "repository": "deckerweb/advanced-scripts-quicknav",
       "plugin_file": "advanced-scripts-quicknav/advanced-scripts-quicknav.php",
-      "download_url": "https://github.com/deckerweb/advanced-scripts-quicknav/releases/download/v1.2.1/advanced-scripts-quicknav.zip",
-      "sha256": "28865cca60c679da00c82f9c221fb390966335c3960840bcf3977c504d551208",
+      "download_url": "https://github.com/deckerweb/advanced-scripts-quicknav/releases/download/v1.3.0/advanced-scripts-quicknav.zip",
+      "sha256": "59785bfb0e081f08f2598cdc21614aad97afe1847b38068766e7f49d7a5f4664",
       "requires_wp": "6.7",
       "requires_php": "8.0",
       "category": "Scripts",
@@ -227,7 +231,7 @@
       "icon": "assets/icons/advanced-scripts-quicknav-6b9f0d0f1174.png",
       "icon_label": "ASQ",
       "icon_background": "#f0f3f6",
-      "published_at": "2026-10-09T11:35:23Z",
+      "published_at": "2026-10-19T10:21:06Z",
       "series_memberships": [
         "quicknav"
       ],
@@ -485,11 +489,11 @@
       "plugin_file": "plugin-submenu-mover/plugin-submenu-mover.php",
       "category": "Admin",
       "dependencies": [],
-      "version": "1.4.0",
-      "download_url": "https://github.com/deckerweb/plugin-submenu-mover/releases/download/v1.4.0/plugin-submenu-mover.zip",
-      "sha256": "5a37182f212e72ffa0b061eaeb156e307e1a464245a2a0ecdeb9f02b07422a64",
+      "version": "2.0.0",
+      "download_url": "https://github.com/deckerweb/plugin-submenu-mover/releases/download/v2.0.0/plugin-submenu-mover-2.0.0.zip",
+      "sha256": "35ad04a457d053d6f71809d98ccd141453a995b9a9e4a7c49157169fdf408a5f",
       "requires_wp": "6.7",
-      "requires_php": "7.4",
+      "requires_php": "8.3",
       "github_stars": 2,
       "stars_checked_at": "2026-10-15",
       "description": "Move selected plugin settings from top-level menus into suitable submenus for a clearer WordPress admin.",
@@ -497,16 +501,22 @@
       "icon": "assets/icons/plugin-submenu-mover-3514004d94a9.png",
       "icon_label": "PSM",
       "icon_background": "#edf2f5",
-      "published_at": "2025-03-28T10:43:24Z",
+      "published_at": "2026-10-19T15:58:34Z",
       "series": "builder",
       "series_memberships": [
         "builder"
       ],
       "sort_order": 130,
       "series_memberships_v3": [
-        "builder"
+        "builder",
+        "admin",
+        "tools"
       ],
-      "category_de": "Admin"
+      "category_de": "Admin",
+      "series_memberships_v2": [
+        "builder",
+        "tools"
+      ]
     },
     {
       "approved": true,
@@ -646,7 +656,7 @@
       "name": "Connect for Shopware",
       "repository": "deckerweb/connect-for-shopware",
       "plugin_file": "connect-for-shopware/connect-for-shopware.php",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "description": "Read-only Shopware products for Gutenberg and native Bricks elements.",
       "description_de": "Shopware-Produkte lesend in Gutenberg und native Bricks-Elemente einbinden.",
       "requires_wp": "6.6",
@@ -659,15 +669,20 @@
       "icon": "assets/icons/connect-for-shopware-42e03a43be59.png",
       "github_stars": 1,
       "stars_checked_at": "2026-10-15",
-      "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.0.1/connect-for-shopware-1.0.1.zip",
-      "sha256": "87f5e62f3eda5defac78e22721a433900f4d7825cc3d8c0be26a138fbf86efd3",
-      "published_at": "2026-10-06T20:57:45Z",
+      "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.1.0/connect-for-shopware-1.1.0.zip",
+      "sha256": "e2c7d6d7a9161d04a9fed32a9e16637a4b9f672e6d432892439103933141a545",
+      "published_at": "2026-10-20T08:54:04Z",
       "icon_label": "CFS",
       "sort_order": 170,
       "series_memberships_v3": [
-        "connect"
+        "connect",
+        "shop"
       ],
-      "category_de": "Handel"
+      "category_de": "Handel",
+      "series_memberships_v2": [
+        "connect",
+        "shop"
+      ]
     },
     {
       "approved": true,
@@ -969,7 +984,7 @@
       "sort_order": 270
     }
   ],
-  "catalog_revision": "2026-10-19.1",
+  "catalog_revision": "2026-10-20.1",
   "generated_at": "2026-10-18T18:34:43Z",
   "requires_library": "0.1.0",
   "series_definitions": {
@@ -1012,6 +1027,11 @@
       "name": "Admin",
       "name_de": "Admin",
       "order": 70
+    },
+    "inspiration": {
+      "name": "Inspiration",
+      "name_de": "Inspiration",
+      "order": 80
     }
   }
 }
