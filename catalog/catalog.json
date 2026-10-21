@@ -533,16 +533,16 @@
           "min_version": ""
         }
       ],
-      "version": "1.1.0",
-      "download_url": "https://github.com/deckerweb/purify-elementor/releases/download/v1.1.0/purify-elementor-1.1.0.zip",
-      "sha256": "698577a95875586fbff158a531a4667ee2b7cca01785b1c5d34e8d3171172a9e",
+      "version": "1.1.1",
+      "download_url": "https://github.com/deckerweb/purify-elementor/releases/download/v1.1.1/purify-elementor-1.1.1.zip",
+      "sha256": "63c389ea63f5c2feb585526bcf44d301004c63be17ee50ee8c5e5379dbbcdea0",
       "requires_wp": "6.7",
-      "requires_php": "7.4",
+      "requires_php": "8.1",
       "github_stars": 1,
       "stars_checked_at": "2026-10-15",
       "description": "Targeted Elementor advertising cleanup with optional AI, news and locked widget controls.",
       "description_de": "Gezielte Bereinigung von Elementor-Werbung mit optionalen Einstellungen für KI, Neuigkeiten und gesperrte Widgets.",
-      "published_at": "2026-10-14T19:27:29Z",
+      "published_at": "2026-10-21T22:18:40Z",
       "series_memberships": [
         "purify"
       ],
@@ -1019,8 +1019,8 @@
       "stars_checked_at": "2026-10-21"
     }
   ],
-  "catalog_revision": "2026-10-21.2",
-  "generated_at": "2026-10-21T12:27:05Z",
+  "catalog_revision": "2026-10-22.1",
+  "generated_at": "2026-10-21T22:18:40Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
