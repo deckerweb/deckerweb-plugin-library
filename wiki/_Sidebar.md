@@ -1,14 +1,28 @@
-## deckerweb Plugin Library
+## English
 
-[English](Home) · [Deutsch](Home-de)
+- [Home](Home)
+- [Overview](README)
+- [Integration](INTEGRATION)
+- [Plugin series](SERIES)
+- [Catalog](CATALOG)
+- [FAQ](FAQ)
+- [Data & privacy](DATA)
+- [Updater](UPDATER)
+- [Testing](TESTING)
+- [Changelog](CHANGELOG)
+- [Security](SECURITY)
 
-- [README EN](README) · [DE](README-de)
-- [INTEGRATION EN](INTEGRATION) · [DE](INTEGRATION-de)
-- [SERIES EN](SERIES) · [DE](SERIES-de)
-- [CATALOG EN](CATALOG) · [DE](CATALOG-de)
-- [FAQ EN](FAQ) · [DE](FAQ-de)
-- [DATA EN](DATA) · [DE](DATA-de)
-- [UPDATER EN](UPDATER) · [DE](UPDATER-de)
-- [CHANGELOG EN](CHANGELOG) · [DE](CHANGELOG-de)
-- [TESTING EN](TESTING) · [DE](TESTING-de)
-- [SECURITY EN](SECURITY) · [DE](SECURITY-de)
+## Deutsch
+
+- [Startseite](Home-de)
+- [Überblick](README-de)
+- [Integration](INTEGRATION-de)
+- [Plugin-Serien](SERIES-de)
+- [Katalog](CATALOG-de)
+- [FAQ](FAQ-de)
+- [Daten & Datenschutz](DATA-de)
+- [Updater](UPDATER-de)
+- [Tests](TESTING-de)
+- [Änderungsverlauf](CHANGELOG-de)
+- [Sicherheit](SECURITY-de)
+
