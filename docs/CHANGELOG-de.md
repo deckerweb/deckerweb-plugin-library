@@ -2,6 +2,13 @@
 
 [English](CHANGELOG.md)
 
+### 1.1.0 · 2026-10-21
+
+- **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.
+- **Behoben:** Strengere Bereinigung von Admin-Eingaben und kontextgerechte Absicherung der Katalogausgabe.
+- **Behoben:** Inline-Updates berücksichtigen die Nonce-Prüfung von Git Updater, ohne die Library-Autorisierung abzuschwächen; fehlgeschlagene Aktionen bleiben als Fehler erkennbar.
+- **Behoben:** Gezielte Katalogupdates erkennen passende GitHub-Quellarchivangebote und installieren weiterhin ausschließlich das freigegebene Release-ZIP mit geprüfter Prüfsumme.
+
 ### 1.0.0 · 2026-10-15
 
 - **Neu:** Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen.

@@ -498,7 +498,7 @@
       "stars_checked_at": "2026-10-15",
       "description": "Move selected plugin settings from top-level menus into suitable submenus for a clearer WordPress admin.",
       "description_de": "Ausgewählte Plugin-Einstellungen aus Hauptmenüs in passende Untermenüs verschieben – für einen übersichtlicheren WordPress-Admin.",
-      "icon": "assets/icons/plugin-submenu-mover-3514004d94a9.png",
+      "icon": "assets/icons/plugin-submenu-mover-8378bc01dc18.png",
       "icon_label": "PSM",
       "icon_background": "#edf2f5",
       "published_at": "2026-10-19T15:58:34Z",
@@ -547,7 +547,7 @@
         "purify"
       ],
       "icon": "assets/icons/purify-elementor-786d0fd981d9.png",
-      "icon_de": "assets/icons/purify-elementor-786d0fd981d9-de.png",
+      "icon_de": "assets/icons/purify-elementor-083648fac0c6-de.png",
       "icon_label": "PE",
       "sort_order": 140,
       "series_memberships_v3": [
@@ -560,7 +560,8 @@
           "since_version": "1.1.0",
           "mode": "pause"
         }
-      ]
+      ],
+      "icon_background": "#e9e1f1"
     },
     {
       "approved": true,
@@ -604,7 +605,8 @@
           "mode": "pause"
         }
       ],
-      "category_de": "Admin"
+      "category_de": "Admin",
+      "icon_background": "#dfebdd"
     },
     {
       "approved": true,
@@ -648,7 +650,8 @@
           "since_version": "1.1.0",
           "mode": "pause"
         }
-      ]
+      ],
+      "icon_background": "#f1e3d7"
     },
     {
       "approved": true,
@@ -666,7 +669,7 @@
       "series_memberships": [
         "connect"
       ],
-      "icon": "assets/icons/connect-for-shopware-42e03a43be59.png",
+      "icon": "assets/icons/connect-for-shopware-edf44f8030fc.png",
       "github_stars": 1,
       "stars_checked_at": "2026-10-15",
       "download_url": "https://github.com/deckerweb/connect-for-shopware/releases/download/v1.1.0/connect-for-shopware-1.1.0.zip",
@@ -682,7 +685,8 @@
       "series_memberships_v2": [
         "connect",
         "shop"
-      ]
+      ],
+      "icon_background": "#dfe7f0"
     },
     {
       "approved": true,
@@ -879,7 +883,8 @@
       "published_at": "2026-10-15T05:47:32Z",
       "github_stars": 4,
       "stars_checked_at": "2026-10-15",
-      "icon": "assets/icons/genesis-widgetized-notfound-b19c22c920b2.png"
+      "icon": "assets/icons/genesis-widgetized-notfound-b19c22c920b2.png",
+      "icon_background": "#e1e8dc"
     },
     {
       "approved": true,
@@ -947,7 +952,8 @@
       "github_stars": 1,
       "stars_checked_at": "2026-10-19",
       "published_at": "2026-10-19T06:47:30Z",
-      "sort_order": 260
+      "sort_order": 260,
+      "icon_background": "#ddebe8"
     },
     {
       "approved": true,
@@ -981,11 +987,12 @@
       "github_stars": 1,
       "stars_checked_at": "2026-10-19",
       "published_at": "2026-10-19T07:28:41Z",
-      "sort_order": 270
+      "sort_order": 270,
+      "icon_background": "#e7e2ef"
     }
   ],
-  "catalog_revision": "2026-10-20.1",
-  "generated_at": "2026-10-18T18:34:43Z",
+  "catalog_revision": "2026-10-21.1",
+  "generated_at": "2026-10-21T09:57:10Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {

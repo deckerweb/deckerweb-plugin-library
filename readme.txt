@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,12 +36,19 @@ Use Settings → deckerweb Library (Network Settings on Multisite). Hiding disco
 Another installed host, even inactive, preserves shared data. The final host removes temporary Library data and caches. Settings remain unless optional deletion was enabled. Installed plugins and their content remain. Hosts must call the supplied uninstall contract.
 
 = Does it support Multisite? =
-Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Bricks QuickNav retains its per-site restriction. Permissions and dependency checks still apply.
+Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Permissions and dependency checks still apply.
 
 = How do I report a vulnerability? =
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 1.1.0 · 2026-10-21
+
+- **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.
+- **Behoben:** Strengere Bereinigung von Admin-Eingaben und kontextgerechte Absicherung der Katalogausgabe.
+- **Behoben:** Inline-Updates berücksichtigen die Nonce-Prüfung von Git Updater, ohne die Library-Autorisierung abzuschwächen; fehlgeschlagene Aktionen bleiben als Fehler erkennbar.
+- **Behoben:** Gezielte Katalogupdates erkennen passende GitHub-Quellarchivangebote und installieren weiterhin ausschließlich das freigegebene Release-ZIP mit geprüfter Prüfsumme.
+
 ### 1.0.0 · 2026-10-15
 
 - **Neu:** Persönliche Katalogsortierung, stabile Zufallsansicht und kopierbare technische Informationen in den Library-Einstellungen.

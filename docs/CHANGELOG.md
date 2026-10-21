@@ -2,6 +2,13 @@
 
 [Deutsch](CHANGELOG-de.md)
 
+### 1.1.0 · 2026-10-21
+
+- **Improved:** Updated approved catalog and local original icons, with fewer duplicate image files. Initials use consistent subtle background colors; cards highlight on hover and keyboard focus.
+- **Fixed:** Stricter normalization of administration inputs and contextual protection of catalog output.
+- **Fixed:** Inline updates work with Git Updater nonce checks without weakening Library authorization; failed actions retain their error styling.
+- **Fixed:** Explicit catalog updates recognize matching GitHub source-archive offers while installing only the approved, checksum-verified release asset.
+
 ### 1.0.0 · 2026-10-15
 
 - **New:** Personal catalog sorting, stable random discovery and copyable technical information in Library settings.

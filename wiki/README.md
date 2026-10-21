@@ -14,7 +14,7 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-**Version:** 1.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.1.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](INTEGRATION) · [FAQ by topic](FAQ) · [Security](SECURITY)
 
@@ -153,7 +153,7 @@ Another installed host, even inactive, preserves shared data. The final host rem
 
 ### Does it support Multisite?
 
-Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Bricks QuickNav retains its per-site restriction. Permissions and dependency checks still apply.
+Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Permissions and dependency checks still apply.
 
 ### How do I report a vulnerability?
 
@@ -163,6 +163,13 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 1.1.0 · 2026-10-21
+
+- **Improved:** Updated approved catalog and local original icons, with fewer duplicate image files. Initials use consistent subtle background colors; cards highlight on hover and keyboard focus.
+- **Fixed:** Stricter normalization of administration inputs and contextual protection of catalog output.
+- **Fixed:** Inline updates work with Git Updater nonce checks without weakening Library authorization; failed actions retain their error styling.
+- **Fixed:** Explicit catalog updates recognize matching GitHub source-archive offers while installing only the approved, checksum-verified release asset.
 
 ### 1.0.0 · 2026-10-15
 
@@ -214,33 +221,7 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 - **Fixed:** Plugins with their own updater remain independent when the catalog is unavailable.
 - **Fixed:** Online catalog sources are restricted to the deckerweb GitHub raw-file host.
 
-### 0.5.0 · 2026-10-05
-
-- **New:** Explicit QuickNav, Builder and Purify product-family metadata, discreet card badges and a series filter. Empty families remain hidden.
-- **New:** Purify Elementor joins the approved catalog and Purify family; Multisite Toolbar Additions belongs to QuickNav.
-- **Improved:** Combine series and search with Fits my installation; reset filters without changing catalog settings.
-
-### 0.4.0 · 2026-10-05
-
-- **New:** Host-domain translations in English, informal German and formal German.
-- **New:** Shared last-host cleanup with optional settings deletion and a local accessible changelog.
-- **Improved:** Compatible runtime election across old and new hosts; current approved catalog sources and local icons.
-- **Fixed:** Reject oversized archive contents before reading them and normalize files using bounded streams.
-- **Fixed:** Preserve host code during integration and report platform conflicts without raising minimums.
-- **Misc:** Bilingual documentation, private security reporting through host repositories and documented data ownership.
-
-### 0.3.0 · 2026-10-01
-
-- **New:** Fourteen approved plugins, twelve original local icons and dated GitHub star counts.
-- **Improved:** Explicit Multisite requirements and refreshed release provenance.
-
-### 0.2.0
-
-- **New:** Additional catalog entries, local product icons and GitHub star snapshots.
-
-### 0.1.0
-
-- **New:** Embedded curated catalog, verified installation, separate activation and optional online approvals.
+[ Complete changelog ](CHANGELOG)
 
 <a id="author"></a>
 ## Author and scope

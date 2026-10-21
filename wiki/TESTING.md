@@ -14,4 +14,4 @@ Use disposable staging installations, never production. Test WordPress 6.4 basel
 
 Commercial builder fixtures do not establish licensed builder compatibility. Complete real builder and host feature tests in their own staging projects before host publication. Screenshots do not block release.
 
-[Actual validation for 1.0.0](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/VALIDATION-1.0.0.md).
+[Actual validation for 1.1.0](VALIDATION-1.1.0).

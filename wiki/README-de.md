@@ -14,7 +14,7 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
-**Version:** 1.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.1.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](INTEGRATION-de) · [Fragen nach Themen](FAQ-de) · [Sicherheit](SECURITY-de)
 
@@ -153,7 +153,7 @@ Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktivie
 
 ### Wird Multisite unterstützt?
 
-Library-Einstellungen gelten je Netzwerk. Daily Scripture ab 1.0.0 unterstützt Netzwerkaktivierung; ältere installierte Versionen müssen zuvor aktualisiert werden. Bricks QuickNav bleibt auf Website-Aktivierung beschränkt. Berechtigungs- und Abhängigkeitsprüfungen gelten weiterhin.
+Library-Einstellungen gelten je Netzwerk. Daily Scripture ab 1.0.0 unterstützt Netzwerkaktivierung; ältere installierte Versionen müssen zuvor aktualisiert werden. Berechtigungs- und Abhängigkeitsprüfungen gelten weiterhin.
 
 ### Wie wird eine Sicherheitslücke gemeldet?
 
@@ -163,6 +163,13 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 1.1.0 · 2026-10-21
+
+- **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.
+- **Behoben:** Strengere Bereinigung von Admin-Eingaben und kontextgerechte Absicherung der Katalogausgabe.
+- **Behoben:** Inline-Updates berücksichtigen die Nonce-Prüfung von Git Updater, ohne die Library-Autorisierung abzuschwächen; fehlgeschlagene Aktionen bleiben als Fehler erkennbar.
+- **Behoben:** Gezielte Katalogupdates erkennen passende GitHub-Quellarchivangebote und installieren weiterhin ausschließlich das freigegebene Release-ZIP mit geprüfter Prüfsumme.
 
 ### 1.0.0 · 2026-10-15
 
@@ -214,33 +221,7 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 - **Behoben:** Plugins mit eigenem Updater bleiben bei nicht erreichbarem Katalog unabhängig.
 - **Behoben:** Online-Katalogquellen sind auf den GitHub-Raw-Dateihost von deckerweb beschränkt.
 
-### 0.5.0 · 2026-10-05
-
-- **Neu:** Ausdrückliche Serienzuordnung für QuickNav, Builder und Purify, dezente Karten-Badges und Serienfilter. Leere Serien bleiben verborgen.
-- **Neu:** Purify Elementor ergänzt den freigegebenen Katalog und die Purify-Serie; Multisite Toolbar Additions gehört zu QuickNav.
-- **Verbessert:** Serien und Suche mit „Passt zu meiner Installation“ kombinieren; Filter ohne Einstellungsänderung zurücksetzen.
-
-### 0.4.0 · 2026-10-05
-
-- **Neu:** Übersetzungen über die Host-Textdomain auf Englisch, Deutsch (Du) und Deutsch (Sie).
-- **Neu:** Gemeinsame Bereinigung beim letzten Host mit optionaler Einstellungslöschung und lokalem zugänglichem Änderungsverlauf.
-- **Verbessert:** Kompatible Laufzeitwahl mit alten und neuen Hosts; aktuelle freigegebene Katalogquellen und lokale Icons.
-- **Behoben:** Übergroße Archivinhalte vor dem Lesen ablehnen und Dateien über begrenzte Streams aufbereiten.
-- **Behoben:** Host-Code bei Integration erhalten und Plattformkonflikte ohne Erhöhung der Mindestversionen melden.
-- **Sonstiges:** Zweisprachige Dokumentation, private Sicherheitsmeldungen über Host-Repositories und dokumentierte Datenzuordnung.
-
-### 0.3.0 · 2026-10-01
-
-- **Neu:** Vierzehn freigegebene Plugins, zwölf lokale Original-Icons und datierte GitHub-Sterne.
-- **Verbessert:** Explizite Multisite-Anforderungen und aktualisierte Release-Quellen.
-
-### 0.2.0
-
-- **Neu:** Zusätzliche Katalogeinträge, lokale Produkt-Icons und GitHub-Sterne als Zahlenstand.
-
-### 0.1.0
-
-- **Neu:** Eingebetteter kuratierter Katalog, geprüfte Installation, separate Aktivierung und optionale Online-Freigaben.
+[ Vollständiger Änderungsverlauf ](CHANGELOG-de)
 
 <a id="author"></a>
 ## Autor und Umfang

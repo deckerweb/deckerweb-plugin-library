@@ -3,6 +3,10 @@
 from pathlib import Path
 import json,hashlib,zipfile,argparse
 p=argparse.ArgumentParser();p.add_argument('destination',type=Path);a=p.parse_args();kit=Path(__file__).resolve().parents[1];lib=kit/'lib';m=json.loads((lib/'compatibility.json').read_text());version=m['version'];runtime=[f for f in lib.rglob('*')if f.is_file()and f.name not in ['compatibility.json','host.json','messages.json']and f.suffix not in ['.po','.pot']];m['files']=sorted(str(f.relative_to(lib))for f in runtime);m['hashes']={name:hashlib.sha256((lib/name).read_bytes()).hexdigest()for name in m['files']};(lib/'compatibility.json').write_text(json.dumps(m,indent=2)+'\n')
+catalog=json.loads((lib/'catalog.json').read_text())
+icons={entry[key] for entry in catalog['plugins'] for key in ['icon','icon_de'] if key in entry}
+actual={str(f.relative_to(lib)) for f in (lib/'assets/icons').glob('*.png')}
+if actual != icons:p.error('Catalog icon mismatch: missing='+str(icons-actual)+' orphaned='+str(actual-icons))
 a.destination.mkdir(parents=True,exist_ok=True)
 for kind in ['runtime','kit']:
  out=a.destination/('deckerweb-plugin-library-'+('runtime-'if kind=='runtime'else'')+version+'.zip')
