@@ -989,10 +989,38 @@
       "published_at": "2026-10-19T07:28:41Z",
       "sort_order": 270,
       "icon_background": "#e7e2ef"
+    },
+    {
+      "approved": true,
+      "slug": "tuerchenzeit",
+      "name": "Türchenzeit",
+      "version": "1.0.0",
+      "repository": "deckerweb/tuerchenzeit",
+      "plugin_file": "tuerchenzeit/tuerchenzeit.php",
+      "download_url": "https://github.com/deckerweb/tuerchenzeit/releases/download/v1.0.0/tuerchenzeit-1.0.0.zip",
+      "sha256": "fb06779b2dce23c8d1c34b7518ecdeb01680bbf6f678bb3add207a5bf87d6f76",
+      "requires_wp": "6.9",
+      "requires_php": "8.3",
+      "description": "A thoughtfully designed Advent calendar with 24 daily doors, your own content and an optional Advent landing page.",
+      "description_de": "Liebevoll gestalteter Adventskalender mit 24 täglichen Türchen, eigenen Inhalten und einer optionalen Advents-Landingpage.",
+      "category": "Advent calendar",
+      "category_de": "Adventskalender",
+      "dependencies": [],
+      "series_memberships": [],
+      "series_memberships_v2": [],
+      "series_memberships_v3": [
+        "inspiration"
+      ],
+      "icon_label": "TZ",
+      "icon_background": "#e8e2f0",
+      "sort_order": 280,
+      "published_at": "2026-10-21T12:19:04Z",
+      "github_stars": 1,
+      "stars_checked_at": "2026-10-21"
     }
   ],
-  "catalog_revision": "2026-10-21.1",
-  "generated_at": "2026-10-21T09:57:10Z",
+  "catalog_revision": "2026-10-21.2",
+  "generated_at": "2026-10-21T12:27:05Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {
