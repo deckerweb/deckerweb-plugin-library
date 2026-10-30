@@ -18,6 +18,17 @@ Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status 
 
 [Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
 
+## Die Library in WordPress
+
+![Library 1.2.0: kompakte Serien- und Statusfilter über den Plugin-Karten](assets-github/screenshots/catalog-filters-de-1.2.0.png)
+
+Serien, Suche und Plugin-Status in einer kompakten Leiste kombinieren. Die Auswahl wird pro Benutzer gespeichert.
+
+![Library 1.2.0: Katalog mit 30 Plugins und aktuellen lokalen Originalicons](assets-github/screenshots/catalog-overview-de-1.2.0.png)
+
+Der Katalog mit 30 freigegebenen Plugins und ihren lokalen Originalicons. Die Aufnahmen zeigen Library 1.2.0 und Katalogrevision 2026-10-30.1; verfügbare Versionen können sich ändern.
+
+
 ## Inhalt
 
 - [Auf einen Blick](#at-a-glance)
@@ -59,29 +70,15 @@ Die öffentliche GitHub-Katalogadresse ist vorausgefüllt. Online-Abfragen in de
 
 Installierte Hosts teilen Einstellungen; Deaktivieren erhält Daten. Frische Freigabe, Prüfsummen und Archivprüfung schützen Paketaktionen. [Daten](docs/DATA-de.md) · [Updater-Einbindung](docs/UPDATER-de.md).
 
-### Ein Blick in den Katalog
-
-![Schematischer Überblick über den deckerweb Plugin-Katalog](assets-github/banner-de.png)
-
-Dieser bisherige Überblick veranschaulicht den Katalog mit beispielhaften Plugins und ihren Icons. Er ist eine schematische Darstellung, kein Screenshot und keine vollständige Liste des heutigen Katalogs. Verfügbare Releases und Voraussetzungen stehen auf den tatsächlichen Plugin-Karten.
-
-### Der Katalog in WordPress
-
-![Reale Katalogansicht in WordPress](assets-github/catalog-real-de.png)
-
-Ein realer Screenshot aus einer Testinstallation mit Library 0.6.0. Er zeigt Plugin-Karten, Filter, Installationsaktionen und Hinweise auf Abhängigkeiten. Katalog und angezeigte Versionen können sich ändern; das Bild ist ein Beispiel, keine laufend aktuelle Release-Liste.
+### Persönliche Filter und klarer Status
 
 Im Katalog stehen Standard, Name A–Z, Name Z–A, zuletzt aktualisiert und zufällig entdecken zur Wahl. Die Ansicht wird pro WordPress-Benutzer gespeichert; Neu mischen ändert die Zufallsreihenfolge. Filter bleiben bei der Rückkehr erhalten. Die Library-Einstellungen enthalten aufklappbare technische Informationen mit Kopierfunktion, ohne Zugangsdaten oder Website-Inhalte. Git-Updater-Konflikte werden lokal erkannt; ein gezielter Hinweis erklärt bei Bedarf die vorübergehende Deaktivierung.
 
 Suche, Serien, passende Voraussetzungen und Plugin-Status kombinieren. Zur Auswahl stehen Alle, Nicht installiert, Installiert, Aktiv, Inaktiv und Update verfügbar. Der Status bezieht sich auf die aktuelle Website oder das Netzwerk. Update verfügbar vergleicht bekannte stabile installierte Versionen mit freigegebenen Katalogreleases; unbekannte und Entwicklungsversionen gelten nicht als bestätigte Updates. Die Trefferzahl berücksichtigt alle ausgewählten Filter. Filter zurücksetzen leert Suche und Filter, erhält aber die persönliche Sortierung. Die Auswahl wird pro Benutzer gespeichert. Erfolgreiche Inline-Aktionen aktualisieren die passenden Karten; fehlgeschlagene Aktionen bleiben sichtbar. Filtern benötigt keine zusätzlichen GitHub-Anfragen. Herkunft und Revision des Katalogs stehen über den Bedienelementen.
 
-![Persönliche Katalogfilter](assets-github/screenshots/catalog-filters-de-1.2.0.png)
-
-
-![Aktueller Katalog mit lokalen Plugin-Icons](assets-github/screenshots/catalog-overview-de-1.2.0.png)
-
-
 Katalogaktionen nennen fehlgeschlagene Anfrage- und Prüfschritte, ohne fremde Antworttexte, Zugangsdaten oder private Pfade anzuzeigen.
+
+[Schematische Katalogübersicht](assets-github/banner-de.png)
 
 
 <a id="for-users"></a>

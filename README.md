@@ -18,6 +18,17 @@ Installation and activation happen directly in the selected card. Status and err
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
+## The Library in WordPress
+
+![Library 1.2.0: compact series and status filters above the plugin cards](assets-github/screenshots/catalog-filters-en-1.2.0.png)
+
+Combine series, search and plugin status in a compact toolbar. Your preferences are saved per user.
+
+![Library 1.2.0: catalog with 30 plugins and current local original icons](assets-github/screenshots/catalog-overview-en-1.2.0.png)
+
+The catalog with 30 approved plugins and their local original icons. Screenshots show Library 1.2.0 and catalog revision 2026-10-30.1; available versions can change.
+
+
 ## Contents
 
 - [At a Glance](#at-a-glance)
@@ -59,29 +70,15 @@ The public GitHub catalog address is prefilled. Enable online retrieval in Libra
 
 Installed hosts share settings; deactivation preserves data. Fresh release approval, checksums and archive checks guard package actions. [Data](docs/DATA.md) · [Updater integration](docs/UPDATER.md).
 
-### A look at the catalog
-
-![Illustrative deckerweb plugin catalog overview](assets-github/banner-en.png)
-
-This original overview illustrates the catalog with examples of plugins and their icons. It is a schematic illustration, not a screenshot or a complete list of today's catalog. Available releases and requirements appear on the actual plugin cards.
-
-### The catalog in WordPress
-
-![Real catalog view in WordPress](assets-github/catalog-real-en.png)
-
-A real screenshot from a Library 0.6.0 test installation. It shows plugin cards, filters, installation controls and dependency notices. The catalog and displayed versions can change; this image is an example, not a live release list.
+### Personal filters and clear status
 
 Choose Standard, Name A–Z, Name Z–A, Recently updated or Discover randomly in the catalog. Your view is saved per WordPress user; Shuffle again changes the random order. Filters remain available when returning. Library settings contain expandable Technical information with a copy button. No credentials or site content are included. Git Updater conflicts are detected locally; a targeted notice explains temporary deactivation when needed.
 
 Combine search, series, installation compatibility and Plugin status. Choose All, Not installed, Installed, Active, Inactive or Update available. Status uses the current site or network context. Update available compares known stable installed versions with approved catalog releases; unknown and development versions are not treated as confirmed updates. The result count reflects all selected filters. Reset filters clears search and filters while keeping the personal sort order. Preferences are stored per user. Successful inline actions refresh matching cards; failed actions remain visible. No additional GitHub requests are needed for filtering. Catalog origin and revision are shown above the controls.
 
-![Personal catalog filters](assets-github/screenshots/catalog-filters-en-1.2.0.png)
-
-
-![Current catalog with local plugin icons](assets-github/screenshots/catalog-overview-en-1.2.0.png)
-
-
 Catalog actions identify failed request and verification stages without displaying remote response bodies, credentials or private paths.
+
+[Illustrative catalog diagram](assets-github/banner-en.png)
 
 
 <a id="for-users"></a>
