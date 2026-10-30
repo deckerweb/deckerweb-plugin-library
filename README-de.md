@@ -14,7 +14,7 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
-**Version:** 1.1.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.2.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](docs/INTEGRATION-de.md) · [Fragen nach Themen](docs/FAQ-de.md) · [Sicherheit](SECURITY-de.md)
 
@@ -72,6 +72,17 @@ Dieser bisherige Überblick veranschaulicht den Katalog mit beispielhaften Plugi
 Ein realer Screenshot aus einer Testinstallation mit Library 0.6.0. Er zeigt Plugin-Karten, Filter, Installationsaktionen und Hinweise auf Abhängigkeiten. Katalog und angezeigte Versionen können sich ändern; das Bild ist ein Beispiel, keine laufend aktuelle Release-Liste.
 
 Im Katalog stehen Standard, Name A–Z, Name Z–A, zuletzt aktualisiert und zufällig entdecken zur Wahl. Die Ansicht wird pro WordPress-Benutzer gespeichert; Neu mischen ändert die Zufallsreihenfolge. Filter bleiben bei der Rückkehr erhalten. Die Library-Einstellungen enthalten aufklappbare technische Informationen mit Kopierfunktion, ohne Zugangsdaten oder Website-Inhalte. Git-Updater-Konflikte werden lokal erkannt; ein gezielter Hinweis erklärt bei Bedarf die vorübergehende Deaktivierung.
+
+Suche, Serien, passende Voraussetzungen und Plugin-Status kombinieren. Zur Auswahl stehen Alle, Nicht installiert, Installiert, Aktiv, Inaktiv und Update verfügbar. Der Status bezieht sich auf die aktuelle Website oder das Netzwerk. Update verfügbar vergleicht bekannte stabile installierte Versionen mit freigegebenen Katalogreleases; unbekannte und Entwicklungsversionen gelten nicht als bestätigte Updates. Die Trefferzahl berücksichtigt alle ausgewählten Filter. Filter zurücksetzen leert Suche und Filter, erhält aber die persönliche Sortierung. Die Auswahl wird pro Benutzer gespeichert. Erfolgreiche Inline-Aktionen aktualisieren die passenden Karten; fehlgeschlagene Aktionen bleiben sichtbar. Filtern benötigt keine zusätzlichen GitHub-Anfragen. Herkunft und Revision des Katalogs stehen über den Bedienelementen.
+
+![Persönliche Katalogfilter](assets-github/screenshots/catalog-filters-de-1.2.0.png)
+
+
+![Aktueller Katalog mit lokalen Plugin-Icons](assets-github/screenshots/catalog-overview-de-1.2.0.png)
+
+
+Katalogaktionen nennen fehlgeschlagene Anfrage- und Prüfschritte, ohne fremde Antworttexte, Zugangsdaten oder private Pfade anzuzeigen.
+
 
 <a id="for-users"></a>
 ## Die Library in deinem Plugin entdeckt?
@@ -164,6 +175,15 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 <a id="changelog"></a>
 ## Änderungsverlauf
 
+### 1.2.0 · 2026-10-30
+
+- **Neu:** Plugins nach Installation, Aktivierung und verfügbaren Katalogupdates filtern, mit passender Trefferzahl.
+- **Verbessert:** Plugin-Status und Treffer werden nach erfolgreichen Katalogaktionen aktualisiert. Filter zurücksetzen erhält die persönliche Sortierung.
+- **Verbessert:** Aktualisierter eingebauter Katalog und lokale Originalicons.
+- **Verbessert:** Katalog- und Downloadfehler nennen die betroffene Fehlerstufe sowie eine bereinigte Verbindungs-, HTTP-, Prüfsummen- oder Archivursache.
+- **Verbessert:** Kompaktere Katalogfilter erhalten vertraute WordPress-Bedienelemente und Tastaturfokus.
+- **Behoben:** Katalogaktionen bleiben auch nach Filter- oder Sortierwechseln inline.
+
 ### 1.1.0 · 2026-10-21
 
 - **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.
@@ -207,19 +227,6 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 - **Behoben:** Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden.
 - **Behoben:** Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite.
 - **Behoben:** Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten.
-
-### 0.6.0 · 2026-10-06
-
-- **Neu:** Freigegebene Plugin-Releases können im Online-Katalog erscheinen, ohne die eingebettete Library auszutauschen.
-- **Neu:** Purify WPCode Lite und Purify WPForms Lite im Katalog entdecken.
-- **Neu:** Plugins können mehreren Serien angehören, darunter Inhalte verwalten.
-- **Neu:** Die Connect-Serie und das kommende Connect for Shopware 1.0.0 mit klarem Vorbereitungshinweis entdecken.
-- **Verbessert:** Der Katalog wird nach 24 Stunden aktualisiert; Updateprüfungen installierter Plugins nutzen einen unabhängigen Cache.
-- **Verbessert:** Die optionale Anbindung des Host-Updaters erhält aktuelle Paketfreigaben und Prüfsummenprüfungen.
-- **Verbessert:** Die öffentliche GitHub-Katalogadresse ist in den Library-Einstellungen vorausgefüllt.
-- **Behoben:** Katalog- und Paketabfragen verwenden eine Clientkennung ohne Website-URL.
-- **Behoben:** Plugins mit eigenem Updater bleiben bei nicht erreichbarem Katalog unabhängig.
-- **Behoben:** Online-Katalogquellen sind auf den GitHub-Raw-Dateihost von deckerweb beschränkt.
 
 [ Vollständiger Änderungsverlauf ](docs/CHANGELOG-de.md)
 

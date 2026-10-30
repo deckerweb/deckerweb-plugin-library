@@ -2,6 +2,15 @@
 
 [Deutsch](CHANGELOG-de.md)
 
+### 1.2.0 · 2026-10-30
+
+- **New:** Filter plugins by installation, activation and available catalog updates, with matching result counts.
+- **Improved:** Plugin status and matching results refresh after successful catalog actions. Reset filters keeps the personal sort order.
+- **Improved:** Updated bundled catalog and local original icons.
+- **Improved:** Catalog and download failures identify the failed stage and a safe connection, HTTP, checksum or archive cause.
+- **Improved:** More compact catalog filters retain familiar WordPress controls and keyboard focus.
+- **Fixed:** Catalog actions remain inline after changing filters or sorting.
+
 ### 1.1.0 · 2026-10-21
 
 - **Improved:** Updated approved catalog and local original icons, with fewer duplicate image files. Initials use consistent subtle background colors; cards highlight on hover and keyboard focus.

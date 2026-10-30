@@ -8,31 +8,34 @@ Series definitions contain an identifier, English and German name, and numeric d
 
 | Plugin | Initials | Series |
 |---|---|---|
-| Brand Admin Schemes | BAS | Tools, Admin |
-| Breakdance QuickNav | BDQ | QuickNav |
-| Daily Scripture | DS | Inspiration |
-| Bricks QuickNav | BXQ | QuickNav |
-| Oxygen QuickNav | OQN | QuickNav |
-| Advanced Scripts QuickNav | ASQ | QuickNav, Tools, Admin |
-| Quick Edit Featured Image | QFI | Builder, Manage Content |
-| Shortcode Item Updated | SIU | Builder, Manage Content |
-| Builder List Pages | BLP | Builder |
-| Multisite Toolbar Additions | MTA | QuickNav |
-| Post Author Taxonomy | PAT | Builder, Manage Content |
-| Portfolio Content | PC | Builder, Manage Content |
-| Builder Shortcode Extras | BSE | Builder |
-| Plugin Submenu Mover | PSM | Builder, Admin, Tools |
-| Purify Elementor | PE | Purify |
-| Purify WPCode Lite | PCL | Purify |
-| Purify WPForms Lite | PFL | Purify |
-| Connect for Shopware | CFS | Connect, Shop |
-| Redirect Draft Content | RDC | Manage Content |
-| Tools for FluentCart | TFC | Tools, Shop |
-| Builder Content Guide | BCG | Builder, Manage Content |
-| Builder Template Categories | BTC | Builder |
-| Site Essentials | SE | Admin, Tools |
-| Genesis Widgetized Not Found & 404 | GNF | Builder, Tools |
-| Types & Fields QuickNav | TFQ | QuickNav |
-| TabulaMea | TBM | Tools, Admin |
-| Genesis Widgetized Footer | GWF | Builder, Tools |
+| Brand Admin Schemes | BAS | tools, admin |
+| Breakdance QuickNav | BDQ | quicknav |
+| Daily Scripture | DS | inspiration |
+| Bricks QuickNav | BXQ | quicknav |
+| Oxygen QuickNav | OQN | quicknav |
+| Advanced Scripts QuickNav | ASQ | quicknav, tools, admin |
+| Quick Edit Featured Image | QFI | builder, manage-content |
+| Shortcode Item Updated | SIU | builder, manage-content |
+| Builder List Pages | BLP | builder |
+| Multisite Toolbar Additions | MTA | quicknav |
+| Post Author Taxonomy | PAT | builder, manage-content |
+| Portfolio Content | PC | builder, manage-content |
+| Builder Shortcode Extras | BSE | builder |
+| Plugin Submenu Mover | PSM | builder, admin, tools |
+| Purify Elementor | PE | purify |
+| Purify WPCode Lite | PCL | purify |
+| Purify WPForms Lite | PFL | purify |
+| Connect for Shopware | CFS | connect, shop |
+| Redirect Draft Content | RDC | manage-content |
+| Tools for FluentCart | TFC | tools, shop |
+| Builder Content Guide | BCG | builder, manage-content |
+| Builder Template Categories | BTC | builder |
+| Site Essentials | SE | admin, tools |
+| Genesis Widgetized Not Found & 404 | GNF | builder, tools |
+| Types & Fields QuickNav | TFQ | quicknav |
+| TabulaMea | TBM | tools, admin |
+| Genesis Widgetized Footer | GWF | builder, tools |
+| Türchenzeit | TZ | inspiration |
+| GP Project Export Name | GEN | glotpress, tools |
+| GlotFrame | GF | glotpress, tools, builder |
 

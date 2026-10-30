@@ -2,6 +2,9 @@
 
 [English](VALIDATION.md)
 
-Geprüft in isolierten WordPress-7.1.2-Installationen mit PHP 8.4.5 und SQLite. Die 24 Originalpakete bestehen Prüfsummen- und Archivprüfung. Echte Katalogleser 0.6.0, 0.7.0, 0.8.1 und 0.9.0 akzeptieren die Kandidatenmetadaten. Geprüft sind fünf Sortierungen, stabile Zufallsreihenfolge, persönliche Einstellungen, Single-Site-Freigabe von Multisite Toolbar Additions, Offline-Katalogstatus ohne HTTP-Aufruf, datensparsame Diagnose, Deutsch und Deutsch (Sie) über den Host-Sprachweg sowie Nonce- und Rechteprüfungen für Administrator und Abonnent. Native MTA-Updates von 3.1.0 auf 4.1.0 erhalten Website-/Netzwerkaktivierung und gespeicherte Testdaten. Browsertests erfassen Sortierung, Inlinefilter, Speicherung, Einzelkartenbreite, Diagnose und Dialogsichtbarkeit/-schließen bei widersprechendem CSS und überschriebener close-Instanzmethode. Library-Installationen funktionieren im geprüften Mischstand mit Git Updater 14.4.2 und 14.4.2.3; die alte 0.9.0-Kontrolle reproduziert den Abbruch mit 14.4.2. Dies ist keine Zusage für alle Git-Updater-Versionen oder fremden Updateanbieter.
+Releasevorbereitung. Statusfilter, Trefferzahl, kompakte Bedienelemente und Inline-Statusaktualisierung wurden in einer isolierten Installation mit WordPress 7.1.2 / PHP 8.4.5 geprüft. WordPress 6.4 erhielt eine gezielte Darstellungsprüfung. Alle 30 freigegebenen Originalpakete wurden auf Identität, Archivsicherheit und SHA256 geprüft.
 
-PHP-8.0-Ausführung, erneuter WordPress-6.4-Lauf, echte FTP-/SSH-Verbindungen, externer persistenter Object Cache und vollständige kommerzielle Builder-Funktionstests wurden in diesem Durchlauf nicht ausgeführt. Testdownloads liefern lokal geprüfte Originalpakete. Keine produktive Installation oder öffentliche Veröffentlichung.
+Ein Nutzer bestätigte am 30. Oktober 2026 einen erfolgreichen FTPS-Test (FTP über SSL). SSH wurde nicht getestet; eine SSH-Kompatibilitätszusage wird nicht abgeleitet. PHP-8.0-Ausführung und eine vollständige neue Multisite-Aktionsmatrix bleiben ungeprüft.
+
+Offizielles Plugin Check 2.1.0 meldet weiterhin 34 einzeln bewertete kontextabhängige Library-Befunde, im Befundtyp unverändert zu 1.1.0. Daraus folgt keine pauschale Sicherheitsgarantie. Die Komponente wird eingebettet in einem Referenzhost geprüft, nicht als eigenständiges Plugin.
+

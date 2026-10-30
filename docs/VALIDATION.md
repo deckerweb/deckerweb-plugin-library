@@ -2,6 +2,9 @@
 
 [Deutsch](VALIDATION-de.md)
 
-Checked in isolated WordPress 7.1.2 installations with PHP 8.4.5 and SQLite. The 24 original release packages pass checksum and archive validation. Actual catalog readers 0.6.0, 0.7.0, 0.8.1 and 0.9.0 accept the candidate metadata. Tests cover five sorting modes, stable random order, per-user preferences, Single Site permission for Multisite Toolbar Additions, offline catalog provenance without HTTP requests, bounded diagnostics, host-domain German and formal German, and administrator/subscriber nonce and capability checks. Native MTA 3.1.0 to 4.1.0 updates preserve single-site/network activation and stored data. Browser checks cover personal sorting, inline filtering, persistence, one-card width, diagnostics and modal visibility/closing under conflicting styles and an overwritten instance close method. Library installation succeeds with Git Updater 14.4.2 and 14.4.2.3 in the tested mixed-version configuration; the old 0.9.0 control reproduces the 14.4.2 abort. This does not establish compatibility with every Git Updater release or every third-party update provider.
+Release preparation. Status filters, result counts, compact controls and inline action recovery were tested in an isolated WordPress 7.1.2 / PHP 8.4.5 installation. WordPress 6.4 received a targeted rendering check. All 30 approved original plugin packages were checked for identity, archive safety and SHA256.
 
-PHP 8.0 execution, a new WordPress 6.4 run, real FTP/SSH connections, persistent external object cache and complete commercial-builder feature tests were not performed in this cycle. Test downloads use locally supplied verified original release packages. No production installation or public release was performed.
+A user confirmed a successful FTPS (FTP over SSL) test on 30 October 2026. SSH has not been tested; no SSH compatibility claim is made. PHP 8.0 execution and a full new Multisite action matrix remain untested.
+
+Official Plugin Check 2.1.0 leaves 34 individually assessed contextual Library findings, unchanged in type from 1.1.0. These do not constitute a blanket security guarantee. The component is tested embedded in a reference host, not as a standalone plugin.
+

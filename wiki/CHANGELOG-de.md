@@ -2,6 +2,15 @@
 
 [English](CHANGELOG)
 
+### 1.2.0 · 2026-10-30
+
+- **Neu:** Plugins nach Installation, Aktivierung und verfügbaren Katalogupdates filtern, mit passender Trefferzahl.
+- **Verbessert:** Plugin-Status und Treffer werden nach erfolgreichen Katalogaktionen aktualisiert. Filter zurücksetzen erhält die persönliche Sortierung.
+- **Verbessert:** Aktualisierter eingebauter Katalog und lokale Originalicons.
+- **Verbessert:** Katalog- und Downloadfehler nennen die betroffene Fehlerstufe sowie eine bereinigte Verbindungs-, HTTP-, Prüfsummen- oder Archivursache.
+- **Verbessert:** Kompaktere Katalogfilter erhalten vertraute WordPress-Bedienelemente und Tastaturfokus.
+- **Behoben:** Katalogaktionen bleiben auch nach Filter- oder Sortierwechseln inline.
+
 ### 1.1.0 · 2026-10-21
 
 - **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.

@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,15 @@ Library settings are shared per network. Daily Scripture 1.0.0 and newer support
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 1.2.0 · 2026-10-30
+
+- **Neu:** Plugins nach Installation, Aktivierung und verfügbaren Katalogupdates filtern, mit passender Trefferzahl.
+- **Verbessert:** Plugin-Status und Treffer werden nach erfolgreichen Katalogaktionen aktualisiert. Filter zurücksetzen erhält die persönliche Sortierung.
+- **Verbessert:** Aktualisierter eingebauter Katalog und lokale Originalicons.
+- **Verbessert:** Katalog- und Downloadfehler nennen die betroffene Fehlerstufe sowie eine bereinigte Verbindungs-, HTTP-, Prüfsummen- oder Archivursache.
+- **Verbessert:** Kompaktere Katalogfilter erhalten vertraute WordPress-Bedienelemente und Tastaturfokus.
+- **Behoben:** Katalogaktionen bleiben auch nach Filter- oder Sortierwechseln inline.
+
 ### 1.1.0 · 2026-10-21
 
 - **Verbessert:** Aktualisierter freigegebener Katalog und lokale Originalicons mit weniger Bild-Doppeldateien. Kürzel erhalten dezente Hintergrundfarben; Karten reagieren auf Maus und Tastaturfokus.
