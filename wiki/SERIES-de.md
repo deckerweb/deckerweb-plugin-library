@@ -2,7 +2,22 @@
 
 [English](SERIES)
 
-Seriendefinitionen enthalten Kennung, englischen und deutschen Namen sowie numerische Reihenfolge. Library 0.9.0 liest series_definitions und `series_memberships_v3`. Alte Felder enthalten ausschließlich von älteren Lesern unterstützte Kennungen. Admin ist verfügbar: Brand Admin Schemes gehört zu Werkzeuge/Admin, Advanced Scripts QuickNav zu QuickNav/Werkzeuge/Admin. Builder Content Guide gehört zu Builder/Inhalte verwalten; Tools for FluentCart zu Werkzeuge/Shop. Jede Karte bleibt einmal vorhanden und zeigt mehrere Badges. Unbekannte, doppelte oder widersprüchliche Zuordnungen machen den Katalog ungültig. sort_order steuert Kartenreihenfolge mit stabilem Kennungsabgleich; category_de übersetzt Kategorien.
+Katalogrevision: **2026-10-30.1** · **30 Plugins** · **10 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
+
+## Verfügbare Serien
+
+| Serie | Plugins |
+|---|---|
+| QuickNav | 6 |
+| Builder | 12 |
+| Purify | 3 |
+| Inhalte verwalten | 6 |
+| Connect | 1 |
+| Werkzeuge | 10 |
+| Shop | 2 |
+| Admin | 5 |
+| Inspiration | 2 |
+| GlotPress | 2 |
 
 ## Aktueller Katalog
 
@@ -35,4 +50,9 @@ Seriendefinitionen enthalten Kennung, englischen und deutschen Namen sowie numer
 | Types & Fields QuickNav | TFQ | QuickNav |
 | TabulaMea | TBM | Werkzeuge, Admin |
 | Genesis Widgetized Footer | GWF | Builder, Werkzeuge |
+| Türchenzeit | TZ | Inspiration |
+| GP Project Export Name | GEN | GlotPress, Werkzeuge |
+| GlotFrame | GF | GlotPress, Werkzeuge, Builder |
+
+Seriendefinitionen liefern englische/deutsche Namen und die Anzeigereihenfolge. Library 0.9.0 und neuer verwenden `series_definitions` und `series_memberships_v3`; ältere Datenfelder erhalten die von älteren Lesern unterstützte Teilmenge.
 

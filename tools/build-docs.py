@@ -3,6 +3,26 @@
 from pathlib import Path
 import json,shutil,re
 kit=Path(__file__).resolve().parents[1];docs=kit/'docs';content=json.loads((docs/'content.json').read_text());history=json.loads((kit/'lib/history.json').read_text());labels={'New':'Neu','Improved':'Verbessert','Fixed':'Behoben','Misc':'Sonstiges'};wiki=kit/'wiki';wiki.mkdir(exist_ok=True)
+# Derive current catalog documentation in both languages from the approved feed.
+# The same source drives counts, localized series names and every membership row.
+catalog = json.loads((kit / 'catalog/catalog.json').read_text())
+entries = [entry for entry in catalog['plugins'] if entry.get('approved')]
+definitions = catalog['series_definitions']
+ordered_series = sorted(definitions, key=lambda key: (definitions[key]['order'], key))
+def memberships(entry):
+ """Return the newest supported membership list for one approved catalog entry."""
+ return entry.get('series_memberships_v3', entry.get('series_memberships_v2', entry.get('series_memberships', [])))
+for language in ['en', 'de']:
+ label = lambda key: definitions[key]['name_de' if language == 'de' else 'name']
+ series_table = ('| Series | Plugins |\n|---|---|\n' if language == 'en' else '| Serie | Plugins |\n|---|---|\n')
+ series_table += ''.join('| ' + label(key) + ' | ' + str(sum(key in memberships(entry) for entry in entries)) + ' |\n' for key in ordered_series)
+ plugin_table = ('| Plugin | Initials | Series |\n|---|---|---|\n' if language == 'en' else '| Plugin | Kürzel | Serien |\n|---|---|---|\n')
+ plugin_table += ''.join('| ' + entry['name'] + ' | ' + entry['icon_label'] + ' | ' + ', '.join(label(key) for key in memberships(entry)) + ' |\n' for entry in entries)
+ replacements = {'{{catalog_count}}': str(len(entries)), '{{catalog_revision}}': catalog['catalog_revision'], '{{series_count}}': str(len(definitions)), '{{series_table}}': series_table.rstrip(), '{{plugin_series_table}}': plugin_table.rstrip()}
+ for page in ['CATALOG', 'SERIES']:
+  for token, value in replacements.items():
+   content['pages'][page][language]['body'] = content['pages'][page][language]['body'].replace(token, value)
+
 for lang in ['en','de']:
  suffix=''if lang=='en'else'-de';other='[Deutsch](README-de.md)'if lang=='en'else'[English](README.md)';faqs='\n\n'.join('### '+q['question'][lang]+'\n\n'+q['answer'][lang]for q in content['faq']);changes=''
  for r in history:
