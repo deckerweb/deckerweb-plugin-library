@@ -2,6 +2,8 @@
 
 [Deutsch](VALIDATION-0.5.0-de.md)
 
+Historical validation for this version; not the current test status. See [Library 1.2.0](VALIDATION-1.2.0.md).
+
 5 October 2026. This feature update adds series metadata and filtering and the approved Purify Elementor entry; Library minimum versions and lifecycle rules remain unchanged.
 
 33 focused assertions pass on each of WordPress 6.4 and 7.1.2 site installations and 32 on a WordPress 6.7 network installation (98 in total). They cover eight badges, explicit family membership, independent plugins, legacy metadata, malformed series rejection, empty/unknown filters, search and compatibility combinations, reset, network requirements and EN/de_DE/de_DE_formal controls. Browser checks cover actual form submission, Enter preserving the chosen family, All preserving search, resets, empty states, mobile layout and the five-version accessible history. Both JavaScript-enabled and disabled modes are checked.

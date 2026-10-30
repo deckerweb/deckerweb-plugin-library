@@ -2,6 +2,8 @@
 
 [Deutsch](VALIDATION-0.6.1-de.md)
 
+Historical validation for this version; not the current test status. See [Library 1.2.0](VALIDATION-1.2.0.md).
+
 7 October 2026. Library 0.6.1. The update permits Daily Scripture network activation from installed version 1.0.0, with a manifest-verified cold-activation handoff from older Library instances and a protective legacy catalog policy.
 
 Current checks cover approved original ZIPs, version-aware requirements, legacy readers, independent caches/updater bridge, cold activation and invalid-manifest refusal. Daily Scripture 1.0.1 is prepared in an isolated copy; existing/new-site data and Network Admin source selection are tested there. Four browser modes EN/de_DE_formal, JavaScript on/off, verify filters, separate card width, mobile overflow and history controls. Complete ordered parameter/return contracts are checked for 65 named/anonymous functions.

@@ -14,6 +14,8 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
+Current stable component: **Library 1.2.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.2.0.md).
+
 **Version:** 1.2.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
@@ -45,7 +47,7 @@ The catalog with 30 approved plugins and their local original icons. Screenshots
 ## At a Glance
 
 - Selected public GitHub releases with local icons and clear requirements.
-- Search, product-family filters and installation compatibility.
+- Search, series and status filters, personal sorting and matching result counts.
 - Optional daily online catalog; independent installed-plugin update checks.
 
 <a id="installation"></a>
@@ -60,7 +62,7 @@ See [integration](docs/INTEGRATION.md), [data](docs/DATA.md), [tests](docs/TESTI
 
 ### Discover suitable plugins
 
-Use the deckerweb tab under Plugins → Add New. Combine search, QuickNav/Builder/Purify/Manage Content/Connect and Fits my installation. Each card explains missing requirements; installation and activation remain separate.
+Use Plugins → Add New → deckerweb. Combine search, any available series, plugin status and Fits my installation. Each card explains requirements and safe-pause notices; installation and activation remain separate.
 
 ### Approved catalog updates
 
@@ -145,11 +147,11 @@ Open Plugins → Add New → deckerweb. WordPress.org remains the default view.
 
 ### Does it contact external services?
 
-Local browsing does not. Installation downloads the selected GitHub release. Optional online approval updates contact the configured first-party HTTPS endpoint; its server sees the requesting IP. No site URL, user ID, inventory or telemetry is sent.
+Local browsing does not. Installation downloads the selected approved GitHub release. Optional online retrieval contacts the configured trusted public GitHub catalog; the server sees the requesting IP. The Library does not send a site URL, user ID or plugin inventory and contains no telemetry. An embedding host’s separate updater may make its own documented requests.
 
 ### Why is an installation unavailable?
 
-Check the card for missing or inactive dependencies and WordPress/PHP requirements. Prerequisites are not installed automatically; activation is separate.
+Check the card for WordPress/PHP requirements and the selected release. Missing mother plugins or themes are advisory for catalog versions with a verified safe-pause rule: installation and activation remain available while dependent features pause. Older installed versions may still have required dependencies. Native WordPress restrictions and platform requirements remain effective. Prerequisites are not installed automatically; activation is separate.
 
 ### Can I hide it?
 
@@ -161,7 +163,7 @@ Another installed host, even inactive, preserves shared data. The final host rem
 
 ### Does it support Multisite?
 
-Library settings are shared per network. Daily Scripture 1.0.0 and newer support network activation; earlier installed versions must be updated first. Permissions and dependency checks still apply.
+Library settings apply per network; catalog preferences are personal. Plugin actions respect site/network permissions and each catalog entry. Multisite Toolbar Additions supports single sites and Multisite. Daily Scripture permits network activation from version 1.0.0. The current Bricks QuickNav catalog version has no blanket per-site activation block; its theme-dependent features still depend on each site’s active theme. See the validation guide for the actual tested scope.
 
 ### How do I report a vulnerability?
 

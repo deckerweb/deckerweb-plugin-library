@@ -1,5 +1,7 @@
 # Validation 1.1.0
 
+Historical validation for this version; not the current test status. See [Library 1.2.0](VALIDATION-1.2.0).
+
 [Deutsch](VALIDATION-1.1.0-de)
 
 Validation record for approved version 1.1.0. WordPress 7.1.2 / PHP 8.4.5 with disposable SQLite single-site and network fixtures.

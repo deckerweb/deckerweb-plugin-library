@@ -14,3 +14,13 @@
 | You already use … | Du nutzt bereits … / Sie nutzen bereits … |
 
 Public process references: plugin conventions / Plugin-Konventionen; consistent standard / einheitlicher Standard; shared foundation / gemeinsame Grundlage.
+
+| English | Deutsch |
+|---|---|
+| Plugin status | Plugin-Status |
+| Update available | Update verfügbar |
+| Reset filters | Filter zurücksetzen |
+| Shuffle again | Neu mischen |
+| Catalog verification | Katalogprüfung |
+| Package download | Paketdownload |
+

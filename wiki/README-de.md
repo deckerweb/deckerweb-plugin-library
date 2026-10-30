@@ -14,6 +14,8 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
+Aktuelle stabile Komponente: **Library 1.2.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.2.0-de).
+
 **Version:** 1.2.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](INTEGRATION-de) · [Fragen nach Themen](FAQ-de) · [Sicherheit](SECURITY-de)
@@ -45,7 +47,7 @@ Der Katalog mit 30 freigegebenen Plugins und ihren lokalen Originalicons. Die Au
 ## Auf einen Blick
 
 - Ausgewählte öffentliche GitHub-Releases mit lokalen Icons und klaren Voraussetzungen.
-- Suche, Serienfilter und passende Voraussetzungen.
+- Suche, Serien- und Statusfilter, persönliche Sortierung und passende Trefferzahlen.
 - Optionaler täglicher Online-Katalog; unabhängige Updateprüfungen installierter Plugins.
 
 <a id="installation"></a>
@@ -60,7 +62,7 @@ Siehe [integration](INTEGRATION-de), [data](DATA-de), [tests](TESTING-de) und [s
 
 ### Passende Plugins finden
 
-Den deckerweb-Tab unter Plugins → Installieren öffnen. Suche, QuickNav/Builder/Purify/Manage Content/Connect und „Passt zu meiner Installation“ kombinieren. Jede Karte erklärt fehlende Voraussetzungen; Installation und Aktivierung bleiben getrennt.
+Plugins → Plugin hinzufügen → deckerweb öffnen. Suche, verfügbare Serien, Plugin-Status und „Passt zu meiner Installation“ kombinieren. Jede Karte erklärt Voraussetzungen und Pausenhinweise; Installation und Aktivierung bleiben getrennt.
 
 ### Freigegebene Katalogupdates
 
@@ -105,7 +107,7 @@ Das Deaktivieren eines einbettenden Plugins erhält gemeinsame Library-Einstellu
 <a id="for-developers"></a>
 ## Für Entwickler: durchstöbern, nutzen, anpassen
 
-Die Library steht unter **GPL-2.0-or-later**. Du kannst den Code unter dieser Lizenz studieren, weiterverwenden und anpassen. Erhalte Copyright- und erforderliche Herkunftshinweise. Prüfe vor der Übernahme von Grafiken oder Branding die gesonderten [Grafikhinweise](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS-de.md).
+Die Library steht unter **GPL-2.0-or-later**. Du kannst den Code unter dieser Lizenz studieren, weiterverwenden und anpassen. Erhalte Copyright- und erforderliche Herkunftshinweise. Prüfe vor der Übernahme von Grafiken oder Branding die gesonderten [Grafikhinweise](ASSETS-de).
 
 ### Mit dem Einbindungsvertrag starten
 
@@ -134,7 +136,7 @@ Das ist der Einstieg, nicht die gesamte Einbindung. Die [Integrationsanleitung](
 
 Die ausgelieferte Implementierung ist bewusst auf freigegebene deckerweb Repositories und Katalogquellen beschränkt. Eine beliebige JSON-URL einzutragen reicht für einen anderen Herausgeber nicht aus. Passe erlaubte Quellen, Repository-Identitäten, Paketregeln, Serien, Übersetzungen und gemeinsame Laufzeitverwaltung gezielt an und teste sie. Vermeide Namespace- und Bootstrap-Kollisionen, wenn deine Variante neben deckerweb Plugins laufen kann.
 
-Trenne Katalogmetadaten von Komponenten-Releases, speichere die Anzeige zwischen und frage GitHub nicht bei jedem Seitenaufruf ab. Prüfe Paketfreigaben vor entsprechenden Aktionen frisch und erhalte unabhängige Host-Updatewege. Siehe [Kataloganleitung](CATALOG-de), [Testanleitung](TESTING-de) und [Release-Konventionen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS-de.md). Ideen und Implementierungsfragen sind in den Issues und Discussions dieses Repositories willkommen; private Sicherheitsmeldungen zu einer eingebetteten Kopie gehören in das Repository ihres Host-Plugins.
+Trenne Katalogmetadaten von Komponenten-Releases, speichere die Anzeige zwischen und frage GitHub nicht bei jedem Seitenaufruf ab. Prüfe Paketfreigaben vor entsprechenden Aktionen frisch und erhalte unabhängige Host-Updatewege. Siehe [Kataloganleitung](CATALOG-de), [Testanleitung](TESTING-de) und [Release-Konventionen](CONVENTIONS-de). Ideen und Implementierungsfragen sind in den Issues und Discussions dieses Repositories willkommen; private Sicherheitsmeldungen zu einer eingebetteten Kopie gehören in das Repository ihres Host-Plugins.
 
 
 ## FAQ
@@ -145,11 +147,11 @@ Plugins → Plugin hinzufügen → deckerweb öffnen. WordPress.org bleibt die S
 
 ### Werden externe Dienste kontaktiert?
 
-Die lokale Ansicht nicht. Installation lädt das ausgewählte GitHub-Release. Optionale Online-Freigaben kontaktieren die konfigurierte eigene HTTPS-Quelle; deren Server sieht die anfragende IP-Adresse. Website-URL, Nutzer-ID, Plugin-Inventar und Telemetrie werden nicht übertragen.
+Die lokale Ansicht nicht. Installation lädt den ausgewählten freigegebenen GitHub-Release. Optionale Online-Abfragen kontaktieren den konfigurierten vertrauenswürdigen öffentlichen GitHub-Katalog; der Server sieht die anfragende IP-Adresse. Die Library überträgt keine Website-URL, Nutzer-ID oder Pluginliste und enthält keine Telemetrie. Der separate Host-Updater kann eigene dokumentierte Anfragen stellen.
 
 ### Warum ist eine Installation nicht verfügbar?
 
-Die Karte zeigt fehlende oder inaktive Abhängigkeiten sowie WordPress-/PHP-Anforderungen. Voraussetzungen werden nicht automatisch installiert; Aktivierung ist ein eigener Schritt.
+Die Karte nennt WordPress-/PHP-Anforderungen und den angebotenen Release. Fehlende Mutter-Plugins oder Themes sind bei Katalogversionen mit geprüfter Pausenregel ein Hinweis: Installation und Aktivierung bleiben möglich, während abhängige Funktionen pausieren. Ältere installierte Versionen können noch Pflichtabhängigkeiten haben. Native WordPress-Sperren und Plattformanforderungen gelten weiterhin. Voraussetzungen werden nicht automatisch installiert; Aktivierung ist ein eigener Schritt.
 
 ### Kann der Katalog ausgeblendet werden?
 
@@ -161,7 +163,7 @@ Ein weiterer installierter Host erhält gemeinsam genutzte Daten, auch deaktivie
 
 ### Wird Multisite unterstützt?
 
-Library-Einstellungen gelten je Netzwerk. Daily Scripture ab 1.0.0 unterstützt Netzwerkaktivierung; ältere installierte Versionen müssen zuvor aktualisiert werden. Berechtigungs- und Abhängigkeitsprüfungen gelten weiterhin.
+Library-Einstellungen gelten je Netzwerk; Katalogansichten sind persönlich. Pluginaktionen berücksichtigen Website-/Netzwerkrechte und den jeweiligen Katalogeintrag. Multisite Toolbar Additions unterstützt Einzelwebsites und Multisite. Daily Scripture erlaubt Netzwerkaktivierung ab Version 1.0.0. Die aktuelle Bricks-QuickNav-Katalogversion hat keine pauschale Sperre auf Website-Aktivierung; themeabhängige Funktionen richten sich weiterhin nach dem aktiven Theme der jeweiligen Website. Der Prüfstand nennt den tatsächlich getesteten Umfang.
 
 ### Wie wird eine Sicherheitslücke gemeldet?
 
@@ -241,4 +243,4 @@ Normale Fehler und Fragen im Repository des einbettenden Hosts melden; Sicherhei
 
 ## Copyright und Lizenzen
 
-Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [Lizenz](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/LICENSE) · [Grafiken und Herkunft](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/ASSETS-de.md).
+Copyright © 2026 David Decker — DECKERWEB. GPL-2.0-or-later. [Lizenz](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/LICENSE) · [Grafiken und Herkunft](ASSETS-de).

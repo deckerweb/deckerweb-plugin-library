@@ -2,6 +2,8 @@
 
 [English](TESTING.md)
 
+Dies ist eine Prüfliste, keine Liste bereits bestandener Tests. Tatsächliche Ergebnisse stehen im verlinkten Prüfstand.
+
 Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basis und aktuellen stabilen Zielstand mit unterstütztem PHP prüfen; native Dateisystem-Installation und repräsentative FTP-/SSH-Hosts. Tatsächliches finales Laufzeit-ZIP im ausgewählten Host testen.
 
 1. Einzelhost und alte/neue Hosts in beiden Reihenfolgen aktivieren: eine kompatible Laufzeit, ein Tab. Inkompatible höhere Versionen und unvollständige Kopien ohne Fatal Error überspringen.
@@ -15,3 +17,6 @@ Isolierte Staging-Installationen verwenden, keine Produktion. WordPress-6.4-Basi
 Builder-Fixtures belegen keine Kompatibilität mit Lizenzinstallationen. Echte Builder und Host-Funktionen vor Host-Veröffentlichung in deren Projekten prüfen. Screenshots blockieren keinen Release.
 
 [Tatsächlicher Prüfstand für 1.2.0](VALIDATION-1.2.0-de.md).
+
+Sechs Statusmodi, Benutzerspeicherung, kombinierte Filter, Trefferzahl, Zurücksetzen mit erhaltener Sortierung/Zufallsfolge, Statusaktualisierung/Fokus nach Aktionen und mobile kompakte Bedienung einschließen. Fehlerstufen ohne Ausgabe von URLs, Pfaden oder Zugangsdaten prüfen. FTPS ist für 1.2.0 benutzerbestätigt; SSH und PHP-8.0-Ausführung bleiben ungetestet. Dokumentationsbilder ausschließlich in neutralen Testinstallationen aufnehmen.
+

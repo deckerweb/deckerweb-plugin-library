@@ -2,6 +2,8 @@
 
 [Deutsch](VALIDATION-0.4.0-de.md)
 
+Historical validation for this version; not the current test status. See [Library 1.2.0](VALIDATION-1.2.0.md).
+
 Checked on 5 October 2026 against disposable WordPress installations. Library requirements remain WordPress 6.4 and PHP 8.0; no host minimum was raised.
 
 - 70 integration assertions: capabilities, nonces, sources, approval, caches, dependencies and host updater preservation.

@@ -26,18 +26,12 @@ Translations use the elected host's header Text Domain (its slug if missing), ne
 
 The Library kit itself is not installable. `deckerweb-plugin-library-runtime-1.2.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
 
-Read [security](SECURITY), [data](DATA), [tests](TESTING) and [release conventions](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CONVENTIONS.md).
+Read [security](SECURITY), [data](DATA), [tests](TESTING) and [release conventions](CONVENTIONS).
 
-Legacy 0.1–0.3 hosts can coexist, but their old uninstall code does not implement this new contract. Upgrade every host integration before relying on final-host cleanup after the last 0.4 host has been removed. No legacy host files are modified automatically.
+## Mixed versions and cleanup
 
-For the central feed and optional existing updater bridge, read [Catalog](CATALOG) and [Updater](UPDATER). Always keep the current host development source and translate component messages through its domain.
+The highest compatible complete copy is elected for a request. Registration remains `register_v2`; the compatibility manifest uses protocol 2. The cleanup entry is `uninstall_v3`—its suffix does not change the manifest protocol. Keep the manifest and every listed hash intact. Preserve installed inactive hosts and their integration paths.
 
-When replacing an earlier 0.6.0 build, replace every installed 0.6.0 copy together. Equal versions use the host basename as a deterministic election tie-breaker; an older same-version copy can otherwise win. Archive earlier packages and verify compatibility.json hashes after replacement.
+The current bootstrap can hand off to a newer valid copy during native activation. An old offline catalog cannot redraw its disabled card before that copy is active; use the native Plugins screen for such a first transition. Older hosts retain their own uninstall routines and must be reviewed separately. No other host file is rewritten. For historically different copies with the same version, replace all affected copies rather than relying on the host-name tie-breaker.
 
-The 0.6.1 bootstrap registers a pre-activation handoff. During a cold activation it verifies the newly included target host manifest and replaces an older elected Library before its activation guard. Only callbacks owned by the former Library instance are removed; host/updater hooks remain. Keep the protocol-two manifest complete. Daily Scripture network approval starts at installed version 1.0.0. Publish the revised online catalog before distributing the host update.
-
-An old offline Library catalog cannot redraw its disabled activation card before the new component is active. For the first transition use Network Admin → Plugins → Daily Scripture → Network Activate (or update an already active host). The new target bootstrap handles that native activation; afterward the new Library owns the catalog actions.
-
-Protocol 3 prevents a previously loaded protocol-2 cleanup from owning the new host’s uninstall entry. Older hosts still calling v2 must be reviewed separately; the new component cannot rewrite their uninstall code.
-
-New 0.8.0 hosts call uninstall_v3. Cleanup rechecks ownership at request shutdown after a native deletion batch. A physically installed inactive host still protects shared data. An old host uninstalled alone still uses its own old routine; new code cannot retroactively change that file. Replace local unpublished 0.7.1 test copies before final mixed-host rollout.
+Library 1.2.0 requires WordPress 6.4 and PHP 8.0. A host embedding Updater 2.2.1 requires at least PHP 8.1; higher host requirements remain authoritative. Use the latest stable compatible components and test the actual integrated host ZIP. See [Updater](UPDATER), [Assets](ASSETS) and [Validation 1.2.0](VALIDATION-1.2.0).

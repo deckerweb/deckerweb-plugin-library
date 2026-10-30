@@ -1,5 +1,7 @@
 **deckerweb Plugin Library · Documentation / Dokumentation**
 
+[Website (EN)](https://deckerwebplugins.com/en/library/) · [Website (DE)](https://deckerwebplugins.com/de/library/)
+
 [Wiki home / Wiki-Startseite](https://github.com/deckerweb/deckerweb-plugin-library/wiki) · [Repository](https://github.com/deckerweb/deckerweb-plugin-library) · [Downloads & Releases](https://github.com/deckerweb/deckerweb-plugin-library/releases)  
 [Help & bugs / Hilfe & Fehler](https://github.com/deckerweb/deckerweb-plugin-library/issues) · [Discussions / Austausch](https://github.com/deckerweb/deckerweb-plugin-library/discussions) · [Security / Sicherheit](https://github.com/deckerweb/deckerweb-plugin-library/security/policy)
 

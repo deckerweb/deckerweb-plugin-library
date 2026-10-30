@@ -2,6 +2,8 @@
 
 [English](VALIDATION-0.4.0.md)
 
+Historischer Prüfstand dieser Version, kein aktueller Testnachweis. Siehe [Library 1.2.0](VALIDATION-1.2.0-de.md).
+
 Am 5. Oktober 2026 in isolierten WordPress-Installationen geprüft. Mindestanforderungen bleiben WordPress 6.4 und PHP 8.0; keine Host-Mindestanforderung wurde erhöht.
 
 - 70 Integrationsprüfungen: Rechte, Nonces, Quellen, Freigabe, Caches, Voraussetzungen und Erhalt eigener Host-Updater.

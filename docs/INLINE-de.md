@@ -2,6 +2,11 @@
 
 [English](INLINE.md)
 
-Library 0.7.0 installiert und aktiviert Katalogplugins direkt in ihrer Karte, ohne die Seite zu verlassen. Suche, Serienfilter und Scrollposition bleiben erhalten. Installation und Aktivierung sind getrennte Aktionen. Fehler erscheinen als Klartext neben der Aktion; ein erneuter Versuch ist möglich. Benötigte Dateisystem-Zugangsdaten werden im nativen WordPress-Dialog angefragt. Sie bleiben im Seitenspeicher von WordPress, ohne zusätzliche Library-Speicherung. Ohne JavaScript wird der vorhandene geprüfte Formular-Installer verwendet.
+Library 1.2.0 installiert, aktiviert und aktualisiert Katalogplugins in ihren Karten. Installation und Aktivierung bleiben getrennt. Persönliche Filter und Sortierung bleiben verfügbar; erfolgreiche Aktionen erneuern Kartenstatus und Trefferzahl. Eine Karte kann nach der Aktion verschwinden, wenn sie nicht mehr zum gewählten Status passt. Tastaturfokus wechselt bei Bedarf auf ein geeignetes verbleibendes Bedienelement oder die Trefferzahl.
 
-Jede Aktion prüft Berechtigungen, Nonce, Netzwerkbereich, frische Freigabe und Abhängigkeiten. Installation prüft weiterhin Original-ZIP-Hash, Archiv und Identität. Eine installationsweite Aktionssperre verhindert gleichzeitige Änderungen am selben Katalogplugin. Bei unerwarteter Aktivierungsausgabe oder Verbindungsabbruch muss vor einem erneuten Versuch der installierte Plugin-Status geprüft werden.
+Jede Aktion prüft Rechte, Aktions-Nonce, Netzwerkbereich, zutreffende Voraussetzungen und Releasefreigabe. Downloads behalten Original-SHA256-, Archiv- und Identitätsprüfung. Eine temporäre installationsweite Sperre verhindert parallele Änderungen am selben Plugin. Nach unterbrochenen Anfragen prüft die Statuswiederherstellung das tatsächliche Ergebnis, ohne erfolgreiche Schreibvorgänge automatisch zu wiederholen. Fehlgeschlagene oder unbestätigte Aktionen erscheinen nicht als Erfolg.
+
+Benötigte Dateisystem-Zugangsdaten fragt WordPress im nativen Dialog ab; die Library speichert sie nicht zusätzlich. FTPS wurde mit 1.2.0 erfolgreich durch einen Nutzer getestet; SSH bleibt ungetestet. Ohne JavaScript bleiben native Formularwege im Admin; Updates mit Zugangsdaten können die Pluginverwaltung nutzen. Siehe [Tests](TESTING-de.md) und [Prüfstand](VALIDATION-1.2.0-de.md).
+
+Fehler nennen verfügbare bereinigte Katalog-/Download-/Prüfursachen. Ein Fremd-Updater kann eigene Meldungen anzeigen. Veraltete Angebote vor erneutem Versuch aktualisieren; verweigerte Freigaben oder Prüfsummenfehler nicht umgehen.
+

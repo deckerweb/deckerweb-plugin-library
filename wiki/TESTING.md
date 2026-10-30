@@ -2,6 +2,8 @@
 
 [Deutsch](TESTING-de)
 
+This is a test checklist, not a list of completed tests. See the linked validation record for actual results.
+
 Use disposable staging installations, never production. Test WordPress 6.4 baseline and the current stable target with supported PHP; native filesystem installation and representative FTP/SSH hosts. Test the actual final runtime ZIP embedded in the selected host.
 
 1. Activate a single host, then old/new hosts in both orders; one elected compatible runtime and one tab. Skip incompatible higher versions and incomplete copies without a fatal error.
@@ -15,3 +17,6 @@ Use disposable staging installations, never production. Test WordPress 6.4 basel
 Commercial builder fixtures do not establish licensed builder compatibility. Complete real builder and host feature tests in their own staging projects before host publication. Screenshots do not block release.
 
 [Actual validation for 1.2.0](VALIDATION-1.2.0).
+
+Include six status modes, per-user persistence, combined filters, result counts, Reset filters retaining sort/random order, successful action recovery and focus, and mobile compact controls. Check error stages without leaking URLs, paths or credentials. FTPS is user-confirmed for 1.2.0; SSH and PHP 8.0 execution remain untested. Take documentation screenshots only in neutral test installations.
+

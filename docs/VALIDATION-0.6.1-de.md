@@ -2,6 +2,8 @@
 
 [English](VALIDATION-0.6.1.md)
 
+Historischer Prüfstand dieser Version, kein aktueller Testnachweis. Siehe [Library 1.2.0](VALIDATION-1.2.0-de.md).
+
 7. Oktober 2026. Library 0.6.1. Das Update erlaubt Daily-Scripture-Netzwerkaktivierung ab installierter Version 1.0.0, mit manifestgeprüfter Übergabe von älteren Library-Instanzen bei Erstaktivierung und vorsichtiger Altleser-Katalogregel.
 
 Aktuell geprüft: freigegebene Original-ZIPs, versionsabhängige Voraussetzungen, Altleser, unabhängige Caches/Updater-Brücke, Erstaktivierung und Ablehnung defekter Manifeste. Daily Scripture 1.0.1 ist in einer isolierten Kopie vorbereitet; Datenhaltung bestehender/neuer Websites und Bezugswebsite im Network Admin sind dort geprüft. Vier Browsermodi EN/de_DE_formal, JavaScript an/aus, prüfen Filter, normale Einzelkartenbreite, mobilen Überlauf und Verlaufsbedienung. Für 65 benannte/anonyme Funktionen sind geordnete Parameter-/Rückgabeverträge geprüft.

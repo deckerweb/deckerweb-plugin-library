@@ -14,3 +14,13 @@
 | You already use … | Du nutzt bereits … / Sie nutzen bereits … |
 
 Öffentliche Prozessbezüge: Plugin-Konventionen / plugin conventions; einheitlicher Standard / consistent standard; gemeinsame Grundlage / shared foundation.
+
+| English | Deutsch |
+|---|---|
+| Plugin status | Plugin-Status |
+| Update available | Update verfügbar |
+| Reset filters | Filter zurücksetzen |
+| Shuffle again | Neu mischen |
+| Catalog verification | Katalogprüfung |
+| Package download | Paketdownload |
+

@@ -28,16 +28,10 @@ Das Library-Kit ist nicht separat installierbar. `deckerweb-plugin-library-runti
 
 Siehe [Sicherheit](../SECURITY-de.md), [Daten](DATA-de.md), [Tests](TESTING-de.md) und [Release-Konventionen](CONVENTIONS-de.md).
 
-Alte Hosts mit 0.1–0.3 können parallel bestehen; deren alter Uninstall-Code erfüllt diesen neuen Vertrag jedoch noch nicht. Alle Host-Einbindungen aktualisieren, bevor nach Entfernen des letzten 0.4-Hosts eine abschließende Bereinigung durch einen alten Host erwartet wird. Alte Host-Dateien werden nicht automatisch verändert.
+## Gemischte Versionen und Bereinigung
 
-Für zentralen Feed und optionale Brücke zum bestehenden Updater [Katalog](CATALOG-de.md) und [Updater](UPDATER-de.md) lesen. Aktuelle Host-Entwicklungsquelle erhalten und Nachrichten über deren Textdomain übersetzen.
+Pro Anfrage wird die höchste kompatible vollständige Kopie gewählt. Registrierung bleibt `register_v2`; das Kompatibilitätsmanifest verwendet Protokoll 2. Der Bereinigungseinstieg heißt `uninstall_v3`—dieser Suffix ändert das Manifestprotokoll nicht. Manifest und alle aufgeführten Hashes müssen vollständig bleiben. Installierte inaktive Hosts und ihre Einbindungspfade erhalten.
 
-Beim Ersetzen eines früheren 0.6.0-Builds sämtliche installierten 0.6.0-Kopien gemeinsam austauschen. Gleiche Versionen verwenden den Host-Basename als eindeutige Auswahlregel; sonst kann eine ältere Kopie derselben Version gewinnen. Frühere Pakete archivieren und nach Austausch die Hashes in compatibility.json prüfen.
+Der aktuelle Bootstrap kann bei nativer Aktivierung an eine neuere gültige Kopie übergeben. Ein alter Offlinekatalog kann eine gesperrte Karte vor Aktivierung dieser Kopie nicht neu darstellen; für einen solchen Erstwechsel die native Pluginverwaltung verwenden. Ältere Hosts behalten ihre eigenen Deinstallationsroutinen und müssen separat geprüft werden. Keine fremde Hostdatei wird umgeschrieben. Historisch unterschiedliche Kopien derselben Version vollständig ersetzen, statt auf die Auswahl nach Hostnamen zu vertrauen.
 
-Der 0.6.1-Bootstrap registriert eine Übergabe vor Aktivierung. Bei erstmaliger Aktivierung prüft er das Manifest des gerade eingebundenen Zielhosts und ersetzt eine ältere gewählte Library vor deren Aktivierungsprüfung. Nur Callbacks der bisherigen Library-Instanz werden entfernt; Host-/Updater-Hooks bleiben erhalten. Das Protokoll-2-Manifest muss vollständig sein. Daily-Scripture-Netzwerkfreigabe gilt ab installierter Version 1.0.0. Den aktualisierten Online-Katalog vor Auslieferung des Host-Updates veröffentlichen.
-
-Ein alter Offline-Library-Katalog kann seine gesperrte Aktivierungskarte vor dem Komponentenwechsel nicht neu darstellen. Für den Erstwechsel Netzwerkverwaltung → Plugins → Daily Scripture → Netzwerkweit aktivieren verwenden (oder einen bereits aktiven Host aktualisieren). Der neue Zielhost-Bootstrap übernimmt diese native Aktivierung; danach stellt die neue Library die Katalogaktionen bereit.
-
-Protokoll3 verhindert, dass eine zuvor geladene v2-Kopie den Deinstallationseinstieg des neuen Hosts übernimmt. Ältere Hosts, die weiterhin v2 aufrufen, müssen separat geprüft werden; die Komponente schreibt deren Uninstall-Code nicht um.
-
-Neue 0.8.0-Hosts rufen uninstall_v3 auf. Die Bereinigung prüft am Request-Ende nach einer nativen Sammeldeinstallation nochmals, ob Hosts installiert bleiben. Ein physisch installierter inaktiver Host schützt gemeinsame Daten weiterhin. Ein allein deinstallierter alter Host verwendet seine alte Routine; neuer Code ändert dessen Datei nicht rückwirkend. Lokale unveröffentlichte 0.7.1-Testkopien vor dem abschließenden gemischten Rollout ersetzen.
+Library 1.2.0 benötigt WordPress 6.4 und PHP 8.0. Ein Host mit Updater 2.2.1 benötigt mindestens PHP 8.1; höhere Hostanforderungen bleiben maßgeblich. Aktuelle stabile kompatible Komponenten verwenden und das tatsächlich integrierte Host-ZIP prüfen. Siehe [Updater](UPDATER-de.md), [Grafiken](ASSETS-de.md) und [Prüfstand 1.2.0](VALIDATION-1.2.0-de.md).

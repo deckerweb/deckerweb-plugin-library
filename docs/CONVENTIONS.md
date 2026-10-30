@@ -10,4 +10,5 @@ Keep public documentation on the shared source in `docs/content.json` and runtim
 
 Maintain synchronized English/German documentation and user-facing language. Use the words plugin conventions, consistent standard or shared foundation for necessary public process references. Internal working records do not enter public exports.
 
-Current banner artwork adapts the already approved catalog layout and original product icons; it introduces no new logo. Screenshots are a low-priority supplement.
+The approved blue/purple Library branding remains. Documentation screenshots use neutral test installations and match the described interface version. Preserve historical reports as historical evidence; current documentation must reflect the published component and approved catalog. Released tags and ZIPs remain immutable.
+

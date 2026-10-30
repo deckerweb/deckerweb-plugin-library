@@ -12,15 +12,17 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
+Aktuelle stabile Komponente: **Library 1.2.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.2.0-de).
+
 Kleine Plugins. Konkrete Verbesserungen.
 
-- [README](README-de)
-- [INTEGRATION](INTEGRATION-de)
-- [SERIES](SERIES-de)
-- [CATALOG](CATALOG-de)
-- [FAQ](FAQ-de)
-- [DATA](DATA-de)
-- [UPDATER](UPDATER-de)
-- [CHANGELOG](CHANGELOG-de)
-- [TESTING](TESTING-de)
-- [SECURITY](SECURITY-de)
+- [Überblick](README-de)
+- [Einbindung](INTEGRATION-de)
+- [Plugin-Serien](SERIES-de)
+- [Katalog](CATALOG-de)
+- [Fragen nach Themen](FAQ-de)
+- [Daten & Datenschutz](DATA-de)
+- [Updater](UPDATER-de)
+- [Änderungsverlauf](CHANGELOG-de)
+- [Tests](TESTING-de)
+- [Sicherheit](SECURITY-de)

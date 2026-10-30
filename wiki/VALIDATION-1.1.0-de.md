@@ -1,5 +1,7 @@
 # Prüfstand 1.1.0
 
+Historischer Prüfstand dieser Version, kein aktueller Testnachweis. Siehe [Library 1.2.0](VALIDATION-1.2.0-de).
+
 [English](VALIDATION-1.1.0)
 
 Prüfstand zur freigegebenen Version 1.1.0. WordPress 7.1.2 / PHP 8.4.5 mit isolierten SQLite-Einzel- und Netzwerkinstallationen.

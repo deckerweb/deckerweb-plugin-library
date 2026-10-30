@@ -2,6 +2,8 @@
 
 [English](VALIDATION-0.5.0.md)
 
+Historischer Prüfstand dieser Version, kein aktueller Testnachweis. Siehe [Library 1.2.0](VALIDATION-1.2.0-de.md).
+
 5. Oktober 2026. Diese Erweiterung ergänzt Serienmetadaten und Filter und den freigegebenen Purify-Elementor-Eintrag; Library-Mindestversionen und Lebenszyklusregeln bleiben erhalten.
 
 Je 33 gezielte Prüfungen bestehen auf WordPress 6.4 und 7.1.2 als Einzelwebsite sowie 32 auf WordPress 6.7 als Netzwerk (98 insgesamt). Geprüft: acht Badges, ausdrückliche Serienzuordnung, eigenständige Plugins, ältere Metadaten, Ablehnung fehlerhafter Serien, leere/unbekannte Filter, Kombinationen mit Suche und Voraussetzungen, Zurücksetzen, Netzwerkanforderungen und Bedienelemente in EN/de_DE/de_DE_formal. Browserprüfungen umfassen tatsächliches Absenden, Enter mit Erhalt der Serie, „Alle“ mit Erhalt der Suche, Zurücksetzen, leere Ergebnisse, mobile Darstellung und den zugänglichen Verlauf mit fünf Versionen. Geprüft mit aktiviertem und deaktiviertem JavaScript.
