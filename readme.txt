@@ -16,6 +16,8 @@ Installation and activation happen directly in the selected card. Status and err
 
 Current stable component: **Library 1.2.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.2.0.md).
 
+Current online catalog: **2026-11-04.1 · 31 plugins · eight series**. The Library remains at **1.2.0**.
+
 Embedded component for direct distribution only; not a standalone WordPress.org submission.
 
 == Installation ==

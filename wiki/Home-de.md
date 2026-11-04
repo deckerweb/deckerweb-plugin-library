@@ -14,6 +14,8 @@ Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status 
 
 Aktuelle stabile Komponente: **Library 1.2.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.2.0-de).
 
+Aktueller Onlinekatalog: **2026-11-04.1 · 31 Plugins · acht Serien**. Library bleibt bei **1.2.0**.
+
 Kleine Plugins. Konkrete Verbesserungen.
 
 - [Überblick](README-de)

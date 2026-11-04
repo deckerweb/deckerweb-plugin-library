@@ -2,18 +2,16 @@
 
 [Deutsch](SERIES-de.md)
 
-Catalog revision: **2026-10-30.1** · **30 plugins** · **10 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
+Catalog revision: **2026-11-04.1** · **31 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
 
 ## Available series
 
 | Series | Plugins |
 |---|---|
-| QuickNav | 6 |
-| Builder | 12 |
+| QuickNav | 7 |
+| Builder | 10 |
 | Purify | 3 |
-| Manage Content | 6 |
-| Connect | 1 |
-| Tools | 10 |
+| Manage Content | 5 |
 | Shop | 2 |
 | Admin | 5 |
 | Inspiration | 2 |
@@ -23,36 +21,39 @@ Catalog revision: **2026-10-30.1** · **30 plugins** · **10 series**. A plugin 
 
 | Plugin | Initials | Series |
 |---|---|---|
-| Brand Admin Schemes | BAS | Tools, Admin |
+| Brand Admin Schemes | BAS | Admin |
 | Breakdance QuickNav | BDQ | QuickNav |
 | Daily Scripture | DS | Inspiration |
 | Bricks QuickNav | BXQ | QuickNav |
 | Oxygen QuickNav | OQN | QuickNav |
-| Advanced Scripts QuickNav | ASQ | QuickNav, Tools, Admin |
-| Quick Edit Featured Image | QFI | Builder, Manage Content |
-| Shortcode Item Updated | SIU | Builder, Manage Content |
+| Advanced Scripts QuickNav | ASQ | QuickNav |
+| Quick Edit Featured Image | QFI | Manage Content |
+| Shortcode Item Updated | SIU | Builder |
 | Builder List Pages | BLP | Builder |
-| Multisite Toolbar Additions | MTA | QuickNav |
+| Multisite Toolbar Additions | MTA | QuickNav, Admin |
 | Post Author Taxonomy | PAT | Builder, Manage Content |
 | Portfolio Content | PC | Builder, Manage Content |
 | Builder Shortcode Extras | BSE | Builder |
-| Plugin Submenu Mover | PSM | Builder, Admin, Tools |
+| Plugin Submenu Mover | PSM | Admin |
 | Purify Elementor | PE | Purify |
 | Purify WPCode Lite | PCL | Purify |
 | Purify WPForms Lite | PFL | Purify |
-| Connect for Shopware | CFS | Connect, Shop |
+| Connect for Shopware | CFS | Shop |
 | Redirect Draft Content | RDC | Manage Content |
-| Tools for FluentCart | TFC | Tools, Shop |
+| Tools for FluentCart | TFC | Shop |
 | Builder Content Guide | BCG | Builder, Manage Content |
 | Builder Template Categories | BTC | Builder |
-| Site Essentials | SE | Admin, Tools |
-| Genesis Widgetized Not Found & 404 | GNF | Builder, Tools |
+| Site Essentials | SE | Admin |
+| Genesis Widgetized Not Found & 404 | GNF | Builder |
 | Types & Fields QuickNav | TFQ | QuickNav |
-| TabulaMea | TBM | Tools, Admin |
-| Genesis Widgetized Footer | GWF | Builder, Tools |
+| TabulaMea | TBM | Admin |
+| Genesis Widgetized Footer | GWF | Builder |
 | Türchenzeit | TZ | Inspiration |
-| GP Project Export Name | GEN | GlotPress, Tools |
-| GlotFrame | GF | GlotPress, Tools, Builder |
+| GP Project Export Name | GEN | GlotPress |
+| GlotFrame | GF | GlotPress, Builder |
+| WPCodeBox QuickNav | WBQ | QuickNav |
 
 Series definitions supply English/German names and display order. Library 0.9.0 and newer use `series_definitions` and `series_memberships_v3`; legacy fields preserve the subset supported by older readers.
 
+
+Revision 2026-11-04.1 uses eight series. The broad Tools and Connect groups have been removed. Each assignment describes the main purpose; a second series is retained when it represents a distinct benefit. Saved selections for removed series fall back to All in Library 1.2.0. Older Library versions display their supported subset of series while continuing to read the catalog.

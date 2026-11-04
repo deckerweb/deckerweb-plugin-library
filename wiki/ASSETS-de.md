@@ -6,3 +6,5 @@ Lokale Katalogicons sind originale deckerweb-Grafiken aus freigegebenen Plugin-R
 
 Library 1.2.0 enthält 31 lokale Katalog-PNG-Dateien für 30 Plugins einschließlich der benötigten deutschen Iconvariante. Grundsätzlich liegt ein aktuelles Originalicon je Plugin bei; echte Sprachvarianten bleiben erhalten. Aktuelle neutrale EN/DE-Screenshots zeigen kompakte Filter und Katalogrevision 2026-10-30.1. Laufzeit-ZIPs enthalten keine Präsentationsbilder oder Marketinggrafiken; diese bleiben in der Repository-Dokumentation. Siehe [Überblick](README-de).
 
+
+Der Onlinekatalog 2026-11-04.1 enthält inzwischen 31 Plugins. Dies fügt dem unveränderten Runtimepaket 1.2.0 keine Icondateien hinzu: WPCodeBox QuickNav verwendet vorerst WBQ. Die darüber beschriebenen 30er-Aufnahmen und 31 PNG-Dateien dokumentieren den ursprünglichen Library-1.2.0-Auslieferungsstand.
