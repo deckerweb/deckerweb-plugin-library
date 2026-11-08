@@ -89,7 +89,8 @@ foreach ( [ 0, 1, 2 ] as $network ) {
  verify(!Requirements::dependencies_for($versioned,[$file=>$good],true)[0]['_advisory'],'older target retains required dependency');
  verify(Requirements::dependencies_for($versioned,[$file=>$good],false)[0]['_advisory'],'offered target uses versioned pause');
  verify(count(Requirements::check($versioned,[$file=>$good],true,true))===2,'old network and dependency restrictions retained');
- verify(Requirements::check($versioned,[$file=>$good],true,false)===[],'new network and pause target remains available');
+ $target_issues = Requirements::check($versioned,[$file=>$good],true,false);
+ verify(version_compare(PHP_VERSION,$versioned['requires_php'],'>=') ? $target_issues===[] : count($target_issues)===1,'new network and pause target respects offered PHP minimum');
 }
 verify($GLOBALS['http_calls']===0,'installed update selection and legacy adapters issue no HTTP');
 // Independent keys make write order irrelevant for distinct records. API doubles
