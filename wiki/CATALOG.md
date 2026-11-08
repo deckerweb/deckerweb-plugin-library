@@ -2,15 +2,23 @@
 
 [Deutsch](CATALOG-de)
 
-Current Library: **1.2.0** · catalog revision **2026-11-04.1**.
+Current Library: **1.3.0** · catalog revision **2026-11-08.1**.
 
-The catalog contains 31 approved public plugin releases. Each entry pins repository identity, plugin main file, version, original ZIP URL, SHA 256 and platform requirements. Updates are explicitly reviewed; no automatic enrollment. Online retrieval is optional and initially off, cached for 24 hours; installed-plugin update checks use an independent 12 hour cache. Package actions require fresh approval. Existing Library 0.6.0,0.7.0 and 0.8.1 readers accept the additive catalog fields, show supported series and retain conservative dependency checks. New local icons use versioned filenames where older bundled assets would otherwise be stale; older hosts use initials when the file is absent. No remote icons or executable code are loaded.
+The catalog contains 32 approved public plugin releases in 8 series. Each entry pins repository identity, main file, first-installation version, original ZIP URL, SHA256 and requirements. Catalog retrieval is optional, off by default and cached for 24 hours. New plugins and catalog changes require explicit review. Older readers retain their historical conservative behavior.
 
-Cards with no available local image use initials on a subtle background. An explicit catalog `icon_background` takes precedence over the stable built-in pastel palette. Original icons are bundled locally; no remote image requests occur. A removed old image path falls back to initials until compatible local artwork is available. Cards subtly highlight on hover and keyboard focus without moving.
+Original icons are bundled locally. Initials use a subtle background when no matching local icon exists; an explicit `icon_background` takes precedence over the stable pastel palette. Cards retain subtle hover/keyboard focus. No remote icons, scripts or executable catalog code are loaded. WPCodeBox QuickNav uses its local original icon in this Library version.
 
+Current [catalog release/package sources](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-08.1.json). Catalog versions choose first-installation packages; they do not cap installed-plugin updates.
 
-New in revision 2026-11-04.1: WPCodeBox QuickNav 1.0.0 (WBQ, QuickNav). Updated: Builder List Pages 1.3.0 and Types & Fields QuickNav 1.1.0. The original WPCodeBox QuickNav icon is pending a future Library build. Existing copies use the WBQ initials without fetching external images.
+## Plugin updates and the online catalog
 
-WPCodeBox navigation requires WPCodeBox 2 version 1.4.1 or newer. Without a supported active version, this functionality pauses; settings and the independent Functionality Plugin overview remain available. WordPress 6.9 and PHP 8.3 are the add-on’s own minimum requirements.
+**Online catalog and installed-plugin updates are independent with Library 1.3.0 and Updater 2.4.0.** Enable the catalog when you want fresh discovery metadata. There is no need to disable it to receive newer plugin releases.
 
-Current [release and package sources](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-04.1.json). This catalog update does not change Library release packages.
+Example: the catalog lists 1.3.0, your site has 1.3.1, and the normal updater offers 1.4.0. The Library shows Installed: 1.3.1 and Update available: 1.4.0. Its update button uses the normal WordPress update. An older, unavailable or disabled catalog does not block it. If you manually install 1.4.0, the installed version updates accordingly and no downgrade is offered.
+
+For a plugin not installed yet, Install now uses the verified catalog package. Later updates come from its normal updater. This requires a working updater; the Library does not add one to arbitrary old plugins. Online catalog settings do not enable automatic installation or change private-repository credentials.
+
+“No update reported” means the existing WordPress update state contains no newer offer. It does not claim a fresh GitHub check or that your installed version is the latest. Browsing, sorting and filters start no additional release checks. Use Dashboard → Updates for the normal WordPress checking workflow; caches and technical requirements still apply.
+
+Settings → deckerweb Library (Network Admin → Settings on Multisite) controls optional online metadata. Hiding the catalog changes visibility only. Both settings leave installed-plugin updates independent. Previous versions may still use their older catalog-approval behavior; update both components for the complete current behavior.
+

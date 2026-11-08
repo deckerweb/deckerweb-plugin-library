@@ -1,7 +1,7 @@
 === deckerweb Plugin Library ===
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,9 +14,9 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-Current stable component: **Library 1.2.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.2.0.md).
+Component: **Library 1.3.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.3.0.md).
 
-Current online catalog: **2026-11-04.1 · 31 plugins · eight series**. The Library remains at **1.2.0**.
+Current online catalog: **2026-11-08.1 · 32 plugins · eight series**. Library component: **1.3.0**. Catalog discovery and first installation are separate from ordinary installed-plugin updates.
 
 Embedded component for direct distribution only; not a standalone WordPress.org submission.
 
@@ -27,14 +27,14 @@ See README.md and docs/INTEGRATION.md.
 = Where is the catalog? =
 Open Plugins → Add New → deckerweb. WordPress.org remains the default view.
 
-= Does it contact external services? =
-Local browsing does not. Installation downloads the selected approved GitHub release. Optional online retrieval contacts the configured trusted public GitHub catalog; the server sees the requesting IP. The Library does not send a site URL, user ID or plugin inventory and contains no telemetry. An embedding host’s separate updater may make its own documented requests.
+= Does the online catalog limit plugin updates? =
+No. With Library 1.3.0 and Updater 2.4.0, installed plugins use their normal WordPress update provider regardless of catalog settings or catalog version. The Library shows the actual installed version and existing WordPress update offers. A catalog version only selects the verified package for first installation. No additional GitHub release checks are made when browsing. Normal update intervals, caches and technical requirements still apply. This does not enable automatic installation. Older component combinations may retain their previous behavior until updated. See the [update guide](docs/CATALOG.md#plugin-updates-and-the-online-catalog).
 
 = Why is an installation unavailable? =
 Check the card for WordPress/PHP requirements and the selected release. Missing mother plugins or themes are advisory for catalog versions with a verified safe-pause rule: installation and activation remain available while dependent features pause. Older installed versions may still have required dependencies. Native WordPress restrictions and platform requirements remain effective. Prerequisites are not installed automatically; activation is separate.
 
 = Can I hide it? =
-Use Settings → deckerweb Library (Network Settings on Multisite). Hiding discovery preserves dependency checks and existing managed updates. Disable online catalog retrieval separately to stop its requests.
+Use Settings → deckerweb Library (Network Settings on Multisite). Hiding the catalog preserves dependency checks and ordinary plugin updates. Online retrieval is a separate preference for catalog metadata and first installations.
 
 = What happens when I remove a host? =
 Another installed host, even inactive, preserves shared data. The final host removes temporary Library data and caches. Settings remain unless optional deletion was enabled. Installed plugins and their content remain. Hosts must call the supplied uninstall contract.
@@ -46,6 +46,16 @@ Library settings apply per network; catalog preferences are personal. Plugin act
 Use Security → Advisories → Report a vulnerability in the host plugin repository. Include host and Library versions; do not post security details in public issues. Hosts must enable private reporting before publication.
 
 == Changelog ==
+### 1.3.0 · 2026-11-08
+
+- **Neu:** Bestandsupdates sind unabhängig von Onlinekatalog-Einstellung und Katalogversionen.
+- **Verbessert:** Karten zeigen tatsächlich installierte Versionen und normale WordPress-Updateangebote, auch neuere Releases als im Katalog.
+- **Verbessert:** Freigegebenen eingebauten Katalog und lokale Originalicons aktualisiert.
+- **Behoben:** Veraltete katalogverwaltete Updateangebote entfernen und installierte Identität vor expliziten Updates prüfen.
+- **Behoben:** Bei der Aktivierung eines vorhandenen Plugins die Voraussetzungen seiner installierten Version prüfen.
+- **Behoben:** Parallele Installations- und Temporärdateieinträge unabhängig speichern und eigene Erstinstallationsdateien nach Fehlern zuverlässig bereinigen.
+- **Sonstiges:** Altplugins ohne normalen Updateanbieter benötigen einmalig ein manuelles ZIP-Update; die Library liefert keine katalogverwalteten Ersatz-Updateangebote mehr.
+
 ### 1.2.0 · 2026-10-30
 
 - **Neu:** Plugins nach Installation, Aktivierung und verfügbaren Katalogupdates filtern, mit passender Trefferzahl.

@@ -2,19 +2,23 @@
 
 [Deutsch](UPDATER-de.md)
 
-## Catalog actions and host updater
+## Two separate tasks
 
-Library 1.2.0 installs, activates and explicitly updates selected catalog plugins inline. Native `Plugin_Upgrader` processing preserves activation scope and plugin data. Existing plugins without an updater can be updated after exact plugin/repository identity checks; this is not automatic ownership of every installed plugin. Different versions, foreign repositories or unrecognized package sources are rejected.
+Library 1.3.0 uses the reviewed catalog to discover plugins and install a verified package for the first time. Updater 2.4.0 handles installed-plugin releases through the normal WordPress update process. Online catalog preference, catalog version, withdrawal or catalog retrieval failure do not determine the version offered by that updater.
 
-A matching GitHub source-archive offer may be accepted only when repository, plugin, version and tag match exactly. The installed package is still the approved catalog release asset, with SHA256, identity and archive verification. Other update offers and third-party hooks remain intact. Git Updater interoperability includes the native updates nonce while retaining the Library’s own action nonce and capability checks. The local conflict notice recommends temporary deactivation when needed; nothing is deactivated automatically.
+The Library reads the actual installed headers and existing WordPress `update_plugins` offers. Status filters and update buttons use that existing offer. No `wp_update_plugins()` call, GitHub release request or background check is started by rendering Library cards. A normal WordPress check may still be needed before a newly published release appears.
 
-## Optional provider contract
+The update button invokes native `Plugin_Upgrader::bulk_upgrade()` for the exact installed basename. As in the Core AJAX updater, the bulk method processes the single selected plugin while preserving activation scope. It does not synthesize an offer, replace the normal package with a catalog asset or impose catalog platform/dependency rules on the new package. Native/updater package identity, offered-version, permissions and actual archive platform checks remain effective. A changed displayed offer is refused until the page is reloaded. Other update providers and their offers remain untouched.
 
-An explicitly configured public host updater can call `updater_release(repository, file, fresh)`: an array supplies approved metadata, `false` permits its existing direct-updater mode when Library online retrieval is off, and `null` refuses approval. Refused approval must not silently fall back to an unapproved package. Display cache is 24 hours; independent update metadata cache is 12 hours. Fresh package approval still requires a successful source check.
+## Integration and older copies
 
-`updater_package(repository, file, package)` returns a verified temporary package path or `WP_Error`. The caller removes successful temporary archives after use. Repository URL, plugin basename and package URL must identify the same approved target. Preserve private authentication and other updater behavior; this bridge is for explicitly opted-in public hosts.
+Update both embedded components and retain the pinned class returned by the Updater runtime include. Existing `deckerweb_library_updater_options_v1()` host calls can remain: new Updater 2.4.0 ignores the obsolete catalog release/package callbacks. Library 1.3.0 returns `false` from its legacy `updater_release()` to select the known direct path for older updaters; it no longer supplies catalog update packages or cleanup leases for that path. This deliberate ownership change is specific to the new runtime, not a general instruction to bypass old provider refusals.
 
-Library 1.2.0 also offers `updater_diagnostic(repository, file)` for an available safe failure from the same request and target. It performs no HTTP request. It may return `null`; it does not cover every possible error. Existing Updater 2.2.1 does not automatically display these extra diagnostics and can still show a general verification message. Do not change the array/null/false provider contract to pass error objects as release metadata.
+The Library removes old `dwl_managed` offers from its retired catalog updater while preserving ordinary offers. It does not create a new updater for old plugins without one. Such plugins need their normal updater integration updated separately; the Plugins screen remains the management entry point. Unchanged old copies retain their historical behavior until an appropriate new runtime is elected. Update URI, authentication and native automatic-update preferences are preserved.
 
-Filesystem credentials stay in WordPress’s native dialog. Without JavaScript, actions remain in administration; updates needing credentials use the native Plugins screen. Online catalog failure never disables checksum/identity checks. The old `integration/updater-v2.1-dev.3-catalog-provider.patch` is a historical example for that exact development version, not a patch to apply to current updaters.
+## First installation and cleanup
+
+First installation still requires fresh catalog approval, the catalog SHA256 and bounded archive/identity verification. The Library owns and removes its installation temporary files, including exception paths, and preserves foreign/replaced paths. Updater 2.4.0 owns ordinary installed updates and does not request a Library package lease. Hosts adopt `deckerweb_library_uninstall_v4` while retaining their own cleanup.
+
+Filesystem credentials remain in WordPress’s native dialog; the Library does not store them. The native updates nonce for third-party compatibility is sent alongside the independently verified Library action nonce. Without JavaScript the same normal update runs through an authorized administration POST; when filesystem credentials are needed, use the native Plugins screen. Git Updater conflict notices remain advisory; nothing is deactivated automatically.
 

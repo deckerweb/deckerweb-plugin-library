@@ -1,3 +1,3 @@
-# Historisches Updater-Einbindungsbeispiel
+# Einbindung von Bestandsupdates
 
-`updater-v2.1-dev.3-catalog-provider.patch` gilt ausschließlich für Updater 2.1.0-dev.3. Es bleibt als historische Referenz erhalten und darf nicht auf aktuelle Updater angewandt werden. Aktuellen Hostadapter und [Updater-Anleitung](../docs/UPDATER-de.md) verwenden. Die Übersetzungs-JSON gehört zu diesem alten Beispiel. Library 1.2.0 ersetzt oder aktualisiert keinen Host-Updater automatisch.
+Library 1.3.0 mit Updater 2.4.0 verwenden. Der Katalog dient Entdeckung und geprüfter Erstinstallation, nicht der Freigabe von Bestandsupdates. Vorhandene Hostadapteraufrufe bleiben zulässig, wählen im neuen Updater aber keine Katalogreleases. Die von der Runtime zurückgegebene Updater-Klasse beibehalten und den v4-Library-Uninstall-Einstieg unter Erhalt der Host-Bereinigung übernehmen. Siehe [Einbindung](../docs/INTEGRATION-de.md) und [Updater](../docs/UPDATER-de.md).

@@ -2,6 +2,16 @@
 
 [Deutsch](CHANGELOG-de)
 
+### 1.3.0 · 2026-11-08
+
+- **New:** Installed-plugin updates are independent of online catalog settings and catalog versions.
+- **Improved:** Cards show actual installed versions and normal WordPress update offers, including newer releases than the catalog.
+- **Improved:** Updated approved bundled catalog and local original icons.
+- **Fixed:** Retire stale catalog-managed update offers and verify installed identity before explicit updates.
+- **Fixed:** Check installed-version requirements when activating an existing plugin.
+- **Fixed:** Keep parallel installation and temporary-file records independent and reliably clean owned first-installation files after failures.
+- **Misc:** Older plugins without a normal update provider need a one-time manual ZIP update; the Library no longer supplies catalog-managed update offers.
+
 ### 1.2.0 · 2026-10-30
 
 - **New:** Filter plugins by installation, activation and available catalog updates, with matching result counts.

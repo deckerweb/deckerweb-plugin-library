@@ -1,15 +1,9 @@
-# Prüfstand · 1.0.0
+# Prüfstand · 1.3.0
 
 [English](VALIDATION)
 
-Veröffentlicht am 30. Oktober 2026. Statusfilter, Trefferzahl, kompakte Bedienelemente und Inline-Statusaktualisierung wurden in einer isolierten Installation mit WordPress 7.1.2 / PHP 8.4.5 geprüft. WordPress 6.4 erhielt eine gezielte Darstellungsprüfung. Alle 30 freigegebenen Originalpakete wurden auf Identität, Archivsicherheit und SHA256 geprüft.
+Die Komponente wird gemeinsam mit Updater 2.4.0 in isolierten WordPress-Installationen geprüft. Abgedeckt sind Onlineabruf an/aus, veraltete/zukünftige/nicht erreichbare Kataloge, manuell neuere Installationen, normale Updateangebote, native Einzel-/Sammel-/automatische Updates, echte AJAX-Nonces/Berechtigungen, Statuswiederherstellung mit abgesendeter Zielversion und geprüfte Erstinstallation. Kontrollierte Transportantworten und SQLite-Testumgebungen unter WordPress 6.7/7.1.2, PHP 8.1/8.2/8.4 und Multisite. Der vollständige Plugin Check 2.2.0 umfasst statische und Laufzeitprüfungen mit individueller Kontextbewertung; damit wird keine leere Befundliste behauptet. Nativer v4-Uninstall und alte/neue Komponenten-Ladereihenfolgen werden geprüft. Neutrale EN/DE-Komponentenansichten decken 32 lokale Icons, Mobilbreite und Tastatur-Updates ab.
 
-Ein Nutzer bestätigte am 30. Oktober 2026 einen erfolgreichen FTPS-Test (FTP über SSL). SSH wurde nicht getestet; eine SSH-Kompatibilitätszusage wird nicht abgeleitet. PHP-8.0-Ausführung und eine vollständige neue Multisite-Aktionsmatrix bleiben ungeprüft.
-
-Offizielles Plugin Check 2.1.0 meldet weiterhin 34 einzeln bewertete kontextabhängige Library-Befunde, im Befundtyp unverändert zu 1.1.0. Daraus folgt keine pauschale Sicherheitsgarantie. Die Komponente wird eingebettet in einem Referenzhost geprüft, nicht als eigenständiges Plugin.
+Grenzen: PHP 8.0, WordPress 6.4, echte MySQL-Parallelität und echter SSH2-Dateisystemtransport wurden nicht ausgeführt. Die frühere FTPS-Bestätigung gehört zu 1.2.0. Vorbereitete CI belegt keinen GitHub-Lauf. Keine Kundenseite dient als Testumgebung. Die Host-Einbindung benötigt weiterhin ihre eigene finale Paketprüfung.
 
 
-Katalogrevision bei Veröffentlichung von Library 1.2.0: 2026-10-30.1. Paketversionen und Bildherkunft stehen in den [Katalogquellen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-1.2.0.json).
-
-
-Katalogupdate vom 4. November 2026: 31 Originalpakete auf SHA256, Archivsicherheit und Pluginidentität geprüft. Leser von Library 0.6.0 bis 1.2.0 akzeptieren alle Einträge. Elf Filterzustände in der isolierten Testinstallation geprüft, einschließlich Rückfall entfernter Tools-/Connect-Filter auf Alle. Kein neuer Library-Release und keine erneute vollständige Plugin-Check-Prüfung der unveränderten Komponente. Aktuelle Quellen: [Katalog 2026-11-04.1](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-04.1.json).

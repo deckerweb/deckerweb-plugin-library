@@ -15,7 +15,7 @@ In the host's existing `uninstall.php`, after its direct-access guard, add a bou
 
 ```php
 require_once __DIR__ . '/includes/deckerweb-plugin-library/lifecycle.php';
-deckerweb_library_uninstall_v3( __DIR__ . '/YOUR-HOST-SLUG.php' );
+deckerweb_library_uninstall_v4( __DIR__ . '/YOUR-HOST-SLUG.php' );
 ```
 
 The exact host basename must match `WP_UNINSTALL_PLUGIN`. This contract is required for final-host cleanup. Inactive installed hosts are detected from their physical embedded bootstrap files; no active-only registration list is trusted. Keep the conventional library directory for discovery, including future copies. Hosts in custom locations require an explicitly reviewed detection contract.
@@ -24,14 +24,16 @@ Translations use the elected host's header Text Domain (its slug if missing), ne
 
 `prepare-plugin.py` only accepts BAS and Daily Scripture source ZIPs with known version markers and compatible minimum headers. It preserves code after the exact legacy integration block, adds bounded replacement markers and refuses ambiguous custom integrations or conditional uninstall code. It creates a new destination, never overwrites the supplied source and never raises minimums. Other hosts need reviewed manual integration. Review host translations, security policy and its actual final ZIP before release.
 
-The Library kit itself is not installable. `deckerweb-plugin-library-runtime-1.2.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
+The Library kit itself is not installable. `deckerweb-plugin-library-runtime-1.3.0.zip` contains runtime files only; the full kit additionally contains authoring tools and documentation, which must not enter production plugin ZIPs. Do not ship this external installer or the deckerweb Updater on WordPress.org.
 
 Read [security](../SECURITY.md), [data](DATA.md), [tests](TESTING.md) and [release conventions](CONVENTIONS.md).
 
 ## Mixed versions and cleanup
 
-The highest compatible complete copy is elected for a request. Registration remains `register_v2`; the compatibility manifest uses protocol 2. The cleanup entry is `uninstall_v3`—its suffix does not change the manifest protocol. Keep the manifest and every listed hash intact. Preserve installed inactive hosts and their integration paths.
+The highest compatible complete copy is elected for a request. Registration remains `register_v2`; the compatibility manifest uses protocol 2. The cleanup entry is `uninstall_v4`—its suffix does not change the manifest protocol. Keep the manifest and every listed hash intact. Preserve installed inactive hosts and their integration paths.
 
 The current bootstrap can hand off to a newer valid copy during native activation. An old offline catalog cannot redraw its disabled card before that copy is active; use the native Plugins screen for such a first transition. Older hosts retain their own uninstall routines and must be reviewed separately. No other host file is rewritten. For historically different copies with the same version, replace all affected copies rather than relying on the host-name tie-breaker.
 
-Library 1.2.0 requires WordPress 6.4 and PHP 8.0. A host embedding Updater 2.2.1 requires at least PHP 8.1; higher host requirements remain authoritative. Use the latest stable compatible components and test the actual integrated host ZIP. See [Updater](UPDATER.md), [Assets](ASSETS.md) and [Validation 1.2.0](VALIDATION-1.2.0.md).
+Library 1.3.0 requires WordPress 6.4 and PHP 8.0. A host embedding Updater 2.3.1 requires at least PHP 8.1; higher host requirements remain authoritative. Use the latest stable compatible components and test the actual integrated host ZIP. See [Updater](UPDATER.md), [Assets](ASSETS.md) and [Validation 1.3.0](VALIDATION-1.3.0.md).
+
+For installed-plugin update behavior, use Library 1.3.0 together with Updater 2.4.0. The catalog is no longer an installed-update provider. Existing host adapter calls remain accepted; see [Updater](UPDATER.md).

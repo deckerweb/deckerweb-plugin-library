@@ -112,6 +112,9 @@ msgstr ""
 msgid "Catalog refreshed."
 msgstr ""
 
+msgid "Catalog retrieval does not limit updates of installed plugins. Those use their normal WordPress update provider."
+msgstr ""
+
 msgid "Catalog verification"
 msgstr ""
 
@@ -242,6 +245,12 @@ msgid "Installation failed."
 msgstr ""
 
 msgid "Installed"
+msgstr ""
+
+msgid "Installed plugin identity does not match the approved release."
+msgstr ""
+
+msgid "Installed plugins use their normal update provider. Reload the update information and try again."
 msgstr ""
 
 msgid "Installed · inactive"
@@ -407,6 +416,9 @@ msgid "New"
 msgstr ""
 
 msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "No update reported."
 msgstr ""
 
 msgid "Not installed"
@@ -628,6 +640,9 @@ msgstr ""
 msgid "The installed plugin identity could not be verified for this catalog update."
 msgstr ""
 
+msgid "The installed plugin identity could not be verified. Use the Plugins screen to review it."
+msgstr ""
+
 msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
 msgstr ""
 
@@ -644,6 +659,9 @@ msgid "The release checksum does not match. Installation stopped."
 msgstr ""
 
 msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr ""
+
+msgid "The requirements below describe the catalog version for first installation, not an installed-plugin update."
 msgstr ""
 
 msgid "The requirements below describe the offered release."
@@ -703,7 +721,13 @@ msgstr ""
 msgid "Update available"
 msgstr ""
 
+msgid "Update available: %s"
+msgstr ""
+
 msgid "Update failed."
+msgstr ""
+
+msgid "Update information changed. Reload the page and try again."
 msgstr ""
 
 msgid "Update to %s"
@@ -713,6 +737,12 @@ msgid "Updated"
 msgstr ""
 
 msgid "Updating…"
+msgstr ""
+
+msgid "Use the Plugins screen to manage this installed plugin."
+msgstr ""
+
+msgid "Verified first installations · Independent plugin updates"
 msgstr ""
 
 msgid "View plugins"

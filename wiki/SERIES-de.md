@@ -2,16 +2,16 @@
 
 [English](SERIES)
 
-Katalogrevision: **2026-11-04.1** · **31 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
+Katalogrevision: **2026-11-08.1** · **32 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
 
 ## Verfügbare Serien
 
 | Serie | Plugins |
 |---|---|
 | QuickNav | 7 |
-| Builder | 10 |
+| Builder | 11 |
 | Purify | 3 |
-| Inhalte verwalten | 5 |
+| Inhalte verwalten | 6 |
 | Shop | 2 |
 | Admin | 5 |
 | Inspiration | 2 |
@@ -52,6 +52,7 @@ Katalogrevision: **2026-11-04.1** · **31 Plugins** · **8 Serien**. Ein Plugin 
 | GP Project Export Name | GEN | GlotPress |
 | GlotFrame | GF | GlotPress, Builder |
 | WPCodeBox QuickNav | WBQ | QuickNav |
+| Builder PDF Presenter | BPP | Builder, Inhalte verwalten |
 
 Seriendefinitionen liefern englische/deutsche Namen und die Anzeigereihenfolge. Library 0.9.0 und neuer verwenden `series_definitions` und `series_memberships_v3`; ältere Datenfelder erhalten die von älteren Lesern unterstützte Teilmenge.
 

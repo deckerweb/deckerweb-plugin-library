@@ -20,3 +20,14 @@ Builder-Fixtures belegen keine Kompatibilität mit Lizenzinstallationen. Echte B
 
 Sechs Statusmodi, Benutzerspeicherung, kombinierte Filter, Trefferzahl, Zurücksetzen mit erhaltener Sortierung/Zufallsfolge, Statusaktualisierung/Fokus nach Aktionen und mobile kompakte Bedienung einschließen. Fehlerstufen ohne Ausgabe von URLs, Pfaden oder Zugangsdaten prüfen. FTPS ist für 1.2.0 benutzerbestätigt; SSH und PHP-8.0-Ausführung bleiben ungetestet. Dokumentationsbilder ausschließlich in neutralen Testinstallationen aufnehmen.
 
+
+## Ausführbare Regressionstests
+
+Im Kit-Stamm `php tests/security-regressions.php`, `php tests/cleanup-regressions.php`, `php tests/cleanup-regressions.php --older-alias` und `php tests/parallel-regressions.php` ausführen. Die Tests führen die Komponentenmethoden mit ausdrücklich ersetzten WordPress-APIs aus. Sie prüfen Identitätswechsel, veraltete Downloads, installierte gegenüber angebotenen Plattformanforderungen, versionierte Abhängigkeits-/Netzwerkregeln, einzelne Registereinträge und die Letzt-Host-Bereinigung. Der Paralleltest verwendet zwölf CLI-Prozesse und isolierte dateibasierte Speicherung; keine echte WordPress-Datenbank. Produktive Websites, echte HTTP-Anfragen und Zugangsdaten werden nicht verwendet.
+
+`python3 tests/manifest.py` prüft die Laufzeithashes. Der nur lesende CI-Workflow prüft PHP-Syntax und diese Tests für PHP 8.0–8.4 sowie JavaScript-Syntax. Die vorhandene Konfiguration belegt keine bereits erfolgten entfernten Läufe oder Tests sämtlicher PHP-Versionen. Die Suite ersetzt keine tatsächlichen WordPress-Aktivierungen/-Updates, persistenten Object-Cache-, MySQL-Parallelitäts-, Plugin-Check- oder FTP-/SSH-Integrationstests. Test-/Werkzeugverzeichnisse gehören nicht in Host-Laufzeitpakete.
+
+
+
+
+Veraltete, zukünftige, ungültige und fehlende Kataloge bei Onlineabruf an/aus, manuell neuere Installationen, fehlende normale Angebote und alte zuerst geladene Helper prüfen. Erstinstallationsfreigabe und Prüfsummen bleiben wirksam; Bestandsupdates verwenden normale Angebote. Statuswiederherstellung muss mit der abgesendeten normalen Zielversion statt der Katalogversion vergleichen. Native Einzel-, Sammel- und automatische Updates prüfen; geänderte Angebote, Archividentität/-version/-plattformfehler und unberechtigte Anfragen müssen die Installation erhalten.

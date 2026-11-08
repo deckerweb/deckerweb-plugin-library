@@ -738,21 +738,21 @@
       "plugin_file": "tools-for-fluentcart/tools-for-fluentcart.php",
       "category": "Commerce",
       "dependencies": [],
-      "version": "0.9.1",
-      "download_url": "https://github.com/deckerweb/tools-for-fluentcart/releases/download/v0.9.1/tools-for-fluentcart-0.9.1.zip",
-      "sha256": "6ad5001a4dd1b6b84ae2c398ffea4f8c403ffd629c6750d23b71f77b126268d0",
+      "version": "1.0.0",
+      "download_url": "https://github.com/deckerweb/tools-for-fluentcart/releases/download/v1.0.0/tools-for-fluentcart-1.0.0.zip",
+      "sha256": "1ff8f4581cf6532e40823784fc5c84aba60c057fe100829b37ac6635bf74f19d",
       "requires_wp": "7.1.2",
       "requires_php": "8.2",
       "github_stars": 1,
       "stars_checked_at": "2026-11-04",
-      "description": "Practical FluentCart tools for quantity limits, minimum order values and single-item carts. Cart Rules supports FluentCart 1.7.x and stays paused without a supported active version.",
-      "description_de": "Praktische FluentCart-Werkzeuge für Mengenlimits, Mindestbestellwerte und Einzelartikel-Warenkörbe. Cart Rules unterstützt FluentCart 1.7.x und bleibt ohne unterstützte aktive Version pausiert.",
+      "description": "FluentCart tools for cart rules, product notes, store checks and catalog mode. Cart Rules pauses without supported active FluentCart 1.7.0 or later; plugin settings remain available.",
+      "description_de": "FluentCart-Werkzeuge für Warenkorbregeln, Produktnotizen, Shop-Prüfungen und Katalogmodus. Ohne unterstütztes aktives FluentCart ab 1.7.0 pausiert Cart Rules; die Plugin-Einstellungen bleiben erreichbar.",
       "requires_multisite": false,
       "network_only": false,
-      "icon": "assets/icons/tools-for-fluentcart-f628f6cdf6b3.png",
+      "icon": "assets/icons/tools-for-fluentcart-808c1c876fd1.png",
       "icon_label": "TFC",
       "icon_background": "#edf2f5",
-      "published_at": "2026-10-22T09:31:24Z",
+      "published_at": "2026-11-04T23:26:55Z",
       "series_memberships": [],
       "series_memberships_v2": [
         "shop"
@@ -1154,11 +1154,47 @@
         }
       ],
       "requires_multisite": false,
-      "network_only": false
+      "network_only": false,
+      "icon": "assets/icons/wpcodebox-quicknav-22cffca6f65f.png"
+    },
+    {
+      "approved": true,
+      "slug": "builder-pdf-presenter",
+      "name": "Builder PDF Presenter",
+      "version": "1.0.0",
+      "repository": "deckerweb/builder-pdf-presenter",
+      "plugin_file": "builder-pdf-presenter/builder-pdf-presenter.php",
+      "description": "Manage and present PDFs with cover cards, an on-demand reader, blocks, patterns, shortcodes and optional native Bricks elements. Bricks and Meta Box are optional.",
+      "description_de": "PDFs verwalten und mit Cover-Karten, bedarfsgeladenem Reader, Blöcken, Vorlagen, Shortcodes und optionalen nativen Bricks-Elementen präsentieren. Bricks und Meta Box sind optional.",
+      "requires_wp": "6.9",
+      "requires_php": "8.3",
+      "category": "Content",
+      "category_de": "Inhalte",
+      "dependencies": [],
+      "requires_multisite": false,
+      "network_only": false,
+      "icon_label": "BPP",
+      "icon": "assets/icons/builder-pdf-presenter-5ffcecb79dff.png",
+      "sort_order": 320,
+      "series_memberships": [
+        "builder",
+        "manage-content"
+      ],
+      "series_memberships_v2": [
+        "builder",
+        "manage-content"
+      ],
+      "series_memberships_v3": [
+        "builder",
+        "manage-content"
+      ],
+      "download_url": "https://github.com/deckerweb/builder-pdf-presenter/releases/download/v1.0.0/builder-pdf-presenter-1.0.0.zip",
+      "sha256": "e6b228d3161424388a94633cd7d27fb3425e264d1d3e34655fac61268366ccf0",
+      "published_at": "2026-11-06T18:55:58Z"
     }
   ],
-  "catalog_revision": "2026-11-04.1",
-  "generated_at": "2026-11-04T21:14:22Z",
+  "catalog_revision": "2026-11-08.1",
+  "generated_at": "2026-11-08T21:44:34Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {

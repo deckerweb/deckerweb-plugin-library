@@ -2,6 +2,16 @@
 
 [English](CHANGELOG)
 
+### 1.3.0 · 2026-11-08
+
+- **Neu:** Bestandsupdates sind unabhängig von Onlinekatalog-Einstellung und Katalogversionen.
+- **Verbessert:** Karten zeigen tatsächlich installierte Versionen und normale WordPress-Updateangebote, auch neuere Releases als im Katalog.
+- **Verbessert:** Freigegebenen eingebauten Katalog und lokale Originalicons aktualisiert.
+- **Behoben:** Veraltete katalogverwaltete Updateangebote entfernen und installierte Identität vor expliziten Updates prüfen.
+- **Behoben:** Bei der Aktivierung eines vorhandenen Plugins die Voraussetzungen seiner installierten Version prüfen.
+- **Behoben:** Parallele Installations- und Temporärdateieinträge unabhängig speichern und eigene Erstinstallationsdateien nach Fehlern zuverlässig bereinigen.
+- **Sonstiges:** Altplugins ohne normalen Updateanbieter benötigen einmalig ein manuelles ZIP-Update; die Library liefert keine katalogverwalteten Ersatz-Updateangebote mehr.
+
 ### 1.2.0 · 2026-10-30
 
 - **Neu:** Plugins nach Installation, Aktivierung und verfügbaren Katalogupdates filtern, mit passender Trefferzahl.

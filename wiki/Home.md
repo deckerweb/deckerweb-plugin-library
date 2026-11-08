@@ -12,9 +12,9 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-Current stable component: **Library 1.2.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](CATALOG) and [validation](VALIDATION-1.2.0).
+Component: **Library 1.3.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](CATALOG) and [validation](VALIDATION-1.3.0).
 
-Current online catalog: **2026-11-04.1 · 31 plugins · eight series**. The Library remains at **1.2.0**.
+Current online catalog: **2026-11-08.1 · 32 plugins · eight series**. Library component: **1.3.0**. Catalog discovery and first installation are separate from ordinary installed-plugin updates.
 
 Small plugins. Practical improvements.
 

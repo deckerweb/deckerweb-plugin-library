@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-08",
+  "catalog_revision": "2026-11-08.1",
+  "icons": [
+    {
+      "plugin": "wpcodebox-quicknav",
+      "sha256": "22cffca6f65ffdb3fbd082470cd49fad6a3b6059200670ec68543cec2d478f2b",
+      "source": "https://github.com/deckerweb/wpcodebox-quicknav",
+      "approval": "Previously reserved original icon for next Library build"
+    },
+    {
+      "plugin": "tools-for-fluentcart",
+      "sha256": "808c1c876fd13383d2b819fb34d3ca35258451a8633ec1e178a272b5921c67d4",
+      "source": "https://github.com/deckerweb/tools-for-fluentcart",
+      "approval": "Previously reserved replacement original icon for next Library build"
+    },
+    {
+      "plugin": "builder-pdf-presenter",
+      "sha256": "5ffcecb79dff984781d628f4e781b5274893d89dd52a2a3efaa542f567d901dc",
+      "source": "https://github.com/deckerweb/builder-pdf-presenter/blob/84bc39235f998357f6847f9543656da594bb5d16/assets/branding/icon-128.png",
+      "approval": "Original icon approved for Library 1.3.0 on 2026-11-08"
+    }
+  ]
+}

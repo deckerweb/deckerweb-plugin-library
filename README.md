@@ -14,23 +14,23 @@ This repository contains the reusable PHP component, catalog, integration exampl
 
 Installation and activation happen directly in the selected card. Status and errors appear there; search, series filters and scroll position remain. Filesystem credentials use the native WordPress dialog. Without JavaScript, the checked form workflow remains available.
 
-Current stable component: **Library 1.2.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.2.0.md).
+Component: **Library 1.3.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](docs/CATALOG.md) and [validation](docs/VALIDATION-1.3.0.md).
 
-Current online catalog: **2026-11-04.1 · 31 plugins · eight series**. The Library remains at **1.2.0**.
+Current online catalog: **2026-11-08.1 · 32 plugins · eight series**. Library component: **1.3.0**. Catalog discovery and first installation are separate from ordinary installed-plugin updates.
 
-**Version:** 1.2.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.3.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Documentation](docs/INTEGRATION.md) · [FAQ by topic](docs/FAQ.md) · [Security](SECURITY.md)
 
 ## The Library in WordPress
 
-![Library 1.2.0: compact series and status filters above the plugin cards](assets-github/screenshots/catalog-filters-en-1.2.0.png)
+![Library 1.3.0: compact series and status filters above the plugin cards](assets-github/screenshots/catalog-filters-en-1.3.0.png)
 
 Combine series, search and plugin status in a compact toolbar. Your preferences are saved per user.
 
-![Library 1.2.0: catalog with 30 plugins and current local original icons](assets-github/screenshots/catalog-overview-en-1.2.0.png)
+![Library 1.3.0: catalog with 32 plugins and current local original icons](assets-github/screenshots/catalog-overview-en-1.3.0.png)
 
-The catalog with 30 approved plugins and their local original icons. Screenshots show Library 1.2.0 and catalog revision 2026-10-30.1; available versions can change.
+The catalog with 32 approved plugins and their local original icons. Screenshots show Library 1.3.0 and catalog revision 2026-11-08.1; available versions can change.
 
 
 ## Contents
@@ -72,13 +72,13 @@ The public GitHub catalog address is prefilled. Enable online retrieval in Libra
 
 ### Shared preferences and safe packages
 
-Installed hosts share settings; deactivation preserves data. Fresh release approval, checksums and archive checks guard package actions. [Data](docs/DATA.md) · [Updater integration](docs/UPDATER.md).
+Installed hosts share settings; deactivation preserves data. Fresh release approval, checksums and archive checks guard first installations; installed updates use their normal updater. [Data](docs/DATA.md) · [Updater integration](docs/UPDATER.md).
 
 ### Personal filters and clear status
 
 Choose Standard, Name A–Z, Name Z–A, Recently updated or Discover randomly in the catalog. Your view is saved per WordPress user; Shuffle again changes the random order. Filters remain available when returning. Library settings contain expandable Technical information with a copy button. No credentials or site content are included. Git Updater conflicts are detected locally; a targeted notice explains temporary deactivation when needed.
 
-Combine search, series, installation compatibility and Plugin status. Choose All, Not installed, Installed, Active, Inactive or Update available. Status uses the current site or network context. Update available compares known stable installed versions with approved catalog releases; unknown and development versions are not treated as confirmed updates. The result count reflects all selected filters. Reset filters clears search and filters while keeping the personal sort order. Preferences are stored per user. Successful inline actions refresh matching cards; failed actions remain visible. No additional GitHub requests are needed for filtering. Catalog origin and revision are shown above the controls.
+Combine search, series, installation compatibility and Plugin status. Choose All, Not installed, Installed, Active, Inactive or Update available. Status uses the current site or network context. Update available uses existing WordPress offers for installed plugins, independently of catalog versions. No update reported does not claim a fresh release check. The result count reflects all selected filters. Reset filters clears search and filters while keeping the personal sort order. Preferences are stored per user. Successful inline actions refresh matching cards; failed actions remain visible. No additional GitHub requests are needed for filtering. Catalog origin and revision are shown above the controls.
 
 Catalog actions identify failed request and verification stages without displaying remote response bodies, credentials or private paths.
 
@@ -96,7 +96,7 @@ You can hide the catalog in **Settings → deckerweb Library**, or in the networ
 
 ### External connections are explained
 
-The bundled catalog and its icons can be displayed locally. Optional online catalog retrieval is **off by default**. When enabled, it reads the public catalog from GitHub and caches discovery results for 24 hours; you can also refresh manually. Installing a selected plugin downloads its approved GitHub ZIP. Package actions in online mode check approval again before proceeding.
+The bundled catalog and its icons can be displayed locally. Optional online catalog retrieval is **off by default**. When enabled, it reads the public catalog from GitHub and caches discovery results for 24 hours; you can also refresh manually. Installing a selected plugin downloads its approved GitHub ZIP. First installations in online mode check approval again. Installed-plugin updates use their normal updater independently.
 
 These requests let the serving endpoint see the requesting IP address. The Library does not send your site URL, user ID or plugin inventory and has no telemetry. Existing plugin updaters may make their own requests according to the host plugin's documentation. Public catalog retrieval and public package downloads do not require a GitHub account or user token.
 
@@ -147,9 +147,9 @@ Keep catalog metadata separate from component releases, cache discovery rather t
 
 Open Plugins → Add New → deckerweb. WordPress.org remains the default view.
 
-### Does it contact external services?
+### Does the online catalog limit plugin updates?
 
-Local browsing does not. Installation downloads the selected approved GitHub release. Optional online retrieval contacts the configured trusted public GitHub catalog; the server sees the requesting IP. The Library does not send a site URL, user ID or plugin inventory and contains no telemetry. An embedding host’s separate updater may make its own documented requests.
+No. With Library 1.3.0 and Updater 2.4.0, installed plugins use their normal WordPress update provider regardless of catalog settings or catalog version. The Library shows the actual installed version and existing WordPress update offers. A catalog version only selects the verified package for first installation. No additional GitHub release checks are made when browsing. Normal update intervals, caches and technical requirements still apply. This does not enable automatic installation. Older component combinations may retain their previous behavior until updated. See the [update guide](docs/CATALOG.md#plugin-updates-and-the-online-catalog).
 
 ### Why is an installation unavailable?
 
@@ -157,7 +157,7 @@ Check the card for WordPress/PHP requirements and the selected release. Missing 
 
 ### Can I hide it?
 
-Use Settings → deckerweb Library (Network Settings on Multisite). Hiding discovery preserves dependency checks and existing managed updates. Disable online catalog retrieval separately to stop its requests.
+Use Settings → deckerweb Library (Network Settings on Multisite). Hiding the catalog preserves dependency checks and ordinary plugin updates. Online retrieval is a separate preference for catalog metadata and first installations.
 
 ### What happens when I remove a host?
 
@@ -175,6 +175,16 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 <a id="changelog"></a>
 ## Changelog
+
+### 1.3.0 · 2026-11-08
+
+- **New:** Installed-plugin updates are independent of online catalog settings and catalog versions.
+- **Improved:** Cards show actual installed versions and normal WordPress update offers, including newer releases than the catalog.
+- **Improved:** Updated approved bundled catalog and local original icons.
+- **Fixed:** Retire stale catalog-managed update offers and verify installed identity before explicit updates.
+- **Fixed:** Check installed-version requirements when activating an existing plugin.
+- **Fixed:** Keep parallel installation and temporary-file records independent and reliably clean owned first-installation files after failures.
+- **Misc:** Older plugins without a normal update provider need a one-time manual ZIP update; the Library no longer supplies catalog-managed update offers.
 
 ### 1.2.0 · 2026-10-30
 
@@ -220,14 +230,6 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 - **Improved:** Install and activate catalog plugins directly in their cards, with inline status and errors.
 - **Improved:** Use the approved three-character fallback labels when no original icon is available.
-
-### 0.6.1 · 2026-10-07
-
-- **Improved:** Updated approved plugin releases and original catalog icons.
-- **Improved:** The settings footer shows the local Library SVG icon, name and version.
-- **Fixed:** Daily Scripture 1.0.0 and newer can be network activated, including beside an older embedded Library.
-- **Fixed:** Single filtered results retain normal card width on wide screens.
-- **Fixed:** Multisite Toolbar Additions is also available for single websites and site activation.
 
 [ Complete changelog ](docs/CHANGELOG.md)
 

@@ -10,7 +10,7 @@ Open Plugins → Add New → deckerweb. WordPress.org remains the default view.
 
 ### Does it contact external services?
 
-Local browsing does not. Installation downloads the selected approved GitHub release. Optional online retrieval contacts the configured trusted public GitHub catalog; the server sees the requesting IP. The Library does not send a site URL, user ID or plugin inventory and contains no telemetry. An embedding host’s separate updater may make its own documented requests.
+Optional catalog retrieval requests the first-party JSON feed and sends no site URL, plugin inventory or usage data. GitHub receives release downloads for first installation. Installed updates use the existing normal updater connections, independently of the Library catalog preference. Local icons and filtering make no extra release requests.
 
 ## Requirements and installation
 
@@ -20,7 +20,7 @@ Check the card for WordPress/PHP requirements and the selected release. Missing 
 
 ### Can I hide it?
 
-Use Settings → deckerweb Library (Network Settings on Multisite). Hiding discovery preserves dependency checks and existing managed updates. Disable online catalog retrieval separately to stop its requests.
+Use Settings → deckerweb Library (Network Settings on Multisite). Hiding the catalog preserves dependency checks and ordinary plugin updates. Online retrieval is a separate preference for catalog metadata and first installations.
 
 ## Catalog and update checks
 
@@ -30,7 +30,7 @@ No. An approved online catalog revision can carry a newer plugin version indepen
 
 ### Why can the catalog and updater show different freshness?
 
-Discovery is cached for 24 hours; installed-plugin updates use an independent cache in the WordPress cycle. Package actions recheck approval freshly.
+The catalog is a reviewed snapshot for discovery and first installation, cached for 24 hours. Installed updates follow the separate normal WordPress updater and its existing checks. A newer installed or normally offered version can therefore exceed the catalog version. It is not downgraded or blocked by the older catalog. No extra release request occurs while browsing.
 
 ### Do users need a GitHub token?
 
@@ -54,7 +54,7 @@ Use Security → Advisories → Report a vulnerability in the host plugin reposi
 
 ### How do I find plugins with updates?
 
-Choose Plugin status → Update available. The filter compares known stable installed versions with the approved catalog version. Search, series and compatibility filters still apply; the result count reflects their combination. It does not query GitHub separately or include unrelated WordPress.org updates.
+Choose Plugin status → Update available. The filter uses existing WordPress update offers for installed plugins, not a comparison with catalog versions. Combine it with search, series and compatibility. If no offer exists yet, the card says No update reported; this does not claim a fresh GitHub check.
 
 ### What does Reset filters keep?
 
@@ -63,5 +63,11 @@ Reset filters clears search, series and installation compatibility and selects A
 ### What does a verification error mean?
 
 Library 1.2.0 distinguishes catalog verification, package download, checksum and archive stages. It uses safe connection/TLS/DNS/timeout or HTTP descriptions without exposing remote response bodies or credentials. Refresh the catalog or retry after a temporary server problem. A refused approval is never bypassed. The host’s separate updater can still display a more general message. See [Updater](UPDATER.md) and [Testing](TESTING.md).
+
+## Plugin updates and catalog approval
+
+### Does the online catalog limit plugin updates?
+
+No. With Library 1.3.0 and Updater 2.4.0, installed plugins use their normal WordPress update provider regardless of catalog settings or catalog version. The Library shows the actual installed version and existing WordPress update offers. A catalog version only selects the verified package for first installation. No additional GitHub release checks are made when browsing. Normal update intervals, caches and technical requirements still apply. This does not enable automatic installation. Older component combinations may retain their previous behavior until updated. See the [update guide](CATALOG.md#plugin-updates-and-the-online-catalog).
 
 

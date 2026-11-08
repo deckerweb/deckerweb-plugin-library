@@ -1,3 +1,3 @@
-# Historical updater integration example
+# Installed-plugin update integration
 
-`updater-v2.1-dev.3-catalog-provider.patch` targets only Updater 2.1.0-dev.3. It is retained as historical reference and must not be applied to current updater versions. Use the current host adapter and [Updater integration guide](../docs/UPDATER.md). The translation JSON belongs to that historical example. Library 1.2.0 does not update or replace host updater code automatically.
+Use Library 1.3.0 with Updater 2.4.0. The catalog is for discovery and verified first installation, not installed-plugin update approval. Existing host adapter calls remain accepted but do not select catalog releases in the new updater. Retain the runtime-returned Updater class and adopt the v4 Library uninstall entry while preserving host cleanup. See [integration](../docs/INTEGRATION.md) and [Updater](../docs/UPDATER.md).

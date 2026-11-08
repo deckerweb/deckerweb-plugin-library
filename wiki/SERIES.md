@@ -2,16 +2,16 @@
 
 [Deutsch](SERIES-de)
 
-Catalog revision: **2026-11-04.1** · **31 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
+Catalog revision: **2026-11-08.1** · **32 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
 
 ## Available series
 
 | Series | Plugins |
 |---|---|
 | QuickNav | 7 |
-| Builder | 10 |
+| Builder | 11 |
 | Purify | 3 |
-| Manage Content | 5 |
+| Manage Content | 6 |
 | Shop | 2 |
 | Admin | 5 |
 | Inspiration | 2 |
@@ -52,8 +52,9 @@ Catalog revision: **2026-11-04.1** · **31 plugins** · **8 series**. A plugin c
 | GP Project Export Name | GEN | GlotPress |
 | GlotFrame | GF | GlotPress, Builder |
 | WPCodeBox QuickNav | WBQ | QuickNav |
+| Builder PDF Presenter | BPP | Builder, Manage Content |
 
 Series definitions supply English/German names and display order. Library 0.9.0 and newer use `series_definitions` and `series_memberships_v3`; legacy fields preserve the subset supported by older readers.
 
 
-Revision 2026-11-04.1 uses eight series. The broad Tools and Connect groups have been removed. Each assignment describes the main purpose; a second series is retained when it represents a distinct benefit. Saved selections for removed series fall back to All in Library 1.2.0. Older Library versions display their supported subset of series while continuing to read the catalog.
+Since revision 2026-11-04.1, the catalog uses eight series. The broad Tools and Connect groups have been removed. Each assignment describes the main purpose; a second series is retained when it represents a distinct benefit. Saved selections for removed series fall back to All in Library 1.2.0. Older Library versions display their supported subset of series while continuing to read the catalog.

@@ -14,23 +14,23 @@ Dieses Repository enthält die wiederverwendbare PHP-Komponente, den Katalog, Ei
 
 Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status und Fehler erscheinen dort; Suche, Serienfilter und Scrollposition bleiben erhalten. Dateisystem-Zugangsdaten verwenden den nativen WordPress-Dialog. Ohne JavaScript bleibt der geprüfte Formularweg verfügbar.
 
-Aktuelle stabile Komponente: **Library 1.2.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.2.0-de).
+Komponente: **Library 1.3.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.3.0-de).
 
-Aktueller Onlinekatalog: **2026-11-04.1 · 31 Plugins · acht Serien**. Library bleibt bei **1.2.0**.
+Aktueller Onlinekatalog: **2026-11-08.1 · 32 Plugins · acht Serien**. Library-Komponente: **1.3.0**. Katalogentdeckung und Erstinstallation sind von normalen Bestandsupdates getrennt.
 
-**Version:** 1.2.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
+**Version:** 1.3.0 · WordPress ≥ 6.4 · PHP ≥ 8.0
 
 [Dokumentation](INTEGRATION-de) · [Fragen nach Themen](FAQ-de) · [Sicherheit](SECURITY-de)
 
 ## Die Library in WordPress
 
-![Library 1.2.0: kompakte Serien- und Statusfilter über den Plugin-Karten](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-filters-de-1.2.0.png)
+![Library 1.3.0: kompakte Serien- und Statusfilter über den Plugin-Karten](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-filters-de-1.3.0.png)
 
 Serien, Suche und Plugin-Status in einer kompakten Leiste kombinieren. Die Auswahl wird pro Benutzer gespeichert.
 
-![Library 1.2.0: Katalog mit 30 Plugins und aktuellen lokalen Originalicons](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-overview-de-1.2.0.png)
+![Library 1.3.0: Katalog mit 32 Plugins und aktuellen lokalen Originalicons](https://raw.githubusercontent.com/wiki/deckerweb/deckerweb-plugin-library/assets/catalog-overview-de-1.3.0.png)
 
-Der Katalog mit 30 freigegebenen Plugins und ihren lokalen Originalicons. Die Aufnahmen zeigen Library 1.2.0 und Katalogrevision 2026-10-30.1; verfügbare Versionen können sich ändern.
+Der Katalog mit 32 freigegebenen Plugins und ihren lokalen Originalicons. Die Aufnahmen zeigen Library 1.3.0 und Katalogrevision 2026-11-08.1; verfügbare Versionen können sich ändern.
 
 
 ## Inhalt
@@ -72,13 +72,13 @@ Die öffentliche GitHub-Katalogadresse ist vorausgefüllt. Online-Abfragen in de
 
 ### Gemeinsame Einstellungen und sichere Pakete
 
-Installierte Hosts teilen Einstellungen; Deaktivieren erhält Daten. Frische Freigabe, Prüfsummen und Archivprüfung schützen Paketaktionen. [Daten](DATA-de) · [Updater-Einbindung](UPDATER-de).
+Installierte Hosts teilen Einstellungen; Deaktivieren erhält Daten. Frische Freigabe, Prüfsummen und Archivprüfung schützen Erstinstallationen; Bestandsupdates verwenden ihren normalen Updater. [Daten](DATA-de) · [Updater-Einbindung](UPDATER-de).
 
 ### Persönliche Filter und klarer Status
 
 Im Katalog stehen Standard, Name A–Z, Name Z–A, zuletzt aktualisiert und zufällig entdecken zur Wahl. Die Ansicht wird pro WordPress-Benutzer gespeichert; Neu mischen ändert die Zufallsreihenfolge. Filter bleiben bei der Rückkehr erhalten. Die Library-Einstellungen enthalten aufklappbare technische Informationen mit Kopierfunktion, ohne Zugangsdaten oder Website-Inhalte. Git-Updater-Konflikte werden lokal erkannt; ein gezielter Hinweis erklärt bei Bedarf die vorübergehende Deaktivierung.
 
-Suche, Serien, passende Voraussetzungen und Plugin-Status kombinieren. Zur Auswahl stehen Alle, Nicht installiert, Installiert, Aktiv, Inaktiv und Update verfügbar. Der Status bezieht sich auf die aktuelle Website oder das Netzwerk. Update verfügbar vergleicht bekannte stabile installierte Versionen mit freigegebenen Katalogreleases; unbekannte und Entwicklungsversionen gelten nicht als bestätigte Updates. Die Trefferzahl berücksichtigt alle ausgewählten Filter. Filter zurücksetzen leert Suche und Filter, erhält aber die persönliche Sortierung. Die Auswahl wird pro Benutzer gespeichert. Erfolgreiche Inline-Aktionen aktualisieren die passenden Karten; fehlgeschlagene Aktionen bleiben sichtbar. Filtern benötigt keine zusätzlichen GitHub-Anfragen. Herkunft und Revision des Katalogs stehen über den Bedienelementen.
+Suche, Serien, passende Voraussetzungen und Plugin-Status kombinieren. Zur Auswahl stehen Alle, Nicht installiert, Installiert, Aktiv, Inaktiv und Update verfügbar. Der Status bezieht sich auf die aktuelle Website oder das Netzwerk. Update verfügbar verwendet vorhandene WordPress-Angebote für installierte Plugins, unabhängig von Katalogversionen. Kein Update gemeldet behauptet keine frische Releaseprüfung. Die Trefferzahl berücksichtigt alle ausgewählten Filter. Filter zurücksetzen leert Suche und Filter, erhält aber die persönliche Sortierung. Die Auswahl wird pro Benutzer gespeichert. Erfolgreiche Inline-Aktionen aktualisieren die passenden Karten; fehlgeschlagene Aktionen bleiben sichtbar. Filtern benötigt keine zusätzlichen GitHub-Anfragen. Herkunft und Revision des Katalogs stehen über den Bedienelementen.
 
 Katalogaktionen nennen fehlgeschlagene Anfrage- und Prüfschritte, ohne fremde Antworttexte, Zugangsdaten oder private Pfade anzuzeigen.
 
@@ -96,7 +96,7 @@ Unter **Einstellungen → deckerweb Library** beziehungsweise in den Netzwerkein
 
 ### Externe Verbindungen sind nachvollziehbar
 
-Der mitgelieferte Katalog und seine Icons lassen sich lokal anzeigen. Der optionale Online-Katalog ist **standardmäßig ausgeschaltet**. Wenn du ihn aktivierst, liest die Library den öffentlichen Katalog von GitHub und speichert die Anzeige 24 Stunden zwischen. Du kannst ihn auch manuell aktualisieren. Eine Plugin-Installation lädt das ausgewählte, freigegebene GitHub-ZIP. Paketaktionen im Online-Modus prüfen die Freigabe nochmals frisch.
+Der mitgelieferte Katalog und seine Icons lassen sich lokal anzeigen. Der optionale Online-Katalog ist **standardmäßig ausgeschaltet**. Wenn du ihn aktivierst, liest die Library den öffentlichen Katalog von GitHub und speichert die Anzeige 24 Stunden zwischen. Du kannst ihn auch manuell aktualisieren. Eine Plugin-Installation lädt das ausgewählte, freigegebene GitHub-ZIP. Erstinstallationen im Online-Modus prüfen die Freigabe nochmals frisch. Bestandsupdates verwenden unabhängig davon ihren normalen Updater.
 
 Der jeweilige Server sieht dabei die anfragende IP-Adresse. Die Library überträgt weder deine Website-URL noch Nutzer-ID oder Plugin-Inventar und enthält keine Telemetrie. Bestehende Plugin-Updater können eigene Verbindungen aufbauen; dazu gilt die Dokumentation des einbettenden Plugins. Für den öffentlichen Katalog und öffentliche Paketdownloads brauchst du keinen GitHub-Account oder Nutzer-Token.
 
@@ -147,9 +147,9 @@ Trenne Katalogmetadaten von Komponenten-Releases, speichere die Anzeige zwischen
 
 Plugins → Plugin hinzufügen → deckerweb öffnen. WordPress.org bleibt die Standardansicht.
 
-### Werden externe Dienste kontaktiert?
+### Begrenzt der Onlinekatalog Pluginupdates?
 
-Die lokale Ansicht nicht. Installation lädt den ausgewählten freigegebenen GitHub-Release. Optionale Online-Abfragen kontaktieren den konfigurierten vertrauenswürdigen öffentlichen GitHub-Katalog; der Server sieht die anfragende IP-Adresse. Die Library überträgt keine Website-URL, Nutzer-ID oder Pluginliste und enthält keine Telemetrie. Der separate Host-Updater kann eigene dokumentierte Anfragen stellen.
+Nein. Mit Library 1.3.0 und Updater 2.4.0 verwenden installierte Plugins ihren normalen WordPress-Updater, unabhängig von Katalogeinstellung und Katalogversion. Die Library zeigt die tatsächlich installierte Version und vorhandene WordPress-Updateangebote. Eine Katalogversion bestimmt nur das geprüfte Paket für die Erstinstallation. Beim Stöbern gibt es keine zusätzlichen GitHub-Releaseabfragen. Normale Prüfintervalle, Caches und technische Anforderungen gelten weiterhin. Automatische Installation wird dadurch nicht aktiviert. Ältere Komponentenkombinationen können bis zum Update ihr bisheriges Verhalten behalten. Siehe die [Updateanleitung](CATALOG-de#pluginupdates-und-der-onlinekatalog).
 
 ### Warum ist eine Installation nicht verfügbar?
 
@@ -157,7 +157,7 @@ Die Karte nennt WordPress-/PHP-Anforderungen und den angebotenen Release. Fehlen
 
 ### Kann der Katalog ausgeblendet werden?
 
-Unter Einstellungen → deckerweb Library (bei Multisite in den Netzwerkeinstellungen). Ausblenden erhält Abhängigkeitsprüfungen und bereits eingerichtete Updates. Online-Abrufe separat abschalten.
+Unter Einstellungen → deckerweb Library (bei Multisite in den Netzwerkeinstellungen). Ausblenden erhält Abhängigkeitsprüfungen und normale Pluginupdates. Der Onlineabruf ist eine getrennte Einstellung für Katalogmetadaten und Erstinstallationen.
 
 ### Was passiert beim Entfernen eines Hosts?
 
@@ -175,6 +175,16 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 <a id="changelog"></a>
 ## Änderungsverlauf
+
+### 1.3.0 · 2026-11-08
+
+- **Neu:** Bestandsupdates sind unabhängig von Onlinekatalog-Einstellung und Katalogversionen.
+- **Verbessert:** Karten zeigen tatsächlich installierte Versionen und normale WordPress-Updateangebote, auch neuere Releases als im Katalog.
+- **Verbessert:** Freigegebenen eingebauten Katalog und lokale Originalicons aktualisiert.
+- **Behoben:** Veraltete katalogverwaltete Updateangebote entfernen und installierte Identität vor expliziten Updates prüfen.
+- **Behoben:** Bei der Aktivierung eines vorhandenen Plugins die Voraussetzungen seiner installierten Version prüfen.
+- **Behoben:** Parallele Installations- und Temporärdateieinträge unabhängig speichern und eigene Erstinstallationsdateien nach Fehlern zuverlässig bereinigen.
+- **Sonstiges:** Altplugins ohne normalen Updateanbieter benötigen einmalig ein manuelles ZIP-Update; die Library liefert keine katalogverwalteten Ersatz-Updateangebote mehr.
 
 ### 1.2.0 · 2026-10-30
 
@@ -220,14 +230,6 @@ Im Host-Plugin-Repository Security → Advisories → Report a vulnerability ver
 
 - **Verbessert:** Katalogplugins direkt in ihrer Karte installieren und aktivieren, mit Status und Fehlern an Ort und Stelle.
 - **Verbessert:** Die freigegebenen dreistelligen Fallback-Kürzel verwenden, wenn kein Originalicon verfügbar ist.
-
-### 0.6.1 · 2026-10-07
-
-- **Verbessert:** Freigegebene Plugin-Releases und originale Katalogicons aktualisiert.
-- **Verbessert:** Der Einstellungs-Footer zeigt das lokale SVG-Icon, den Namen und die Version der Library.
-- **Behoben:** Daily Scripture ab 1.0.0 kann auch neben einer älteren eingebetteten Library netzwerkweit aktiviert werden.
-- **Behoben:** Einzelne gefilterte Treffer behalten auf breiten Ansichten die normale Kartenbreite.
-- **Behoben:** Multisite Toolbar Additions wird auch für einzelne Websites und Website-Aktivierung angeboten.
 
 [ Vollständiger Änderungsverlauf ](CHANGELOG-de)
 
