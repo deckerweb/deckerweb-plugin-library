@@ -14,7 +14,7 @@ Installation und Aktivierung erfolgen direkt in der ausgewählten Karte. Status 
 
 Komponente: **Library 1.3.0**. Siehe [Website](https://deckerwebplugins.com/de/library/), [Katalog](CATALOG-de) und [Prüfstand](VALIDATION-1.3.0-de).
 
-Aktueller Onlinekatalog: **2026-11-08.1 · 32 Plugins · acht Serien**. Library-Komponente: **1.3.0**. Katalogentdeckung und Erstinstallation sind von normalen Bestandsupdates getrennt.
+Aktueller Onlinekatalog: **2026-11-09.1 · 32 Plugins · acht Serien**. Library-Komponente: **1.3.0**. Katalogentdeckung und Erstinstallation sind von normalen Bestandsupdates getrennt.
 
 Kleine Plugins. Konkrete Verbesserungen.
 

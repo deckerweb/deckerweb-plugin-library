@@ -2,7 +2,7 @@
 
 [Deutsch](SERIES-de.md)
 
-Catalog revision: **2026-11-08.1** · **32 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
+Catalog revision: **2026-11-09.1** · **32 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
 
 ## Available series
 

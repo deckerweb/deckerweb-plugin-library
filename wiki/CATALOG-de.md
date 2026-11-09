@@ -2,13 +2,13 @@
 
 [English](CATALOG)
 
-Aktuelle Library: **1.3.0** · Katalogrevision **2026-11-08.1**.
+Aktuelle Library: **1.3.0** · Katalogrevision **2026-11-09.1**.
 
 Der Katalog enthält 32 freigegebene öffentliche Plugin-Releases in 8 Serien. Jeder Eintrag legt Repository, Hauptdatei, Erstinstallationsversion, Original-ZIP, SHA256 und Voraussetzungen fest. Der Katalogabruf ist optional, standardmäßig aus und wird 24 Stunden gespeichert. Neue Plugins und Katalogänderungen werden ausdrücklich geprüft. Ältere Leser behalten ihr historisches konservatives Verhalten.
 
 Originalicons werden lokal mitgeliefert. Ohne passendes lokales Icon erscheint ein Kürzel auf dezentem Hintergrund; ein explizites `icon_background` hat Vorrang vor der stabilen Pastellpalette. Dezente Hover-/Tastaturfokusdarstellung bleibt erhalten. Keine externen Icons, Skripte oder ausführbaren Kataloginhalte. WPCodeBox QuickNav verwendet in dieser Library sein lokales Originalicon.
 
-Aktuelle [Katalog-Release-/Paketquellen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-08.1.json). Katalogversionen bestimmen Pakete für Erstinstallationen, begrenzen aber keine Bestandsupdates.
+Aktuelle [Katalog-Release-/Paketquellen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-09.1.json). Katalogversionen bestimmen Pakete für Erstinstallationen, begrenzen aber keine Bestandsupdates.
 
 ## Pluginupdates und der Onlinekatalog
 
@@ -22,3 +22,5 @@ Kein Update gemeldet bedeutet: Im vorhandenen WordPress-Updatestand liegt kein n
 
 Einstellungen → deckerweb Library (bei Multisite Netzwerkverwaltung → Einstellungen) steuert den optionalen Onlineabruf. Ausblenden ändert nur die Sichtbarkeit. Beide Einstellungen lassen Bestandsupdates unabhängig. Frühere Komponenten können noch ihr älteres Freigabeverhalten besitzen; beide Komponenten für das vollständige aktuelle Verhalten aktualisieren.
 
+
+Revision 2026-11-09.1 aktualisiert 28 geprüfte Plugin-Releases aus der Komponentenpflegematrix. Der Katalog behält 32 Plugins und acht Serien. Daily Scripture, Brand Admin Schemes, Site Essentials und TabulaMea bleiben unverändert. Library 1.3.0 und ihr eingebauter Rückfallkatalog bleiben unverändert.
