@@ -2,13 +2,13 @@
 
 [English](CATALOG)
 
-Aktuelle Library: **1.3.0** · Katalogrevision **2026-11-09.1**.
+Aktuelle Library: **1.3.0** · Katalogrevision **2026-11-10.1**.
 
 Der Katalog enthält 32 freigegebene öffentliche Plugin-Releases in 8 Serien. Jeder Eintrag legt Repository, Hauptdatei, Erstinstallationsversion, Original-ZIP, SHA256 und Voraussetzungen fest. Der Katalogabruf ist optional, standardmäßig aus und wird 24 Stunden gespeichert. Neue Plugins und Katalogänderungen werden ausdrücklich geprüft. Ältere Leser behalten ihr historisches konservatives Verhalten.
 
 Originalicons werden lokal mitgeliefert. Ohne passendes lokales Icon erscheint ein Kürzel auf dezentem Hintergrund; ein explizites `icon_background` hat Vorrang vor der stabilen Pastellpalette. Dezente Hover-/Tastaturfokusdarstellung bleibt erhalten. Keine externen Icons, Skripte oder ausführbaren Kataloginhalte. WPCodeBox QuickNav verwendet in dieser Library sein lokales Originalicon.
 
-Aktuelle [Katalog-Release-/Paketquellen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-09.1.json). Katalogversionen bestimmen Pakete für Erstinstallationen, begrenzen aber keine Bestandsupdates.
+Aktuelle [Katalog-Release-/Paketquellen](https://github.com/deckerweb/deckerweb-plugin-library/blob/main/docs/CATALOG-SOURCES-2026-11-10.1.json). Katalogversionen bestimmen Pakete für Erstinstallationen, begrenzen aber keine Bestandsupdates.
 
 ## Pluginupdates und der Onlinekatalog
 
@@ -24,3 +24,5 @@ Einstellungen → deckerweb Library (bei Multisite Netzwerkverwaltung → Einste
 
 
 Revision 2026-11-09.1 aktualisiert 28 geprüfte Plugin-Releases aus der Komponentenpflegematrix. Der Katalog behält 32 Plugins und acht Serien. Daily Scripture, Brand Admin Schemes, Site Essentials und TabulaMea bleiben unverändert. Library 1.3.0 und ihr eingebauter Rückfallkatalog bleiben unverändert.
+
+Revision 2026-11-10.1 aktualisiert TabulaMea auf 1.0.0 sowie Site Essentials, Brand Admin Schemes und Daily Scripture auf 1.2.0. Die übrigen 28 Einträge, acht Serien und lokalen Icons bleiben unverändert. Library bleibt bei 1.3.0; eingebauter Rückfallkatalog und Release-Pakete bleiben unverändert.

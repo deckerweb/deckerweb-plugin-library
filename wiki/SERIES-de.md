@@ -2,7 +2,7 @@
 
 [English](SERIES)
 
-Katalogrevision: **2026-11-09.1** · **32 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
+Katalogrevision: **2026-11-10.1** · **32 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
 
 ## Verfügbare Serien
 

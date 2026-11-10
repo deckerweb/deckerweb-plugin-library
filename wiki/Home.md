@@ -14,7 +14,7 @@ Installation and activation happen directly in the selected card. Status and err
 
 Component: **Library 1.3.0**. See the [website](https://deckerwebplugins.com/en/library/), [catalog](CATALOG) and [validation](VALIDATION-1.3.0).
 
-Current online catalog: **2026-11-09.1 · 32 plugins · eight series**. Library component: **1.3.0**. Catalog discovery and first installation are separate from ordinary installed-plugin updates.
+Current online catalog: **2026-11-10.1 · 32 plugins · eight series**. Library component: **1.3.0**. Catalog discovery and first installation are separate from ordinary installed-plugin updates.
 
 Small plugins. Practical improvements.
 

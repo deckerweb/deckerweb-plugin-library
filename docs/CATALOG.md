@@ -2,13 +2,13 @@
 
 [Deutsch](CATALOG-de.md)
 
-Current Library: **1.3.0** · catalog revision **2026-11-09.1**.
+Current Library: **1.3.0** · catalog revision **2026-11-10.1**.
 
 The catalog contains 32 approved public plugin releases in 8 series. Each entry pins repository identity, main file, first-installation version, original ZIP URL, SHA256 and requirements. Catalog retrieval is optional, off by default and cached for 24 hours. New plugins and catalog changes require explicit review. Older readers retain their historical conservative behavior.
 
 Original icons are bundled locally. Initials use a subtle background when no matching local icon exists; an explicit `icon_background` takes precedence over the stable pastel palette. Cards retain subtle hover/keyboard focus. No remote icons, scripts or executable catalog code are loaded. WPCodeBox QuickNav uses its local original icon in this Library version.
 
-Current [catalog release/package sources](CATALOG-SOURCES-2026-11-09.1.json). Catalog versions choose first-installation packages; they do not cap installed-plugin updates.
+Current [catalog release/package sources](CATALOG-SOURCES-2026-11-10.1.json). Catalog versions choose first-installation packages; they do not cap installed-plugin updates.
 
 ## Plugin updates and the online catalog
 
@@ -24,3 +24,5 @@ Settings → deckerweb Library (Network Admin → Settings on Multisite) control
 
 
 Revision 2026-11-09.1 updates 28 reviewed plugin releases from the component-maintenance matrix. The catalog retains 32 plugins and eight series. Daily Scripture, Brand Admin Schemes, Site Essentials and TabulaMea are unchanged. Library 1.3.0 and its embedded fallback catalog are unchanged.
+
+Revision 2026-11-10.1 updates TabulaMea to 1.0.0 and Site Essentials, Brand Admin Schemes and Daily Scripture to 1.2.0. The other 28 entries, eight series and local icons are unchanged. Library remains 1.3.0; its embedded fallback catalog and release packages are unchanged.
