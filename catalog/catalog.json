@@ -1191,10 +1191,40 @@
       "download_url": "https://github.com/deckerweb/builder-pdf-presenter/releases/download/v1.0.1/builder-pdf-presenter-1.0.1.zip",
       "sha256": "2be2e65e846952929536b5e7e3e078e6569c4551d7ae307f811ee11df4d9ac18",
       "published_at": "2026-11-09T06:09:26Z"
+    },
+    {
+      "approved": true,
+      "slug": "tools-for-woocommerce",
+      "name": "Tools for WooCommerce",
+      "repository": "deckerweb/tools-for-woocommerce",
+      "plugin_file": "tools-for-woocommerce/tools-for-woocommerce.php",
+      "category": "Commerce",
+      "category_de": "Handel",
+      "dependencies": [],
+      "version": "1.0.0",
+      "download_url": "https://github.com/deckerweb/tools-for-woocommerce/releases/download/v1.0.0/tools-for-woocommerce-1.0.0.zip",
+      "sha256": "c7258de8556644b551bf5d72604647bf79627c5ed6e437d3a880087227ff6ebb",
+      "requires_wp": "7.0",
+      "requires_php": "8.3",
+      "description": "WooCommerce tools for catalog mode, free offers, flexible cart rules and email design. Shop features pause without active WooCommerce 11.1.2 or later.",
+      "description_de": "WooCommerce-Werkzeuge für Katalogmodus, Gratisangebote, flexible Warenkorbregeln und E-Mail-Design. Ohne aktives WooCommerce ab 11.1.2 pausieren die Shop-Funktionen.",
+      "requires_multisite": false,
+      "network_only": false,
+      "icon_label": "TWC",
+      "icon_background": "#edf2f5",
+      "published_at": "2026-11-13T13:02:18Z",
+      "series_memberships": [],
+      "series_memberships_v2": [
+        "shop"
+      ],
+      "series_memberships_v3": [
+        "shop"
+      ],
+      "sort_order": 195
     }
   ],
-  "catalog_revision": "2026-11-10.1",
-  "generated_at": "2026-11-10T13:18:29Z",
+  "catalog_revision": "2026-11-13.1",
+  "generated_at": "2026-11-13T17:11:46Z",
   "requires_library": "0.1.0",
   "series_definitions": {
     "quicknav": {

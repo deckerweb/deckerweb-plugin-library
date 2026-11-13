@@ -2,7 +2,7 @@
 
 [English](SERIES.md)
 
-Katalogrevision: **2026-11-10.1** · **32 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
+Katalogrevision: **2026-11-13.1** · **33 Plugins** · **8 Serien**. Ein Plugin kann mehreren Serien angehören und erscheint trotzdem nur einmal. Serien lassen sich mit Suche, Installationsvoraussetzungen und persönlichen Statusfiltern kombinieren.
 
 ## Verfügbare Serien
 
@@ -12,7 +12,7 @@ Katalogrevision: **2026-11-10.1** · **32 Plugins** · **8 Serien**. Ein Plugin 
 | Builder | 11 |
 | Purify | 3 |
 | Inhalte verwalten | 6 |
-| Shop | 2 |
+| Shop | 3 |
 | Admin | 5 |
 | Inspiration | 2 |
 | GlotPress | 2 |
@@ -53,6 +53,7 @@ Katalogrevision: **2026-11-10.1** · **32 Plugins** · **8 Serien**. Ein Plugin 
 | GlotFrame | GF | GlotPress, Builder |
 | WPCodeBox QuickNav | WBQ | QuickNav |
 | Builder PDF Presenter | BPP | Builder, Inhalte verwalten |
+| Tools for WooCommerce | TWC | Shop |
 
 Seriendefinitionen liefern englische/deutsche Namen und die Anzeigereihenfolge. Library 0.9.0 und neuer verwenden `series_definitions` und `series_memberships_v3`; ältere Datenfelder erhalten die von älteren Lesern unterstützte Teilmenge.
 

@@ -2,7 +2,7 @@
 
 [Deutsch](SERIES-de)
 
-Catalog revision: **2026-11-10.1** · **32 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
+Catalog revision: **2026-11-13.1** · **33 plugins** · **8 series**. A plugin can belong to several series and still appears only once. Combine series with search, installation compatibility and personal status filters.
 
 ## Available series
 
@@ -12,7 +12,7 @@ Catalog revision: **2026-11-10.1** · **32 plugins** · **8 series**. A plugin c
 | Builder | 11 |
 | Purify | 3 |
 | Manage Content | 6 |
-| Shop | 2 |
+| Shop | 3 |
 | Admin | 5 |
 | Inspiration | 2 |
 | GlotPress | 2 |
@@ -53,6 +53,7 @@ Catalog revision: **2026-11-10.1** · **32 plugins** · **8 series**. A plugin c
 | GlotFrame | GF | GlotPress, Builder |
 | WPCodeBox QuickNav | WBQ | QuickNav |
 | Builder PDF Presenter | BPP | Builder, Manage Content |
+| Tools for WooCommerce | TWC | Shop |
 
 Series definitions supply English/German names and display order. Library 0.9.0 and newer use `series_definitions` and `series_memberships_v3`; legacy fields preserve the subset supported by older readers.
 
